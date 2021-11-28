@@ -3,7 +3,7 @@
     <Navbar />
     <div class="content flex flex-col items-center xl:mx-42 lg:mx-40 md:mx-20 px-8 py-4">
       <div class="hero flex flex-col items-center mt-4">
-        <h1 class="self-start md:self-center text-6xl font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500">
+        <h1 class="self-start md:self-center text-6xl font-semibold tracking-wide text-blue-700 dark:text-blue-400">
           Ultramarine Linux
         </h1>
         <h2 class="text-xl self-start md:self-center">
