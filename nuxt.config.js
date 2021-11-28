@@ -50,5 +50,10 @@ export default {
   colorMode: {
     preference: 'system',
     classSuffix: ''
+  },
+
+  loading: {
+    color: 'blue',
+    height: '5px'
   }
 }
