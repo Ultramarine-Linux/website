@@ -3,10 +3,10 @@
     <Navbar />
     <div class="content flex flex-col items-center">
       <section id="hero" class="flex flex-col items-center mt-4 xl:mx-42 lg:mx-40 md:mx-20 px-8 2xl:py-4">
-        <h1 class="self-start md:self-center text-6xl font-semibold tracking-wide text-blue-700 dark:text-blue-400">
+        <h1 class="self-start md:self-center text-5xl md:text-6xl font-semibold tracking-wide text-blue-700 dark:text-blue-400">
           Ultramarine Linux
         </h1>
-        <h2 class="text-xl self-start md:self-center">
+        <h2 class="text-xl self-start md:self-center pl-1 md:pl-0">
           A simplified Linux experience for everyone.
         </h2>
         <div class="buttons flex flex-row justify-between mt-4 self-start md:self-center">
@@ -24,15 +24,30 @@
             </button>
           </a>
         </div>
-        <div class="screenshot hidden md:block">
-          <img src="../static/ultramarine.png" alt="Desktop Environment Screenshot" class="mt-6 w-4/5 lg:h-96 lg:w-auto rounded-md">
-          <p class="text-gray-400 dark:text-gray-300 text-center">
+        <div class="screenshot hidden md:flex md:flex-col md:justify-center">
+          <nuxt-img src="ultramarine.png" alt="Desktop Environment Screenshot" class="mt-6 w-4/5 lg:h-96 lg:w-auto rounded-md bg-gray-800" />
+          <p class="pt-1 text-gray-400 dark:text-gray-500 text-center">
             Latest Release: Ultramarine Flagship 21.11 (Phing Kan)
           </p>
         </div>
       </section>
       <section id="features" class="bg-gray-200 dark:bg-gray-800 flex flex-col items-center w-full xl:mx-42 lg:mx-40 md:mx-20 mt-12 px-8 py-4">
-        <h1>Why Ultramarine?</h1>
+        <h1 class="mx-6 pt-2 text-4xl font-semibold tracking-wide border-b-2 border-blue-600 dark:border-blue-500">
+          Why Ultramarine?
+        </h1>
+        <p class="mt-6 text-lg text-justify 2xl:max-w-6xl max-w-4xl md:mx-20 mx-4">
+          Ultramarine Linux is a Linux distribution based on Fedora.
+          Our goal is to make a great beginner-friendly experience, while maintaining all of the benefits a power-user would expect from a Linux distro.
+          Want to know more? Keep reading and check out our wiki!
+        </p>
+        <div class="features mt-4 flex flex-col items-center justify-center">
+          <h2 class="mx-6 pt-2 text-2xl w-min font-medium tracking-wide border-b-2 border-blue-400 dark:border-blue-200 self-center text-center">
+            Features
+          </h2>
+          <div class="icons flex flex-row justify-between pt-2">
+            <div>Work in progress</div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
