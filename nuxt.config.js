@@ -48,7 +48,7 @@ export default {
   },
 
   colorMode: {
-    preference: 'light',
+    preference: 'system',
     classSuffix: ''
   }
 }
