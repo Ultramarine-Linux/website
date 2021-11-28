@@ -4,14 +4,14 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'ultramarine-website',
+    title: 'Ultramarine Linux',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Ultramarine Linux - A simplified Linux experience for everyone.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -40,9 +40,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/color-mode'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  colorMode: {
+    preference: 'light',
+    classSuffix: ''
   }
 }
