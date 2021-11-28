@@ -1,8 +1,8 @@
 <template>
   <div class="min-h-screen text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-900">
     <Navbar />
-    <div class="content flex flex-col items-center xl:mx-42 lg:mx-40 md:mx-20 px-8 py-4">
-      <section id="hero" class="flex flex-col items-center mt-4">
+    <div class="content flex flex-col items-center">
+      <section id="hero" class="flex flex-col items-center mt-4 xl:mx-42 lg:mx-40 md:mx-20 px-8 2xl:py-4">
         <h1 class="self-start md:self-center text-6xl font-semibold tracking-wide text-blue-700 dark:text-blue-400">
           Ultramarine Linux
         </h1>
@@ -30,6 +30,9 @@
             Latest Release: Ultramarine Flagship 21.11 (Phing Kan)
           </p>
         </div>
+      </section>
+      <section id="features" class="bg-gray-200 dark:bg-gray-800 flex flex-col items-center w-full xl:mx-42 lg:mx-40 md:mx-20 mt-12 px-8 py-4">
+        <h1>Why Ultramarine?</h1>
       </section>
     </div>
   </div>
