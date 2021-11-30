@@ -8,7 +8,7 @@
     </router-link>
     <div class="links-right flex flex-row justify-center align-middle items-center font-semibold">
       <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-200 mr-4">About</a>
-      <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-200">Installation</a>
+      <a href="/installation" class="hover:text-blue-600 dark:hover:text-blue-200">Installation</a>
     </div>
   </header>
 </template>
