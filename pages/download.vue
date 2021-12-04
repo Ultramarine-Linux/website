@@ -14,6 +14,7 @@
                 <div class="p-3">
                     <p class="text-lg">
                         The flagship edition. Powered by Solus' Budgie Desktop.
+                        <!-- maybe will add a wiki reference to what budgie is here, alongside a read further here, redirecting to wiki-->
                     </p>
                 </div>
                 <a href="https://ultramarine.app" class="flex flex-row rounded-lg">
@@ -24,6 +25,7 @@
                 <div class="p-3">
                     <p class="text-lg">
                         Simplicity, beauty, and practicality.
+                      <!-- maybe will add a wiki reference to what cutefish is here, alongside a read further here, redirecting to wiki-->
                     </p>
                 </div>
 

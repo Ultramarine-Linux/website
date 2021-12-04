@@ -7,7 +7,7 @@
           Ultramarine Linux
         </h1>
         <h2 class="text-xl self-start md:self-center pl-1 md:pl-0">
-          A simplified Linux experience for everyone.
+          A simplified yet powerful Linux experience for all.
         </h2>
         <div class="buttons flex flex-row justify-between mt-4 self-start md:self-center">
           <a href="https://repos.ultramarine-linux.org/builds/Ultramarine-Flagship-21.11.iso" class="flex flex-row justify-center items-center rounded-lg mr-2 px-4 py-2 bg-blue-600 text-gray-50 hover:bg-blue-700">
@@ -37,8 +37,9 @@
         </h1>
         <p class="mt-6 text-lg text-justify 2xl:max-w-6xl max-w-4xl md:mx-20 mx-4">
           Ultramarine Linux is a Linux distribution based on Fedora.
-          Our goal is to make a great beginner-friendly experience, while maintaining all of the benefits a power-user would expect from a Linux distro.
-          Want to know more? Keep reading and check out our wiki!
+          Our goal is to design an experience which satisfies the beginner with the simplicity, while retaining the feature a power user would demand.
+          Want to know more? We have a wiki! 
+          <!--maybe want to add a hyperlink to "wiki" to direct it to the wiki, will see if i can do it later :^)-->
         </p>
         <div class="features mt-4 flex flex-col items-center justify-center">
           <h2 class="mx-6 pt-2 text-2xl w-min font-medium tracking-wide border-b-2 border-blue-400 dark:border-blue-200 self-center text-center">
