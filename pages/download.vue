@@ -11,7 +11,7 @@
       <div class="flex flex-col md:flex-row gap-10 pt-12">
         <div class="flex flex-col items-center">
           <nuxt-img src="ultramarine.png" alt="Ultramarine Flagship Screenshot" class="w-96 h-auto pb-4 rounded-sm" />
-          <a href="https://repos.ultramarine-linux.org/builds/Ultramarine-Flagship-21.11.iso" class="flex flex-row rounded-lg">
+          <a href="https://lapis.ultramarine-linux.org/Ultramarine-Flagship-21.12.iso" class="flex flex-row rounded-lg">
             <button class="px-4 py-2 rounded-lg bg-transparent text-gray-900 dark:text-gray-50 border-2 border-blue-500 hover:bg-blue-600 hover:text-gray-50">
               Download Flagship Edition
             </button>
