@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <!-- I plan to make a wiki system with nuxt-content here (if I have enough time)-->
     <h1 class="text-4xl">
       Work in progress
     </h1>
