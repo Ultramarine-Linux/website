@@ -75,7 +75,26 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="flex flex-col justify-start items-center my-12">
+      <section id="sponsors" class="flex flex-col items-center py-8">
+        <h1 class="text-3xl font-semibold tracking-wide mb-6 text-blue-500 dark:text-blue-200">
+          Our Sponsors
+        </h1>
+        <div class="sponsors flex flex-col justify-end items-center gap-10">
+          <a href="https://dash-cloud.com">
+            <img src="https://dash-cloud.com/assets/img/brand.png" alt="Dash Cloud Logo" class="h-14 w-auto bg-gray-300 p-2 rounded-md">
+            <h2 class="text-center">
+              dash-cloud.com
+            </h2>
+          </a>
+          <a href="https://webhorizon.in">
+            <img src="https://lt.moebox.pl/webhorizon.png" alt="WebHorizon" class="h-28 w-auto rounded-md">
+            <h2 class="text-center">
+              webhorizon.in
+            </h2>
+          </a>
+        </div>
+      </section>
+      <section id="contact" class="flex flex-col justify-start items-center py-12 bg-gray-200 dark:bg-gray-800 w-full">
         <h1 class="text-3xl font-semibold tracking-wide mb-2 text-blue-500 dark:text-blue-200">
           Want to know more?
         </h1>
@@ -88,9 +107,6 @@
           <a class="fab fa-discord text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-200" href="https://discord.gg/bUuQasHdrF" />
           <a class="fab fa-gitlab text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-200" href="https://gitlab.ultramarine-linux.org" />
         </div>
-      </section>
-      <section id="sponsors" class="flex flex-col">
-        <!-- Work in progress -->
       </section>
     </div>
 
