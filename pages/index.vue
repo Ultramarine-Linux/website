@@ -81,7 +81,7 @@
         </h1>
         <div class="sponsors flex flex-col justify-end items-center gap-10">
           <a href="https://dash-cloud.com">
-            <img src="https://dash-cloud.com/assets/img/brand.png" alt="Dash Cloud Logo" class="h-14 w-auto bg-gray-300 p-2 rounded-md">
+            <img src="https://dash-cloud.com/assets/img/brand.png" alt="Dash Cloud Logo" class="h-14 w-auto bg-gray-100 dark:bg-gray-300 p-2 rounded-md">
             <h2 class="text-center">
               dash-cloud.com
             </h2>
