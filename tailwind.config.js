@@ -27,7 +27,8 @@ module.exports = {
           400: '#363ca3',
           300: '#3f47c4',
           200: '#5b63f0',
-          100: '#8289ff'
+          100: '#8289ff',
+          50: '#b4b3ff'
         }
       }
     } // change accent color to 000890
