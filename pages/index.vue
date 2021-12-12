@@ -75,7 +75,7 @@
           </div>
         </div>
       </section>
-      <section id="sponsors" class="flex flex-col items-center py-8">
+      <section id="sponsors" class="flex flex-col items-center py-8 px-4">
         <h1 class="text-3xl font-semibold tracking-wide mb-6 text-blue-500 dark:text-blue-200">
           Our Sponsors
         </h1>
@@ -94,7 +94,7 @@
           </a>
         </div>
       </section>
-      <section id="contact" class="flex flex-col justify-start items-center py-12 bg-gray-200 dark:bg-gray-800 w-full">
+      <section id="contact" class="flex flex-col justify-start items-center py-12 px-6 bg-gray-200 dark:bg-gray-800 w-full">
         <h1 class="text-3xl font-semibold tracking-wide mb-2 text-blue-500 dark:text-blue-200">
           Want to know more?
         </h1>
@@ -109,11 +109,17 @@
         </div>
       </section>
     </div>
-
+    <Footer @set-color-mode="setColorMode" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    setColorMode (mode) {
+      this.$colorMode.preference = mode
+    }
+  }
+}
 </script>
