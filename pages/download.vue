@@ -39,9 +39,16 @@
         </div>
       </div>
     </div>
+    <Footer class="bg-gray-200 dark:bg-gray-800" @set-color-mode="setColorMode" />
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    setColorMode (mode) {
+      this.$colorMode.preference = mode
+    }
+  }
+}
 </script>
