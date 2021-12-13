@@ -5,11 +5,19 @@ stages:
   - deploy
   - test
 
+cache:
+  paths:
+    - node_modules/
+
+
+
 build:
-  image: node:latest
+  image: node
   stage: build
-  script:
+  before_script:
     - npm install
+  script:
+    - npm run build
     - npm run generate
   artifacts:
     paths:
