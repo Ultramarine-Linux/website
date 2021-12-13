@@ -1,0 +1,35 @@
+# build
+
+stages:
+  - build
+  - deploy
+  - test
+
+build:
+  image: node:latest
+  stage: build
+  script:
+    - npm install
+    - npm run generate
+  artifacts:
+    paths:
+      - dist/
+    when: always
+
+
+# only run deploy when branch is main
+
+deploy:
+  stage: deploy
+  only:
+    - main
+  needs:
+    - build
+  dependencies:
+    - build
+  before_script:
+    # add SSH key to known_hosts
+    - ssh-keyscan -t rsa ultramarine-linux.org >> ~/.ssh/known_hosts
+    - cp $SSH_KEY ~/.ssh/id_rsa
+  script:
+    - rsync -avz --delete --progress dist/ gitlab@ultramarine-linux.org:/var/www/ultramarine-site/
