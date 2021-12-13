@@ -8,6 +8,7 @@ stages:
 cache:
   paths:
     - node_modules/
+    - ~/.ssh
 
 
 
@@ -37,8 +38,10 @@ deploy:
   dependencies:
     - build
   before_script:
+    # add SSH key to known_hosts
     - apk update && apk add openssh-client rsync
     - eval $(ssh-agent -s)
+    - ssh-keyscan ultramarine-linux.org > ~/.ssh/known_hosts
     - echo "$SSH_KEY" | ssh-add -
   script:
     - rsync -avz --delete --progress dist/ gitlab@ultramarine-linux.org:/var/www/ultramarine-site/
