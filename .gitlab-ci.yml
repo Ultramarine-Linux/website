@@ -40,6 +40,8 @@ deploy:
   before_script:
     # add SSH key to known_hosts
     - apk update && apk add openssh-client rsync
+    - mkdir -p ~/.ssh
+    - touch ~/.ssh/known_hosts
     - eval $(ssh-agent -s)
     - ssh-keyscan ultramarine-linux.org > ~/.ssh/known_hosts
     - echo "$SSH_KEY" | ssh-add -
