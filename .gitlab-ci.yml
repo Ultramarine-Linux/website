@@ -29,6 +29,7 @@ build:
 
 deploy:
   stage: deploy
+  image: alpine:latest
   only:
     - main
   needs:
@@ -36,9 +37,8 @@ deploy:
   dependencies:
     - build
   before_script:
-    # add SSH key to known_hosts
-    - mkdir -p ~/.ssh
-    - ssh-keyscan -t rsa ultramarine-linux.org > ~/.ssh/known_hosts
-    - cp $SSH_KEY ~/.ssh/id_rsa
+    - apk update && apk add openssh-client rsync
+    - eval $(ssh-agent -s)
+    - echo "$SSH_KEY" | ssh-add -
   script:
     - rsync -avz --delete --progress dist/ gitlab@ultramarine-linux.org:/var/www/ultramarine-site/
