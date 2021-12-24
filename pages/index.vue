@@ -84,7 +84,7 @@
             </button>
           </nuxt-link>
           <a
-            href=""
+            href="/wiki"
             class="flex flex-row justify-center items-center rounded-lg"
           >
             <button
