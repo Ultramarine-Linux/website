@@ -303,7 +303,7 @@
               hover:text-blue-600
               dark:hover:text-blue-200
             "
-            href="https://twitter.com/ultramarinelinux"
+            href="https://twitter.com/UltramarineProj"
           />
           <a
             class="
