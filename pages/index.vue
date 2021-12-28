@@ -246,7 +246,7 @@
         <div class="sponsors flex flex-col justify-end items-center gap-10">
           <a href="https://tensordock.com/">
             <img
-              src="https://i.imgur.com/T2pzlex.png"
+              src="https://tensordock.com/assets/img/brand.png"
               alt="Tensordock Logo"
               class="h-14 w-auto bg-gray-100 dark:bg-gray-300 p-2 rounded-md"
             />
