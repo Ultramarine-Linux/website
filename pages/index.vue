@@ -121,7 +121,7 @@
             "
           />
           <p class="pt-1 text-gray-400 dark:text-gray-500 text-center">
-            Latest Release: Ultramarine Flagship 21.11 (Phing Kan)
+            Upcoming Release: Ultramarine Flagship 22.04 (Rhode Island)
           </p>
         </div>
       </section>
