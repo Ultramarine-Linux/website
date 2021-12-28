@@ -1,6 +1,12 @@
 <template>
   <div class="min-h-screen text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-900">
     <Navbar />
+    <!-- Add a red banner here to show that the download links are down -->
+    <div class="bg-red-500 dark:bg-red-700 text-white font-bold py-4 px-4">
+      <p>
+        Due to some major infrastructure issues, the download links and the Ultramarine Linux repositories are currently out of service. We are very sorry for the inconvenience.
+      </p>
+    </div>
     <div class="flex p-12 flex-col md:items-center items-start min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       <h1 class="text-4xl">
         Pick your flavor of Ultramarine
