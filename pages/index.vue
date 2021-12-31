@@ -13,9 +13,8 @@
     <!-- Add a red banner here to show that the download links are down -->
     <div class="bg-red-500 dark:bg-red-700 text-white font-bold py-4 px-4">
       <p style="text-align: center">
-        Due to some major infrastructure issues, the download links and the
-        Ultramarine Linux repositories are currently out of service. We are very
-        sorry for the inconvenience.
+        Download links and the Ultramarine Linux repositories are up for the time being,
+        unstable download speed is expected. We are very sorry for the inconvenience.
       </p>
     </div>
 
@@ -258,7 +257,7 @@
             <img
               src="https://tensordock.com/assets/img/brand.png"
               alt="Tensordock Logo"
-              class="h-14 w-auto bg-gray-100 dark:bg-gray-300 p-2 rounded-md"
+              class="h-14 w-auto p-2 rounded-md"
             />
             <h2 class="text-center">tensordock.com</h2>
           </a>
