@@ -257,7 +257,7 @@
             <img
               src="https://tensordock.com/assets/img/brand.png"
               alt="Tensordock Logo"
-              class="h-14 w-auto p-2 rounded-md"
+              class="h-14 w-auto rounded-md"
             />
             <h2 class="text-center">tensordock.com</h2>
           </a>
