@@ -11,12 +11,12 @@
     <Navbar />
 
     <!-- Add a red banner here to show that the download links are down -->
-    <div class="bg-red-500 dark:bg-red-700 text-white font-bold py-4 px-4">
+    <!-- <div class="bg-red-500 dark:bg-red-700 text-white font-bold py-4 px-4">
       <p style="text-align: center">
         Download links and the Ultramarine Linux repositories are up for the time being,
         unstable download speed is expected. We are very sorry for the inconvenience.
       </p>
-    </div>
+    </div> -->
 
     <div class="content flex flex-col items-center">
       <section
