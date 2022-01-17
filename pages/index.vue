@@ -133,6 +133,23 @@
             Upcoming Release: Ultramarine Flagship 22.04 (Rhode Island)
           </p>
         </div>
+        <!-- Migration script -->
+        <div class="p-4">
+          <div class="hidden md:flex md:flex-col md:justify-center">
+            <p class="text-xl p-4">
+              You can also migrate from an existing Fedora installation!
+            </p>
+            <!-- code block for copying command -->
+            <div class="p-6 bg-gray-600 text-gray-400 rounded-xl">
+
+              <p id="migrate-script" class="display: inline-block">curl ultramarine-linux.org/migrate.sh | sudo bash</p>
+              <!-- add a button to copy the text next to the code block -->
+              <button type="button" class="copy-button fa-copy" @click="onCopy">
+                <span class="hidden">Copy</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
       <section
         id="about"
@@ -353,9 +370,14 @@
 <script>
 export default {
   methods: {
-    setColorMode(mode) {
-      this.$colorMode.preference = mode;
+    setColorMode (mode) {
+      this.$colorMode.preference = mode
     },
-  },
-};
+    onCopy (event) {
+      // get the text from #migrate-script
+      const text = document.getElementById('migrate-script').textContent
+      this.$copyText(text)
+    }
+  }
+}
 </script>

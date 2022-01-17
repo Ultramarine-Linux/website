@@ -42,7 +42,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    'nuxt-clipboard2'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

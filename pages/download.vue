@@ -114,9 +114,9 @@
 <script>
 export default {
   methods: {
-    setColorMode(mode) {
-      this.$colorMode.preference = mode;
-    },
-  },
-};
+    setColorMode (mode) {
+      this.$colorMode.preference = mode
+    }
+  }
+}
 </script>
