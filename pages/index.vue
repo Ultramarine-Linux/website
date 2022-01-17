@@ -142,7 +142,7 @@
             <!-- code block for copying command -->
             <div class="p-6 bg-gray-600 text-gray-400 rounded-xl">
 
-              <p id="migrate-script" class="display: inline-block">curl ultramarine-linux.org/migrate.sh | sudo bash</p>
+              <p id="migrate-script" class="display: inline-block">curl https://ultramarine-linux.org/migrate.sh | sudo bash</p>
               <!-- add a button to copy the text next to the code block -->
               <button type="button" class="copy-button fa-copy" @click="onCopy">
                 <span class="hidden">Copy</span>
