@@ -76,8 +76,8 @@ echo
 
 echo "Converting to Ultramarine..."
 # convert to ultramarine
-dnf swap -y fedora-release-common ultramarine-release-common
-dnf swap -y fedora-logos ultramarine-logos
+dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
+dnf swap -y fedora-logos ultramarine-logos --allowerasing
 
 echo "Migration complete! Please reboot your system."
 echo "The next Linux kernel update will make your system entry appear as Ultramarine Linux, but now you're already running Ultramarine Linux."
