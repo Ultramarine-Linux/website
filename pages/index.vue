@@ -51,7 +51,7 @@
             </button>
           </nuxt-link>
           <a
-            href="/wiki"
+            href="https://wiki.ultramarine-linux.org/en/guide"
             class="flex flex-row items-center justify-center rounded-lg"
           >
             <button
