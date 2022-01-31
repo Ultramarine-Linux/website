@@ -68,7 +68,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center grayscale">
             <nuxt-img
               src="cutefish.png"
               alt="Ultramarine GNOME Screenshot"
@@ -93,7 +93,7 @@
 
           <div class="flex flex-col items-center">
             <nuxt-img
-              src="ultramarine.png"
+              src="Pantheon.png"
               alt="Ultramarine Pantheon Screenshot"
               class="h-auto pb-4 rounded-sm w-96"
             />
