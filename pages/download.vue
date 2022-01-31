@@ -68,20 +68,20 @@
             </div>
           </div>
 
-          <div class="flex flex-col items-center grayscale">
+          <div class="flex flex-col items-center">
             <nuxt-img
               src="GNOME.png"
               alt="Ultramarine GNOME Screenshot"
               class="h-auto pb-4 rounded-sm w-96"
             />
             <a
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/GNOME/x86_64/iso/"
               class="flex flex-row rounded-lg"
             >
               <button
-                disabled
-                class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-gray-500 rounded-lg dark:text-gray-400"
+                class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-blue-500 rounded-lg dark:text-gray-50 hover:bg-blue-600 hover:text-gray-50"
               >
-                GNOME Edition Available Soon
+                Download GNOME Edition
               </button>
             </a>
             <div class="pt-4">
