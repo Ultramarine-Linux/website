@@ -93,7 +93,7 @@
 
           <div class="flex flex-col items-center">
             <nuxt-img
-              src="Pantheon.png"
+              src="pantheon.png"
               alt="Ultramarine Pantheon Screenshot"
               class="h-auto pb-4 rounded-sm w-96"
             />
