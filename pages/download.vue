@@ -81,7 +81,7 @@
                 disabled
                 class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-gray-500 rounded-lg dark:text-gray-400"
               >
-                GNOME Edition Not Available Yet
+                GNOME Edition Available Soon
               </button>
             </a>
             <div class="pt-4">
@@ -116,12 +116,24 @@
 
         </div>
       </div>
+      <br>
+      <br>
+      <br>
+      <h2 class="text-3xl">Torrents</h2>
+      <h2 class="pt-1 text-gray-400">You can also download Ultramarine Builds using Torrent clients from FOSS Torrents which are available 
+          <a class="text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
+            href="https://fosstorrents.com/distributions/ultramarine-linux/">
+              here
+            </a>.
+      </h2>
+
     </div>
     <Footer
       class="bg-gray-200 dark:bg-gray-800"
       @set-color-mode="setColorMode"
     />
   </div>
+  
 </template>
 
 <script>
