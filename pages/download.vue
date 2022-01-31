@@ -70,7 +70,7 @@
 
           <div class="flex flex-col items-center grayscale">
             <nuxt-img
-              src="cutefish.png"
+              src="GNOME.png"
               alt="Ultramarine GNOME Screenshot"
               class="h-auto pb-4 rounded-sm w-96"
             />
