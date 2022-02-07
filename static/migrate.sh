@@ -45,7 +45,7 @@ echo "Please make sure you have a backup of your system before proceeding, as th
 echo "This script will also update your system to the latest version of Fedora before proceeding. Please make sure you can properly update your system before proceeding."
 echo
 # prompt
-read -p "Are you sure you want to continue? (y/n) " -n 1 -r REPLY
+read -p "Are you sure you want to continue? (y/n) " -r REPLY
 
 if [[ $REPLY =~ ^[Nn]$ ]]; then
     echo "Exiting..."
@@ -87,4 +87,15 @@ dnf swap -y fedora-logos ultramarine-logos --allowerasing
 
 echo "Migration complete! Please reboot your system."
 echo "The next Linux kernel update will make your system entry appear as Ultramarine Linux, but now you're already running Ultramarine Linux."
+
+read -p "Would you like to also generate a new initramfs? (generate an Ultramarine boot entry) (y/n) " -r REPLY
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "Generating new initramfs..."
+    # generate new initramfs
+    dracut -f
+    echo "New initramfs generated."
+fi
+
+echo "The migration logs can be found at ${LOG}."
 echo "Have fun!"
