@@ -73,7 +73,7 @@ pkglist=(
 )
 for pkg in "${pkglist[@]}"; do
     file=$(curl -s https://lapis.ultramarine-linux.org/pub/ultramarine/${os_version}/Everything/x86_64/os/Packages/ | grep -E $pkg | grep -Eo 'href="[^"]*"' | sed -e 's/href="//g' | sed -e 's/"//g')
-    dnf install -yq https://lapis.ultramarine-linux.org/pub/ultramarine/${os_version}/Everything/x86_64/os/Packages/${file}
+    dnf install -y https://lapis.ultramarine-linux.org/pub/ultramarine/${os_version}/Everything/x86_64/os/Packages/${file}
 done
 
 
