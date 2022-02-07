@@ -64,7 +64,7 @@ echo
 echo "Downloading and installing required packages..."
 # find file in http directory
 echo "Installing RPM Fusion..."
-dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 echo "Installing the Ultramarine repository..."
 
 pkglist=(
@@ -72,8 +72,7 @@ pkglist=(
     'ultramarine-repos'
 )
 for pkg in "${pkglist[@]}"; do
-    file=$(curl -s https://lapis.ultramarine-linux.org/pub/ultramarine/${os_version}/Everything/x86_64/os/Packages/ | grep -E $pkg | grep -Eo 'href="[^"]*"' | sed -e 's/href="//g' | sed -e 's/"//g')
-    dnf install -y https://lapis.ultramarine-linux.org/pub/ultramarine/${os_version}/Everything/x86_64/os/Packages/${file}
+    dnf --repofrompath ultramarine,https://lapis.ultramarine-linux.org/pub/ultramarine/${os_version}/Everything/x86_64/os/ install -y $pkg
 done
 
 
