@@ -74,7 +74,7 @@ pkglist=(
     'ultramarine-repos'
 )
 for pkg in "${pkglist[@]}"; do
-    dnf --repofrompath ultramarine,https://lapis.ultramarine-linux.org/pub/ultramarine/${os_version}/Everything/x86_64/os/ install -y $pkg
+    dnf --nogpgcheck --repofrompath ultramarine,https://lapis.ultramarine-linux.org/pub/ultramarine/${os_version}/Everything/x86_64/os/ install -y $pkg
 done
 
 set +x
