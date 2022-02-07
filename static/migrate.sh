@@ -59,14 +59,16 @@ echo "Updating system..."
 # Make all commands visible
 set -x
 dnf update -y
-
+set +x
 echo
 echo "Downloading and installing required packages..."
 # find file in http directory
 echo "Installing RPM Fusion..."
+set -x
 dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+set +x
 echo "Installing the Ultramarine repository..."
-
+set -x
 pkglist=(
     'ultramarine-repos-common'
     'ultramarine-repos'
@@ -75,19 +77,22 @@ for pkg in "${pkglist[@]}"; do
     dnf --repofrompath ultramarine,https://lapis.ultramarine-linux.org/pub/ultramarine/${os_version}/Everything/x86_64/os/ install -y $pkg
 done
 
-
+set +x
 echo "Repo installation complete."
 echo
 
 echo "Converting to Ultramarine..."
 # convert to ultramarine
+set -x
 dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
 dnf swap -y fedora-logos ultramarine-logos --allowerasing
-
+set +x
 echo "Migration complete! Please reboot your system."
 echo "The next Linux kernel update will make your system entry appear as Ultramarine Linux, but now you're already running Ultramarine Linux."
 
 read -p "Would you like to also generate a new initramfs? (generate an Ultramarine boot entry) (y/n) " -r REPLY
+
+set -x
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "Generating new initramfs..."
@@ -96,5 +101,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "New initramfs generated."
 fi
 
+set +x
 echo "The migration logs can be found at ${LOG}."
 echo "Have fun!"
