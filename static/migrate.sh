@@ -34,10 +34,10 @@ if [ "$MIGRATABLE" = false ]; then
 fi
 
 # check root
-if [ "$(id -u)" != "0" ]; then
-    echo "This script must be run as root."
-    exit 1
-fi
+#if [ "$(id -u)" != "0" ]; then
+#    echo "This script must be run as root."
+#    exit 1
+#fi
 
 echo "Welcome to the Fedora to Ultramarine Linux migration script!"
 echo "This script will migrate your Fedora system to Ultramarine Linux."
