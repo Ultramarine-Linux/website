@@ -58,7 +58,7 @@ echo
 echo "Updating system..."
 # Make all commands visible
 set -x
-dnf update -yq
+dnf update -y
 
 echo
 echo "Downloading and installing required packages..."
