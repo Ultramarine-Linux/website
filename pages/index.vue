@@ -80,7 +80,8 @@
             <!-- code block for copying command -->
             <div class="inline-flex gap-4 display:">
               <div class="p-6 text-gray-400 bg-gray-600 rounded-xl">
-                <p id="migrate-script" class="font-mono">curl https://ultramarine-linux.org/migrate.sh | sudo bash</p>
+                <!-- eslint-disable-next-line vue/no-parsing-error -->
+                <p id="migrate-script" class="font-mono" >bash <(curl -s https://ultramarine-linux.org/migrate.sh)</p>
               </div>
               <!-- add a button to copy the text next to the code block -->
               <div class="p-6 text-gray-400 bg-gray-600 cursor-pointer rounded-xl dark:text-gray-200 hover:bg-gray-500 dark:hover:text-gray-100" @click="onCopy">
