@@ -2,6 +2,10 @@
 
 # Migrate from Fedora to Ultramarine Linux script
 
+# log all output to file
+LOG=ultramarine-migrate.log
+exec > >(tee -a "$LOG") 2>&1
+
 # get distro data from /etc/os-release
 os_id=$(grep -E '^ID=' /etc/os-release | sed -e 's/ID=//g')
 # get distro version data from /etc/os-release
@@ -52,6 +56,8 @@ echo "====Beginning migration..===="
 echo
 # update system
 echo "Updating system..."
+# Make all commands visible
+set -x
 dnf update -yq
 
 echo
