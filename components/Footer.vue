@@ -1,7 +1,7 @@
 <template>
   <footer
     class="
-      flex flex-row
+      flex flex-col md:flex-row gap-4 md:gap-0
       w-full
       justify-between
       px-6
@@ -25,7 +25,7 @@
         the U.S. and elsewhere.
       </h2>
     </div>
-    <div id="color-mode-toggle" class="text-right font-semibold">
+    <div id="color-mode-toggle" class="md:text-right text-left font-semibold">
       <h2>Theme:</h2>
       <button
         class="pr-2 hover:text-blue-600 dark:hover:text-blue-200"
