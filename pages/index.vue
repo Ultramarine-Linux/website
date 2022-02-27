@@ -15,10 +15,10 @@
     <div class="flex flex-col items-center content">
       <section
         id="hero"
-        class="flex flex-col items-center px-8 mt-4  xl:mx-42 lg:mx-40 md:mx-20 2xl:py-4"
+        class="flex flex-col items-center px-8 mt-8 md:mt-6 xl:mx-42 lg:mx-40 md:mx-20 2xl:py-4"
       >
         <h1
-          class="self-start text-5xl font-semibold tracking-wide text-blue-700  md:self-center md:text-6xl dark:text-blue-200"
+          class="self-start text-5xl font-semibold tracking-wide text-blue-700 md:self-center md:text-6xl dark:text-blue-200"
         >
           Ultramarine Linux
         </h1>
@@ -26,7 +26,7 @@
           A simplified yet powerful Linux® experience for all.
         </h2>
         <div
-          class="flex flex-row self-start justify-between mt-4  buttons md:self-center"
+          id="buttons" class="flex flex-col gap-4 md:flex-row self-start justify-between mt-4 md:self-center"
         >
           <nuxt-link
             to="/download"
@@ -55,7 +55,7 @@
             class="flex flex-row items-center justify-center rounded-lg"
           >
             <button
-              class="px-4 py-2 ml-2 text-blue-300 bg-transparent border-2 border-blue-500 rounded-lg  dark:text-blue-100 dark:border-blue-400 hover:bg-blue-400 hover:text-gray-50 dark:hover:text-gray-50"
+              class="px-4 py-2 text-blue-300 bg-transparent border-2 border-blue-500 rounded-lg  dark:text-blue-100 dark:border-blue-400 hover:bg-blue-400 hover:text-gray-50 dark:hover:text-gray-50"
             >
               Installation Guide
             </button>
@@ -65,26 +65,27 @@
           <nuxt-img
             src="ultramarine.png"
             alt="Desktop Environment Screenshot"
-            class="self-center w-4/5 mt-6 bg-gray-800 rounded-md  lg:h-96 lg:w-auto"
+            class="self-center w-4/5 mt-6 bg-gray-800 rounded-md lg:h-96 lg:w-auto"
+            quality="70"
           />
           <p class="pt-1 text-center text-gray-400 dark:text-gray-500">
             Upcoming Release: Ultramarine Flagship 22.04 (Rhode Island)
           </p>
         </div>
         <!-- Migration script -->
-        <p class="p-4 text-xl">
-          You can also migrate from an existing Fedora installation!
-        </p>
-        <div class="p-4">
-          <div class="hidden md:flex md:flex-col md:justify-center">
+        <div id="migration" class="hidden md:flex md:flex-col md:justify-center mt-6">
+          <p class="pt- pb-2 text-xl text-center">
+            You can also migrate from an existing Fedora installation!
+          </p>
+          <div class="p-2">
             <!-- code block for copying command -->
-            <div class="inline-flex gap-4 display:">
-              <div class="p-6 text-gray-400 bg-gray-600 rounded-xl">
+            <div class="inline-flex items-center bg-gray-600 rounded-xl">
+              <div class="p-6 text-gray-400 bg-gray-700 rounded-xl">
                 <!-- eslint-disable-next-line vue/no-parsing-error -->
                 <p id="migrate-script" class="font-mono" >bash <(curl -s https://ultramarine-linux.org/migrate.sh)</p>
               </div>
               <!-- add a button to copy the text next to the code block -->
-              <div class="p-6 text-gray-400 bg-gray-600 cursor-pointer rounded-xl dark:text-gray-200 hover:bg-gray-500 dark:hover:text-gray-100" @click="onCopy">
+              <div class="relative px-3 py-4 mx-1 text-gray-400 bg-gray-600 cursor-pointer rounded-xl dark:text-gray-200 hover:bg-gray-500 dark:hover:text-gray-100" @click="onCopy">
                 <button type="button" class="copy-button fa fa-copy">
                   <span class="hidden">Copy</span>
                 </button>
@@ -95,15 +96,15 @@
       </section>
       <section
         id="about"
-        class="flex flex-col items-center w-full px-8 py-8 mt-12 bg-gray-200  dark:bg-gray-800 xl:mx-42 lg:mx-40 md:mx-20"
+        class="flex flex-col items-start md:items-center text-left w-full px-8 py-8 mt-8 mx-auto bg-gray-200 dark:bg-gray-800 xl:mx-42 lg:mx-40 md:mx-20"
       >
         <h1
-          class="pt-2 mx-6 text-3xl font-semibold tracking-wide text-blue-500  md:text-4xl dark:text-blue-200"
+          class="pt-2 text-3xl font-semibold tracking-wide text-blue-500  md:text-4xl dark:text-blue-200"
         >
           Why Ultramarine?
         </h1>
         <p
-          class="max-w-2xl mx-4 mt-2 mb-4 text-lg text-justify  lg:max-w-4xl md:mx-20"
+          class="max-w-2xl mt-2 mb-4 text-lg text-left md:text-justify lg:max-w-4xl md:mx-20"
         >
           Ultramarine Linux is a Linux® distribution based on Fedora® Linux. Our
           goal is to design an experience which satisfies the beginner with the
@@ -112,45 +113,45 @@
           <!--maybe want to add a hyperlink to "wiki" to direct it to the wiki, will see if i can do it later :^)-->
         </p>
         <div
-          class="flex flex-col items-center justify-center mt-4 mb-4 features"
+          id="features" class="flex flex-col md:items-center md:justify-center mt-4 mb-4"
         >
           <div
-            class="flex flex-col items-start justify-between gap-16 pt-2  icons md:flex-row md:gap-20 text-7xl"
+            id="icons" class="flex flex-col items-start justify-between gap-20 md:gap-20 pt-2 md:flex-row text-7xl"
           >
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-start md:items-center">
               <div class="mb-2 text-blue-600 fab fa-fedora dark:text-blue-50" />
               <h3 class="mb-1 text-xl font-semibold tracking-wide">
                 Based on Fedora®
               </h3>
-              <p class="max-w-sm text-lg text-justify">
+              <p class="max-w-sm text-lg text-left md:text-justify">
                 As a Fedora® Remix, Ultramarine provides you with all advantages
                 of Fedora, but with the freedom of choice and our tweaks to make
                 your experience even better.
               </p>
             </div>
 
-            <div class="flex flex-col items-center justify-center">
+            <div class="flex flex-col items-start md:items-center">
               <div
                 class="mb-2 text-blue-600 fas fa-lock-open dark:text-blue-50"
               />
               <h3 class="mb-1 text-xl font-semibold tracking-wide">
                 Open Source
               </h3>
-              <p class="max-w-sm text-lg text-justify">
+              <p class="max-w-sm text-lg text-left md:text-justify">
                 Just like any other good Linux® distributions, we are free and
                 open source, so you can always take a look under the hood and
                 see what's going on behind the curtains.
               </p>
             </div>
 
-            <div class="flex flex-col items-center justify-center">
+            <div class="flex flex-col items-start md:items-center">
               <div
                 class="mb-2 text-blue-600 far fa-check-circle dark:text-blue-50"
               />
               <h3 class="mb-1 text-xl font-semibold tracking-wide">
                 Sane Defaults
               </h3>
-              <p class="max-w-sm text-lg text-justify">
+              <p class="max-w-sm text-lg text-left md:text-justify">
                 Fedora® Linux is great, but it is even better with our included
                 defaults. From a preinstalled NVIDIA driver to more software
                 repositories like RPM Fusion, we have them all.
@@ -175,10 +176,11 @@
             <h2 class="text-center">tensordock.com</h2>
           </a>
           <a href="https://webhorizon.in" class="object-scale">
-            <img
+            <nuxt-img
               src="webhorizon.png"
               alt="WebHorizon"
               class="w-72 h-auto rounded-md"
+              quality="50"
             />
             <h2 class="text-center">webhorizon.in</h2>
           </a>

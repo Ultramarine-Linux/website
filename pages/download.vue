@@ -23,6 +23,7 @@
               src="ultramarine.png"
               alt="Ultramarine Flagship Screenshot"
               class="h-auto pb-4 rounded-sm w-96"
+              quality="40"
             />
             <a
               href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/Flagship/x86_64/iso/"
@@ -48,6 +49,7 @@
               src="cutefish.png"
               alt="Ultramarine Cutefish Screenshot"
               class="h-auto pb-4 rounded-sm w-96"
+              quality="40"
             />
             <a
               href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/Cutefish/x86_64/iso/"
@@ -73,6 +75,7 @@
               src="GNOME.png"
               alt="Ultramarine GNOME Screenshot"
               class="h-auto pb-4 rounded-sm w-96"
+              quality="40"
             />
             <a
               href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/GNOME/x86_64/iso/"
@@ -96,6 +99,7 @@
               src="pantheon.png"
               alt="Ultramarine Pantheon Screenshot"
               class="h-auto pb-4 rounded-sm w-96"
+              quality="40"
             />
             <a
               href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/Pantheon/x86_64/iso/"
