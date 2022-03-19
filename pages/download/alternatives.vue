@@ -120,10 +120,8 @@
 
         </div>
       </div>
-      <br>
-      <br>
-      <br>
-      <h2 class="text-3xl">Torrents</h2>
+
+      <h2 class="text-3xl mt-20">Torrents</h2>
       <h2 class="pt-1 text-gray-400">You can also download Ultramarine Builds using Torrent clients from FOSS Torrents which are available
           <a class="text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
             href="https://fosstorrents.com/distributions/ultramarine-linux/">

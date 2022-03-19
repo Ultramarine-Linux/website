@@ -120,11 +120,11 @@
 
         </div>
       </div>
-      <br>
-      <br>
-      <br>
-      <h2 class="text-3xl">Torrents</h2>
-      <h2 class="pt-1 text-gray-400">You can also download Ultramarine Builds using Torrent clients from FOSS Torrents which are available 
+
+      <a href="/download/alternatives" class="pt-1 text-gray-400 mt-6">Looking for more downloads? You can find alternative downloads <span class="text-gray-100">here</span>.</a>
+
+      <h2 class="text-3xl mt-20">Torrents</h2>
+      <h2 class="pt-1 text-gray-400">You can also download Ultramarine Builds using Torrent clients from FOSS Torrents which are available
           <a class="text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
             href="https://fosstorrents.com/distributions/ultramarine-linux/">
               here
@@ -137,7 +137,7 @@
       @set-color-mode="setColorMode"
     />
   </div>
-  
+
 </template>
 
 <script>
