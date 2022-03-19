@@ -3,15 +3,6 @@
     class="min-h-screen text-gray-900 bg-gray-100  dark:text-gray-200 dark:bg-gray-900"
   >
     <Navbar />
-
-    <!-- Add a red banner here to show that the download links are down -->
-    <!-- <div class="px-4 py-4 font-bold text-white bg-red-500 dark:bg-red-700">
-      <p style="text-align: center">
-        Download links and the Ultramarine Linux repositories are up for the time being,
-        unstable download speed is expected. We are very sorry for the inconvenience.
-      </p>
-    </div> -->
-
     <div class="flex flex-col items-center content">
       <section
         id="hero"

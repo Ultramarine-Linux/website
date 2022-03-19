@@ -3,14 +3,6 @@
     class="min-h-screen text-gray-900 bg-gray-100 dark:text-gray-200 dark:bg-gray-900"
   >
     <Navbar />
-    <!-- Add a red banner here to show that the download links are down -->
-    <!-- <div class="px-4 py-4 font-bold text-white bg-red-500 dark:bg-red-700">
-      <p style="text-align: center">
-        Due to some major infrastructure issues, the download links and the
-        Ultramarine Linux repositories are currently out of service. We are very
-        sorry for the inconvenience.
-      </p>
-    </div> -->
     <div
       class="flex flex-col min-h-screen p-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-900 dark:text-gray-100"
     >
