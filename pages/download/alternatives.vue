@@ -8,6 +8,10 @@
     >
       <h1 class="text-4xl">Alternative Downloads</h1>
       <h2 class="pt-1 text-gray-400">Here you can find some alternative downloads that are not considered as current main releases of Ultramarine.</h2>
+
+      <br>
+      <h2 class="text-2xl">Ultramarine Linux 22.04 Beta</h2>
+
       <div class="">
         <div class="grid grid-flow-row-dense grid-cols-1 gap-10 pt-12 md:grid-cols-2 md:flex-row">
           <div class="flex flex-col items-center">
@@ -18,7 +22,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/Flagship/x86_64/iso/"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Flagship/x86_64/iso/"
               class="flex flex-row rounded-lg"
             >
               <button
@@ -44,7 +48,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/Cutefish/x86_64/iso/"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Cutefish/x86_64/iso/"
               class="flex flex-row rounded-lg"
             >
               <button
@@ -70,7 +74,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/GNOME/x86_64/iso/"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/GNOME/x86_64/iso/"
               class="flex flex-row rounded-lg"
             >
               <button
@@ -94,7 +98,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/Pantheon/x86_64/iso/"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Pantheon/x86_64/iso/"
               class="flex flex-row rounded-lg"
             >
               <button
@@ -106,6 +110,30 @@
             <div class="pt-4">
               <p class="max-w-md text-lg text-justify">
                 The default desktop of elementary OS focused on elegance and visual appeal.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <nuxt-img
+              src="ultramarine.png"
+              alt="Ultramarine Flagship Screenshot"
+              class="h-auto pb-4 rounded-sm w-96"
+              quality="40"
+            />
+            <a
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Lapis/x86_64/iso/"
+              class="flex flex-row rounded-lg"
+            >
+              <button
+                class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-blue-500 rounded-lg dark:text-gray-50 hover:bg-blue-600 hover:text-gray-50"
+              >
+                Download Ultramarine Lapis
+              </button>
+            </a>
+            <div class="pt-4">
+              <p class="max-w-md text-lg text-justify">
+                The Flagship Edition, but immutable. Powered by OSTree. (In alpha, Install at your own risk)
+                <!-- maybe will add a wiki reference to what budgie is here, alongside a read further here, redirecting to wiki-->
               </p>
             </div>
           </div>
