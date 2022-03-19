@@ -14,7 +14,7 @@
   >
     <div class="flex flex-col">
       <h1 class="font-semibold tracking-wide">
-        Copyright © 2021 Ultramarine Linux Team
+        Copyright © 2021 - 2022 Ultramarine Linux Team
       </h1>
       <h2>
         Linux® is the registered trademark of Linus Torvalds in the U.S. and
