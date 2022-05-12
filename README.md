@@ -1,4 +1,4 @@
-# ultramarine-website
+# Ultramarine Linux Website
 
 ## Build Setup
 
