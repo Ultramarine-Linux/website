@@ -162,7 +162,7 @@
             <img
               src="https://tensordock.com/assets/img/brand.png"
               alt="Tensordock Logo"
-              class="w-72 h-auto rounded-md"
+              class="w-72 h-auto rounded-md bg-gray-100 p-1"
             />
             <h2 class="text-center">tensordock.com</h2>
           </a>
@@ -170,7 +170,7 @@
             <nuxt-img
               src="webhorizon.png"
               alt="WebHorizon"
-              class="w-72 h-auto rounded-md"
+              class="w-72 h-auto rounded-md bg-gray-800 p-1"
               quality="50"
             />
             <h2 class="text-center">webhorizon.in</h2>
