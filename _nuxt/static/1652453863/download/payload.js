@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/download", {data:[{_img:{"/_ipx/q_40/ultramarine.png":"\u002F_nuxt\u002Fimage\u002F9f34cb.png","/_ipx/q_40/cutefish.png":"\u002F_nuxt\u002Fimage\u002Fed8f25.png","/_ipx/q_40/GNOME.png":"\u002F_nuxt\u002Fimage\u002F87afc5.png","/_ipx/q_40/pantheon.png":"\u002F_nuxt\u002Fimage\u002Ff81065.png"}}],fetch:{},mutations:[]});

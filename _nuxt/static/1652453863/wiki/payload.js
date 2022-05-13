@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/wiki", {data:[{_img:{}}],fetch:{},mutations:[]});
