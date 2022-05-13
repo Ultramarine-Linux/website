@@ -9,7 +9,7 @@
         class="flex flex-col items-center px-8 mt-8 md:mt-6 xl:mx-42 lg:mx-40 md:mx-20 2xl:py-4"
       >
         <h1
-          class="self-start text-5xl font-semibold tracking-wide text-blue-700 md:self-center md:text-6xl dark:text-blue-200"
+          class="self-start text-5xl font-montserrat-bold tracking-wide text-blue-700 md:self-center md:text-6xl dark:text-blue-200"
         >
           Ultramarine Linux
         </h1>
