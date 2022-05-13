@@ -7,7 +7,7 @@
       class="flex flex-col min-h-screen p-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-900 dark:text-gray-100"
     >
       <h1 class="text-4xl">Pick your flavor of Ultramarine</h1>
-      <h2 class="pt-1 text-gray-400">Latest Release: 21.12 (Phing Kan)</h2>
+      <h2 class="pt-1 text-gray-400">Latest Release: 22.04 (Rhode Island)</h2>
       <div class="">
         <div class="grid grid-flow-row-dense grid-cols-1 gap-10 pt-12 md:grid-cols-2 md:flex-row">
           <div class="flex flex-col items-center">
@@ -18,7 +18,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/Flagship/x86_64/iso/"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Flagship/x86_64/iso/Ultramarine-Flagship-Live-x86_64-36-1.0.iso"
               class="flex flex-row rounded-lg"
             >
               <button
@@ -44,7 +44,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/Cutefish/x86_64/iso/"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Cutefish/x86_64/iso/Ultramarine-Cutefish-Live-x86_64-36-1.0.iso"
               class="flex flex-row rounded-lg"
             >
               <button
@@ -70,7 +70,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/GNOME/x86_64/iso/"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/GNOME/x86_64/iso/Ultramarine-GNOME-Live-x86_64-36-1.0.iso"
               class="flex flex-row rounded-lg"
             >
               <button
@@ -94,7 +94,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/35/Pantheon/x86_64/iso/"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Pantheon/x86_64/iso/Ultramarine-Pantheon-Live-x86_64-36-1.0.iso"
               class="flex flex-row rounded-lg"
             >
               <button
@@ -112,8 +112,6 @@
 
         </div>
       </div>
-
-      <a href="/download/alternatives" class="pt-1 text-gray-400 mt-6">Looking for more downloads? You can find alternative downloads <span class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200">here</span>.</a>
 
       <h2 class="text-3xl mt-20">Torrents</h2>
       <h2 class="pt-1 text-gray-400">You can also download Ultramarine Builds using Torrent clients from FOSS Torrents which are available

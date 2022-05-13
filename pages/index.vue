@@ -60,7 +60,7 @@
             quality="70"
           />
           <p class="pt-1 text-center text-gray-400 dark:text-gray-500">
-            Upcoming Release: Ultramarine Flagship 22.04 (Rhode Island)
+            Current Release: Ultramarine Flagship 22.04 (Rhode Island)
           </p>
         </div>
         <!-- Migration script -->
