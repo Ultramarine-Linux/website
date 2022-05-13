@@ -1,5 +1,7 @@
 # Ultramarine Linux Website
 
+Currently run through GitLab CI, trying to migrate to GH Pages
+
 ## Build Setup
 
 ```bash
