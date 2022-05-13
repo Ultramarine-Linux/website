@@ -1,4 +1,5 @@
 # Ultramarine Linux Website
+[![Build and deploy to GitHub Pages](https://github.com/Ultramarine-Linux/website/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ultramarine-Linux/website/actions/workflows/deploy.yml)
 
 Automatically built using GitHub Actions, deployed to GH Pages and ran through Cloudflare
 
