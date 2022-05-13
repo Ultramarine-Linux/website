@@ -1,6 +1,6 @@
 # Ultramarine Linux Website
 
-Currently run through GitLab CI, trying to migrate to GH Pages
+Automatically built using GitHub Actions, deployed to GH Pages and ran through Cloudflare
 
 ## Build Setup
 
