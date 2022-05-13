@@ -54,7 +54,7 @@
         </div>
         <div class="hidden screenshot md:flex md:flex-col md:justify-center">
           <nuxt-img
-            :src="require(`~/static/ultramarine.png`)"
+            src="ultramarine.png"
             alt="Desktop Environment Screenshot"
             class="self-center w-4/5 mt-6 bg-gray-800 rounded-md lg:h-96 lg:w-auto"
             quality="70"
