@@ -2,6 +2,8 @@ name: Build and deploy to GitHub Pages
 
 on: [push, pull_request]
 
+permissions: read-all|write-all
+
 jobs:
   cd:
     runs-on: ${{ matrix.os }}
