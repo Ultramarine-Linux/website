@@ -194,16 +194,19 @@
         </p>
         <div class="flex flex-row gap-12 text-5xl icons">
           <a
-            class="text-gray-600  fab fa-twitter dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-200"
+            class="text-gray-600 fab fa-twitter dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-200"
             href="https://twitter.com/UltramarineProj"
+            aria-label="Ultramarine Twitter Link"
           />
           <a
-            class="text-gray-600  fab fa-discord dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-200"
+            class="text-gray-600 fab fa-discord dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-200"
             href="https://discord.gg/bUuQasHdrF"
+            aria-label="Ultramarine Discord Server Link"
           />
           <a
-            class="text-gray-600  fab fa-gitlab dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-200"
-            href="https://gitlab.ultramarine-linux.org"
+            class="text-gray-600 fab fa-github dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-200"
+            href="https://github.com/ultramarine-linux"
+            aria-label="Ultramarine GitHub Organization Link"
           />
         </div>
       </section>
