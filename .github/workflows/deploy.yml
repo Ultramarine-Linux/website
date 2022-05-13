@@ -2,7 +2,7 @@ name: Build and deploy to GitHub Pages
 
 on: [push, pull_request]
 
-permissions: read-all|write-all
+permissions: write-all
 
 jobs:
   cd:
