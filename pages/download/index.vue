@@ -18,7 +18,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Flagship/x86_64/iso/Ultramarine-Flagship-Live-x86_64-36-1.0.iso"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Flagship/x86_64/iso/Ultramarine-Flagship-Live-x86_64-36-1.1.iso"
               class="flex flex-row rounded-lg"
             >
               <button
@@ -44,7 +44,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Cutefish/x86_64/iso/Ultramarine-Cutefish-Live-x86_64-36-1.0.iso"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Cutefish/x86_64/iso/Ultramarine-Cutefish-Live-x86_64-36-1.1.iso"
               class="flex flex-row rounded-lg"
             >
               <button
@@ -70,7 +70,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/GNOME/x86_64/iso/Ultramarine-GNOME-Live-x86_64-36-1.0.iso"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/GNOME/x86_64/iso/Ultramarine-GNOME-Live-x86_64-36-1.1.iso"
               class="flex flex-row rounded-lg"
             >
               <button
@@ -94,7 +94,7 @@
               quality="40"
             />
             <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Pantheon/x86_64/iso/Ultramarine-Pantheon-Live-x86_64-36-1.0.iso"
+              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Pantheon/x86_64/iso/Ultramarine-Pantheon-Live-x86_64-36-1.1.iso"
               class="flex flex-row rounded-lg"
             >
               <button
