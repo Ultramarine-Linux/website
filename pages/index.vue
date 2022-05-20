@@ -14,7 +14,7 @@
           Ultramarine Linux
         </h1>
         <h2 class="self-start pl-1 text-xl md:self-center md:pl-0">
-          A simplified yet powerful Linux® experience for all.
+          Simple, yet powerful.
         </h2>
         <div
           id="buttons" class="flex flex-col gap-4 md:flex-row self-start justify-between mt-4 md:self-center"
@@ -60,7 +60,7 @@
             quality="70"
           />
           <p class="pt-1 text-center text-gray-400 dark:text-gray-500">
-            Current Release: Ultramarine Flagship 22.04 (Rhode Island)
+            Current Release: Ultramarine Flagship 36 (Rhode Island)
           </p>
         </div>
         <!-- Migration script -->
@@ -92,15 +92,17 @@
         <h1
           class="pt-2 text-3xl font-semibold tracking-wide text-blue-500  md:text-4xl dark:text-blue-200"
         >
-          Why Ultramarine?
+          What is Ultramarine?
         </h1>
         <p
           class="max-w-2xl mt-2 mb-4 text-lg text-left md:text-justify lg:max-w-4xl md:mx-20"
         >
-          Ultramarine Linux is a Linux® distribution based on Fedora® Linux. Our
-          goal is to design an experience which satisfies the beginner with the
-          simplicity, while retaining the features a power user would demand.
-          Here's what we offer:
+          Ultramarine Linux is a Linux-based operating system designed for your own personal workstation (or battlestation).
+          It is designed to be as easy to use as possible, and stays out of your way.
+
+          Ultramarine Linux keeps up with the latest and greatest software in the open-source community, while trying to be stable and secure.
+
+          Ultramarine is for everyone, from the beginner to the tech enthusiast, and even Windows dropouts!
           <!--maybe want to add a hyperlink to "wiki" to direct it to the wiki, will see if i can do it later :^)-->
         </p>
         <div
@@ -115,9 +117,8 @@
                 Based on Fedora®
               </h3>
               <p class="max-w-sm text-lg text-left md:text-justify">
-                As a Fedora® Remix, Ultramarine provides you with all advantages
-                of Fedora, but with the freedom of choice and our tweaks to make
-                your experience even better.
+                Designed to be 100% bug-for-bug compatible with Fedora, Ultramarine offers the latest and greatest in open-source software,
+                yet maintaining rock-solid stability. Making sure things don't break is our top priority.
               </p>
             </div>
 
@@ -126,12 +127,12 @@
                 class="mb-2 text-blue-600 fas fa-lock-open dark:text-blue-50"
               />
               <h3 class="mb-1 text-xl font-semibold tracking-wide">
-                Open Source
+                Developer Friendly
               </h3>
               <p class="max-w-sm text-lg text-left md:text-justify">
-                Just like any other good Linux® distributions, we are free and
-                open source, so you can always take a look under the hood and
-                see what's going on behind the curtains.
+                Ultramarine provides a developer-friendly (and friendly for the average user) tools
+                to make sure you can get the most out of your system. We're making it as easy and accessible as possible for everyone to create and package their software for
+                Ultramarine (and in extension, Fedora!).
               </p>
             </div>
 
@@ -143,9 +144,8 @@
                 Sane Defaults
               </h3>
               <p class="max-w-sm text-lg text-left md:text-justify">
-                Fedora® Linux is great, but it is even better with our included
-                defaults. From a preinstalled NVIDIA driver to more software
-                repositories like RPM Fusion, we have them all.
+                Ultramarine applies common tweaks and settings to make sure your out-of-the-box experience is as smooth as it can be.
+                We've tried to make sure that you'll be able to get started as quickly as possible.
               </p>
             </div>
           </div>
