@@ -42,7 +42,7 @@
             </button>
           </nuxt-link>
           <a
-            href="https://wiki.ultramarine-linux.org/en/guide"
+            href="https://wiki.ultramarine-linux.org/installation/getting-started"
             class="flex flex-row items-center justify-center rounded-lg"
           >
             <button
