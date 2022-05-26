@@ -1,6 +1,8 @@
 name: Build and deploy to GitHub Pages
 
-on: [push, pull_request]
+on: 
+  push:
+    branches: main
 
 permissions: write-all
 
