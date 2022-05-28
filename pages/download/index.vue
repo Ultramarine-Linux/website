@@ -7,109 +7,32 @@
       class="flex flex-col min-h-screen p-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-900 dark:text-gray-100"
     >
       <h1 class="text-4xl">Pick your flavor of Ultramarine</h1>
-      <h2 class="pt-1 text-gray-400">Latest Release: 22.04 (Rhode Island)</h2>
+      <h2 class="pt-1 text-gray-400">Latest Release: 36 (Rhode Island)</h2>
       <div class="">
         <div class="grid grid-flow-row-dense grid-cols-1 gap-10 pt-12 md:grid-cols-2 md:flex-row">
-          <div class="flex flex-col items-center">
-            <nuxt-img
-              src="ultramarine.png"
-              alt="Ultramarine Flagship Screenshot"
-              class="h-auto pb-4 rounded-sm w-96"
-              quality="40"
-            />
-            <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Flagship/x86_64/iso/Ultramarine-Flagship-Live-x86_64-36-1.1.iso"
-              class="flex flex-row rounded-lg"
-            >
-              <button
-                class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-blue-500 rounded-lg dark:text-gray-50 hover:bg-blue-600 hover:text-gray-50"
-              >
-                Download Flagship Edition
-              </button>
-            </a>
-            <div class="pt-4">
-              <p class="max-w-md text-lg text-justify">
-                The flagship edition with the latest and greatest software and our
-                best polish. Powered by Solus' Budgie Desktop. (Recommended)
-                <!-- maybe will add a wiki reference to what budgie is here, alongside a read further here, redirecting to wiki-->
-              </p>
-            </div>
-          </div>
+          <DownloadSection
+            editionName="Flagship"
+            screenshot="ultramarine.png"
+            description="The flagship edition with the latest and greatest software and ourbest polish. Powered by Solus' Budgie Desktop. (Recommended)"
+          />
 
-          <div class="flex flex-col items-center">
-            <nuxt-img
-              src="GNOME.png"
-              alt="Ultramarine GNOME Screenshot"
-              class="h-auto pb-4 rounded-sm w-96"
-              quality="40"
-            />
-            <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/GNOME/x86_64/iso/Ultramarine-GNOME-Live-x86_64-36-1.1.iso"
-              class="flex flex-row rounded-lg"
-            >
-              <button
-                class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-blue-500 rounded-lg dark:text-gray-50 hover:bg-blue-600 hover:text-gray-50"
-              >
-                Download GNOME Edition
-              </button>
-            </a>
-            <div class="pt-4">
-              <p class="max-w-md text-lg text-justify">
-                GNOME is a simple, elegant, and intuitive desktop environment with a focus on productivity.
-              </p>
-            </div>
-          </div>
+          <DownloadSection
+            editionName="GNOME"
+            screenshot="GNOME.png"
+            description="GNOME is a simple, elegant, and intuitive desktop environment with a focus on productivity."
+          />
 
-          <div class="flex flex-col items-center">
-            <nuxt-img
-              src="pantheon.png"
-              alt="Ultramarine Pantheon Screenshot"
-              class="h-auto pb-4 rounded-sm w-96"
-              quality="40"
-            />
-            <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Pantheon/x86_64/iso/Ultramarine-Pantheon-Live-x86_64-36-1.1.iso"
-              class="flex flex-row rounded-lg"
-            >
-              <button
-                class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-blue-500 rounded-lg dark:text-gray-50 hover:bg-blue-600 hover:text-gray-50"
-              >
-                Download Pantheon Edition
-              </button>
-            </a>
-            <div class="pt-4">
-              <p class="max-w-md text-lg text-justify">
-                The default desktop of elementary OS focused on elegance and visual appeal.
-              </p>
-            </div>
-          </div>
+          <DownloadSection
+            editionName="Pantheon"
+            screenshot="pantheon.png"
+            description="The default desktop of elementary OS focused on elegance and visual appeal."
+          />
 
-
-          <div class="flex flex-col items-center">
-            <nuxt-img
-              src="cutefish.png"
-              alt="Ultramarine Cutefish Screenshot"
-              class="h-auto pb-4 rounded-sm w-96"
-              quality="40"
-            />
-            <a
-              href="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Cutefish/x86_64/iso/Ultramarine-Cutefish-Live-x86_64-36-1.1.iso"
-              class="flex flex-row rounded-lg"
-            >
-              <button
-                class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-blue-500 rounded-lg dark:text-gray-50 hover:bg-blue-600 hover:text-gray-50"
-              >
-                Download Cutefish Edition
-              </button>
-            </a>
-            <div class="pt-4">
-              <p class="max-w-md text-lg text-justify">
-                Simplicity, beauty, and practicality, with a familiar look. (In
-                early development, only recommended for more advanced users)
-                <!-- maybe will add a wiki reference to what cutefish is here, alongside a read further here, redirecting to wiki-->
-              </p>
-            </div>
-          </div>
+          <DownloadSection
+            editionName="Cutefish"
+            screenshot="cutefish.png"
+            description="Simplicity, beauty, and practicality, with a familiar look. (In early development, only recommended for more advanced users)"
+          />
         </div>
       </div>
 
