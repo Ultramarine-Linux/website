@@ -36,12 +36,14 @@ const lapisBaseLink = 'https://lapis.ultramarine-linux.org/pub/ultramarine'
 
 export default {
   name: 'DownloadSection',
-  props: ['editionName', 'screenshot', 'description'],
+  props: ['editionName', 'screenshot', 'description', 'isoLink'],
   computed: {
     baseLink() {
       return `${lapisBaseLink}/${currentMajorVersion}/${this.editionName}/x86_64/iso`
     },
     downloadLink() {
+      if (this.isoLink) return this.isoLink
+
       return `${this.baseLink}/Ultramarine-${this.editionName}-Live-x86_64-${currentMajorVersion}-${currentMinorVersion}.iso`
     },
 
