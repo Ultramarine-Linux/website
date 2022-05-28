@@ -33,6 +33,12 @@
             screenshot="cutefish.png"
             description="Simplicity, beauty, and practicality, with a familiar look. (In early development, only recommended for more advanced users)"
           />
+
+          <DownloadSection
+            editionName="Lapis"
+            screenshot="ultramarine.png"
+            description="The Flagship Edition, but immutable. Powered by OSTree."
+          />
         </div>
       </div>
 
