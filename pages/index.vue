@@ -42,7 +42,7 @@
       <section id="about" class="flex flex-col items-center mb-12">
         <h2 class="font-semibold tracking-tight text-4xl mb-8">What is Ultramarine?</h2>
         <div class="flex flex-row gap-8 items-center">
-          <div class="flex flex-col items-start bg-gray-800 p-4 rounded-xl h-80">
+          <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-80 shadow-lg">
             <div class="mb-2 text-blue-600 fab fa-fedora dark:text-blue-50 text-6xl" />
             <h3 class="mb-1 text-xl font-semibold tracking-wide">
               Based on Fedora®
@@ -52,7 +52,7 @@
               yet maintaining rock-solid stability. Making sure things don't break is our top priority.
             </p>
           </div>
-          <div class="flex flex-col items-start bg-gray-800 p-4 rounded-xl h-80">
+          <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-80 shadow-lg">
             <div class="mb-2 text-blue-600 fas fa-lock-open dark:text-blue-50 text-5xl p-1 pb-1.5" />
             <h3 class="mb-1 text-xl font-semibold tracking-wide">
               Developer Friendly
@@ -61,7 +61,7 @@
               Ultramarine provides a developer-friendly (and friendly for the average user) tools to make sure you can get the most out of your system. We're making it as easy and accessible as possible for everyone to create and package their software for Ultramarine (and in extension, Fedora!).
             </p>
           </div>
-          <div class="flex flex-col items-start bg-gray-800 p-4 rounded-xl h-80">
+          <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-80 shadow-lg">
             <div class="mb-2 text-blue-600 far fa-check-circle dark:text-blue-50 text-5xl p-1 pb-1.5" />
             <h3 class="mb-1 text-xl font-semibold tracking-wide">
               Based on Fedora®
@@ -72,7 +72,7 @@
             </p>
           </div>
         </div>
-        <div class="text-center text-lg max-w-4xl bg-gray-800 rounded-lg p-4 mt-8">
+        <div class="text-center text-lg max-w-4xl bg-gray-200 dark:bg-gray-800 rounded-lg p-4 mt-8 shadow-lg">
           Ultramarine Linux is a Linux-based operating system designed for your own personal workstation (or battlestation). It is designed to be as easy to use as possible, and stays out of your way. Ultramarine Linux keeps up with the latest and greatest software in the open-source community, while trying to be stable and secure. Ultramarine is for everyone, from the beginner to the tech enthusiast, and even Windows dropouts!
         </div>
       </section>
