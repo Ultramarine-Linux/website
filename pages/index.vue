@@ -6,8 +6,8 @@
           <div class="text-bg-container">
             <h1 class="hero-text font-bold text-4xl sm:text-6xl text-black dark:text-white leading-normal md:leading-relaxed">The OS that just works.</h1>
           </div>
-          <span class="text-xl max-w-xs">Ultramarine Linux is a Fedora-based Linux distribution designed to stay out of your way and be easy to use. All editions come with several tweaks preapplied to make initial setup and daily usage seamless.</span>
-          <div id="button-row" class="flex flex-row gap-4 mt-8">
+          <span class="text-lg md:text-xl max-w-xs">Ultramarine Linux is a Fedora-based Linux distribution designed to stay out of your way and be easy to use. All editions come with several tweaks preapplied to make initial setup and daily usage seamless.</span>
+          <div id="button-row" class="flex flex-row gap-4 mt-2 md:mt-8">
             <a href="/download">
               <PrimaryButton class="text-xl">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -22,14 +22,14 @@
               </SecondaryButton>
             </a>
           </div>
-          <a href="#migrate" class="text-gray-700 dark:text-gray-400 hover:underline">Already using Fedora? Click here for a migration script.</a>
+          <a href="#migrate" class="text-gray-700 dark:text-gray-400 hover:underline md:block hidden">Already using Fedora? Click here for a migration script.</a>
         </div>
         <div id="hero-right" class="lg:block hidden">
           <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" class="rounded-md dark:block hidden"></nuxt-img>
           <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" class="rounded-md dark:hidden block"></nuxt-img>
         </div>
       </section>
-      <div id="scroll-animation" class="flex flex-col w-full pb-12 md:pt-24 items-center justify-center">
+      <div id="scroll-animation" class="lg:flex flex-col w-full pb-12 md:pt-24 items-center justify-center hidden">
         <div class="mouse"></div>
         <span class="tracking-wider text-gray-500 pb-4">scroll to learn more</span>
       </div>
@@ -39,7 +39,7 @@
        and trademarks + oss licenses -->
       <!-- Reference license page in footer instead of having long paragraphs -->
       <!-- Resize navbar after scroll: https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp -->
-      <section id="migrate" class="flex flex-col items-center pb-12">
+      <section id="migrate" class="md:flex flex-col items-center pb-12 hidden">
         <h2 class="text-2xl font-semibold">Already using Fedora? You can use our migration script!</h2>
         <div id="migration" class="hidden md:flex md:flex-col md:justify-center mt-2">
           <div class="p-2">
