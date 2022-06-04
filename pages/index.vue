@@ -32,6 +32,9 @@
         <div class="mouse"></div>
         <span class="tracking-wider text-gray-500 pb-4">scroll to learn more</span>
       </div>
+      <!-- WIP: Add more sections -->
+      <!-- Add new license page with credits to laptop mockup, unsplash text gradient image and trademarks + oss licenses -->
+      <!-- Reference license page in footer instead of having long paragraphs -->
     </div>
   </div>
 </template>
