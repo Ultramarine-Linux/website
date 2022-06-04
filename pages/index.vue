@@ -41,7 +41,7 @@
       <!-- Resize navbar after scroll: https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp -->
       <section id="about" class="flex flex-col items-center mb-12">
         <h2 class="font-semibold tracking-tight text-4xl mb-8">What is Ultramarine?</h2>
-        <div class="flex flex-row gap-8 items-center">
+        <div class="flex md:flex-row flex-col gap-8 items-center">
           <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-80 shadow-lg">
             <div class="mb-2 text-blue-600 fab fa-fedora dark:text-blue-50 text-6xl" />
             <h3 class="mb-1 text-xl font-semibold tracking-wide">
@@ -95,6 +95,17 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="flex flex-col items-center">
+        <h2 class="text-4xl font-semibold mb-2">Reviews</h2>
+        <h3 class="text-lg">The most notable reviews about Ultramarine Linux</h3>
+        <div class="flex flex-col md:flex-row gap-8">
+          <a href="https://www.youtube.com/watch?v=YD77rBBkYck">Tylers Tech</a>
+          <a href="https://www.youtube.com/watch?v=y_vgOH_UQvg">eBuzz Central</a>
+          <a href="https://www.youtube.com/watch?v=-L6yuasSD1o">The Linux Cast</a>
+          <a href="https://distrowatch.com/dwres.php?resource=ratings&distro=ultramarine">DistroWatch</a>
         </div>
       </section>
     </div>
