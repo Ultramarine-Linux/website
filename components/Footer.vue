@@ -6,6 +6,7 @@
       justify-between
       mx-auto
       px-8
+      pb-2
       text-gray-600
       dark:text-gray-300
       bg-gray-100
