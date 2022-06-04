@@ -22,7 +22,7 @@
               </SecondaryButton>
             </a>
           </div>
-          <a href="#migrate" class="text-gray-400">Already using Fedora? Click <span class="hover:underline text-blue-100">here</span> for a migration script.</a>
+          <a href="#migrate" class="text-gray-700 dark:text-gray-400 hover:underline">Already using Fedora? Click here for a migration script.</a>
         </div>
         <div id="hero-right" class="lg:block hidden">
           <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" class="rounded-md dark:block hidden"></nuxt-img>
