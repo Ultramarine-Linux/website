@@ -4,7 +4,7 @@
       <section id="hero" class="mt-8 mb-4 flex flex-row justify-between items-center">
         <div id="hero-left" class="max-w-2xl mr-8">
           <div class="text-bg-container">
-            <h1 class="hero-text font-bold text-4xl sm:text-6xl text-black dark:text-white leading-normal md:leading-relaxed">The OS that just works.</h1>
+            <h1 class="hero-text font-bold text-4xl sm:text-6xl text-black dark:text-white leading-normal md:leading-relaxed">It just works.</h1>
           </div>
           <span class="text-lg md:text-xl max-w-xs">Ultramarine Linux is a Fedora-based Linux distribution designed to stay out of your way and be easy to use. All editions come with several tweaks preapplied to make initial setup and daily usage seamless.</span>
           <div id="button-row" class="flex flex-row gap-4 mt-2 md:mt-8">
