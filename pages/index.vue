@@ -25,8 +25,8 @@
           <a href="#migrate" class="text-gray-700 dark:text-gray-400 hover:underline md:block hidden">Already using Fedora? Click here for a migration script.</a>
         </div>
         <div id="hero-right" class="lg:block hidden">
-          <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" class="rounded-md dark:block hidden"></nuxt-img>
-          <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" class="rounded-md dark:hidden block"></nuxt-img>
+          <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" alt="Laptop preview with screnshot of Desktop" class="rounded-md dark:block hidden"></nuxt-img>
+          <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" alt="Laptop preview with screnshot of Desktop" class="rounded-md dark:hidden block"></nuxt-img>
         </div>
       </section>
       <div id="scroll-animation" class="lg:flex flex-col w-full pb-12 items-center justify-center hidden">
