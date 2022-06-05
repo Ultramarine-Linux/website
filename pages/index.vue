@@ -39,7 +39,7 @@
        and trademarks + oss licenses -->
       <!-- Reference license page in footer instead of having long paragraphs -->
       <!-- Resize navbar after scroll: https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp -->
-      <section id="about" class="flex flex-col items-center mb-12">
+      <section id="about" class="flex flex-col items-center mb-8">
         <h2 class="font-semibold tracking-tight text-4xl mb-8">What is Ultramarine?</h2>
         <div class="flex md:flex-row flex-col gap-8 items-center">
           <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-80 shadow-lg">
@@ -64,11 +64,10 @@
           <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-80 shadow-lg">
             <div class="mb-2 text-blue-600 far fa-check-circle dark:text-blue-50 text-5xl p-1 pb-1.5" />
             <h3 class="mb-1 text-xl font-semibold tracking-wide">
-              Based on Fedora®
+              Sane Defaults
             </h3>
             <p class="max-w-sm text-lg text-left">
-              Designed to be 100% bug-for-bug compatible with Fedora, Ultramarine offers the latest and greatest in open-source software,
-              yet maintaining rock-solid stability. Making sure things don't break is our top priority.
+              Ultramarine applies common tweaks and settings to make sure your out-of-the-box experience is as smooth as it can be. We've tried to make sure that you'll be able to get started as quickly as possible.
             </p>
           </div>
         </div>
@@ -77,18 +76,27 @@
         </div>
       </section>
 
-      <section id="reviews" class="flex flex-col items-center mb-8">
+      <section id="reviews" class="flex flex-col items-center mb-12">
         <h2 class="text-4xl font-semibold">Reviews</h2>
-        <h3 class="text-lg">The most notable reviews about Ultramarine Linux</h3>
+        <h3 class="text-lg mb-4">The most notable reviews about Ultramarine Linux</h3>
         <div class="flex flex-col md:flex-row gap-8">
-          <a href="https://www.youtube.com/watch?v=YD77rBBkYck">Tylers Tech</a>
-          <a href="https://www.youtube.com/watch?v=y_vgOH_UQvg">eBuzz Central</a>
-          <a href="https://www.youtube.com/watch?v=-L6yuasSD1o">The Linux Cast</a>
-          <a href="https://distrowatch.com/weekly.php?issue=20220207#ultramarine">DistroWatch</a>
+          <div class="flex flex-col items-center gap-4 p-4 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/YD77rBBkYck" title="Tyler's Tech review" frameborder="0"></iframe>
+            <a href="https://www.youtube.com/c/TylersTechNow" class="font-medium text-xl hover:text-blue-200">Tyler's Tech</a>
+          </div>
+          <div class="flex flex-col items-center gap-4 p-4 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
+            <iframe loading="lazy" src="https://youtube.com/embed/y_vgOH_UQvg" title="eBuzz Central review" frameborder="0"></iframe>
+            <a href="https://www.youtube.com/c/eBuzzCentral" class="font-medium text-xl hover:text-blue-200">eBuzz Central</a>
+          </div>
+          <div class="flex flex-col items-center gap-4 p-4 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
+            <iframe loading="lazy" src="https://youtube.com/embed/-L6yuasSD1o" title="The Linux Cast review" frameborder="0"></iframe>
+            <a href="https://www.youtube.com/c/TheLinuxCast" class="font-medium text-xl hover:text-blue-200">The Linux Cast</a>
+          </div>
         </div>
+        <a href="https://distrowatch.com/weekly.php?issue=20220207#ultramarine" class="mt-4 p-4 hover:text-blue-300 bg-gray-200 dark:bg-gray-800 rounded-md shadow-lg">DistroWatch Article</a>
       </section>
 
-      <section id="migrate" class="md:flex flex-col items-center pb-12 hidden">
+      <section id="migrate" class="md:flex flex-col items-center mb-24 hidden">
         <h2 class="text-2xl font-semibold">Already using Fedora? You can use our migration script!</h2>
         <div id="migration" class="hidden md:flex md:flex-col md:justify-center mt-2">
           <div class="p-2">
@@ -138,6 +146,11 @@ export default {
 </script>
 
 <style>
+iframe {
+  aspect-ratio: 16/9;
+  width: 20rem;
+}
+
 .text-bg-container {
   background-image: url("@/static/texture.jpg");
 }
