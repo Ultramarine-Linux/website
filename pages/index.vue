@@ -75,15 +75,15 @@
         <h3 class="text-lg mb-4">The most notable reviews about Ultramarine Linux</h3>
         <div class="flex flex-col md:flex-row gap-8">
           <div class="flex flex-col items-center gap-4 p-4 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
-            <iframe loading="lazy" src="https://www.youtube.com/embed/YD77rBBkYck" title="Tyler's Tech review" frameborder="0"></iframe>
+            <iframe loading="lazy" src="https://www.youtube.com/embed/YD77rBBkYck" title="Tyler's Tech review" frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
             <a href="https://www.youtube.com/c/TylersTechNow" class="font-medium text-xl hover:text-blue-200">Tyler's Tech</a>
           </div>
           <div class="flex flex-col items-center gap-4 p-4 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
-            <iframe loading="lazy" src="https://youtube.com/embed/y_vgOH_UQvg" title="eBuzz Central review" frameborder="0"></iframe>
+            <iframe loading="lazy" src="https://youtube.com/embed/y_vgOH_UQvg" title="eBuzz Central review" frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
             <a href="https://www.youtube.com/c/eBuzzCentral" class="font-medium text-xl hover:text-blue-200">eBuzz Central</a>
           </div>
           <div class="flex flex-col items-center gap-4 p-4 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
-            <iframe loading="lazy" src="https://youtube.com/embed/-L6yuasSD1o" title="The Linux Cast review" frameborder="0"></iframe>
+            <iframe loading="lazy" src="https://youtube.com/embed/-L6yuasSD1o" title="The Linux Cast review" frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
             <a href="https://www.youtube.com/c/TheLinuxCast" class="font-medium text-xl hover:text-blue-200">The Linux Cast</a>
           </div>
         </div>
