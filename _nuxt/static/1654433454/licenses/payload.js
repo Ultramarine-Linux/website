@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/licenses", {data:[{_img:{"/_ipx/q_50/webhorizon.png":"\u002F_nuxt\u002Fimage\u002Fda750e.png"}}],fetch:{},mutations:[]});
