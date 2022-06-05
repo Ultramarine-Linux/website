@@ -2,7 +2,6 @@
   <div
     class="min-h-screen text-gray-900 bg-gray-100 dark:text-gray-200 dark:bg-gray-900"
   >
-    <Navbar />
     <div
       class="flex flex-col min-h-screen p-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-900 dark:text-gray-100"
     >
@@ -44,7 +43,7 @@
       </div>
 
       <h2 class="text-3xl mt-20">Torrents</h2>
-      <h2 class="pt-1 text-gray-400">You can also download Ultramarine Builds using Torrent clients from FOSS Torrents which are available
+      <h2 class="pt-1 text-gray-400 pb-12">You can also download Ultramarine Builds using Torrent clients from FOSS Torrents which are available
           <a class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
             href="https://fosstorrents.com/distributions/ultramarine-linux/">
               here
@@ -52,20 +51,6 @@
       </h2>
 
     </div>
-    <Footer
-      class="bg-gray-200 dark:bg-gray-800"
-      @set-color-mode="setColorMode"
-    />
   </div>
 
 </template>
-
-<script>
-export default {
-  methods: {
-    setColorMode(mode) {
-      this.$colorMode.preference = mode;
-    },
-  },
-};
-</script>
