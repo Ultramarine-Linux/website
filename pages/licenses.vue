@@ -22,7 +22,7 @@
             alt="TensorDock Logo"
             class="w-72 h-auto rounded-md bg-gray-800 dark:bg-gray-200 p-1 mb-1"
           />
-          <span>WebHorizon</span>
+          <span>TensorDock</span>
         </li>
       </a>
     </ul>
