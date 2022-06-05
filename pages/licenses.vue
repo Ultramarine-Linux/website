@@ -1,7 +1,31 @@
 <template>
   <div class="flex flex-col min-h-screen mt-8">
-    <h1 class="text-4xl font-bold">Licenses</h1>
+    <h1 class="text-4xl font-bold">Licenses & Credits</h1>
     <h2 class="mb-8">Credits to frameworks and artworks that have been used on this website. <br> (Please note: these are just the most notable licenses, others are either embedded in the source code or can be found in the build output)</h2>
+    <h3 class="text-lg font-semibold mb-4">Our Sponsors:</h3>
+    <ul class="flex flex-row gap-8 mb-4">
+      <a href="https://webhorizon.in">
+        <li class="flex flex-col items-center p-4 text-xl font-medium bg-gray-200 dark:bg-gray-800 rounded-md shadow-lg">
+          <nuxt-img
+            src="webhorizon.png"
+            alt="WebHorizon Logo"
+            class="w-72 h-auto rounded-md bg-gray-700 p-1 mb-1"
+            quality="50"
+          />
+          <span>WebHorizon</span>
+        </li>
+      </a>
+      <a href="https://tensordock.com">
+        <li class="flex flex-col items-center p-4 text-xl font-medium bg-gray-200 dark:bg-gray-800 rounded-md shadow-lg">
+          <img
+            src="https://tensordock.com/assets/img/brand.png"
+            alt="TensorDock Logo"
+            class="w-72 h-auto rounded-md bg-gray-800 dark:bg-gray-200 p-1 mb-1"
+          />
+          <span>WebHorizon</span>
+        </li>
+      </a>
+    </ul>
     <h3 class="text-lg font-semibold mb-4">Libraries:</h3>
     <ul class="flex flex-row flex-wrap gap-x-8 gap-y-4 mb-8">
       <li class="p-4 bg-gray-200 dark:bg-gray-800 rounded-md shadow-lg">
