@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/", {data:[{_img:{"/_ipx/w_800,q_20/laptop-dark.png":"\u002F_nuxt\u002Fimage\u002F309364.png"}}],fetch:{},mutations:[]});
