@@ -33,12 +33,6 @@
         <div class="mouse"></div>
         <span class="tracking-wider text-gray-500 pb-4">scroll to learn more</span>
       </div>
-      <!-- WIP: Add more sections -->
-      <!-- Add new license page with credits to laptop mockup: https://www.figma.com/community/file/839429886467621125
-      , unsplash text gradient image https://unsplash.com/photos/OdnXv9hJOEI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink photo by SIMON LEE on Unsplash
-       and trademarks + oss licenses -->
-      <!-- Reference license page in footer instead of having long paragraphs -->
-      <!-- Resize navbar after scroll: https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp -->
       <section id="about" class="flex flex-col items-center mb-8">
         <h2 class="font-semibold tracking-tight text-4xl mb-8">What is Ultramarine?</h2>
         <div class="flex md:flex-row flex-col gap-8 items-center">
