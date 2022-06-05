@@ -7,19 +7,16 @@
       quality="10"
     />
 
-    <a
-      :href="downloadLink"
-      class="flex flex-row rounded-lg"
-    >
-      <div class="flex flex-col items-center">
-        <button
-          class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-blue-500 rounded-lg dark:text-gray-50 hover:bg-blue-600 hover:text-gray-50"
-        >
-          Download {{ editionName }} Edition
-        </button>
-        <a :href="checksumLink" class="mt-1 text-gray-400">View Checksum</a>
-      </div>
-    </a>
+    <div class="flex flex-col items-center">
+      <a
+        :href="downloadLink"
+        class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-blue-500 rounded-lg dark:text-gray-50 hover:bg-blue-600 hover:text-gray-50"
+      >
+        Download {{ editionName }} Edition
+      </a>
+      <a :href="checksumLink" class="mt-1 text-gray-400">View Checksum</a>
+    </div>
+
     <div class="pt-2">
       <p class="max-w-md text-lg text-justify">
         {{ description }}
