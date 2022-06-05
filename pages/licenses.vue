@@ -94,7 +94,7 @@
       </li>
     </ul>
     <h3 class="text-lg font-semibold mb-2">Trademarks:</h3>
-    <ul class="mb-8">
+    <ul class="mb-4">
       <li>Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.</li>
       <li>Fedora® and the Infinity design logo are trademarks of Red Hat, Inc. in the U.S. and elsewhere.</li>
     </ul>
