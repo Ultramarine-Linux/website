@@ -96,7 +96,7 @@
         <a href="https://distrowatch.com/weekly.php?issue=20220207#ultramarine" class="mt-4 p-4 hover:text-blue-300 bg-gray-200 dark:bg-gray-800 rounded-md shadow-lg">DistroWatch Article</a>
       </section>
 
-      <section id="migrate" class="md:flex flex-col items-center mb-24 hidden">
+      <section id="migrate" class="md:flex flex-col items-center mb-12 hidden">
         <h2 class="text-2xl font-semibold">Already using Fedora? You can use our migration script!</h2>
         <div id="migration" class="hidden md:flex md:flex-col md:justify-center mt-2">
           <div class="p-2">
