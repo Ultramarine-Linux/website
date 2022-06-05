@@ -7,7 +7,7 @@
             <h1 class="hero-text font-bold text-4xl sm:text-6xl text-black dark:text-white leading-normal md:leading-relaxed">It just works.</h1>
           </div>
           <span class="text-lg md:text-xl max-w-xs">Ultramarine Linux is a Fedora-based Linux distribution designed to stay out of your way and be easy to use. All editions come with several tweaks preapplied to make initial setup and daily usage seamless.</span>
-          <div id="button-row" class="flex flex-row gap-4 mt-2 md:mt-8">
+          <div id="button-row" class="flex flex-col md:flex-row gap-4 mt-2 md:mt-8">
             <a href="/download">
               <PrimaryButton class="text-xl">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -25,18 +25,18 @@
           <a href="#migrate" class="text-gray-700 dark:text-gray-400 hover:underline md:block hidden">Already using Fedora? Click here for a migration script.</a>
         </div>
         <div id="hero-right" class="lg:block hidden">
-          <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" class="rounded-md dark:block hidden"></nuxt-img>
-          <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" class="rounded-md dark:hidden block"></nuxt-img>
+          <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" alt="Laptop preview with screnshot of Desktop" class="rounded-md dark:block hidden"></nuxt-img>
+          <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" alt="Laptop preview with screnshot of Desktop" class="rounded-md dark:hidden block"></nuxt-img>
         </div>
       </section>
       <div id="scroll-animation" class="lg:flex flex-col w-full pb-12 items-center justify-center hidden">
         <div class="mouse"></div>
         <span class="tracking-wider text-gray-500 pb-4">scroll to learn more</span>
       </div>
-      <section id="about" class="flex flex-col items-center mb-8">
-        <h2 class="font-semibold tracking-tight text-4xl mb-8">What is Ultramarine?</h2>
-        <div class="flex md:flex-row flex-col gap-8 items-center">
-          <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-80 shadow-lg">
+      <section id="about" class="flex flex-col flex-wrap items-start lg:items-center mb-8">
+        <h2 class="font-semibold tracking-tight text-4xl mb-8 mt-8 lg:mt-0">What is Ultramarine?</h2>
+        <div class="flex lg:flex-row flex-col gap-8 items-center">
+          <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-auto lg:h-80 shadow-lg">
             <div class="mb-2 text-blue-600 fab fa-fedora dark:text-blue-50 text-6xl" />
             <h3 class="mb-1 text-xl font-semibold tracking-wide">
               Based on Fedora®
@@ -46,7 +46,7 @@
               yet maintaining rock-solid stability. Making sure things don't break is our top priority.
             </p>
           </div>
-          <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-80 shadow-lg">
+          <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-auto lg:h-80 shadow-lg">
             <div class="mb-2 text-blue-600 fas fa-lock-open dark:text-blue-50 text-5xl p-1 pb-1.5" />
             <h3 class="mb-1 text-xl font-semibold tracking-wide">
               Developer Friendly
@@ -55,7 +55,7 @@
               Ultramarine provides a developer-friendly (and friendly for the average user) tools to make sure you can get the most out of your system. We're making it as easy and accessible as possible for everyone to create and package their software for Ultramarine (and in extension, Fedora!).
             </p>
           </div>
-          <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-80 shadow-lg">
+          <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-auto lg:h-80 shadow-lg">
             <div class="mb-2 text-blue-600 far fa-check-circle dark:text-blue-50 text-5xl p-1 pb-1.5" />
             <h3 class="mb-1 text-xl font-semibold tracking-wide">
               Sane Defaults
@@ -65,25 +65,25 @@
             </p>
           </div>
         </div>
-        <div class="text-center text-lg max-w-4xl bg-gray-200 dark:bg-gray-800 rounded-lg p-4 mt-8 shadow-lg">
+        <div class="text-left lg:text-center text-lg max-w-4xl bg-gray-200 dark:bg-gray-800 rounded-lg p-4 mt-8 shadow-lg">
           Ultramarine Linux is a Linux-based operating system designed for your own personal workstation (or battlestation). It is designed to be as easy to use as possible, and stays out of your way. Ultramarine Linux keeps up with the latest and greatest software in the open-source community, while trying to be stable and secure. Ultramarine is for everyone, from the beginner to the tech enthusiast, and even Windows dropouts!
         </div>
       </section>
 
-      <section id="reviews" class="flex flex-col items-center mb-12">
+      <section id="reviews" class="flex flex-col flex-wrap items-start lg:items-center mb-12 w-full">
         <h2 class="text-4xl font-semibold">Reviews</h2>
         <h3 class="text-lg mb-4">The most notable reviews about Ultramarine Linux</h3>
-        <div class="flex flex-col md:flex-row gap-8">
-          <div class="flex flex-col items-center gap-4 p-4 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
-            <iframe loading="lazy" src="https://www.youtube.com/embed/YD77rBBkYck" title="Tyler's Tech review" frameborder="0"></iframe>
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-8 w-full">
+          <div class="flex flex-col items-center gap-4 p-2 lg:p-4 w-full lg:w-min xl:min-w-[400px] min-w-[300px] bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/YD77rBBkYck" title="Tyler's Tech review" frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
             <a href="https://www.youtube.com/c/TylersTechNow" class="font-medium text-xl hover:text-blue-200">Tyler's Tech</a>
           </div>
-          <div class="flex flex-col items-center gap-4 p-4 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
-            <iframe loading="lazy" src="https://youtube.com/embed/y_vgOH_UQvg" title="eBuzz Central review" frameborder="0"></iframe>
+          <div class="flex flex-col items-center gap-4 p-2 lg:p-4 w-full lg:w-min xl:min-w-[400px] min-w-[300px] bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
+            <iframe loading="lazy" src="https://youtube.com/embed/y_vgOH_UQvg" title="eBuzz Central review" frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
             <a href="https://www.youtube.com/c/eBuzzCentral" class="font-medium text-xl hover:text-blue-200">eBuzz Central</a>
           </div>
-          <div class="flex flex-col items-center gap-4 p-4 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
-            <iframe loading="lazy" src="https://youtube.com/embed/-L6yuasSD1o" title="The Linux Cast review" frameborder="0"></iframe>
+          <div class="flex flex-col items-center gap-4 p-2 lg:p-4 w-full lg:w-min xl:min-w-[400px] min-w-[300px] bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
+            <iframe loading="lazy" src="https://youtube.com/embed/-L6yuasSD1o" title="The Linux Cast review" frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
             <a href="https://www.youtube.com/c/TheLinuxCast" class="font-medium text-xl hover:text-blue-200">The Linux Cast</a>
           </div>
         </div>
@@ -102,7 +102,7 @@
               </div>
               <!-- add a button to copy the text next to the code block -->
               <div class="relative px-3 py-4 mx-1 text-gray-400 bg-gray-600 cursor-pointer rounded-xl dark:text-gray-200 hover:bg-gray-500 dark:hover:text-gray-100" @click="onCopy">
-                <button type="button" class="copy-button fa fa-copy">
+                <button type="button" class="copy-button fa fa-copy" aria-label="Copy to clipboard button">
                   <span class="hidden">Copy</span>
                 </button>
               </div>
@@ -142,7 +142,7 @@ export default {
 <style>
 iframe {
   aspect-ratio: 16/9;
-  width: 20rem;
+  width: 95%;
 }
 
 .text-bg-container {

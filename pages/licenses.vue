@@ -78,9 +78,8 @@
       </li>
       <li class="p-4 bg-gray-200 dark:bg-gray-800 rounded-md shadow-lg">
         <h3 class="text-lg font-bold">CSS scrollwheel animation</h3>
-        <!-- TODO: find author -->
-        <p>Made by Unknown</p>
-        <p>Released on Codepen</p>
+        <p>Made by Tsukasa Aoki</p>
+        <a href="https://codepen.io/TKS31/pen/gOaKaxx">Released on Codepen</a>
       </li>
       <li class="p-4 bg-gray-200 dark:bg-gray-800 rounded-md shadow-lg">
         <h3 class="text-lg font-bold">Hero Text Background Image</h3>
