@@ -102,7 +102,7 @@
               </div>
               <!-- add a button to copy the text next to the code block -->
               <div class="relative px-3 py-4 mx-1 text-gray-400 bg-gray-600 cursor-pointer rounded-xl dark:text-gray-200 hover:bg-gray-500 dark:hover:text-gray-100" @click="onCopy">
-                <button type="button" class="copy-button fa fa-copy">
+                <button type="button" class="copy-button fa fa-copy" aria-label="Copy to clipboard button">
                   <span class="hidden">Copy</span>
                 </button>
               </div>
