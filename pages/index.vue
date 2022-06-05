@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col">
     <div>
-      <section id="hero" class="md:py-12 lg:py-24 flex flex-row justify-between items-center">
+      <section id="hero" class="mt-8 mb-4 flex flex-row justify-between items-center">
         <div id="hero-left" class="max-w-2xl mr-8">
           <div class="text-bg-container">
             <h1 class="hero-text font-bold text-4xl sm:text-6xl text-black dark:text-white leading-normal md:leading-relaxed">The OS that just works.</h1>
@@ -29,7 +29,7 @@
           <nuxt-img src="laptop-dark.png" width="800" height="auto" quality="20" class="rounded-md dark:hidden block"></nuxt-img>
         </div>
       </section>
-      <div id="scroll-animation" class="lg:flex flex-col w-full pb-12 md:pt-24 items-center justify-center hidden">
+      <div id="scroll-animation" class="lg:flex flex-col w-full pb-12 items-center justify-center hidden">
         <div class="mouse"></div>
         <span class="tracking-wider text-gray-500 pb-4">scroll to learn more</span>
       </div>
@@ -77,6 +77,17 @@
         </div>
       </section>
 
+      <section id="reviews" class="flex flex-col items-center mb-8">
+        <h2 class="text-4xl font-semibold">Reviews</h2>
+        <h3 class="text-lg">The most notable reviews about Ultramarine Linux</h3>
+        <div class="flex flex-col md:flex-row gap-8">
+          <a href="https://www.youtube.com/watch?v=YD77rBBkYck">Tylers Tech</a>
+          <a href="https://www.youtube.com/watch?v=y_vgOH_UQvg">eBuzz Central</a>
+          <a href="https://www.youtube.com/watch?v=-L6yuasSD1o">The Linux Cast</a>
+          <a href="https://distrowatch.com/weekly.php?issue=20220207#ultramarine">DistroWatch</a>
+        </div>
+      </section>
+
       <section id="migrate" class="md:flex flex-col items-center pb-12 hidden">
         <h2 class="text-2xl font-semibold">Already using Fedora? You can use our migration script!</h2>
         <div id="migration" class="hidden md:flex md:flex-col md:justify-center mt-2">
@@ -97,18 +108,8 @@
           </div>
         </div>
       </section>
-
-      <section id="reviews" class="flex flex-col items-center">
-        <h2 class="text-4xl font-semibold mb-2">Reviews</h2>
-        <h3 class="text-lg">The most notable reviews about Ultramarine Linux</h3>
-        <div class="flex flex-col md:flex-row gap-8">
-          <a href="https://www.youtube.com/watch?v=YD77rBBkYck">Tylers Tech</a>
-          <a href="https://www.youtube.com/watch?v=y_vgOH_UQvg">eBuzz Central</a>
-          <a href="https://www.youtube.com/watch?v=-L6yuasSD1o">The Linux Cast</a>
-          <a href="https://distrowatch.com/dwres.php?resource=ratings&distro=ultramarine">DistroWatch</a>
-        </div>
-      </section>
     </div>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
