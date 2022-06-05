@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   background-color: #0e1015;
+  scroll-padding-top: 120px;
 }
 
 /* width */

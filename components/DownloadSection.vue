@@ -4,7 +4,7 @@
       :src="screenshot"
       :alt="'Ultramarine' + editionName + 'Screenshot'"
       class="h-auto pb-4 rounded-sm w-96"
-      quality="40"
+      quality="10"
     />
 
     <a

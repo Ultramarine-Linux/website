@@ -2,28 +2,23 @@
   <footer
     class="
       flex flex-col md:flex-row gap-4 md:gap-0
-      w-full
+      max-w-screen-2xl
       justify-between
-      px-6
+      mx-auto
+      px-8
       py-4
       text-gray-600
       dark:text-gray-300
       bg-gray-100
       dark:bg-gray-900
+      border-t border-gray-400 dark:border-gray-600
     "
   >
     <div class="flex flex-col">
-      <h1 class="font-semibold tracking-wide">
+      <span class="font-semibold tracking-wide">
         Copyright © 2021 - 2022 Ultramarine Linux Team
-      </h1>
-      <h2>
-        Linux® is the registered trademark of Linus Torvalds in the U.S. and
-        other countries.
-      </h2>
-      <h2>
-        Fedora® and the Infinity design logo are trademarks of Red Hat, Inc. in
-        the U.S. and elsewhere.
-      </h2>
+      </span>
+      <a href="/licenses" class="text-blue-200 dark:text-blue-50 hover:text-blue-300 hover:underline">License Notice & Credits</a>
     </div>
     <div id="color-mode-toggle" class="md:text-right text-left font-semibold">
       <h2>Theme:</h2>
