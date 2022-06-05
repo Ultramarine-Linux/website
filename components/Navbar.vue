@@ -6,9 +6,15 @@
         Ultramarine
       </h1>
     </nuxt-link>
-    <div class="links-right flex flex-row gap-8 justify-center align-middle items-center font-semibold">
+    <div class="links-right flex flex-row gap-4 justify-center align-middle items-center font-semibold">
       <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-200">About</a>
       <a href="https://wiki.ultramarine-linux.org" class="hover:text-blue-600 dark:hover:text-blue-200">Wiki</a>
+      <a href="https://discord.gg/bUuQasHdrF" class="fab fa-discord text-2xl hover:text-blue-600 dark:hover:text-blue-200">
+        <span class="hidden">Ultramarine Discord server</span>
+      </a>
+      <a href="https://github.com/ultramarine-linux" class="fab fa-github text-2xl hover:text-blue-600 dark:hover:text-blue-200">
+        <span class="hidden">Ultramarine Linux Github</span>
+      </a>
     </div>
   </header>
 </template>

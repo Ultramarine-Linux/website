@@ -98,6 +98,5 @@
       <li>Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.</li>
       <li>Fedora® and the Infinity design logo are trademarks of Red Hat, Inc. in the U.S. and elsewhere.</li>
     </ul>
-
   </div>
 </template>
