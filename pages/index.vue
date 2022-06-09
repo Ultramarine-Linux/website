@@ -52,7 +52,7 @@
               Developer Friendly
             </h3>
             <p class="max-w-sm text-lg text-left">
-              Ultramarine provides a developer-friendly (and friendly for the average user) tools to make sure you can get the most out of your system. We're making it as easy and accessible as possible for everyone to create and package their software for Ultramarine (and in extension, Fedora!).
+              Ultramarine provides developer-friendly (and friendly for the average user) tools to make sure you can get the most out of your system. We're making it as easy and accessible as possible for everyone to create and package their software for Ultramarine (and in extension, Fedora!).
             </p>
           </div>
           <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-auto lg:h-80 shadow-lg">
@@ -61,7 +61,7 @@
               Sane Defaults
             </h3>
             <p class="max-w-sm text-lg text-left">
-              Ultramarine applies common tweaks and settings to make sure your out-of-the-box experience is as smooth as it can be. We've tried to make sure that you'll be able to get started as quickly as possible.
+              Ultramarine applies pragmatic tweaks and settings to make sure your out-of-the-box experience is as smooth as it can be. We've tried to make sure that you'll be able to get started as quickly as possible.
             </p>
           </div>
         </div>
