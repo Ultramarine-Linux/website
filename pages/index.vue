@@ -95,13 +95,13 @@
         <div id="migration" class="hidden md:flex md:flex-col md:justify-center mt-2">
           <div class="p-2">
             <!-- code block for copying command -->
-            <div class="inline-flex items-center bg-gray-600 rounded-xl">
-              <div class="p-6 text-gray-400 bg-gray-700 rounded-xl">
+            <div class="inline-flex items-center bg-gray-300 dark:bg-gray-600 rounded-xl">
+              <div class="p-6 bg-gray-200 dark:text-gray-400 dark:bg-gray-700 rounded-xl">
                 <!-- eslint-disable-next-line vue/no-parsing-error -->
                 <p id="migrate-script" class="font-mono" >bash &lt;(curl -s https://ultramarine-linux.org/migrate.sh)</p>
               </div>
               <!-- add a button to copy the text next to the code block -->
-              <div class="relative px-3 py-4 mx-1 text-gray-400 bg-gray-600 cursor-pointer rounded-xl dark:text-gray-200 hover:bg-gray-500 dark:hover:text-gray-100" @click="onCopy">
+              <div class="relative px-3 py-4 mx-1 text-gray-700 bg-gray-300 dark:bg-gray-600 cursor-pointer rounded-xl dark:text-gray-300 hover:text-gray-400 dark:hover:text-gray-50" @click="onCopy">
                 <button type="button" class="copy-button fa fa-copy" aria-label="Copy to clipboard button">
                   <span class="hidden">Copy</span>
                 </button>
