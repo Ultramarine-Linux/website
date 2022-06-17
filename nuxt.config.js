@@ -57,5 +57,11 @@ export default {
   loading: {
     color: 'blue',
     height: '5px'
+  },
+  build: {
+    extend(config, ctx) {} 
+  },
+  server: {
+      host: "0.0.0.0"
   }
 }
