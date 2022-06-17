@@ -35,6 +35,9 @@
       </div>
       <section id="about" class="flex flex-col flex-wrap items-start lg:items-center mb-8">
         <h2 class="font-semibold tracking-tight text-4xl mb-8 mt-8 lg:mt-0">What is Ultramarine?</h2>
+        <div class="text-left lg:text-center text-lg max-w-4xl bg-gray-200 dark:bg-gray-800 rounded-lg p-4 mt-0 mb-8 shadow-lg">
+          Ultramarine Linux is a Linux-based operating system designed for your own personal workstation (or battlestation). It is designed to be as easy to use as possible, and stays out of your way. Ultramarine Linux keeps up with the latest and greatest software in the open-source community, while trying to be stable and secure. Ultramarine is for everyone, from the beginner to the tech enthusiast, and even Windows dropouts!
+        </div>
         <div class="flex lg:flex-row flex-col gap-8 items-center">
           <div class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl h-auto lg:h-80 shadow-lg">
             <div class="mb-2 text-blue-600 fab fa-fedora dark:text-blue-50 text-6xl" />
@@ -64,9 +67,6 @@
               Ultramarine applies pragmatic tweaks and settings to make sure your out-of-the-box experience is as smooth as it can be. We've tried to make sure that you'll be able to get started as quickly as possible.
             </p>
           </div>
-        </div>
-        <div class="text-left lg:text-center text-lg max-w-4xl bg-gray-200 dark:bg-gray-800 rounded-lg p-4 mt-8 shadow-lg">
-          Ultramarine Linux is a Linux-based operating system designed for your own personal workstation (or battlestation). It is designed to be as easy to use as possible, and stays out of your way. Ultramarine Linux keeps up with the latest and greatest software in the open-source community, while trying to be stable and secure. Ultramarine is for everyone, from the beginner to the tech enthusiast, and even Windows dropouts!
         </div>
       </section>
 
