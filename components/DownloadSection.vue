@@ -14,18 +14,21 @@
       >
         Download {{ editionName }} Edition
       </a>
-      <div class="flex items-center gap-3 mt-2">
+      
+      <div class="flex flex-col items-center gap-3 mt-2">
+        
+        <a :href="checksumLink" class="text-gray-400">View Checksum</a>
+        
         <div class="" v-if="deprecatedMajorVersion && deprecatedMinorVersion">
-          <div class="px-4 py-2 bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-200 font-medium rounded-xl">
+          <div class="px-2 py-1 text-gray-700 italic dark:text-gray-200 font-medium rounded-lg">
             Ultramarine Linux {{ deprecatedMajorVersion }}.{{ deprecatedMinorVersion }}
           </div>
         </div>
-        <a :href="checksumLink" class="text-gray-400">View Checksum</a>
       </div>
     </div>
 
     <div class="pt-2">
-      <p class="max-w-md text-lg text-justify">
+      <p class="max-w-md text-lg text-center">
         {{ description }}
       </p>
     </div>

@@ -3,7 +3,7 @@
     class="min-h-screen text-gray-900 bg-gray-100 dark:text-gray-200 dark:bg-gray-900"
   >
     <div
-      class="flex flex-col min-h-screen p-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-900 dark:text-gray-100"
+      class="flex flex-col min-h-screen p-2 md:px-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-900 dark:text-gray-100"
     >
       <h1 class="text-4xl font-bold">Pick your flavor of Ultramarine</h1>
       <h2 class="pt-1 text-gray-400">Latest Release: 36 (Rhode Island)</h2>
@@ -51,7 +51,7 @@
       </div>
 
 
-      <h2 class="text-3xl mt-20">Torrents</h2>
+      <h2 class="text-2xl font-semibold mt-20">Torrents</h2>
       <h2 class="pt-1 text-gray-400 pb-12">You can also download Ultramarine Builds using Torrent clients from FOSS Torrents which are available
           <a class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
             href="https://fosstorrents.com/distributions/ultramarine-linux/">
