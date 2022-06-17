@@ -16,6 +16,9 @@
       <a href="https://github.com/ultramarine-linux" class="fab fa-github text-2xl hover:text-blue-600 dark:hover:text-blue-200" aria-label="Ultramarine Linux Github link">
         <span class="hidden">Ultramarine Linux Github</span>
       </a>
+      <a href="https://twitter.com/UltramarineProj" class="fab fa-twitter text-2xl hover:text-blue-600 dark:hover:text-blue-200" aria-label="Ultramarine Linux Twitter link">
+        <span class="hidden">Ultramarine Linux Twitter</span>
+      </a>
     </div>
   </header>
 </template>

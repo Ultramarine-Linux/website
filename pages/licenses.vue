@@ -1,5 +1,6 @@
 <template>
-  <div class="flex flex-col min-h-screen mt-8">
+  <div class="flex flex-col min-h-screen md:mt-8">
+    <BackMenu targetLink="/" target="Home"></BackMenu>
     <h1 class="text-4xl font-bold">Licenses & Credits</h1>
     <h2 class="mb-8">Credits to frameworks and artworks that have been used on this website. <br> (Please note: these are just the most notable licenses, others are either embedded in the source code or can be found in the build output)</h2>
     <h3 class="text-lg font-semibold mb-4">Our Sponsors:</h3>
@@ -97,5 +98,13 @@
       <li>Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.</li>
       <li>Fedora® and the Infinity design logo are trademarks of Red Hat, Inc. in the U.S. and elsewhere.</li>
     </ul>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </div>
 </template>

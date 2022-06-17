@@ -30,6 +30,9 @@ module.exports = {
           100: '#8289ff',
           50: '#b4b3ff'
         }
+      },
+      screens: {
+        'xs': '480px',
       }
     } // change accent color to 000890
   },

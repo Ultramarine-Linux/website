@@ -5,6 +5,7 @@
     <div
       class="flex flex-col min-h-screen p-2 md:px-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-900 dark:text-gray-100"
     >
+    <BackMenu targetLink="/" target="Home"></BackMenu>
       <h1 class="text-4xl font-bold">Pick your flavor of Ultramarine</h1>
       <h2 class="pt-1 text-gray-400">Latest Release: 36 (Rhode Island)</h2>
       <div class="">

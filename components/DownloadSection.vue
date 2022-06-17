@@ -12,6 +12,7 @@
         :href="downloadLink"
         class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-blue-500 rounded-lg dark:text-gray-50 hover:bg-blue-600 hover:text-gray-50"
       >
+        <i class="fa fa-download"></i> &nbsp;
         Download {{ editionName }} Edition
       </a>
       
