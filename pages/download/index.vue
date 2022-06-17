@@ -28,12 +28,6 @@
           />
 
           <DownloadSection
-            editionName="Cutefish"
-            screenshot="cutefish.png"
-            description="Simplicity, beauty, and practicality, with a familiar look. (In early development, only recommended for more advanced users)"
-          />
-
-          <DownloadSection
             editionName="Lapis"
             screenshot="ultramarine.png"
             description="The Flagship Edition, but immutable. Powered by OSTree."
@@ -41,6 +35,21 @@
           />
         </div>
       </div>
+
+      <h2 class="text-3xl mt-20">Deprecated Builds</h2>
+      <h2 class="pt-1 text-gray-400">These builds are provided as is and will not be actively maintained.</h2>
+      <div class="">
+        <div class="grid grid-flow-row-dense grid-cols-1 gap-10 pt-12 md:grid-cols-1 md:flex-row">
+          <DownloadSection
+            editionName="Cutefish"
+            screenshot="cutefish.png"
+            description="Simplicity, beauty, and practicality, with a familiar look."
+            deprecatedMajorVersion="36"
+            deprecatedMinorVersion="1.1"
+          />
+        </div>
+      </div>
+
 
       <h2 class="text-3xl mt-20">Torrents</h2>
       <h2 class="pt-1 text-gray-400 pb-12">You can also download Ultramarine Builds using Torrent clients from FOSS Torrents which are available

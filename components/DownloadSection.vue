@@ -14,7 +14,14 @@
       >
         Download {{ editionName }} Edition
       </a>
-      <a :href="checksumLink" class="mt-1 text-gray-400">View Checksum</a>
+      <div class="flex items-center gap-3 mt-2">
+        <div class="" v-if="deprecatedMajorVersion && deprecatedMinorVersion">
+          <div class="text-gray-200 px-4 py-2 bg-gray-700 font-medium rounded-xl">
+            Ultramarine Linux {{ deprecatedMajorVersion }}.{{ deprecatedMinorVersion }}
+          </div>
+        </div>
+        <a :href="checksumLink" class="text-gray-400">View Checksum</a>
+      </div>
     </div>
 
     <div class="pt-2">
@@ -22,6 +29,7 @@
         {{ description }}
       </p>
     </div>
+
   </div>
 </template>
 
@@ -33,14 +41,20 @@ const lapisBaseLink = 'https://lapis.ultramarine-linux.org/pub/ultramarine'
 
 export default {
   name: 'DownloadSection',
-  props: ['editionName', 'screenshot', 'description', 'isoLink'],
+  props: ['editionName', 'screenshot', 'description', 'isoLink', 'deprecatedMajorVersion', 'deprecatedMinorVersion'],
   computed: {
     baseLink() {
+      if(this.deprecatedMajorVersion)
+      return `${lapisBaseLink}/${this.deprecatedMajorVersion}/${this.editionName}/x86_64/iso`
+      else
       return `${lapisBaseLink}/${currentMajorVersion}/${this.editionName}/x86_64/iso`
     },
     downloadLink() {
       if (this.isoLink) return this.isoLink
 
+      if(this.deprecatedMajorVersion && this.deprecatedMinorVersion)
+      return `${this.baseLink}/Ultramarine-${this.editionName}-Live-x86_64-${this.deprecatedMajorVersion}-${this.deprecatedMinorVersion}.iso`
+      else
       return `${this.baseLink}/Ultramarine-${this.editionName}-Live-x86_64-${currentMajorVersion}-${currentMinorVersion}.iso`
     },
 
