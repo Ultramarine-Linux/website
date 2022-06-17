@@ -5,7 +5,7 @@
     <div
       class="flex flex-col min-h-screen p-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-900 dark:text-gray-100"
     >
-      <h1 class="text-4xl">Pick your flavor of Ultramarine</h1>
+      <h1 class="text-4xl font-bold">Pick your flavor of Ultramarine</h1>
       <h2 class="pt-1 text-gray-400">Latest Release: 36 (Rhode Island)</h2>
       <div class="">
         <div class="grid grid-flow-row-dense grid-cols-1 gap-10 pt-12 md:grid-cols-2 md:flex-row">
@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <h2 class="text-3xl mt-20">Deprecated Builds</h2>
+      <h2 class="text-2xl mt-20 font-semibold">Deprecated Builds</h2>
       <h2 class="pt-1 text-gray-400">These builds are provided as is and will not be actively maintained.</h2>
       <div class="">
         <div class="grid grid-flow-row-dense grid-cols-1 gap-10 pt-12 md:grid-cols-1 md:flex-row">

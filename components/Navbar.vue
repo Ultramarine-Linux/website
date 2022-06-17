@@ -8,6 +8,7 @@
     </nuxt-link>
     <div class="links-right flex flex-row gap-4 justify-center align-middle items-center font-semibold">
       <a href="/#about" class="hover:text-blue-600 dark:hover:text-blue-200">About</a>
+      <a href="/download" class="hover:text-blue-600 dark:hover:text-blue-200">Download</a>
       <a href="https://wiki.ultramarine-linux.org" class="hover:text-blue-600 dark:hover:text-blue-200">Wiki</a>
       <a href="https://lapis.ultramarine-linux.org/koji/" class="hover:text-blue-600 dark:hover:text-blue-200">Packages</a>
       <a href="https://discord.gg/bUuQasHdrF" class="fab fa-discord text-2xl hover:text-blue-600 dark:hover:text-blue-200" aria-label="Ultramarine Discord link">
