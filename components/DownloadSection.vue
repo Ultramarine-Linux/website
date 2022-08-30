@@ -39,7 +39,7 @@
 
 <script>
 const currentMajorVersion = '36'
-const currentMinorVersion = '1.1'
+const currentMinorVersion = '1.2'
 const lapisBaseLink = 'https://lapis.ultramarine-linux.org/pub/ultramarine'
 
 
