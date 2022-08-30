@@ -32,7 +32,7 @@
             editionName="Lapis"
             screenshot="ultramarine.png"
             description="The Flagship Edition, but immutable. Powered by OSTree."
-            isoLink="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Lapis/x86_64/iso/Ultramarine-36-20220519.0-Lapis-x86_64-ostree1.iso"
+            isoLink="https://lapis.ultramarine-linux.org/pub/ultramarine/36/Lapis/x86_64/iso/Ultramarine-36-20220829.0-Lapis-x86_64-ostree1.iso"
           />
         </div>
       </div>
