@@ -45,21 +45,26 @@ const lapisBaseLink = 'https://lapis.ultramarine-linux.org/pub/ultramarine'
 
 export default {
   name: 'DownloadSection',
-  props: ['editionName', 'screenshot', 'description', 'isoLink', 'deprecatedMajorVersion', 'deprecatedMinorVersion'],
+  props: ['editionName', 'screenshot', 'description', 'isoLink', 'archivedIso', 'deprecatedMajorVersion', 'deprecatedMinorVersion'],
   computed: {
     baseLink() {
-      if(this.deprecatedMajorVersion)
-      return `${lapisBaseLink}/${this.deprecatedMajorVersion}/${this.editionName}/x86_64/iso`
+
+      if (this.deprecatedMajorVersion) {
+        if (this.archivedIso)
+          return `${lapisBaseLink}/archive/${this.editionName}/x86_64/iso`
+        else
+          return `${lapisBaseLink}/${this.deprecatedMajorVersion}/${this.editionName}/x86_64/iso`
+      }
       else
-      return `${lapisBaseLink}/${currentMajorVersion}/${this.editionName}/x86_64/iso`
+        return `${lapisBaseLink}/${currentMajorVersion}/${this.editionName}/x86_64/iso`
     },
     downloadLink() {
       if (this.isoLink) return this.isoLink
 
       if(this.deprecatedMajorVersion && this.deprecatedMinorVersion)
-      return `${this.baseLink}/Ultramarine-${this.editionName}-Live-x86_64-${this.deprecatedMajorVersion}-${this.deprecatedMinorVersion}.iso`
+        return `${this.baseLink}/Ultramarine-${this.editionName}-Live-x86_64-${this.deprecatedMajorVersion}-${this.deprecatedMinorVersion}.iso`
       else
-      return `${this.baseLink}/Ultramarine-${this.editionName}-Live-x86_64-${currentMajorVersion}-${currentMinorVersion}.iso`
+        return `${this.baseLink}/Ultramarine-${this.editionName}-Live-x86_64-${currentMajorVersion}-${currentMinorVersion}.iso`
     },
 
     checksumLink() {

@@ -47,6 +47,7 @@
             description="Simplicity, beauty, and practicality, with a familiar look."
             deprecatedMajorVersion="36"
             deprecatedMinorVersion="1.1"
+            :archivedIso="true"
           />
         </div>
       </div>
