@@ -29,6 +29,8 @@
   },
   "resolutions": {
     "loader-utils": "^2.0.4",
-    "parse-url": "^8.1.0"
+    "parse-url": "^8.1.0",
+    "nth-check": "^2.0.1",
+    "glob-parent": "^5.1.2"
   }
 }
