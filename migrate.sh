@@ -62,17 +62,6 @@ sudo dnf update -y
 set +x
 echo
 echo "Downloading and installing required packages..."
-
-echo "Enabling Flathub..."
-# if flatpak exists
-if [ -f /usr/bin/flatpak ]; then
-    # make all commands visible
-    set -x
-    # enable flatpak
-    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    set +x
-fi
-
 # find file in http directory
 echo "Installing RPM Fusion..."
 set -x
