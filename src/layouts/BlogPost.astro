@@ -1,0 +1,49 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    updatedDate?: string;
+    heroImage?: string;
+  };
+}
+const {
+  content: { title, description, pubDate, updatedDate, heroImage },
+} = Astro.props;
+---
+
+<BaseLayout>
+  <main>
+    <article>
+      <h1 class="font-bold text-5xl mb-1">{title}</h1>
+      <p>{description}</p>
+      <div class="text-gray-200 mb-4">
+        {pubDate && <time>{pubDate}</time>}
+        {
+          updatedDate && (
+            <div>
+              Last updated on <time>{updatedDate}</time>
+            </div>
+          )
+        }
+      </div>
+      {
+        heroImage && (
+          <img
+            width={"100%"}
+            src={heroImage}
+            alt=""
+            class="rounded-3xl py-4 aspect-[21/9] object-cover h-96"
+          />
+        )
+      }
+      <div
+        class="w-full max-w-screen-2xl prose prose-invert lg:prose-lg lg:prose-h2:mb-2 prose-headings:mt-0 prose-p:mb-2 prose-code:before:content-none prose-code:after:content-none prose-code:bg-gray-700 prose-code:rounded-md prose-code:text-gray-50 prose-code:font-mono prose-code:p-1 prose-code:font-medium"
+      >
+        <slot />
+      </div>
+    </article>
+  </main>
+</BaseLayout>

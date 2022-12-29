@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
+);
+---
+
+<BaseLayout>
+  <main class="min-h-[80vh]">
+    <h1 class="font-bold md:text-5xl text-4xl mb-4">Blog</h1>
+    <p class="ml-1 mb-4 text-gray-100">
+      A blog for any updates on the Ultramarine Linux Project.
+    </p>
+    <section>
+      <ul class="flex flex-col">
+        {
+          posts.map((post) => (
+            <a href={post.url} class="w-full py-2">
+              <li class="hover:bg-gray-800 rounded-md px-2 py-1">
+                <time datetime={post.frontmatter.pubDate} class="text-gray-200">
+                  {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                    "en-us",
+                    {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    }
+                  )}
+                </time>
+                <br />
+                <span class="font-bold text-xl">{post.frontmatter.title}</span>
+              </li>
+            </a>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</BaseLayout>
