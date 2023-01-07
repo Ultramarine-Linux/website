@@ -9,6 +9,10 @@
         <i class="fa fa-download"></i> &nbsp;
         Download {{ editionName }} Edition
       </a>
+
+      <div class="flex flex-col items-center gap-3 mt-2">
+        <a :href="checksumLink" class="text-gray-400">View Checksum</a>
+      </div>
     </div>
 
     <div class="pt-2">
@@ -22,10 +26,14 @@
 
 
 <script setup lang="ts">
+import { computed } from 'vue';
+
 const props = defineProps<{
   editionName: string;
   screenshot: string;
   downloadLink: string;
   description: string;
 }>();
+
+const checksumLink = computed(() => props.downloadLink.replace('.iso', '.sha256sum'));
 </script>
