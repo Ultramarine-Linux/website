@@ -5,7 +5,7 @@
   >
     <div class="flex flex-col">
       <span class="font-semibold tracking-wide">
-        Copyright © 2021 - 2023 Ultramarine Linux Team
+        Copyright © 2021 - 2023 Fyra Labs
       </span>
       <a
         href="/licenses"
