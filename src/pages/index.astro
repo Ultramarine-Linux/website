@@ -9,17 +9,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div>
       <section
         id="hero"
-        class="mt-8 mb-4 flex flex-row justify-between items-center"
+        class="mt-8 mb-4 flex flex-row justify-between items-start"
       >
-        <div id="hero-left" class="max-w-2xl mr-8">
+        <div id="hero-left" class="max-w-2xl mr-8 mt-8">
           <div class="text-bg-container">
             <h1
-              class="hero-text font-bold text-5xl sm:text-6xl leading-normal md:leading-relaxed"
+              class="hero-text font-bold text-5xl sm:text-6xl leading-normal md:leading-relaxed tracking-tight"
             >
               It just works.
             </h1>
           </div>
-          <span class="text-lg md:text-xl max-w-xs"
+          <span class="text-lg max-w-xs"
             >Ultramarine Linux is a Fedora-based Linux distribution designed to
             stay out of your way and be easy to use. All editions come with
             several tweaks preapplied to make initial setup and daily usage
@@ -27,17 +27,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           >
           <div
             id="button-row"
-            class="flex flex-col md:flex-row gap-4 mt-2 md:mt-8"
+            class="flex flex-col md:flex-row gap-4 mt-2 md:mt-6"
           >
             <a href="/download"
               ><button
-                class="flex flex-row items-center justify-center px-4 py-2 mr-2 border-2 bg-blue-500 rounded-lg text-gray-50 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-xl"
+                class="flex flex-row gap-2 items-center justify-center px-6 py-2 border-2 bg-blue-700 rounded-[24px] text-gray-50 hover:bg-blue-800 border-blue-700 hover:border-blue-800 text-lg transition-colors"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  class="w-6 h-6 mr-2"
+                  class="w-6 h-6"
                   ><path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -52,14 +52,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               href="https://wiki.ultramarine-linux.org/en/installation/getting-started/"
               class="mb-2"
               ><button
-                class="flex flex-row items-center justify-center px-4 py-2 mr-2 bg-transparent rounded-lg border-2 text-blue-300 dark:text-blue-100 hover:text-white dark:hover:text-white hover:bg-blue-400 border-blue-500 text-xl"
+                class="flex flex-row items-center justify-center px-6 py-2 bg-transparent rounded-[24px] border-2 text-blue-500 dark:text-blue-200 hover:text-white dark:hover:text-white hover:bg-blue-700 border-blue-700 text-xl transition-colors"
                 ><span>Installation Guide</span>
               </button>
             </a>
           </div>
           <a
             href="#migrate"
-            class="text-gray-700 dark:text-gray-400 hover:underline md:block hidden"
+            class="text-gray-500 dark:text-gray-400 md:block hidden ml-1 tracking-wide"
             >Already using Fedora? Click here for a migration script.</a
           >
         </div>
@@ -72,7 +72,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             class="rounded-md dark:block hidden"
           />
           <img
-            src="laptop-dark.png"
+            src="laptop-light.png"
             width="800"
             height="auto"
             alt="Laptop preview with screnshot of Desktop"
@@ -82,7 +82,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </section>
       <div
         id="scroll-animation"
-        class="hidden lg:flex 2xl:hidden flex-col w-full pb-12 items-center justify-center "
+        class="hidden lg:flex 2xl:hidden flex-col w-full pb-12 items-center justify-center"
       >
         <div class="mouse"></div>
         <span class="tracking-wider text-gray-500 pb-4"

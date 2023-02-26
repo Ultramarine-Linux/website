@@ -9,20 +9,20 @@
       </span>
       <a
         href="/licenses"
-        class="text-blue-200 dark:text-blue-50 hover:text-blue-300 hover:underline"
+        class="text-blue-500 dark:text-blue-400 hover:text-blue-600 hover:dark:text-blue-500"
         >License Notice & Credits</a
       >
     </div>
     <div id="color-mode-toggle" class="md:text-right text-left font-semibold">
       <h2>Theme:</h2>
       <button
-        class="pr-2 hover:text-blue-600 dark:hover:text-blue-200"
+        class="pr-2 hover:text-blue-600 dark:hover:text-blue-500"
         @click="setTheme('light')"
       >
         Light
       </button>
       <button
-        class="hover:text-blue-600 dark:hover:text-blue-200"
+        class="hover:text-blue-600 dark:hover:text-blue-500"
         @click="setTheme('dark')"
       >
         Dark
