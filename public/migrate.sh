@@ -73,9 +73,7 @@ pkglist=(
     'ultramarine-repos-common'
     'ultramarine-repos'
 )
-for pkg in "${pkglist[@]}"; do
-    sudo dnf --nogpgcheck --repofrompath ultramarine,https://repos.fyralabs.com/um${os_version}/ install -y $pkg
-done
+sudo dnf --nogpgcheck --repofrompath ultramarine,https://repos.fyralabs.com/um${os_version}/ install -y ${pkglist[@]}
 
 set +x
 echo "Repo installation complete."
