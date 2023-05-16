@@ -35,5 +35,5 @@ const props = defineProps<{
   description: string;
 }>();
 
-const checksumLink = computed(() => props.downloadLink.replace('.iso', '.sha256sum'));
+const checksumLink = computed(() => props.downloadLink + '.sha256sum');
 </script>
