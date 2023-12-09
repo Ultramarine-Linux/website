@@ -20,7 +20,6 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
-      - run: pnpm install --no-frozen-lockfile
       - name: Install, build, and upload your site
         uses: withastro/action@v1
         with:
