@@ -5,7 +5,7 @@
   >
     <div class="flex flex-col">
       <span class="font-semibold tracking-wide">
-        Copyright © 2021 - 2024 Fyra Labs
+        Copyright © 2021 - {{ new Date().getFullYear() }} Fyra Labs
       </span>
       <a
         href="/licenses"
