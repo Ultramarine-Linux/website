@@ -13,33 +13,5 @@
         >License Notice & Credits</a
       >
     </div>
-    <div id="color-mode-toggle" class="md:text-right text-left font-semibold">
-      <h2>Theme:</h2>
-      <button
-        class="pr-2 hover:text-blue-600 dark:hover:text-blue-500"
-        @click="setTheme('light')"
-      >
-        Light
-      </button>
-      <button
-        class="hover:text-blue-600 dark:hover:text-blue-500"
-        @click="setTheme('dark')"
-      >
-        Dark
-      </button>
-    </div>
   </footer>
 </template>
-
-<script setup lang="ts">
-const setTheme = (theme: string) => {
-  if (theme === "dark") {
-    document.documentElement.classList.add("dark");
-    window.localStorage.setItem("theme", "dark");
-  }
-  else {
-    document.documentElement.classList.remove("dark");
-    window.localStorage.setItem("theme", "light");
-  }
-}
-</script>
