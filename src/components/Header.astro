@@ -1,5 +1,5 @@
 ---
-import ThemeSwitch from './ThemeSwitch.astro'
+import ThemeSwitch from './ThemeSwitch.vue'
 ---
 
 <header
@@ -57,7 +57,7 @@ import ThemeSwitch from './ThemeSwitch.astro'
   <div
     class="links-right flex flex-row gap-8 justify-center align-middle items-center font-semibold"
   >
-    <ThemeSwitch />
+    <ThemeSwitch client:load />
     <a
       href="https://discord.gg/5fdPuxTg5Q"
       class="fab fa-discord text-2xl hover:text-blue-600 dark:hover:text-blue-500"
