@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
-set -x
-
 # Fedora to Ultramarine Linux migration script
+# Lea's pro tip: Run this through shellcheck, it'll genuinely save so much time and effort
+
+trace() {
+  set -x
+  "$@"
+  { set +x; } 2> /dev/null
+}
 
 # Log all output to a file
 LOG=ultramarine-migrate.log
@@ -49,31 +54,33 @@ echo "====Beginning migration..===="
 echo
 
 echo "Updating system..."
-sudo dnf update -y
+trace sudo dnf update -y
 echo
 
 echo "Downloading and installing required packages..."
 
 echo "Installing RPM Fusion..."
-sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${os_version}.noarch.rpm" "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${os_version}.noarch.rpm"
+trace sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${os_version}.noarch.rpm" "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${os_version}.noarch.rpm"
 
 echo "Installing the Ultramarine repositories..."
-sudo dnf --nogpgcheck --repofrompath "ultramarine,https://repos.fyralabs.com/um${os_version}/" install -y ultramarine-repos-common ultramarine-repos
+trace sudo dnf --nogpgcheck --repofrompath "ultramarine,https://repos.fyralabs.com/um${os_version}/" install -y ultramarine-repos-common ultramarine-repos
 
 echo "Repo installation complete."
 echo
 
 echo "Converting to Ultramarine..."
 if [[ ${os_variant} = "workstation" ]]; then
-  sudo dnf swap -y fedora-release-common ultramarine-release-gnome --allowerasing
+  trace sudo dnf swap -y fedora-release-common ultramarine-release-gnome --allowerasing
 elif [[ ${os_variant} = "kde" ]]; then
-  sudo dnf swap -y fedora-release-common ultramarine-release-kde --allowerasing
+  trace sudo dnf swap -y fedora-release-common ultramarine-release-kde --allowerasing
 elif [[ ${os_variant} = "budgie" ]]; then
-  sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
+  trace sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
 else
-  sudo dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
+  trace sudo dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
 fi
-sudo dnf swap -y fedora-logos ultramarine-logos --allowerasing
+trace sudo dnf swap -y fedora-logos ultramarine-logos --allowerasing
+
+# sync comps?
 
 echo "Migration complete! Please reboot your system.
 The next Linux kernel update will make your system entry appear as Ultramarine Linux, but now you're already running Ultramarine Linux."
@@ -82,10 +89,11 @@ read -p "Would you like to also generate a new initramfs? (generate an Ultramari
 
 if [[ ${REPLY} =~ ^[Yy]$ ]]; then
   echo "Generating new initramfs..."
-  sudo dracut -f
+  trace sudo dracut -f
   echo "New initramfs generated."
 fi
 
+echo
 echo "The migration logs can be found at ${LOG}.
 Come chat with us at https://discord.gg/5fdPuxTg5Q or https://matrix.to/#/#hub:fyralabs.com.
 Have fun, thank you for using Ultramarine Linux!"
