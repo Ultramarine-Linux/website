@@ -90,8 +90,6 @@ else # If the variant is unknown or doesn't have an equivalent in Ultramarine
 fi
 trace sudo dnf swap -y fedora-logos ultramarine-logos --allowerasing
 
-# sync comps?
-
 echo "Migration complete! Please reboot your system.
 The next Linux kernel update will make your system entry appear as Ultramarine Linux, but now you're already running Ultramarine Linux."
 
