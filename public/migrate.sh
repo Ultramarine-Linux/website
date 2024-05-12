@@ -62,6 +62,9 @@ echo "Downloading and installing required packages..."
 echo "Installing RPM Fusion..."
 trace sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${os_version}.noarch.rpm" "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${os_version}.noarch.rpm"
 
+echo "Installing Terra..."
+trace sudo dnf install -y --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' --setopt='terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc' terra-release
+
 echo "Installing the Ultramarine repositories..."
 trace sudo dnf --nogpgcheck --repofrompath "ultramarine,https://repos.fyralabs.com/um${os_version}/" install -y ultramarine-repos-common ultramarine-repos
 
@@ -71,12 +74,19 @@ echo
 echo "Converting to Ultramarine..."
 if [[ ${os_variant} = "workstation" ]]; then
   trace sudo dnf swap -y fedora-release-common ultramarine-release-gnome --allowerasing
+  trace sudo dnf group install -y ultramarine-gnome-product-environment
+  trace sudo dnf group remove -y workstation-product-environment
 elif [[ ${os_variant} = "kde" ]]; then
   trace sudo dnf swap -y fedora-release-common ultramarine-release-kde --allowerasing
+  trace sudo dnf group install -y ultramarine-kde-product-environment
+  trace sudo dnf group remove -y kde-desktop-environment
 elif [[ ${os_variant} = "budgie" ]]; then
   trace sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
+  trace sudo dnf group install -y ultramarine-flagship-product-environment
+  trace sudo dnf group remove -y budgie-desktop-environment
 else
   trace sudo dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
+  trace sudo dnf group install -y ultramarine-product-common
 fi
 trace sudo dnf swap -y fedora-logos ultramarine-logos --allowerasing
 
