@@ -84,7 +84,7 @@ elif [[ ${os_variant} = "budgie" ]]; then
   trace sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
   trace sudo dnf group install -y ultramarine-flagship-product-environment
   trace sudo dnf group remove -y budgie-desktop-environment
-else
+else # If the variant is unknown or doesn't have an equivalent in Ultramarine
   trace sudo dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
   trace sudo dnf group install -y ultramarine-product-common
 fi
@@ -106,5 +106,6 @@ fi
 echo
 echo "The migration logs can be found at ${LOG}.
 Come chat with us at https://discord.gg/5fdPuxTg5Q or https://matrix.to/#/#hub:fyralabs.com.
+For addtional information, please see the Ultramarine Wiki, https://wiki.ultramarine-linux.org.
 Have fun, thank you for using Ultramarine Linux!"
 
