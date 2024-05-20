@@ -1,7 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import PrimaryButton from "../components/PrimaryButton.astro";
 import SecondaryButton from "../components/SecondaryButton.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import laptopImageLight from "../assets/40/laptop/light.png";
+import laptopImageDark from "../assets/40/laptop/dark.png";
 ---
 
 <BaseLayout>
@@ -64,17 +67,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           >
         </div>
         <div id="hero-right" class="lg:block hidden">
-          <img
-            src="laptop-dark.png"
-            width="800"
-            height="auto"
+          <Image
+            src={laptopImageDark}
             alt="Laptop preview with screnshot of Desktop"
             class="rounded-md dark:block hidden"
           />
-          <img
-            src="laptop-light.png"
-            width="800"
-            height="auto"
+          <Image
+            src={laptopImageLight}
             alt="Laptop preview with screnshot of Desktop"
             class="rounded-md dark:hidden block"
           />
@@ -268,7 +267,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
       crossorigin="anonymous"
-      referrerPolicy="no-referrer"
+      referrerpolicy="no-referrer"
     />
   </div>
 </BaseLayout>
