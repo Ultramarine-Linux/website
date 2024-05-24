@@ -23,6 +23,7 @@
     "vue": "^3.4.27"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.13"
+    "@tailwindcss/typography": "^0.5.13",
+    "sharp": "^0.33.4"
   }
 }
