@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^3.0.0
-        version: 3.0.0(astro@4.8.6)
+        version: 3.0.0(astro@4.8.6(@types/node@17.0.45))
       '@astrojs/rss':
         specifier: ^4.0.6
         version: 4.0.6
@@ -19,16 +19,16 @@ importers:
         version: 3.1.4
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.8.6)(tailwindcss@3.4.3)
+        version: 5.1.0(astro@4.8.6(@types/node@17.0.45))(tailwindcss@3.4.3)
       '@astrojs/vue':
         specifier: ^4.2.0
-        version: 4.2.0(astro@4.8.6)(rollup@4.17.2)(vite@5.2.11)(vue@3.4.27)
+        version: 4.2.0(astro@4.8.6(@types/node@17.0.45))(rollup@4.17.2)(vite@5.2.11(@types/node@17.0.45))(vue@3.4.27)
       '@fontsource/mulish':
         specifier: ^5.0.18
         version: 5.0.18
       astro:
         specifier: ^4.8.6
-        version: 4.8.6
+        version: 4.8.6(@types/node@17.0.45)
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.3
@@ -39,6 +39,9 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.13
         version: 0.5.13(tailwindcss@3.4.3)
+      sharp:
+        specifier: ^0.33.4
+        version: 0.33.4
 
 packages:
 
@@ -2589,12 +2592,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@3.0.0(astro@4.8.6)':
+  '@astrojs/mdx@3.0.0(astro@4.8.6(@types/node@17.0.45))':
     dependencies:
       '@astrojs/markdown-remark': 5.1.0
       '@mdx-js/mdx': 3.0.1
       acorn: 8.11.3
-      astro: 4.8.6
+      astro: 4.8.6(@types/node@17.0.45)
       es-module-lexer: 1.5.3
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -2625,9 +2628,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.8.6)(tailwindcss@3.4.3)':
+  '@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@17.0.45))(tailwindcss@3.4.3)':
     dependencies:
-      astro: 4.8.6
+      astro: 4.8.6(@types/node@17.0.45)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -2647,13 +2650,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/vue@4.2.0(astro@4.8.6)(rollup@4.17.2)(vite@5.2.11)(vue@3.4.27)':
+  '@astrojs/vue@4.2.0(astro@4.8.6(@types/node@17.0.45))(rollup@4.17.2)(vite@5.2.11(@types/node@17.0.45))(vue@3.4.27)':
     dependencies:
-      '@vitejs/plugin-vue': 5.0.4(vite@5.2.11)(vue@3.4.27)
-      '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.2.11)(vue@3.4.27)
+      '@vitejs/plugin-vue': 5.0.4(vite@5.2.11(@types/node@17.0.45))(vue@3.4.27)
+      '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.2.11(@types/node@17.0.45))(vue@3.4.27)
       '@vue/compiler-sfc': 3.4.27
-      astro: 4.8.6
-      vite-plugin-vue-devtools: 7.2.1(rollup@4.17.2)(vite@5.2.11)(vue@3.4.27)
+      astro: 4.8.6(@types/node@17.0.45)
+      vite-plugin-vue-devtools: 7.2.1(rollup@4.17.2)(vite@5.2.11(@types/node@17.0.45))(vue@3.4.27)
       vue: 3.4.27
     transitivePeerDependencies:
       - '@nuxt/kit'
@@ -3304,19 +3307,19 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-vue-jsx@3.1.0(vite@5.2.11)(vue@3.4.27)':
+  '@vitejs/plugin-vue-jsx@3.1.0(vite@5.2.11(@types/node@17.0.45))(vue@3.4.27)':
     dependencies:
       '@babel/core': 7.24.5
       '@babel/plugin-transform-typescript': 7.24.5(@babel/core@7.24.5)
       '@vue/babel-plugin-jsx': 1.2.2(@babel/core@7.24.5)
-      vite: 5.2.11
+      vite: 5.2.11(@types/node@17.0.45)
       vue: 3.4.27
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@5.0.4(vite@5.2.11)(vue@3.4.27)':
+  '@vitejs/plugin-vue@5.0.4(vite@5.2.11(@types/node@17.0.45))(vue@3.4.27)':
     dependencies:
-      vite: 5.2.11
+      vite: 5.2.11(@types/node@17.0.45)
       vue: 3.4.27
 
   '@vue/babel-helper-vue-transform-on@1.2.2': {}
@@ -3378,14 +3381,14 @@ snapshots:
       '@vue/compiler-dom': 3.4.27
       '@vue/shared': 3.4.27
 
-  '@vue/devtools-core@7.2.1(vite@5.2.11)(vue@3.4.27)':
+  '@vue/devtools-core@7.2.1(vite@5.2.11(@types/node@17.0.45))(vue@3.4.27)':
     dependencies:
       '@vue/devtools-kit': 7.2.1(vue@3.4.27)
       '@vue/devtools-shared': 7.2.1
       mitt: 3.0.1
       nanoid: 3.3.7
       pathe: 1.1.2
-      vite-hot-client: 0.2.3(vite@5.2.11)
+      vite-hot-client: 0.2.3(vite@5.2.11(@types/node@17.0.45))
     transitivePeerDependencies:
       - vite
       - vue
@@ -3473,7 +3476,7 @@ snapshots:
 
   astring@1.8.6: {}
 
-  astro@4.8.6:
+  astro@4.8.6(@types/node@17.0.45):
     dependencies:
       '@astrojs/compiler': 2.8.0
       '@astrojs/internal-helpers': 0.4.0
@@ -3532,8 +3535,8 @@ snapshots:
       tsconfck: 3.0.3
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.11
-      vitefu: 0.2.5(vite@5.2.11)
+      vite: 5.2.11(@types/node@17.0.45)
+      vitefu: 0.2.5(vite@5.2.11(@types/node@17.0.45))
       which-pm: 2.2.0
       yargs-parser: 21.1.1
       zod: 3.23.8
@@ -3671,13 +3674,11 @@ snapshots:
     dependencies:
       color-name: 1.1.4
       simple-swizzle: 0.2.2
-    optional: true
 
   color@4.2.3:
     dependencies:
       color-convert: 2.0.1
       color-string: 1.9.1
-    optional: true
 
   comma-separated-tokens@2.0.3: {}
 
@@ -3718,8 +3719,7 @@ snapshots:
 
   dequal@2.0.3: {}
 
-  detect-libc@2.0.3:
-    optional: true
+  detect-libc@2.0.3: {}
 
   deterministic-object-hash@2.0.2:
     dependencies:
@@ -4115,8 +4115,7 @@ snapshots:
       is-alphabetical: 2.0.1
       is-decimal: 2.0.1
 
-  is-arrayish@0.3.2:
-    optional: true
+  is-arrayish@0.3.2: {}
 
   is-binary-path@2.1.0:
     dependencies:
@@ -5146,7 +5145,6 @@ snapshots:
       '@img/sharp-wasm32': 0.33.4
       '@img/sharp-win32-ia32': 0.33.4
       '@img/sharp-win32-x64': 0.33.4
-    optional: true
 
   shebang-command@2.0.0:
     dependencies:
@@ -5165,7 +5163,6 @@ snapshots:
   simple-swizzle@0.2.2:
     dependencies:
       is-arrayish: 0.3.2
-    optional: true
 
   sirv@2.0.4:
     dependencies:
@@ -5451,11 +5448,11 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite-hot-client@0.2.3(vite@5.2.11):
+  vite-hot-client@0.2.3(vite@5.2.11(@types/node@17.0.45)):
     dependencies:
-      vite: 5.2.11
+      vite: 5.2.11(@types/node@17.0.45)
 
-  vite-plugin-inspect@0.8.4(rollup@4.17.2)(vite@5.2.11):
+  vite-plugin-inspect@0.8.4(rollup@4.17.2)(vite@5.2.11(@types/node@17.0.45)):
     dependencies:
       '@antfu/utils': 0.7.8
       '@rollup/pluginutils': 5.1.0(rollup@4.17.2)
@@ -5466,28 +5463,28 @@ snapshots:
       perfect-debounce: 1.0.0
       picocolors: 1.0.1
       sirv: 2.0.4
-      vite: 5.2.11
+      vite: 5.2.11(@types/node@17.0.45)
     transitivePeerDependencies:
       - rollup
       - supports-color
 
-  vite-plugin-vue-devtools@7.2.1(rollup@4.17.2)(vite@5.2.11)(vue@3.4.27):
+  vite-plugin-vue-devtools@7.2.1(rollup@4.17.2)(vite@5.2.11(@types/node@17.0.45))(vue@3.4.27):
     dependencies:
-      '@vue/devtools-core': 7.2.1(vite@5.2.11)(vue@3.4.27)
+      '@vue/devtools-core': 7.2.1(vite@5.2.11(@types/node@17.0.45))(vue@3.4.27)
       '@vue/devtools-kit': 7.2.1(vue@3.4.27)
       '@vue/devtools-shared': 7.2.1
       execa: 8.0.1
       sirv: 2.0.4
-      vite: 5.2.11
-      vite-plugin-inspect: 0.8.4(rollup@4.17.2)(vite@5.2.11)
-      vite-plugin-vue-inspector: 5.1.0(vite@5.2.11)
+      vite: 5.2.11(@types/node@17.0.45)
+      vite-plugin-inspect: 0.8.4(rollup@4.17.2)(vite@5.2.11(@types/node@17.0.45))
+      vite-plugin-vue-inspector: 5.1.0(vite@5.2.11(@types/node@17.0.45))
     transitivePeerDependencies:
       - '@nuxt/kit'
       - rollup
       - supports-color
       - vue
 
-  vite-plugin-vue-inspector@5.1.0(vite@5.2.11):
+  vite-plugin-vue-inspector@5.1.0(vite@5.2.11(@types/node@17.0.45)):
     dependencies:
       '@babel/core': 7.24.5
       '@babel/plugin-proposal-decorators': 7.24.1(@babel/core@7.24.5)
@@ -5498,21 +5495,22 @@ snapshots:
       '@vue/compiler-dom': 3.4.27
       kolorist: 1.8.0
       magic-string: 0.30.10
-      vite: 5.2.11
+      vite: 5.2.11(@types/node@17.0.45)
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.2.11:
+  vite@5.2.11(@types/node@17.0.45):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.17.2
     optionalDependencies:
+      '@types/node': 17.0.45
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.2.11):
+  vitefu@0.2.5(vite@5.2.11(@types/node@17.0.45)):
     optionalDependencies:
-      vite: 5.2.11
+      vite: 5.2.11(@types/node@17.0.45)
 
   vue@3.4.27:
     dependencies:
