@@ -1,7 +1,11 @@
 ---
 import BackMenu from "../components/BackMenu.vue";
-import DownloadSectionNew from "../components/DownloadSectionNew.vue";
+import DownloadSection from "../components/DownloadSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import flagshipScreenshot from "../assets/39/screenshots/flagship.png";
+import gnomeScreenshot from "../assets/39/screenshots/GNOME.png";
+import pantheonScreenshot from "../assets/39/screenshots/pantheon.png";
+import kdeScreenshot from "../assets/39/screenshots/kde.png";
 ---
 
 <BaseLayout>
@@ -11,7 +15,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div
       class="flex flex-col min-h-screen p-2 md:px-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-900 dark:text-gray-100"
     >
-      <BackMenu targetLink="/download" target="Downloads" />
+      <BackMenu targetLink="/um39" target="Ultramarine Linux 39" />
       <h1 class="text-4xl font-bold">ARM Builds</h1>
       <h2 class="pt-1 text-gray-400">
         You can find ARM (aarch64) builds of Ultramarine Linux 39 here.
@@ -20,30 +24,30 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div
           class="grid grid-flow-row-dense grid-cols-1 gap-10 pt-12 md:grid-cols-2 md:flex-row"
         >
-          <DownloadSectionNew
+          <DownloadSection
             editionName="Flagship"
-            screenshot="../ultramarine.png"
+            screenshot={flagshipScreenshot}
             description="The flagship edition with the latest and greatest software and our best polish. Powered by Budgie Desktop. (Recommended)"
             downloadLink="https://images.fyralabs.com/isos/ultramarine/39/ultramarine-flagship-39-live-aarch64.iso"
           />
 
-          <DownloadSectionNew
+          <DownloadSection
             editionName="GNOME"
-            screenshot="../GNOME.png"
+            screenshot={gnomeScreenshot}
             description="GNOME is a simple, elegant, and intuitive desktop environment with a focus on productivity."
             downloadLink="https://images.fyralabs.com/isos/ultramarine/39/ultramarine-gnome-39-live-aarch64.iso"
           />
 
-          <DownloadSectionNew
+          <DownloadSection
             editionName="Pantheon"
-            screenshot="../pantheon.png"
+            screenshot={pantheonScreenshot}
             description="The default desktop of elementary OS focused on elegance and visual appeal."
             downloadLink="https://images.fyralabs.com/isos/ultramarine/39/ultramarine-pantheon-39-live-aarch64.iso"
           />
 
-          <DownloadSectionNew
+          <DownloadSection
             editionName="KDE Plasma"
-            screenshot="../plasma.png"
+            screenshot={kdeScreenshot}
             description="The good old familiar KDE Plasma Desktop Environment --- simple by default, powerful when needed."
             downloadLink="https://images.fyralabs.com/isos/ultramarine/39/ultramarine-kde-39-live-aarch64.iso"
           />

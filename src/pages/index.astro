@@ -1,7 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import PrimaryButton from "../components/PrimaryButton.astro";
 import SecondaryButton from "../components/SecondaryButton.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import laptopImageLight from "../assets/40/laptop/light.png";
+import laptopImageDark from "../assets/40/laptop/dark.png";
 ---
 
 <BaseLayout>
@@ -64,19 +67,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           >
         </div>
         <div id="hero-right" class="lg:block hidden">
-          <img
-            src="laptop-dark.png"
-            width="800"
-            height="auto"
+          <Image
+            src={laptopImageDark}
             alt="Laptop preview with screnshot of Desktop"
             class="rounded-md dark:block hidden"
+            loading="eager"
           />
-          <img
-            src="laptop-light.png"
-            width="800"
-            height="auto"
+          <Image
+            src={laptopImageLight}
             alt="Laptop preview with screnshot of Desktop"
             class="rounded-md dark:hidden block"
+            loading="eager"
           />
         </div>
       </section>
@@ -99,11 +100,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div
           class="text-left lg:text-justify text-lg max-w-4xl bg-gray-200 dark:bg-gray-800 rounded-lg p-4 mt-0 mb-8 shadow-lg"
         >
-          Ultramarine Linux is a Linux-based operating system designed for your
+          Ultramarine Linux is an operating system designed for your
           own personal workstation (or battlestation). It is designed to be as
-          easy to use as possible, and stays out of your way. Ultramarine Linux
+          easy to use as possible, and stays out of your way. Ultramarine
           keeps up with the latest and greatest software in the open-source
-          community, while trying to be stable and secure. Ultramarine is for
+          community, while staying stable and secure. Ultramarine is for
           everyone, from the beginner to the tech enthusiast, and even Windows
           dropouts!
         </div>
@@ -169,7 +170,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       >
         <h2 class="text-4xl font-semibold">Reviews</h2>
         <h3 class="text-lg mb-4">
-          The most notable reviews about Ultramarine Linux
+          A selection of the best reviews
         </h3>
         <div
           class="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-8 w-full"
@@ -179,13 +180,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           >
             <iframe
               loading="lazy"
-              src="https://www.youtube.com/embed/YD77rBBkYck"
-              title="Tyler's Tech review"
+              src="https://www.youtube.com/embed/ki6evE0jlIw"
+              title="DistroTube review"
               allow="accelerometer; picture-in-picture"
               allowfullscreen></iframe>
             <a
-              href="https://www.youtube.com/c/TylersTechNow"
-              class="font-medium text-xl hover:text-blue-200">Tyler's Tech</a
+              href="https://www.youtube.com/@DistroTube"
+              class="font-medium text-xl hover:text-blue-200">DistroTube</a
             >
           </div>
           <div
@@ -193,13 +194,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           >
             <iframe
               loading="lazy"
-              src="https://youtube.com/embed/y_vgOH_UQvg"
-              title="eBuzz Central review"
+              src="https://www.youtube.com/embed/1SLQIkbqN5Y"
+              title="Jack Keifer review"
               allow="accelerometer; picture-in-picture"
               allowfullscreen></iframe>
             <a
-              href="https://www.youtube.com/c/eBuzzCentral"
-              class="font-medium text-xl hover:text-blue-200">eBuzz Central</a
+              href="https://www.youtube.com/@jackkeifer"
+              class="font-medium text-xl hover:text-blue-200">Jack Keifer</a
             >
           </div>
           <div
@@ -207,20 +208,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           >
             <iframe
               loading="lazy"
-              src="https://youtube.com/embed/-L6yuasSD1o"
-              title="The Linux Cast review"
+              src="https://www.youtube.com/embed/g-N1TMZjd0Q"
+              title="G's Multiverse review"
               allow="accelerometer; picture-in-picture"
               allowfullscreen></iframe>
             <a
-              href="https://www.youtube.com/c/TheLinuxCast"
-              class="font-medium text-xl hover:text-blue-200">The Linux Cast</a
+              href="https://www.youtube.com/@GsMultiverse"
+              class="font-medium text-xl hover:text-blue-200">G's Multiverse</a
             >
           </div>
         </div>
         <a
-          href="https://distrowatch.com/weekly.php?issue=20220207#ultramarine"
+          href="https://www.zdnet.com/article/ultramarine-linux-flagship-is-a-contender-for-desktop-of-the-year/"
           class="mt-4 p-4 hover:text-blue-300 bg-gray-200 dark:bg-gray-800 rounded-md shadow-lg"
-          >DistroWatch Article</a
+          >ZDNet Article</a
         >
       </section>
 
@@ -268,7 +269,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
       crossorigin="anonymous"
-      referrerPolicy="no-referrer"
+      referrerpolicy="no-referrer"
     />
   </div>
 </BaseLayout>
