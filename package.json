@@ -1,7 +1,7 @@
 {
-  "name": "@example/blog",
+  "name": "ultramarine-website",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -12,13 +12,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.0.0",
+    "@astrojs/mdx": "^3.0.1",
     "@astrojs/rss": "^4.0.6",
-    "@astrojs/sitemap": "^3.1.4",
+    "@astrojs/sitemap": "^3.1.5",
     "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/vue": "^4.2.0",
-    "@fontsource/mulish": "^5.0.18",
-    "astro": "^4.8.6",
+    "@astrojs/vue": "^4.3.0",
+    "astro": "^4.9.1",
     "tailwindcss": "^3.4.3",
     "vue": "^3.4.27"
   },
