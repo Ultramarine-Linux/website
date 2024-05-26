@@ -10,8 +10,8 @@
 </template>
 
 <script setup lang="ts">
-
 import {ref} from 'vue'
+
 const icon = ref(undefined)
 
 if (typeof window !== "undefined") {

@@ -1,0 +1,66 @@
+---
+import DownloadIcon from "../icons/DownloadIcon.astro";
+---
+
+<section
+  id="hero"
+  class="lg:mt-8 pt-4 mb-4 lg:mb-64 flex flex-row justify-between items-start max-w-screen-2xl mx-auto px-8 md:px-16"
+>
+  <div id="hero-left" class="max-w-2xl mr-8 mt-12">
+    <div class="text-bg-container">
+      <h1
+        class="hero-text font-bold text-5xl sm:text-6xl leading-normal md:leading-relaxed"
+      >
+        It just works.
+      </h1>
+    </div>
+    <span class="text-lg max-w-xs text-gray-200"
+      >Ultramarine Linux is a Fedora-based Linux distribution designed to
+      stay out of your way and be easy to use. All editions come with
+      several tweaks preapplied to make initial setup and daily usage
+      seamless.</span
+    >
+
+    <div
+      id="button-row"
+      class="flex flex-col md:flex-row gap-2 md:gap-6 mt-4 md:mt-8"
+    >
+      <a href="/download">
+        <button
+          class="flex flex-row gap-2 items-center justify-center px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 text-lg transition-colors"
+        >
+          <DownloadIcon />
+          <span>Download</span>
+        </button>
+      </a>
+
+      <a
+        href="https://wiki.ultramarine-linux.org/en/installation/installation/"
+        class="mb-2"
+        ><button
+          class="flex flex-row items-center justify-center py-2 pl-1 md:pl-0 text-lg dark:text-gray-100"
+          ><span class="hover:text-accent-500 transition-colors">Installation Guide</span>
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <div id="hero-right" class="xl:block hidden">
+      <div class="relative">
+        <div class="absolute top-20 right-36 w-[400px] h-[240px] bg-blue-500 rounded-lg -rotate-12"></div>
+        <div class="absolute top-6 -right-4 w-[400px] h-[240px] bg-teal-500 rounded-lg rotate-[8deg]"></div>
+        <div class="absolute top-40 right-8 w-[400px] h-[240px] bg-purple-500 rounded-lg rotate-2"></div>
+      </div>
+  </div>
+</section>
+
+<style>
+  .hero-text {
+    background-image: url("../../texture.webp");
+    background-clip: text;
+    webkit-background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

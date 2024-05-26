@@ -1,276 +1,24 @@
 ---
 import { Image } from "astro:assets";
-import PrimaryButton from "../components/PrimaryButton.astro";
-import SecondaryButton from "../components/SecondaryButton.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import laptopImageLight from "../assets/40/laptop/light.png";
-import laptopImageDark from "../assets/40/laptop/dark.png";
+import Hero from "../components/sections/Hero.astro";
+import WavyDivider1 from "../components/dividers/WavyDivider1.astro";
+import WhyUltramarine from "../components/sections/WhyUltramarine.astro";
 ---
 
 <BaseLayout>
   <div class="flex flex-col">
-    <div>
-      <section
-        id="hero"
-        class="mt-8 mb-4 flex flex-row justify-between items-start"
-      >
-        <div id="hero-left" class="max-w-2xl mr-8 mt-8">
-          <div class="text-bg-container">
-            <h1
-              class="hero-text font-bold text-5xl sm:text-6xl leading-normal md:leading-relaxed tracking-tight"
-            >
-              It just works.
-            </h1>
-          </div>
-          <span class="text-lg max-w-xs"
-            >Ultramarine Linux is a Fedora-based Linux distribution designed to
-            stay out of your way and be easy to use. All editions come with
-            several tweaks preapplied to make initial setup and daily usage
-            seamless.</span
-          >
-          <div
-            id="button-row"
-            class="flex flex-col md:flex-row gap-4 mt-2 md:mt-6"
-          >
-            <a href="/download"
-              ><button
-                class="flex flex-row gap-2 items-center justify-center px-6 py-2 border-2 bg-blue-700 rounded-[24px] text-gray-50 hover:bg-blue-800 border-blue-700 hover:border-blue-800 text-lg transition-colors"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                  ><path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                  ></path>
-                </svg>
-                <span>Download</span>
-              </button>
-            </a>
-            <a
-              href="https://wiki.ultramarine-linux.org/en/installation/installation/"
-              class="mb-2"
-              ><button
-                class="flex flex-row items-center justify-center px-6 py-2 bg-transparent rounded-[24px] border-2 text-blue-500 dark:text-blue-200 hover:text-white dark:hover:text-white hover:bg-blue-700 border-blue-700 text-xl transition-colors"
-                ><span>Installation Guide</span>
-              </button>
-            </a>
-          </div>
-          <a
-            href="#migrate"
-            class="text-gray-500 dark:text-gray-400 md:block hidden ml-1 tracking-wide"
-            >Already using Fedora? Click here for a migration script.</a
-          >
+      <div class="relative">
+        <Hero />
+
+        <div class="absolute w-full self-center">
+          <div class="wavyDivider1"></div>
         </div>
-        <div id="hero-right" class="lg:block hidden">
-          <Image
-            src={laptopImageDark}
-            alt="Laptop preview with screnshot of Desktop"
-            class="rounded-md dark:block hidden"
-            loading="eager"
-          />
-          <Image
-            src={laptopImageLight}
-            alt="Laptop preview with screnshot of Desktop"
-            class="rounded-md dark:hidden block"
-            loading="eager"
-          />
-        </div>
-      </section>
-      <div
-        id="scroll-animation"
-        class="hidden lg:flex 2xl:hidden flex-col w-full pb-12 items-center justify-center"
-      >
-        <div class="mouse"></div>
-        <span class="tracking-wider text-gray-500 pb-4"
-          >scroll to learn more</span
-        >
+
+        <WhyUltramarine />
+
       </div>
-      <section
-        id="about"
-        class="flex flex-col flex-wrap items-start lg:items-center mb-8 2xl:mt-8"
-      >
-        <h2 class="font-semibold tracking-tight text-4xl mb-8 mt-8 lg:mt-0">
-          What is Ultramarine?
-        </h2>
-        <div
-          class="text-left lg:text-justify text-lg max-w-4xl bg-gray-200 dark:bg-gray-800 rounded-lg p-4 mt-0 mb-8 shadow-lg"
-        >
-          Ultramarine Linux is an operating system designed for your
-          own personal workstation (or battlestation). It is designed to be as
-          easy to use as possible, and stays out of your way. Ultramarine
-          keeps up with the latest and greatest software in the open-source
-          community, while staying stable and secure. Ultramarine is for
-          everyone, from the beginner to the tech enthusiast, and even Windows
-          dropouts!
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
-          <div
-            class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl shadow-lg"
-          >
-            <div
-              class="mb-2 text-blue-600 fab fa-fedora dark:text-blue-50 text-6xl"
-            >
-            </div>
-            <h3 class="mb-1 text-xl font-semibold tracking-wide">
-              Based on Fedora®
-            </h3>
-            <p class="max-w-sm text-lg text-left">
-              Designed to be 100% bug-for-bug compatible with Fedora,
-              Ultramarine offers the latest and greatest in open-source
-              software, yet maintaining rock-solid stability. Making sure things
-              don't break is our top priority.
-            </p>
-          </div>
-          <div
-            class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl shadow-lg"
-          >
-            <div
-              class="mb-2 text-blue-600 fas fa-lock-open dark:text-blue-50 text-5xl p-1 pb-1.5"
-            >
-            </div>
-            <h3 class="mb-1 text-xl font-semibold tracking-wide">
-              Developer Friendly
-            </h3>
-            <p class="max-w-sm text-lg text-left">
-              Ultramarine provides developer-friendly (and friendly for the
-              average user) tools to make sure you can get the most out of your
-              system. We're making it as easy and accessible as possible for
-              everyone to create and package their software for Ultramarine (and
-              in extension, Fedora!).
-            </p>
-          </div>
-          <div
-            class="flex flex-col items-start bg-gray-200 dark:bg-gray-800 p-4 rounded-xl shadow-lg"
-          >
-            <div
-              class="mb-2 text-blue-600 far fa-check-circle dark:text-blue-50 text-5xl p-1 pb-1.5"
-            >
-            </div>
-            <h3 class="mb-1 text-xl font-semibold tracking-wide">
-              Sane Defaults
-            </h3>
-            <p class="max-w-sm text-lg text-left">
-              Ultramarine applies pragmatic tweaks and settings to make sure
-              your out-of-the-box experience is as smooth as it can be. We've
-              tried to make sure that you'll be able to get started as quickly
-              as possible.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      <section
-        id="reviews"
-        class="flex flex-col flex-wrap items-start lg:items-center mb-12 w-full"
-      >
-        <h2 class="text-4xl font-semibold">Reviews</h2>
-        <h3 class="text-lg mb-4">
-          A selection of the best reviews
-        </h3>
-        <div
-          class="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-8 w-full"
-        >
-          <div
-            class="flex flex-col items-center gap-4 p-2 lg:p-4 w-full bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg"
-          >
-            <iframe
-              loading="lazy"
-              src="https://www.youtube.com/embed/ki6evE0jlIw"
-              title="DistroTube review"
-              allow="accelerometer; picture-in-picture"
-              allowfullscreen></iframe>
-            <a
-              href="https://www.youtube.com/@DistroTube"
-              class="font-medium text-xl hover:text-blue-200">DistroTube</a
-            >
-          </div>
-          <div
-            class="flex flex-col items-center gap-4 p-2 lg:p-4 w-full bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg"
-          >
-            <iframe
-              loading="lazy"
-              src="https://www.youtube.com/embed/1SLQIkbqN5Y"
-              title="Jack Keifer review"
-              allow="accelerometer; picture-in-picture"
-              allowfullscreen></iframe>
-            <a
-              href="https://www.youtube.com/@jackkeifer"
-              class="font-medium text-xl hover:text-blue-200">Jack Keifer</a
-            >
-          </div>
-          <div
-            class="flex flex-col items-center gap-4 p-2 lg:p-4 w-full bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg"
-          >
-            <iframe
-              loading="lazy"
-              src="https://www.youtube.com/embed/g-N1TMZjd0Q"
-              title="G's Multiverse review"
-              allow="accelerometer; picture-in-picture"
-              allowfullscreen></iframe>
-            <a
-              href="https://www.youtube.com/@GsMultiverse"
-              class="font-medium text-xl hover:text-blue-200">G's Multiverse</a
-            >
-          </div>
-        </div>
-        <a
-          href="https://www.zdnet.com/article/ultramarine-linux-flagship-is-a-contender-for-desktop-of-the-year/"
-          class="mt-4 p-4 hover:text-blue-300 bg-gray-200 dark:bg-gray-800 rounded-md shadow-lg"
-          >ZDNet Article</a
-        >
-      </section>
-
-      <section id="migrate" class="md:flex flex-col items-center mb-12 hidden">
-        <h2 class="text-2xl font-semibold">
-          Already using Fedora? You can use our migration script!
-        </h2>
-        <div
-          id="migration"
-          class="hidden md:flex md:flex-col md:justify-center mt-2"
-        >
-          <div class="p-2">
-            <!-- code block for copying command -->
-            <div
-              class="inline-flex items-center bg-gray-300 dark:bg-gray-600 rounded-xl"
-            >
-              <div
-                class="p-6 bg-gray-200 dark:text-gray-400 dark:bg-gray-700 rounded-xl"
-              >
-                <p id="migrate-script" class="font-mono">
-                  bash &lt;(curl -s https://ultramarine-linux.org/migrate.sh)
-                </p>
-              </div>
-              <!-- add a button to copy the text next to the code block -->
-              <div
-                class="relative px-3 py-4 mx-1 text-gray-700 bg-gray-300 dark:bg-gray-600 cursor-pointer rounded-xl dark:text-gray-300 hover:text-gray-400 dark:hover:text-gray-50"
-                onclick="copyEvent('migrate-script')"
-              >
-                <button
-                  type="button"
-                  class="copy-button fa fa-copy"
-                  aria-label="Copy to clipboard button"
-                >
-                  <span class="hidden">Copy</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </div>
 </BaseLayout>
 
@@ -280,13 +28,13 @@ import laptopImageDark from "../assets/40/laptop/dark.png";
     width: 95%;
   }
 
-  .hero-text {
-    background-image: url("../../texture.jpg");
-    background-clip: text;
-    webkit-background-clip: text;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .wavyDivider1 {
+    width: 100%;
+    background-image: url(/public/divider_1.svg);
+    background-size: cover;
+    height: 0;
+    padding: 0; /* reset */
+    padding-bottom: calc(100% * 10 / 32);
   }
 
   .mouse {
