@@ -1,5 +1,7 @@
+@import url('https://api.fontshare.com/css?f[]=switzer@400,700&display=swap');
+
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
-  font-family: 'Mulish', sans-serif;
+  font-family: 'Switzer', sans-serif;
 }

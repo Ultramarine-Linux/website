@@ -12,13 +12,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
   </head>
   <body>
     <div
-      class="min-h-screen text-[#1b1b1f] bg-gray-100 dark:text-gray-200 dark:bg-gray-900"
+      class="min-h-screen text-[#1b1b1f] bg-gray-100 dark:text-gray-200 dark:bg-gray-950"
     >
       <Header title={SITE_TITLE} />
       <div class="max-w-screen-2xl mx-auto px-6 md:px-16">
         <slot />
       </div>
-      <Footer client:load />
+      <Footer />
     </div>
     <script is:inline>
       const theme = (() => {
