@@ -1,21 +1,26 @@
 ---
-import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/sections/Hero.astro";
-import WavyDivider1 from "../components/dividers/WavyDivider1.astro";
 import WhyUltramarine from "../components/sections/WhyUltramarine.astro";
+import WhyUltramarine2 from "../components/sections/WhyUltramarine2.astro";
 ---
 
 <BaseLayout>
   <div class="flex flex-col">
-      <div class="relative">
+      <div>
         <Hero />
 
-        <div class="absolute w-full self-center">
+        <div class="absolute w-full self-center hidden md:block">
           <div class="wavyDivider1"></div>
         </div>
 
         <WhyUltramarine />
+
+        <div class="absolute w-full self-center hidden md:block">
+          <div class="umDivider1"></div>
+        </div>
+
+        <WhyUltramarine2 />
 
       </div>
 
@@ -30,11 +35,20 @@ import WhyUltramarine from "../components/sections/WhyUltramarine.astro";
 
   .wavyDivider1 {
     width: 100%;
-    background-image: url(/public/divider_1.svg);
+    background-image: url(/divider_1.svg);
     background-size: cover;
     height: 0;
     padding: 0; /* reset */
     padding-bottom: calc(100% * 10 / 32);
+  }
+
+  .umDivider1 {
+    width: 100%;
+    background-image: url(/divider_2.svg);
+    background-size: cover;
+    height: 0;
+    padding: 0; /* reset */
+    padding-bottom: calc((100% * 10 / 22) + 600px);
   }
 
   .mouse {

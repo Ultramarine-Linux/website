@@ -5,3 +5,23 @@ html {
   color-scheme: dark;
   font-family: 'Switzer', sans-serif;
 }
+
+blockquote {
+  text-indent: -0.45em;
+
+  &::before {
+    content: open-quote;
+    color: gray;
+  }
+  &::after {
+    content: close-quote;
+    color: gray;
+  }
+}
+
+@​supports (hanging-punctuation: first) {
+  blockquote {
+    text-indent: 0;
+    hanging-punctuation: first;
+  }
+}

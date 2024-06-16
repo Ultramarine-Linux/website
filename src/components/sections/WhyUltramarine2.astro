@@ -1,0 +1,69 @@
+---
+import { Picture } from 'astro:assets';
+import { Icon } from 'astro-icon/components'
+
+import fyraTeam from "../../assets/fyra_team.svg"
+import placeholderScreenshot from "../../assets/placeholder.png"
+---
+
+<div class="relative pt-32">
+  <div class="max-w-screen-2xl mx-auto px-8 md:px-16">
+    <h2 class="text-4xl font-bold mt-28 mb-16 text-center">Loved by the people</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
+      <a href="https://www.zdnet.com/article/ultramarine-linux-flagship-is-a-contender-for-desktop-of-the-year/" class="flex flex-col items-start justify-center bg-gray-200 dark:bg-gray-900 py-8 px-12 rounded-xl border border-gray-800">
+        <blockquote class="text-lg" cite="https://www.zdnet.com/article/ultramarine-linux-flagship-is-a-contender-for-desktop-of-the-year/">
+          Ultimately, however, the best thing I can say is that the Ultramarine Linux Flagship edition impressed me enough to make me want to switch from Ubuntu Budgie. [...] If you're looking for a new Linux distribution (or a new OS in general), I would highly recommend Ultramarine Linux Flagship.
+        </blockquote>
+        <p class="pt-4 text-gray-400">- Jack Wallen, ZDNet</p>
+      </a>
+      <a href="https://news.itsfoss.com/ultramarine-linux-40-release/" class="flex flex-col items-start bg-gray-200 dark:bg-gray-900 py-8 px-12 rounded-xl border border-gray-800">
+        <blockquote class="text-lg" cite="https://news.itsfoss.com/ultramarine-linux-40-release/">
+          Ultramarine is one of the best Fedora-based distributions around, which has been built keeping ease of use in mind. Liked by both beginners and veterans, most people find it to be a very reliable daily-driver Linux distro that doesn't get in the way.
+        </blockquote>
+        <p class="pt-4 text-gray-400">- Sourav Rudra, It's FOSS News</p>
+      </a>
+      <a href="https://www.debugpoint.com/ultramarine-linux-39-review/" class="flex flex-col items-start bg-gray-200 dark:bg-gray-900 py-8 px-12 rounded-xl border border-gray-800">
+        <blockquote class="text-lg" cite="https://www.debugpoint.com/ultramarine-linux-39-review/">
+          Ultramarine Linux distinguishes itself by providing a customized out-of-the-box experience with four desktop flavours while based on Fedora Linux. The Fedora base ensures access to the latest advancements in the Linux world, from the kernel to audio and video technologies.
+        </blockquote>
+        <p class="pt-4 text-gray-400">- Arindam, DebugPoint.com</p>
+      </a>
+    </div>
+
+    <h2 class="text-4xl font-bold mt-32 mb-8 text-center">Frequently asked questions</h2>
+    <div class="flex flex-col w-full max-w-4xl mx-auto divide-y divide-gray-800 bg-gray-900 border border-gray-800 rounded-xl px-10 py-2 pb-4 mb-44">
+      <details>
+        <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">How can I place an order?</summary>
+        <div class="px-4 pb-4">
+          <p>You can easily place an order on our website by browsing our product catalog, selecting the items you want, and adding them to your cart. Then, proceed to checkout, where you can provide your shipping and payment information to complete the order.</p>
+        </div>
+      </details>
+      <details>
+        <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">What payment methods do you accept?</summary>
+        <div class="px-4 pb-4">
+          <p>We accept various payment methods, including credit cards, debit cards, net banking, and mobile wallet payments. You can choose the payment option that is most convenient for you during the checkout process.</p>
+        </div>
+      </details>
+      <details>
+        <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">How long does shipping take?</summary>
+        <div class="px-4 pb-4">
+          <p>Shipping times may vary depending on your location and the shipping method chosen. Typically, orders are processed within 1-2 business days, and delivery can take 3-7 business days within India. You will receive a tracking notification once your order is shipped.</p>
+        </div>
+      </details>
+      <details>
+        <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">Can I return a product if I'm not satisfied?</summary>
+        <div class="px-4 pb-4">
+          <p>Yes, we have a hassle-free return policy. If you are not satisfied with your purchase, you can initiate a return within 30 days of receiving the product. Please contact our customer support at <a href="" class="underline">example@gmail.com</a> for assistance.</p>
+        </div>
+      </details>
+      <details>
+        <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">Do you offer international shipping?</summary>
+        <div class="px-4 pb-4">
+          <p>Currently, we only provide shipping services within India. However, we may consider expanding our shipping options to international locations in the future. Please stay updated with our website for any changes in shipping destinations.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+
+
