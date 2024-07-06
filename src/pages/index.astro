@@ -1,29 +1,45 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
 import Hero from "../components/sections/Hero.astro";
 import WhyUltramarine from "../components/sections/WhyUltramarine.astro";
-import WhyUltramarine2 from "../components/sections/WhyUltramarine2.astro";
+import TestimonialsAndFAQs from "../components/sections/TestimonialsAndFAQs.astro";
+import FedoraMigrationScriptDialog from "../components/sections/FedoraMigrationScriptDialog.astro";
+
+import DownloadIcon from "../components/icons/DownloadIcon.astro";
 ---
 
 <BaseLayout>
   <div class="flex flex-col">
-      <div>
-        <Hero />
+    <div>
+      <Hero />
 
-        <div class="absolute w-full self-center hidden md:block">
-          <div class="wavyDivider1"></div>
-        </div>
-
-        <WhyUltramarine />
-
-        <div class="absolute w-full self-center hidden md:block">
-          <div class="umDivider1"></div>
-        </div>
-
-        <WhyUltramarine2 />
-
+      <div class="absolute w-full self-center hidden md:block">
+        <div class="wavyDivider1"></div>
       </div>
 
+      <WhyUltramarine />
+
+      <div class="absolute w-full self-center hidden md:block">
+        <div class="umDivider1"></div>
+      </div>
+
+      <TestimonialsAndFAQs />
+
+      <div class="relative pt-32 max-w-screen-2xl mx-auto px-8 md:px-16">
+        <div class="flex flex-col items-center mb-48">
+          <h1 class="text-center font-bold text-4xl mb-6">
+            Still not convinced? Just try it out!
+          </h1>
+          <a href="https://wiki.ultramarine-linux.org" class="flex flex-row gap-2 items-center text-white font-medium text-xl py-2 px-6 rounded-xl bg-accent-600 hover:bg-accent-700 transition-colors">
+            <DownloadIcon />
+            Download
+          </a>
+          <FedoraMigrationScriptDialog />
+        </div>
+      </div>
+
+    </div>
   </div>
 </BaseLayout>
 
@@ -99,4 +115,19 @@ import WhyUltramarine2 from "../components/sections/WhyUltramarine2.astro";
     window.getSelection().selectAllChildren(str);
     document.execCommand("Copy");
   }
+
+  const dialog = document.querySelector("dialog");
+  const showButton = document.getElementById("migrationscript");
+  const closeButton = document.querySelector("dialog button");
+
+  // "Show the dialog" button opens the dialog modally
+  showButton.addEventListener("click", () => {
+    dialog.showModal();
+  });
+
+  // "Close" button closes the dialog
+  closeButton.addEventListener("click", () => {
+    dialog.close();
+  });
+
 </script>
