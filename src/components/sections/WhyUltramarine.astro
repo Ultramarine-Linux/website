@@ -9,38 +9,38 @@ import placeholderScreenshot from "../../assets/placeholder.png"
 <div class="pt-32 relative max-w-screen-2xl mx-auto px-8 md:px-16">
   <h2 class="text-4xl font-bold mt-4">Why Ultramarine?</h2>
 
-  <div class="w-full flex flex-row items-start justify-between mb-24">
+  <div class="w-full flex flex-col md:flex-row items-start justify-between mb-24">
     <div class="mt-16">
       <h3 class="text-2xl font-semibold mb-4">Built by the community, for the community</h3>
-      <p class="text-gray-200 max-w-2xl mr-20 mb-3">
-        Ultramarine is 100% open source, built with care by the people at Fyra Labs. Lorem ipsum some placeholder text don’t mind this. Lorem ipsum some placeholder text don’t mind this.Lorem ipsum some placeholder text don’t mind this.
+      <p class="text-gray-200 max-w-2xl md:mr-20 mb-3">
+        Ultramarine is 100% open source, built with care by the people at Fyra Labs. Lorem ipsum some placeholder text don't mind this. Lorem ipsum some placeholder text don't mind this.Lorem ipsum some placeholder text don't mind this.
       </p>
       <a href="/pog" class="flex flex-row items-center gap-2 text-accent-200 hover:text-accent-400 transition-colors group">
         <span class="font-medium">Learn more about our mission</span>
         <Icon name="fluent:arrow-right-16-regular" class="size-6 group-hover:translate-x-1 transition-transform duration-300" />
       </a>
     </div>
-    <Picture class="hidden md:block" src={fyraTeam} formats={['avif', 'webp']} quality={90} alt="fyra team image" />
+    <Picture class="hidden md:block mt-16 lg:mt-0" src={fyraTeam} formats={['avif', 'webp']} quality={90} alt="fyra team image" />
   </div>
 
-  <div class="w-full flex flex-row-reverse items-start justify-between mb-48">
-    <div class="mt-16 text-right max-w-2xl">
+  <div class="w-full flex flex-col md:flex-row-reverse items-start justify-between mb-24 lg:mb-48">
+    <div class="mt-16 md:text-right max-w-2xl">
       <h3 class="text-2xl font-semibold mb-4">Preapplied tweaks to get you started in no time</h3>
       <p class="text-gray-200 mb-3">
-        Drivers, codecs and a lot more. With the 1000+ packages in Terra, we’ve got you covered with everything you need, on top of Fedora repos, Flathub and RPM Fusion which are all enabled out of the box on Ultramarine.
+        Drivers, codecs and a lot more. With the 1000+ packages in Terra, we've got you covered with everything you need, on top of Fedora repos, Flathub and RPM Fusion which are all enabled out of the box on Ultramarine.
       </p>
-      <a href="/pog" class="flex flex-row items-center justify-end gap-2 text-accent-200 hover:text-accent-400 transition-colors group">
+      <a href="/pog" class="flex flex-row items-center md:justify-end gap-2 text-accent-200 hover:text-accent-400 transition-colors group">
         <span class="font-medium">View Terra package list</span>
         <Icon name="fluent:arrow-right-16-regular" class="size-6 group-hover:translate-x-1 transition-transform duration-300" />
       </a>
     </div>
-    <Picture class="hidden md:block pr-4" src={placeholderScreenshot} formats={['avif', 'webp']} quality={80} alt="fyra team image" />
+    <Picture class="hidden lg:block pr-4 mt-8 md:mt-0" src={placeholderScreenshot} formats={['avif', 'webp']} quality={80} alt="fyra team image" />
   </div>
 
-  <div class="w-full flex flex-row items-start justify-between mb-32">
+  <div class="w-full flex flex-col md:flex-row items-start justify-between mb-24 lg:mb-32">
     <div class="mt-16">
       <h3 class="text-2xl font-semibold mb-4">Fedora, but even better</h3>
-      <p class="text-gray-200 max-w-2xl mr-20 mb-3">
+      <p class="text-gray-200 max-w-2xl md:mr-20 mb-3">
         Ultramarine is built on top of Fedora, making it bug-for-bug compatible. You can install things just like on Fedora, but Ultramarine provides a variety of tweaks meant to make your experience better, such as our custom Fyra Kernel.
       </p>
       <a href="/pog" class="flex flex-row items-center gap-2 text-accent-200 hover:text-accent-400 transition-colors group">
@@ -48,8 +48,6 @@ import placeholderScreenshot from "../../assets/placeholder.png"
         <Icon name="fluent:arrow-right-16-regular" class="size-6 group-hover:translate-x-1 transition-transform duration-300" />
       </a>
     </div>
-    <Picture class="hidden md:block" src={placeholderScreenshot} formats={['avif', 'webp']} quality={80} alt="fyra team image" />
+    <Picture class="hidden lg:block mt-8 md:mt-0" src={placeholderScreenshot} formats={['avif', 'webp']} quality={80} alt="fyra team image" />
   </div>
 </div>
-
-
