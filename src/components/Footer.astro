@@ -1,0 +1,71 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-100 dark:bg-gray-900 border-t border-gray-400 dark:border-gray-600 py-8 text-gray-600 dark:text-gray-300">
+  <div class="max-w-screen-2xl mx-auto px-8">
+    <div class="flex flex-col md:flex-row justify-between">
+      <div class="mb-4 md:mb-0">
+        <h2 class="text-xl font-semibold">Fyra Labs</h2>
+        <p class="text-sm">Innovating the future</p>
+        <div class="mt-2 flex space-x-4">
+          <a
+            href="https://discord.gg/5fdPuxTg5Q"
+            class="fab fa-discord text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+            aria-label="Ultramarine Discord link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="hidden">Ultramarine Discord server</span>
+          </a>
+          <a
+            href="https://twitter.com/UltramarineProj"
+            class="fab fa-twitter text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+            aria-label="Ultramarine Linux Twitter link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="hidden">Ultramarine Linux Twitter</span>
+          </a>
+          <a
+            href="https://fedi.fyralabs.com/@ultramarine"
+            class="fab fa-mastodon text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+            aria-label="Ultramarine Linux Mastodon link"
+            target="_blank"
+            rel="noopener noreferrer me"
+          >
+            <span class="hidden">Ultramarine Linux Mastodon</span>
+          </a>
+          <a
+            href="https://github.com/ultramarine-linux"
+            class="fab fa-github text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+            aria-label="Ultramarine Linux Github link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="hidden">Ultramarine Linux Github</span>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col md:items-end">
+        <div class="flex space-x-4 mb-4 md:mb-0">
+          <a href="/about" class="hover:text-blue-600 dark:hover:text-blue-500">About Us</a>
+          <a href="/contact" class="hover:text-blue-600 dark:hover:text-blue-500">Contact</a>
+          <a href="/privacy" class="hover:text-blue-600 dark:hover:text-blue-500">Privacy Policy</a>
+          <a href="/terms" class="hover:text-blue-600 dark:hover:text-blue-500">Terms of Service</a>
+        </div>
+        <div class="flex flex-col items-center md:items-end">
+          <span class="font-semibold tracking-wide text-center md:text-right">
+            &copy; 2021 - {currentYear} Fyra Labs
+          </span>
+          <a
+            href="/licenses"
+            class="text-blue-500 dark:text-blue-400 hover:text-blue-600 hover:dark:text-blue-500"
+          >
+            License Notice & Credits
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

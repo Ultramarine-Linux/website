@@ -16,28 +16,92 @@ import ThemeSwitch from "./ThemeSwitch.vue";
         <img src="/ultramarine-logo.svg" alt="Ultramarine Linux Logo">
       </div>
     </a>
+    <nav class="hidden md:flex flex-row gap-8">
+      <a
+        href="https://wiki.ultramarine-linux.org"
+        class="hover:text-blue-600 dark:hover:text-blue-500"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Wiki
+      </a>
+      <a
+        href="https://github.com/Ultramarine-Linux/ultramarine-pkgs"
+        class="hover:text-blue-600 dark:hover:text-blue-500"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Packages
+      </a>
+    </nav>
+  </div>
+  <div class="flex flex-row gap-8 items-center font-semibold">
+    <ThemeSwitch client:load />
+    <nav class="hidden md:flex flex-row gap-8 items-center">
+      <a
+        href="https://discord.gg/5fdPuxTg5Q"
+        class="fab fa-discord text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+        aria-label="Ultramarine Discord link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="hidden">Ultramarine Discord server</span>
+      </a>
+      <a
+        href="https://twitter.com/UltramarineProj"
+        class="fab fa-twitter text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+        aria-label="Ultramarine Linux Twitter link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="hidden">Ultramarine Linux Twitter</span>
+      </a>
+      <a
+        href="https://fedi.fyralabs.com/@ultramarine"
+        class="fab fa-mastodon text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+        aria-label="Ultramarine Linux Mastodon link"
+        target="_blank"
+        rel="noopener noreferrer me"
+      >
+        <span class="hidden">Ultramarine Linux Mastodon</span>
+      </a>
+      <a
+        href="https://github.com/ultramarine-linux"
+        class="fab fa-github text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+        aria-label="Ultramarine Linux Github link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="hidden">Ultramarine Linux Github</span>
+      </a>
+      <a
+        href="/download"
+        class="bg-blue-600 hover:bg-blue-700 text-gray-50 px-6 py-2 rounded-[24px]"
+      >Download</a>
+    </nav>
+    <button id="menu-button" class="md:hidden flex items-center px-3 py-2 border rounded text-gray-600 border-gray-600 hover:text-blue-600 dark:text-gray-200 dark:border-gray-200 dark:hover:text-blue-200">
+      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <title>Menu</title>
+        <path d="M0 3h20v2H0zM0 7h20v2H0zM0 11h20v2H0z" />
+      </svg>
+    </button>
+  </div>
+  <nav id="menu" class="md:hidden hidden flex-col mt-4 w-full bg-gray-100 dark:bg-gray-900 p-4 rounded-lg">
     <a
       href="https://wiki.ultramarine-linux.org"
-      class="hover:text-blue-600 dark:hover:text-blue-500"
+      class="block py-2 px-4 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500"
       target="_blank"
       rel="noopener noreferrer"
-      >Wiki
+    >Wiki
     </a>
     <a
       href="https://github.com/Ultramarine-Linux/ultramarine-pkgs"
-      class="hover:text-blue-600 dark:hover:text-blue-500 md:block hidden"
+      class="block py-2 px-4 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500"
       target="_blank"
       rel="noopener noreferrer"
-      >Packages
+    >Packages
     </a>
-  </div>
-  <div
-    class="links-right flex flex-row gap-8 justify-center align-middle items-center font-semibold"
-  >
-    <ThemeSwitch client:load />
     <a
       href="https://discord.gg/5fdPuxTg5Q"
-      class="fab fa-discord text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+      class="block fab fa-discord text-2xl py-2 px-4 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500"
       aria-label="Ultramarine Discord link"
       target="_blank"
       rel="noopener noreferrer"
@@ -46,7 +110,7 @@ import ThemeSwitch from "./ThemeSwitch.vue";
     </a>
     <a
       href="https://twitter.com/UltramarineProj"
-      class="fab fa-twitter text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+      class="block fab fa-twitter text-2xl py-2 px-4 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500"
       aria-label="Ultramarine Linux Twitter link"
       target="_blank"
       rel="noopener noreferrer"
@@ -55,7 +119,7 @@ import ThemeSwitch from "./ThemeSwitch.vue";
     </a>
     <a
       href="https://fedi.fyralabs.com/@ultramarine"
-      class="fab fa-mastodon text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+      class="block fab fa-mastodon text-2xl py-2 px-4 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500"
       aria-label="Ultramarine Linux Mastodon link"
       target="_blank"
       rel="noopener noreferrer me"
@@ -64,7 +128,7 @@ import ThemeSwitch from "./ThemeSwitch.vue";
     </a>
     <a
       href="https://github.com/ultramarine-linux"
-      class="fab fa-github text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+      class="block fab fa-github text-2xl py-2 px-4 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500"
       aria-label="Ultramarine Linux Github link"
       target="_blank"
       rel="noopener noreferrer"
@@ -73,8 +137,13 @@ import ThemeSwitch from "./ThemeSwitch.vue";
     </a>
     <a
       href="/download"
-      class="md:block hidden bg-blue-600 hover:bg-blue-700 text-gray-50 px-6 py-2 rounded-[24px]"
-      >Download</a
-    >
-  </div>
+      class="block bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-[24px] mt-2"
+    >Download</a>
+  </nav>
 </header>
+
+<script>
+  document.getElementById('menu-button').addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('hidden');
+  });
+</script>
