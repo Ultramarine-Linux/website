@@ -1,7 +1,11 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 # Fedora to Ultramarine Linux migration script
 # Lea's pro tip: Run this through shellcheck, it'll genuinely save so much time and effort
+
+ver="0.1.1"
+# Oldest repo we provide is um37
+MINIMUM_RELEASEVER=37
 
 trace() {
   set -x
@@ -18,85 +22,96 @@ os_id=$(grep -E '^ID=' /etc/os-release | sed -e 's/ID=//g')
 os_version=$(grep -E '^VERSION_ID=' /etc/os-release | sed -e 's/VERSION_ID=//g')
 os_variant=$(grep -E '^VARIANT_ID=' /etc/os-release | sed -e 's/VARIANT_ID=//g')
 
-# If the os_id is fedora and os_version is greater than or equal to 35, then permit upgrade, otherwise error
-if [[ ${os_id} = "fedora" ]] && [[ ${os_version} -ge 35 ]]; then
-  MIGRATABLE=true
-elif [[ ${os_id} = "fedora" ]] || [[ ${os_version} -lt 35 ]]; then
-  echo "This script is only for Fedora 35 or newer."
-  MIGRATABLE=false
+# If the os_id is fedora and os_version is greater than or equal to MINIMUM_RELEASEVER, then permit upgrade, otherwise error
+if [[ ${os_id} = "fedora" ]] && [[ ${os_version} -ge $MINIMUM_RELEASEVER ]]; then
+  : # do nothing
+elif [[ ${os_id} = "fedora" ]] || [[ ${os_version} -lt $MINIMUM_RELEASEVER ]]; then
+  echo "This script is only for Fedora MINIMUM_RELEASEVER or newer."
+  exit 1
 elif [[ ${os_id} = "ultramarine" ]]; then
   echo "You are already running Ultramarine Linux. Congratulations!"
-  MIGRATABLE=false
+  exit 1
 else
-  echo "OS ${os_id} version ${os_version} is not supported. Please run this script on a copy of Fedora Linux 35 or newer."
-  MIGRATABLE=false
-fi
-
-# If migratable is false, then exit
-if [[ ${MIGRATABLE} = false ]]; then
+  echo "OS ${os_id} version ${os_version} is not supported. Please run this script on a copy of Fedora Linux $MINIMUM_RELEASEVER or newer."
   exit 1
 fi
 
+
+echo
+echo ┌────────────────────────────────────┐
+echo │ Ultramarine Linux Migration Script │
+echo └──────────────────────────────╴v$ver
 echo "Welcome to the Fedora to Ultramarine Linux migration script!
 This script will migrate your Fedora system to Ultramarine Linux.
 Please make sure you have a backup of your system before proceeding, as this script will make major changes to your system.
 This script will also update your system to the latest version of Fedora before proceeding. Please make sure you can properly update your system before proceeding."
 echo
 
-read -p "Are you sure you want to continue? (y/n) " -r REPLY
+read -p "□ Are you sure you want to continue? (Y/n) " -r REPLY -n 1
 
 if [[ ${REPLY} =~ ^[Nn]$ ]]; then
   echo "Exiting..."
   exit 1
 fi
 
-echo "====Beginning migration..===="
+echo
+echo "━━━╸Beginning migration╺━━━"
 echo
 
-echo "Updating system..."
+echo "■ (1/3) Updating system..."
 trace sudo dnf update -y
 echo
 
-echo "Downloading and installing required packages..."
+echo "■ (2/3) Installing repositories..."
 
-echo "Installing RPM Fusion..."
+echo " ...[1/3] RPM Fusion"
 trace sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${os_version}.noarch.rpm" "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${os_version}.noarch.rpm"
 
-echo "Installing Terra..."
+echo " ...[2/3] Terra"
 trace sudo dnf install -y --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' --setopt='terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc' terra-release
 
-echo "Installing the Ultramarine repositories..."
+echo " ...[3/3] Ultramarine Repositories"
 trace sudo dnf --nogpgcheck --repofrompath "ultramarine,https://repos.fyralabs.com/um${os_version}/" install -y ultramarine-repos-common ultramarine-repos
 
-echo "Repo installation complete."
-echo
 
-echo "Converting to Ultramarine..."
+echo "■ (3/3) Converting to Ultramarine..."
 if [[ ${os_variant} = "workstation" ]]; then
+  echo ' ... Detected Fedora Workstation'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-gnome --allowerasing
   trace sudo dnf group install -y ultramarine-gnome-product-environment
   trace sudo dnf group remove -y workstation-product-environment
 elif [[ ${os_variant} = "kde" ]]; then
+  echo ' ... Detected Fedora KDE Spin'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-kde --allowerasing
   trace sudo dnf group install -y ultramarine-kde-product-environment
   trace sudo dnf group remove -y kde-desktop-environment
 elif [[ ${os_variant} = "budgie" ]]; then
+  echo ' ... Detected Fedora Budgie Spin'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
   trace sudo dnf group install -y ultramarine-flagship-product-environment
   trace sudo dnf group remove -y budgie-desktop-environment
+elif [[ ${os_variant} = "xfce" ]]; then
+  echo ' ... Detected Fedora XFCE Spin'
+  trace sudo dnf swap -y fedora-release-common ultramarine-release-xfce --allowerasing
+  trace sudo dnf group install -y ultramarine-xfce-product-environment
+  trace sudo dnf group remove -y xfce-desktop-environment
 else # If the variant is unknown or doesn't have an equivalent in Ultramarine
+  echo ' ... Falling back to `ultramarine-release-common`'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
   trace sudo dnf group install -y ultramarine-product-common
 fi
 trace sudo dnf swap -y fedora-logos ultramarine-logos --allowerasing
 
-echo "Migration complete! Please reboot your system.
+echo '┏━━━           ──────  '
+echo '  Migration Complete!  '
+echo '  ──────           ━━━┛'
+echo "You may now reboot your system.
 The next Linux kernel update will make your system entry appear as Ultramarine Linux, but now you're already running Ultramarine Linux."
 
-read -p "Would you like to also generate a new initramfs? (generate an Ultramarine boot entry) (y/n) " -r REPLY
+read -p "□ Would you like to also generate a new initramfs? (generate an Ultramarine boot entry) (y/N) " -r REPLY -n 1
 
 if [[ ${REPLY} =~ ^[Yy]$ ]]; then
-  echo "Generating new initramfs..."
+  echo "■ Generating new initramfs..."
   trace sudo dracut -f
   echo "New initramfs generated."
 fi
