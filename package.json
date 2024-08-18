@@ -17,14 +17,14 @@
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vue": "^4.5.0",
-    "@iconify-json/fluent": "^1.1.56",
-    "astro": "^4.13.0",
-    "astro-icon": "^1.1.0",
-    "tailwindcss": "^3.4.3",
-    "vue": "^3.4.27"
+    "@iconify-json/fluent": "^1.1.62",
+    "astro": "^4.14.2",
+    "astro-icon": "^1.1.1",
+    "tailwindcss": "^3.4.10",
+    "vue": "^3.4.38"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.13",
-    "sharp": "^0.33.4"
+    "@tailwindcss/typography": "^0.5.14",
+    "sharp": "^0.33.5"
   }
 }
