@@ -3,78 +3,85 @@ import ThemeSwitch from "./ThemeSwitch.vue";
 ---
 
 <header
-  id="nav"
-  class="flex flex-row justify-between items-center max-w-screen-2xl px-6 md:px-16 py-4 mx-auto text-gray-600 dark:text-gray-200 sticky top-0 z-50 bg-clip-padding bg-gray-100 bg-opacity-30 dark:bg-gray-900 dark:bg-opacity-40 backdrop-filter backdrop-blur-xl"
+    id="nav"
+    class="flex flex-row justify-between items-center max-w-screen-2xl px-6 md:px-16 py-4 mx-auto text-gray-600 dark:text-gray-200 sticky top-0 z-50 bg-clip-padding bg-gray-100 bg-opacity-30 dark:bg-gray-900 dark:bg-opacity-40 backdrop-filter backdrop-blur-xl"
 >
-  <div class="flex flex-row items-center gap-8">
-    <a
-      href="/"
-      class="flex flex-row items-center font-bold hover:text-blue-600 dark:hover:text-blue-200"
-      aria-label="Navigate to home page"
+    <div class="flex flex-row items-center gap-8">
+        <a
+            href="/"
+            class="flex flex-row items-center font-bold hover:text-blue-600 dark:hover:text-blue-200"
+            aria-label="Navigate to home page"
+        >
+            <div class="w-11 h-auto mr-2">
+                <img src="/ultramarine-logo.svg" alt="Ultramarine Linux Logo" />
+            </div>
+        </a>
+        <a
+            href="https://wiki.ultramarine-linux.org"
+            class="hover:text-blue-600 dark:hover:text-blue-500"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Wiki
+        </a>
+        <a
+            href="https://github.com/Ultramarine-Linux/packages"
+            class="hover:text-blue-600 dark:hover:text-blue-500 md:block hidden"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Packages
+        </a>
+        <a
+            href="https://fyra.bigcartel.com/"
+            class="hover:text-blue-600 dark:hover:text-blue-500 md:block hidden"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Merch
+        </a>
+    </div>
+    <div
+        class="links-right flex flex-row gap-8 justify-center align-middle items-center font-semibold"
     >
-      <div class="w-11 h-auto mr-2">
-        <img src="/ultramarine-logo.svg" alt="Ultramarine Linux Logo">
-      </div>
-    </a>
-    <a
-      href="https://wiki.ultramarine-linux.org"
-      class="hover:text-blue-600 dark:hover:text-blue-500"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Wiki
-    </a>
-    <a
-      href="https://github.com/Ultramarine-Linux/ultramarine-pkgs"
-      class="hover:text-blue-600 dark:hover:text-blue-500 md:block hidden"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Packages
-    </a>
-  </div>
-  <div
-    class="links-right flex flex-row gap-8 justify-center align-middle items-center font-semibold"
-  >
-    <ThemeSwitch client:load />
-    <a
-      href="https://discord.gg/5fdPuxTg5Q"
-      class="fab fa-discord text-2xl hover:text-blue-600 dark:hover:text-blue-500"
-      aria-label="Ultramarine Discord link"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span class="hidden">Ultramarine Discord server</span>
-    </a>
-    <a
-      href="https://twitter.com/UltramarineProj"
-      class="fab fa-twitter text-2xl hover:text-blue-600 dark:hover:text-blue-500"
-      aria-label="Ultramarine Linux Twitter link"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span class="hidden">Ultramarine Linux Twitter</span>
-    </a>
-    <a
-      href="https://fedi.fyralabs.com/@ultramarine"
-      class="fab fa-mastodon text-2xl hover:text-blue-600 dark:hover:text-blue-500"
-      aria-label="Ultramarine Linux Mastodon link"
-      target="_blank"
-      rel="noopener noreferrer me"
-    >
-      <span class="hidden">Ultramarine Linux Mastodon</span>
-    </a>
-    <a
-      href="https://github.com/ultramarine-linux"
-      class="fab fa-github text-2xl hover:text-blue-600 dark:hover:text-blue-500"
-      aria-label="Ultramarine Linux Github link"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span class="hidden">Ultramarine Linux Github</span>
-    </a>
-    <a
-      href="/download"
-      class="md:block hidden bg-blue-600 hover:bg-blue-700 text-gray-50 px-6 py-2 rounded-[24px]"
-      >Download</a
-    >
-  </div>
+        <ThemeSwitch client:load />
+        <a
+            href="https://discord.gg/5fdPuxTg5Q"
+            class="fab fa-discord text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+            aria-label="Ultramarine Discord link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <span class="hidden">Ultramarine Discord server</span>
+        </a>
+        <a
+            href="https://twitter.com/UltramarineProj"
+            class="fab fa-twitter text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+            aria-label="Ultramarine Linux Twitter link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <span class="hidden">Ultramarine Linux Twitter</span>
+        </a>
+        <a
+            href="https://fedi.fyralabs.com/@ultramarine"
+            class="fab fa-mastodon text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+            aria-label="Ultramarine Linux Mastodon link"
+            target="_blank"
+            rel="noopener noreferrer me"
+        >
+            <span class="hidden">Ultramarine Linux Mastodon</span>
+        </a>
+        <a
+            href="https://github.com/ultramarine-linux"
+            class="fab fa-github text-2xl hover:text-blue-600 dark:hover:text-blue-500"
+            aria-label="Ultramarine Linux Github link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <span class="hidden">Ultramarine Linux Github</span>
+        </a>
+        <a
+            href="/download"
+            class="md:block hidden bg-blue-600 hover:bg-blue-700 text-gray-50 px-6 py-2 rounded-[24px]"
+            >Download</a
+        >
+    </div>
 </header>
