@@ -3,6 +3,8 @@
 # Fedora to Ultramarine Linux migration script
 # Lea's pro tip: Run this through shellcheck, it'll genuinely save so much time and effort
 
+set -euo pipefail
+
 trace() {
   set -x
   "$@"
