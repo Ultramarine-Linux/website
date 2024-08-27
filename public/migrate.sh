@@ -76,19 +76,19 @@ echo
 echo "Converting to Ultramarine..."
 if [[ ${os_variant} = "workstation" ]]; then
   trace sudo dnf swap -y fedora-release-common ultramarine-release-gnome --allowerasing
-  trace sudo dnf group install -y ultramarine-gnome-product-environment
+  trace sudo dnf group install --allowerasing -y ultramarine-gnome-product-environment
   trace sudo dnf group remove -y workstation-product-environment
 elif [[ ${os_variant} = "kde" ]]; then
   trace sudo dnf swap -y fedora-release-common ultramarine-release-kde --allowerasing
-  trace sudo dnf group install -y ultramarine-kde-product-environment
+  trace sudo dnf group install --allowerasing -y ultramarine-kde-product-environment
   trace sudo dnf group remove -y kde-desktop-environment
 elif [[ ${os_variant} = "budgie" ]]; then
   trace sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
-  trace sudo dnf group install -y ultramarine-flagship-product-environment
+  trace sudo dnf group install --allowerasing -y ultramarine-flagship-product-environment
   trace sudo dnf group remove -y budgie-desktop-environment
 else # If the variant is unknown or doesn't have an equivalent in Ultramarine
   trace sudo dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
-  trace sudo dnf group install -y ultramarine-product-common
+  trace sudo dnf group install --allowerasing -y ultramarine-product-common
 fi
 trace sudo dnf swap -y fedora-logos ultramarine-logos --allowerasing
 
