@@ -6,6 +6,7 @@
 ver="0.1.1"
 # Oldest repo we provide is um37
 MINIMUM_RELEASEVER=37
+set -euo pipefail
 
 trace() {
   set -x
@@ -78,17 +79,17 @@ echo "■ (3/3) Converting to Ultramarine..."
 if [[ ${os_variant} = "workstation" ]]; then
   echo ' ... Detected Fedora Workstation'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-gnome --allowerasing
-  trace sudo dnf group install -y ultramarine-gnome-product-environment
+  trace sudo dnf group install --allowerasing -y ultramarine-gnome-product-environment
   trace sudo dnf group remove -y workstation-product-environment
 elif [[ ${os_variant} = "kde" ]]; then
   echo ' ... Detected Fedora KDE Spin'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-kde --allowerasing
-  trace sudo dnf group install -y ultramarine-kde-product-environment
+  trace sudo dnf group install --allowerasing -y ultramarine-kde-product-environment
   trace sudo dnf group remove -y kde-desktop-environment
 elif [[ ${os_variant} = "budgie" ]]; then
   echo ' ... Detected Fedora Budgie Spin'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
-  trace sudo dnf group install -y ultramarine-flagship-product-environment
+  trace sudo dnf group install --allowerasing -y ultramarine-flagship-product-environment
   trace sudo dnf group remove -y budgie-desktop-environment
 elif [[ ${os_variant} = "xfce" ]]; then
   echo ' ... Detected Fedora XFCE Spin'
@@ -98,7 +99,7 @@ elif [[ ${os_variant} = "xfce" ]]; then
 else # If the variant is unknown or doesn't have an equivalent in Ultramarine
   echo ' ... Falling back to `ultramarine-release-common`'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
-  trace sudo dnf group install -y ultramarine-product-common
+  trace sudo dnf group install --allowerasing -y ultramarine-product-common
 fi
 trace sudo dnf swap -y fedora-logos ultramarine-logos --allowerasing
 
