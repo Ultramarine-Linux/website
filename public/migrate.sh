@@ -47,7 +47,7 @@ Please make sure you have a backup of your system before proceeding, as this scr
 This script will also update your system to the latest version of Fedora before proceeding. Please make sure you can properly update your system before proceeding."
 echo
 
-read -p "□ Are you sure you want to continue? (Y/n) " -r REPLY -n 1
+read -n 1 -p "□ Are you sure you want to continue? (Y/n) " -r REPLY
 
 if [[ ${REPLY} =~ ^[Nn]$ ]]; then
   echo "Exiting..."
@@ -108,7 +108,7 @@ echo '  ──────           ━━━┛'
 echo "You may now reboot your system.
 The next Linux kernel update will make your system entry appear as Ultramarine Linux, but now you're already running Ultramarine Linux."
 
-read -p "□ Would you like to also generate a new initramfs? (generate an Ultramarine boot entry) (y/N) " -r REPLY -n 1
+read -n 1 -p "□ Would you like to also generate a new initramfs? (generate an Ultramarine boot entry) (y/N) " -r REPLY
 
 if [[ ${REPLY} =~ ^[Yy]$ ]]; then
   echo "■ Generating new initramfs..."
