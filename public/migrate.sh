@@ -112,6 +112,7 @@ The next Linux kernel update will make your system entry appear as Ultramarine L
 read -n 1 -p "□ Would you like to also generate a new initramfs? (generate an Ultramarine boot entry) (y/N) " -r REPLY
 
 if [[ ${REPLY} =~ ^[Yy]$ ]]; then
+  echo
   echo "■ Generating new initramfs..."
   trace sudo dracut -f
   echo "New initramfs generated."
