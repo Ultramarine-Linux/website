@@ -3,7 +3,6 @@ import { Picture } from 'astro:assets';
 import { Icon } from 'astro-icon/components'
 
 import fyraTeam from "../../assets/fyra_team.svg"
-import placeholderScreenshot from "../../assets/placeholder.png"
 ---
 
 <div class="pt-32 relative max-w-screen-2xl mx-auto px-8 md:px-16">
@@ -34,7 +33,7 @@ import placeholderScreenshot from "../../assets/placeholder.png"
         <Icon name="fluent:arrow-right-16-regular" class="size-6 group-hover:translate-x-1 transition-transform duration-300" />
       </a>
     </div>
-    <Picture class="hidden lg:block pr-4 mt-8 md:mt-0" src={placeholderScreenshot} formats={['avif', 'webp']} quality={80} alt="fyra team image" />
+    <Picture class="hidden lg:block pr-4 mt-8 md:mt-0" src={"https://picsum.photos/932/520"} width={466} height={260} formats={['avif', 'webp']} quality={80} alt="fyra team image" />
   </div>
 
   <div class="w-full flex flex-col md:flex-row items-start justify-between mb-24 lg:mb-32">
@@ -48,6 +47,6 @@ import placeholderScreenshot from "../../assets/placeholder.png"
         <Icon name="fluent:arrow-right-16-regular" class="size-6 group-hover:translate-x-1 transition-transform duration-300" />
       </a>
     </div>
-    <Picture class="hidden lg:block mt-8 md:mt-0" src={placeholderScreenshot} formats={['avif', 'webp']} quality={80} alt="fyra team image" />
+    <Picture class="hidden lg:block mt-8 md:mt-0" src={"https://picsum.photos/932/520"} width={466} height={260} formats={['avif', 'webp']} quality={80} alt="fyra team image" />
   </div>
 </div>

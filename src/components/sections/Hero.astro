@@ -1,5 +1,6 @@
 ---
 import DownloadIcon from "../icons/DownloadIcon.astro";
+import { Picture } from 'astro:assets';
 ---
 
 <section
@@ -47,9 +48,15 @@ import DownloadIcon from "../icons/DownloadIcon.astro";
 
   <div id="hero-right" class="xl:block hidden">
       <div class="relative">
-        <div class="absolute top-20 right-36 w-[400px] h-[240px] bg-blue-500 rounded-lg -rotate-12"></div>
-        <div class="absolute top-6 -right-4 w-[400px] h-[240px] bg-teal-500 rounded-lg rotate-[8deg]"></div>
-        <div class="absolute top-40 right-8 w-[400px] h-[240px] bg-purple-500 rounded-lg rotate-2"></div>
+        <div class="absolute top-20 right-36 -rotate-12 w-[400px] h-[240px]">
+          <Picture src="https://picsum.photos/800/480" alt="Placeholder" width={400} height={240} formats={['avif', 'webp']} quality={80} class="rounded-lg" />
+        </div>
+        <div class="absolute top-6 -right-4 rotate-[8deg] w-[400px] h-[240px]">
+          <Picture src="https://picsum.photos/800/480" alt="Placeholder" width={400} height={240} formats={['avif', 'webp']} quality={80} class="rounded-lg" />
+        </div>
+        <div class="absolute top-40 right-8 rotate-2 w-[400px] h-[240px]">
+          <Picture src="https://picsum.photos/800/480" alt="Placeholder" width={400} height={240} formats={['avif', 'webp']} quality={80} class="rounded-lg" />
+        </div>
       </div>
   </div>
 </section>
