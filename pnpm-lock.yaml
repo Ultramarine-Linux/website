@@ -39,6 +39,9 @@ importers:
         specifier: ^3.4.38
         version: 3.4.38(typescript@5.5.4)
     devDependencies:
+      '@iconify-json/bi':
+        specifier: ^1.2.0
+        version: 1.2.0
       '@tailwindcss/typography':
         specifier: ^0.5.14
         version: 0.5.14(tailwindcss@3.4.10)
@@ -398,6 +401,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@iconify-json/bi@1.2.0':
+    resolution: {integrity: sha512-kaBV87cQlyeMkBBiMqsf3b43Nsxdk/rYKvR29dnktht57WUyHCnBAuH+ca/bscX856CzRpVX+sYs7arjrJD0qA==}
 
   '@iconify-json/fluent@1.1.62':
     resolution: {integrity: sha512-+k1+XlL158AZNL4SlAwNOUy1rQSpKptq7MiTOEgCfFtL1H2UYOkwHS/BnfrePhpqg8UQpwphhvuUgUJRcFXdew==}
@@ -3047,6 +3053,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@iconify-json/bi@1.2.0':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/fluent@1.1.62':
     dependencies:

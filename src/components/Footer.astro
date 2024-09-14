@@ -1,0 +1,60 @@
+---
+import { Icon } from "astro-icon/components";
+import UltramarineAltLogo from "./icons/UltramarineAltLogo.astro";
+
+---
+
+<footer class="p-6 md:pt-12 pb-8 w-full bg-gray-900 z-50">
+    <div class="container max-w-screen-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6 text-sm">
+      <div class="col-span-3 flex flex-col gap-2">
+        <a href="#" class="flex items-start gap-2">
+            <UltramarineAltLogo classes="h-6 w-6 pt-1" />
+            <span class="font-bold text-xl">Ultramarine Linux</span>
+        </a>
+        <p class="text-gray-400 max-w-lg">Ultramarine is a distro designed to just work and stay out of your way. Based on Fedora, it provides a seamless experience for users of all skill levels.</p>
+      </div>
+      <div class="grid gap-1">
+        <h3 class="font-bold">Pages</h3>
+        <a href="/" class="text-muted-foreground">Home</a>
+        <a href="/download" class="text-muted-foreground">Download</a>
+        <a href="/community" class="text-muted-foreground">Community</a>
+        <a href="https://blog.fyralabs.com/" class="text-muted-foreground">Blog</a>
+      </div>
+      <div class="grid gap-1">
+        <h3 class="font-bold">Resources</h3>
+        <a href="https://wiki.ultramarine-linux.org/en/welcome" class="text-muted-foreground">Documentation</a>
+        <a href="https://discord.gg/bUuQasHdrF" class="text-muted-foreground">Community</a>
+        <a href="https://github.com/Ultramarine-Linux" class="text-muted-foreground">Contribute</a>
+        <a href="mailto:contact@fyralabs.com" class="text-muted-foreground">Contact</a>
+      </div>
+      <div class="grid gap-1">
+        <h3 class="font-bold">Extras</h3>
+        <a href="https://fyralabs.com" class="text-muted-foreground">Fyra Labs Website</a>
+        <a href="https://fyra.bigcartel.com/" class="text-muted-foreground">Merch Shop</a>
+        <a href="/licenses" class="text-muted-foreground">License Notice & Credits</a>
+      </div>
+    </div>
+    <div class="container max-w-screen-2xl mx-auto pr-16 mt-10 text-sm text-gray-500 dark:text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="text-center sm:text-left">
+        © 2021 - 2024 Fyra Labs. All rights reserved.
+      </div>
+      <div class="flex items-center gap-4 sm:ml-auto">
+        <a href="https://github.com/ultramarine-linux" aria-label="GitHub">
+          <Icon name="bi:github" class="w-5 h-5" />
+          <span class="hidden">Ultramarine Github Repo</span>
+        </a>
+        <a href="https://discord.gg/AVqHrvxB9C" aria-label="Discord">
+          <Icon name="bi:discord" class="w-5 h-5" />
+          <span class="hidden">Ultramarine and Fyra Labs Discord community</span>
+        </a>
+        <a href="https://twitter.com/ultramarinelin" aria-label="Twitter">
+          <Icon name="bi:twitter" class="w-5 h-5" />
+          <span class="hidden">Ultramarine Linux Twitter</span>
+        </a>
+        <a href="https://www.reddit.com/r/ultramarine" aria-label="Reddit">
+          <Icon name="bi:reddit" class="w-5 h-5" />
+          <span class="hidden">Ultramarine Linux Subreddit</span>
+        </a>
+      </div>
+    </div>
+</footer>
