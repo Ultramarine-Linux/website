@@ -10,19 +10,18 @@ import kdeScreenshot from "../assets/40/screenshots/kde.png";
 <BaseLayout>
 
   <div
-    class="flex flex-col min-h-screen p-2 md:px-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-950 dark:text-gray-100"
+    class="flex flex-col items-start min-h-screen max-w-screen-xl mx-auto px-8 md:px-16 mt-12"
   >
     <h1 class="text-4xl font-bold">Pick Your Flavor of Ultramarine</h1>
-    <h2 class="pt-1 text-gray-400">Latest Release: 40 (Lost Umbrella)</h2>
+    <h2 class="pt-1 text-gray-500">Latest Release: 40 (Lost Umbrella)</h2>
 
-    <div
-      class="grid grid-flow-row-dense grid-cols-1 gap-10 pt-12 md:grid-cols-2 md:flex-row"
-    >
+    <div class="flex flex-col items-center justify-center gap-10 mt-8 mb-48 w-full">
       <DownloadSection
         editionName="Flagship"
         screenshot={flagshipScreenshot}
-        description="The Flagship Edition with the latest and greatest software and our best polish. Powered by Budgie Desktop. (Recommended)"
-        downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-flagship-40-live-x86_64.iso"
+        background="/umbrella_bg.webp"
+        downloadLink="https://github.com/ultramarine-linux/ultramarine-iso/releases/download/40/ultramarine-40-flagship-x86_64.iso"
+        description="The flagship edition of Ultramarine Linux, featuring GNOME as the default desktop environment."
       />
 
       <DownloadSection
@@ -45,54 +44,6 @@ import kdeScreenshot from "../assets/40/screenshots/kde.png";
         description="The good old familiar KDE Plasma Desktop Environment --- simple by default, powerful when needed."
         downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-kde-40-live-x86_64.iso"
       />
-    </div>
-
-    <div
-      class="flex flex-col items-center justify-center text-center gap-10 mt-24 mb-10"
-    >
-      <div>
-        <h2 class="text-2xl font-semibold">Torrents</h2>
-        <h2 class="pt-1 text-gray-400">
-          Alternatively, you can download Ultramarine from
-          <a
-            class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
-            href="https://fosstorrents.com/distributions/ultramarine-linux/"
-            >FOSS Torrents</a
-          >.
-        </h2>
-      </div>
-      <div>
-        <h2 class="text-2xl font-semibold">ARM Builds</h2>
-        <h2 class="pt-1 text-gray-400">
-          Generic ARM EFI builds are available
-          <a
-            class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
-            href="/um40-arm">here</a
-          >.
-        </h2>
-      </div>
-      <div>
-        <h2 class="text-2xl font-semibold">Raw Images</h2>
-        <h2 class="pt-1 text-gray-400">
-          Raw images to flash directly to the device. Raspberry Pi users should grab these. x86 and ARM are available
-          <a
-            class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
-            href="https://images.fyralabs.com/images/ultramarine/40/"
-            target="_blank"
-            rel="noopener noreferrer">here</a
-          >.
-        </h2>
-      </div>
-      <div>
-        <h2 class="text-2xl font-semibold">Ultramarine 39</h2>
-        <h2 class="pt-1 text-gray-400">
-          Old Ultramarine 39 Builds are available
-          <a
-            class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
-            href="/um39">here</a
-          >.
-        </h2>
-      </div>
     </div>
   </div>
 </BaseLayout>
