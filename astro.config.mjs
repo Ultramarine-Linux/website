@@ -4,16 +4,12 @@ import sitemap from "@astrojs/sitemap";
 
 import tailwind from "@astrojs/tailwind";
 
-// https://astro.build/config
-import vue from "@astrojs/vue";
-
-// https://astro.build/config
 import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://ultramarine-linux.org",
-  integrations: [mdx(), sitemap(), tailwind(), vue(), icon()],
+  integrations: [mdx(), sitemap(), tailwind(), icon()],
   redirects: {
     "/release-announcements/40": {
       status: 302,
