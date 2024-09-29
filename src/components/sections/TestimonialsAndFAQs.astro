@@ -8,23 +8,23 @@
       <div class="max-w-screen-2xl mx-auto px-8 md:px-16">
         <h2 class="text-2xl md:text-4xl font-bold mt-28 mb-10 text-center">Loved by the people</h2>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
-          <a href="https://www.zdnet.com/article/ultramarine-linux-flagship-is-a-contender-for-desktop-of-the-year/" class="flex flex-col items-start justify-center bg-gray-200 dark:bg-gray-900 py-8 px-12 rounded-xl border border-gray-800">
+          <a href="https://www.zdnet.com/article/ultramarine-linux-flagship-is-a-contender-for-desktop-of-the-year/"  class="flex flex-col justify-between items-start bg-gray-200 dark:bg-gray-900 py-8 px-12 rounded-xl border border-gray-800">
             <blockquote class="lg:text-lg" cite="https://www.zdnet.com/article/ultramarine-linux-flagship-is-a-contender-for-desktop-of-the-year/">
-              Ultimately, however, the best thing I can say is that the Ultramarine Linux Flagship edition impressed me enough to make me want to switch from Ubuntu Budgie. [...] If you're looking for a new Linux distribution (or a new OS in general), I would highly recommend Ultramarine Linux Flagship.
+              If you're looking for a new Linux distribution (or a new OS in general), I would highly recommend Ultramarine Linux Flagship.
             </blockquote>
             <p class="pt-4 text-gray-400">- Jack Wallen, ZDNet</p>
           </a>
-          <a href="https://news.itsfoss.com/ultramarine-linux-40-release/" class="flex flex-col items-start bg-gray-200 dark:bg-gray-900 py-8 px-12 rounded-xl border border-gray-800">
+          <a href="https://news.itsfoss.com/ultramarine-linux-40-release/" class="flex flex-col justify-between items-start bg-gray-200 dark:bg-gray-900 py-8 px-12 rounded-xl border border-gray-800">
             <blockquote class="lg:text-lg" cite="https://news.itsfoss.com/ultramarine-linux-40-release/">
-              Ultramarine is one of the best Fedora-based distributions around, which has been built keeping ease of use in mind. Liked by both beginners and veterans, most people find it to be a very reliable daily-driver Linux distro that doesn't get in the way.
+              Liked by both beginners and veterans, most people find [Ultramarine] to be a very reliable daily-driver Linux distro that doesn't get in the way.
             </blockquote>
             <p class="pt-4 text-gray-400">- Sourav Rudra, It's FOSS News</p>
           </a>
-          <a href="https://www.debugpoint.com/ultramarine-linux-39-review/" class="flex flex-col items-start bg-gray-200 dark:bg-gray-900 py-8 px-12 rounded-xl border border-gray-800">
+          <a href="https://youtu.be/N7pfVVAc7NY?si=pXzxvIP-hsmz8YP-" class="flex flex-col justify-between items-start bg-gray-200 dark:bg-gray-900 py-8 px-12 rounded-xl border border-gray-800">
             <blockquote class="lg:text-lg" cite="https://www.debugpoint.com/ultramarine-linux-39-review/">
-              Ultramarine Linux distinguishes itself by providing a customized out-of-the-box experience with four desktop flavours while based on Fedora Linux. The Fedora base ensures access to the latest advancements in the Linux world, from the kernel to audio and video technologies.
+              [Ultramarine] is one of the most complete Linux distros I have had the chance to experience.
             </blockquote>
-            <p class="pt-4 text-gray-400">- Arindam, DebugPoint.com</p>
+            <p class="pt-4 text-gray-400">- eBuzz Central on YouTube</p>
           </a>
         </div>
       </div>
@@ -36,33 +36,47 @@
         <h2 class="text-2xl md:text-4xl font-bold mb-10 text-center">Frequently asked questions</h2>
         <div class="flex flex-col w-full max-w-4xl mx-auto divide-y divide-gray-800 bg-gray-900 border border-gray-800 rounded-xl px-10 py-2 pb-4">
           <details>
-            <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">Lorem ipsum?</summary>
+            <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">Why does this distro exist? What difference does it have other than just Fedora with RPMFusion?</summary>
             <div class="px-4 pb-4">
-              <p>You can easily place an order on our website by browsing our product catalog, selecting the items you want, and adding them to your cart. Then, proceed to checkout, where you can provide your shipping and payment information to complete the order.</p>
+              <p>
+                Ultramarine Linux was created out of frustration with the legal limits of Fedora. As Fedora (and Red Hat) is an American entity, there are legal restrictions on what software can be packaged in the distribution due to the US patent system.
+                Ultramarine, on the other hand, is based in Thailand and is not subject to any of the copyright restrictions on what software can be packaged.
+                The Ultramarine team aims to make Fedora a little more user-friendly by allowing users to install or package any software they want as long as someone maintains it in Flathub, RPMFusion, or Terra.
+                In addition to this, we provide various UX improvements around the system, and in the future, custom apps.
+              </p>
             </div>
           </details>
           <details>
-            <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">Hello is anyone there?</summary>
+            <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">What does the migration script do?</summary>
             <div class="px-4 pb-4">
-              <p>We accept various payment methods, including credit cards, debit cards, net banking, and mobile wallet payments. You can choose the payment option that is most convenient for you during the checkout process.</p>
+              <p>
+                The migration scripts install RPMFusion, Terra repository, and our signing keys, then installs the bare minimum of an Ultramarine Linux installation on top of an existing Fedora installation (Swapping Fedora release packages with the Ultramarine ones). <br><br>
+
+                The script only installs the bare minimum required for Ultramarine Linux to work because we don’t want to add additional bloat to your current system.
+              </p>
             </div>
           </details>
           <details>
-            <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">Why Ultramarine?</summary>
+            <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">Does Ultramarine track or collect my data?</summary>
             <div class="px-4 pb-4">
-              <p>Shipping times may vary depending on your location and the shipping method chosen. Typically, orders are processed within 1-2 business days, and delivery can take 3-7 business days within India. You will receive a tracking notification once your order is shipped.</p>
+              <p>
+                As of now, the only data we collect is a count of how many times a package has been downloaded from Terra or the Ultramarine repository using <a href="https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/dnf-counting/" class="text-accent-300 hover:text-accent-400">DNF Counting</a>. This information is not tied to you or your computer.
+                Fyra Labs (the company behind Ultramarine) does not collect any data that can be tied to an individual without express consent from the user.
+              </p>
             </div>
           </details>
           <details>
-            <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">How do I install this?</summary>
+            <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">Is Ultramarine semi-rolling?</summary>
             <div class="px-4 pb-4">
-              <p>Yes, we have a hassle-free return policy. If you are not satisfied with your purchase, you can initiate a return within 30 days of receiving the product. Please contact our customer support at <a href="" class="underline">example@gmail.com</a> for assistance.</p>
+              No. Ultramarine and Fedora are not semi-rolling or rolling. Instead, they use a stable release scheme. Updates with breaking changes are rolled out only for every stable release version. Minor updates / point updates are guaranteed to be backwards-compatible, i.e. system components in Ultramarine are updated if and only if they do not break compatibility.
             </div>
           </details>
           <details>
-            <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">What is Fyra Labs?</summary>
+            <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg">Does Ultramarine run on my device?</summary>
             <div class="px-4 pb-4">
-              <p>Currently, we only provide shipping services within India. However, we may consider expanding our shipping options to international locations in the future. Please stay updated with our website for any changes in shipping destinations.</p>
+              <p>Chances are Ultramarine will run on your device. If you're using a standard 64bit PC, yes. Otherwise, check out the
+                <a href="https://wiki.ultramarine-linux.org/en/hardware/anywhere/" class="text-accent-300 hover:text-accent-400">Ultramarine Anywhere page</a>.
+              </p>
             </div>
           </details>
         </div>
