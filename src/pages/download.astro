@@ -9,51 +9,67 @@ import kdeScreenshot from "../assets/40/screenshots/kde.png";
 ---
 
 <BaseLayout>
+    <div
+        class="flex flex-col items-start min-h-screen max-w-screen-xl mx-auto px-8 md:px-16 mt-12"
+    >
+        <h1 class="text-4xl font-bold">Pick Your Flavor of Ultramarine</h1>
+        <h2 class="pt-1 text-gray-500">Latest Release: 40 (Lost Umbrella)</h2>
 
-  <div
-    class="flex flex-col items-start min-h-screen max-w-screen-xl mx-auto px-8 md:px-16 mt-12"
-  >
-    <h1 class="text-4xl font-bold">Pick Your Flavor of Ultramarine</h1>
-    <h2 class="pt-1 text-gray-500">Latest Release: 40 (Lost Umbrella)</h2>
+        <div
+            class="flex flex-col items-center justify-center gap-10 mt-8 mb-24 w-full"
+        >
+            <DownloadSection
+                editionName="Flagship"
+                screenshot={flagshipScreenshot}
+                background="/umbrella_bg.webp"
+                downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-flagship-40-live-x86_64.iso"
+                description="The flagship edition of Ultramarine Linux, featuring GNOME as the default desktop environment."
+            />
 
-    <div class="flex flex-col items-center justify-center gap-10 mt-8 mb-24 w-full">
-      <DownloadSection
-        editionName="Flagship"
-        screenshot={flagshipScreenshot}
-        background="/umbrella_bg.webp"
-        downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-flagship-40-live-x86_64.iso"
-        description="The flagship edition of Ultramarine Linux, featuring GNOME as the default desktop environment."
-      />
+            <DownloadSection
+                editionName="Plasma"
+                screenshot={kdeScreenshot}
+                description="The good old familiar Plasma Desktop Environment --- simple by default, powerful when needed."
+                downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-kde-40-live-x86_64.iso"
+            />
 
-      <DownloadSection
-        editionName="Plasma"
-        screenshot={kdeScreenshot}
-        description="The good old familiar Plasma Desktop Environment --- simple by default, powerful when needed."
-        downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-kde-40-live-x86_64.iso"
-      />
+            <DownloadSection
+                editionName="XFCE"
+                screenshot={xfceScreenshot}
+                description="Xfce is a lightweight but elegant desktop designed to help you squeeze the most out of your device, or revive an old one."
+                downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-xfce-40-live-x86_64.iso"
+            />
 
-      <DownloadSection
-        editionName="XFCE"
-        screenshot={xfceScreenshot}
-        description="Xfce is a lightweight but elegant desktop designed to help you squeeze the most out of your device, or revive an old one."
-        downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-xfce-40-live-x86_64.iso"
-      />
+            <DownloadSection
+                editionName="GNOME"
+                screenshot={gnomeScreenshot}
+                description="GNOME is a simple, elegant, and intuitive desktop environment with a focus on productivity."
+                downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-gnome-40-live-x86_64.iso"
+            />
+        </div>
 
-      <DownloadSection
-        editionName="GNOME"
-        screenshot={gnomeScreenshot}
-        description="GNOME is a simple, elegant, and intuitive desktop environment with a focus on productivity."
-        downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-gnome-40-live-x86_64.iso"
-      />
+        <h2 class="text-3xl font-bold">Alternate Downloads</h2>
+        <p class="pt-1 text-gray-500">
+            Couldn’t find what you’re looking for? Find some extra download
+            options below.
+        </p>
+
+        <div class="flex flex-row flex-wrap gap-4 w-full mt-8 mb-48">
+            <SmallDownloadCard
+                title="Torrents"
+                description="Check out our torrents provided by FOSSTorents"
+                link=""
+            />
+            <SmallDownloadCard
+                title="Raw Images"
+                description="Download our raw images for all Ultramarine Editions"
+                link=""
+            />
+            <SmallDownloadCard
+                title="Ultramarine 39"
+                description="For archival purposes, you can download old releases of UM39 here"
+                link=""
+            />
+        </div>
     </div>
-
-    <h2 class="text-3xl font-bold">Alternate Downloads</h1>
-    <p class="pt-1 text-gray-500">Couldn’t find what you’re looking for? Find some extra download options below.</p>
-
-    <div class="flex flex-row gap-4 w-full mt-8 mb-48">
-      <SmallDownloadCard title="Torrents" description="Check out our torrents provided by FOSSTorents" link="" />
-      <SmallDownloadCard title="Raw Images" description="Download our raw images for all Ultramarine Editions" link="" />
-      <SmallDownloadCard title="Ultramarine 39" description="For archival purposes, you can download old releases of UM39 here" link="" />
-    </div>
-  </div>
 </BaseLayout>
