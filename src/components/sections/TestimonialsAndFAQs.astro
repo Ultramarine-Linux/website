@@ -54,8 +54,6 @@
         </div>
       </div>
     </div>
-
-    <!-- TODO: change the contents of this -->
     <div class="bg-[#0f1120] pb-28 pt-32">
       <div class="max-w-screen-2xl mx-auto px-8 md:px-16">
         <h2 class="text-2xl md:text-4xl font-bold mb-10 text-center">
@@ -72,18 +70,10 @@
             <div class="px-4 pb-4">
               <p>
                 Ultramarine Linux was created out of frustration with the legal
-                limits of Fedora. As Fedora (and Red Hat) is an American entity,
-                there are legal restrictions on what software can be packaged in
-                the distribution due to the US patent system. Ultramarine, on
-                the other hand, is based in Thailand and is not subject to any
-                of the copyright restrictions on what software can be packaged. <br
-                />
-                <br />
-                The Ultramarine team aims to make Fedora a little more user-friendly
-                by allowing users to install or package any software they want as
-                long as someone maintains it in Flathub, RPMFusion, or Terra. In
-                addition to this, we provide various UX improvements around the system,
-                and in the future, custom apps.
+                limits of Fedora and has since evolved to become a distro of
+                it's very own. Ultramarine uses Fedora's packages and is
+                compatible with most software for Fedora but has a different
+                build toolchain, installer, and philosophy.
               </p>
             </div>
           </details>
@@ -95,9 +85,8 @@
               <p>
                 The migration scripts install RPMFusion, Terra repository, and
                 our signing keys, then installs the bare minimum of an
-                Ultramarine Linux installation on top of an existing Fedora
-                installation (Swapping Fedora release packages with the
-                Ultramarine ones). <br /><br />
+                Ultramarine Linux installation (Swapping Fedora release packages
+                with the Ultramarine ones). <br /><br />
 
                 The script only installs the bare minimum required for
                 Ultramarine Linux to work because we don’t want to add
@@ -128,12 +117,12 @@
               >Is Ultramarine semi-rolling?</summary
             >
             <div class="px-4 pb-4">
-              No. Ultramarine and Fedora are not semi-rolling or rolling.
-              Instead, they use a stable release scheme. Updates with breaking
-              changes are rolled out only for every stable release version.
-              Minor updates / point updates are guaranteed to be
-              backwards-compatible, i.e. system components in Ultramarine are
-              updated if and only if they do not break compatibility.
+              No. Ultramarine and Fedora are not semi-rolling or rolling. They
+              use a stable release scheme. Updates with breaking changes are
+              rolled out with only major releases. Minor updates / point updates
+              must be backwards-compatible, i.e. system components in
+              Ultramarine are updated if and only if they do not break
+              compatibility.
             </div>
           </details>
           <details>
@@ -142,13 +131,13 @@
             >
             <div class="px-4 pb-4">
               <p>
-                Chances are Ultramarine will run on your device. If you're using
-                a standard 64bit PC, yes. Otherwise, check out the
+                If your're using a standard PC, yes. Otherwise, if your device
+                is 64bit, odds are yes. Check out the
                 <a
                   href="https://wiki.ultramarine-linux.org/en/hardware/anywhere/"
                   class="text-accent-300 hover:text-accent-400"
                   >Ultramarine Anywhere page</a
-                >.
+                > for more about non-standard devices.
               </p>
             </div>
           </details>
