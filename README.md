@@ -1,5 +1,13 @@
 # Ultramarine Linux Website
 
+things to do
+
+- contributor page
+- community page
+- move checksums to a thank you page after download
+- move install guide link to a thank you page after download
+- device/arch selector
+
 ![image](https://user-images.githubusercontent.com/57040351/209970055-46c62d5e-a351-484b-b825-6dc4bd2355f4.png)
 
 ## 🧞 Commands
