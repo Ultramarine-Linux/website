@@ -1,52 +1,111 @@
 ---
-import { Picture } from 'astro:assets';
-import { Icon } from 'astro-icon/components'
+import { Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
-import fyraTeam from "../../assets/fyra_team.svg"
+import fyraTeam from "../../assets/fyra_team.svg";
 ---
 
 <div class="pt-32 relative max-w-screen-2xl mx-auto px-8 md:px-16">
   <h2 class="text-4xl font-bold mt-4">Why Ultramarine?</h2>
 
-  <div class="w-full flex flex-col lg:flex-row items-center justify-between mb-24 lg:mb-48 mt-32">
+  <div
+    class="w-full flex flex-col lg:flex-row items-center justify-between mb-24 lg:mb-48 mt-32"
+  >
     <div class="lg:w-1/2">
-      <h3 class="text-2xl font-semibold mb-4">Preapplied tweaks to get you started in no time</h3>
+      <h3 class="text-2xl font-semibold mb-4">
+        Preapplied tweaks to get you started in no time
+      </h3>
       <p class="text-gray-200 mb-3">
-        Drivers, codecs and a lot more. With the 1000+ packages in Terra, we've got you covered with everything you need, on top of Fedora repos, Flathub and RPM Fusion which are all enabled out of the box on Ultramarine.
+        Drivers, codecs and a lot more. With the 1000+ packages in Terra, we've
+        got you covered with everything you need, on top of Fedora repos,
+        Flathub and RPM Fusion which are all enabled out of the box on
+        Ultramarine.
       </p>
-      <a href="/pog" class="flex flex-row items-center gap-2 text-accent-200 hover:text-accent-400 transition-colors group">
+      <a
+        href="/pog"
+        class="flex flex-row items-center gap-2 text-accent-200 hover:text-accent-400 transition-colors group"
+      >
         <span class="font-medium">Read more about our changes</span>
-        <Icon name="fluent:arrow-right-16-regular" class="size-6 group-hover:translate-x-1 transition-transform duration-300" />
+        <Icon
+          name="fluent:arrow-right-16-regular"
+          class="size-6 group-hover:translate-x-1 transition-transform duration-300"
+        />
       </a>
     </div>
-    <Picture class="hidden lg:block mt-8 lg:mt-0 lg:w-[466px] lg:h-[260px]" src={"https://picsum.photos/932/520"} width={466} height={260} formats={['avif', 'webp']} quality={80} alt="fyra team image" />
+    <Picture
+      class="hidden lg:block mt-8 lg:mt-0 lg:w-[466px] lg:h-[260px]"
+      src={"https://picsum.photos/932/520"}
+      width={466}
+      height={260}
+      formats={["avif", "webp"]}
+      quality={80}
+      alt="fyra team image"
+    />
   </div>
 
-  <div class="w-full flex flex-col lg:flex-row-reverse items-center justify-between mb-24 lg:mb-48">
+  <div
+    class="w-full flex flex-col lg:flex-row-reverse items-center justify-between mb-24 lg:mb-48"
+  >
     <div class="lg:w-1/2 lg:text-right">
       <h3 class="text-2xl font-semibold mb-4">Tooling</h3>
       <p class="text-gray-200 mb-3">
-        Drivers, codecs and a lot more. With the 1000+ packages in Terra, we've got you covered with everything you need, on top of Fedora repos, Flathub and RPM Fusion which are all enabled out of the box on Ultramarine.
+        Drivers, codecs and a lot more. With the 1000+ packages in Terra, we've
+        got you covered with everything you need, on top of Fedora repos,
+        Flathub and RPM Fusion which are all enabled out of the box on
+        Ultramarine.
       </p>
-      <a href="/pog" class="flex flex-row items-center lg:justify-end gap-2 text-accent-200 hover:text-accent-400 transition-colors group">
+      <a
+        href="/pog"
+        class="flex flex-row items-center lg:justify-end gap-2 text-accent-200 hover:text-accent-400 transition-colors group"
+      >
         <span class="font-medium">View Terra package list</span>
-        <Icon name="fluent:arrow-right-16-regular" class="size-6 group-hover:translate-x-1 transition-transform duration-300" />
+        <Icon
+          name="fluent:arrow-right-16-regular"
+          class="size-6 group-hover:translate-x-1 transition-transform duration-300"
+        />
       </a>
     </div>
-    <Picture class="hidden lg:block lg:w-[466px] lg:h-[260px] mt-8 lg:mt-0" src={"https://picsum.photos/932/520"} width={466} height={260} formats={['avif', 'webp']} quality={80} alt="fyra team image" />
+    <Picture
+      class="hidden lg:block lg:w-[466px] lg:h-[260px] mt-8 lg:mt-0"
+      src={"https://picsum.photos/932/520"}
+      width={466}
+      height={260}
+      formats={["avif", "webp"]}
+      quality={80}
+      alt="fyra team image"
+    />
   </div>
 
-  <div class="w-full flex flex-col lg:flex-row items-center justify-between mb-24 lg:mb-48">
+  <div
+    class="w-full flex flex-col lg:flex-row items-center justify-between mb-24 lg:mb-48"
+  >
     <div class="lg:w-1/2">
       <h3 class="text-2xl font-semibold mb-4">Progressive nature</h3>
       <p class="text-gray-200 mb-3">
-        Ultramarine is 100% open source, built with care by the people at Fyra Labs. Lorem ipsum some placeholder text don't mind this. Lorem ipsum some placeholder text don't mind this.Lorem ipsum some placeholder text don't mind this.
+        Ultramarine is 100% open source, built with care by the people at Fyra
+        Labs. Lorem ipsum some placeholder text don't mind this. Lorem ipsum
+        some placeholder text don't mind this.Lorem ipsum some placeholder text
+        don't mind this.
       </p>
-      <a href="/pog" class="flex flex-row items-center gap-2 text-accent-200 hover:text-accent-400 transition-colors group">
+      <a
+        href="/pog"
+        class="flex flex-row items-center gap-2 text-accent-200 hover:text-accent-400 transition-colors group"
+      >
         <span class="font-medium">Learn more about our mission</span>
-        <Icon name="fluent:arrow-right-16-regular" class="size-6 group-hover:translate-x-1 transition-transform duration-300" />
+        <Icon
+          name="fluent:arrow-right-16-regular"
+          class="size-6 group-hover:translate-x-1 transition-transform duration-300"
+        />
       </a>
     </div>
-    <Picture class="hidden lg:block lg:w-[466px] lg:h-[260px] mt-8 lg:mt-0" src={"https://picsum.photos/932/520"} width={466} height={260} formats={['avif', 'webp']} quality={80} alt="fyra team image" />
+    <Picture
+      class="hidden lg:block lg:w-[466px] lg:h-[260px] mt-8 lg:mt-0"
+      src={"https://picsum.photos/932/520"}
+      width={466}
+      height={260}
+      formats={["avif", "webp"]}
+      quality={80}
+      alt="fyra team image"
+    />
   </div>
 </div>

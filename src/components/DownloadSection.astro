@@ -11,37 +11,50 @@ interface Props {
   background?: string;
 }
 
-const { editionName, screenshot, downloadLink, description, background } = Astro.props;
+const { editionName, screenshot, downloadLink, description, background } =
+  Astro.props;
 const checksumLink = downloadLink + ".sha256sum";
 ---
 
-<div class="flex flex-col-reverse md:flex-row bg-gray-900 rounded-xl w-full overflow-hidden">
+<div
+  class="flex flex-col-reverse md:flex-row bg-gray-900 rounded-xl w-full overflow-hidden"
+>
   <div class="p-6 md:p-8 w-full flex flex-col justify-between relative">
     <div class="z-10">
-      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">Ultramarine {editionName}</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+        Ultramarine {editionName}
+      </h2>
       <p class="max-w-md text-sm md:text-base text-gray-400">
         {description}
       </p>
     </div>
-    <div class="flex flex-col sm:flex-row gap-2 md:gap-4 sm:items-center z-10 mt-6 md:mt-0">
+    <div
+      class="flex flex-col sm:flex-row gap-2 md:gap-4 sm:items-center z-10 mt-6 md:mt-0"
+    >
       <button
         class="flex flex-row gap-2 items-center justify-center px-3 sm:px-4 md:px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 transition-colors w-full sm:w-auto text-sm sm:text-base"
       >
         <DownloadIcon />
         <span>Download</span>
       </button>
-      <a href={checksumLink} class="text-gray-400 hover:text-blue-400 text-center md:text-left text-xs md:text-base">View Checksum</a>
+      <a
+        href={checksumLink}
+        class="text-gray-400 hover:text-blue-400 text-center md:text-left text-xs md:text-base"
+        >View Checksum</a
+      >
     </div>
-    {background &&
-      <div class="absolute inset-0 overflow-hidden">
-        <Image
-          src={background}
-          width={950}
-          height={540}
-          alt={`${background} texture`}
-          class="w-full h-full object-cover opacity-90 blur-sm pointer-events-none"
-        />
-      </div>
+    {
+      background && (
+        <div class="absolute inset-0 overflow-hidden">
+          <Image
+            src={background}
+            width={950}
+            height={540}
+            alt={`${background} texture`}
+            class="w-full h-full object-cover opacity-90 blur-sm pointer-events-none"
+          />
+        </div>
+      )
     }
   </div>
 

@@ -1,6 +1,6 @@
 ---
 import DownloadIcon from "../icons/DownloadIcon.astro";
-import { Picture } from 'astro:assets';
+import { Picture } from "astro:assets";
 ---
 
 <section
@@ -16,7 +16,10 @@ import { Picture } from 'astro:assets';
       </h1>
     </div>
     <span class="inline-block lg:text-lg max-w-xl 2xl:max-w-2xl text-gray-200">
-      Ultramarine is a progressive operating system built on the latest technologies. With pragmatism at its core, everything you need to <strong>do your thing</strong> is ready, while running on the hardware you already have.
+      Ultramarine is a progressive operating system built on the latest
+      technologies. With pragmatism at its core, everything you need to <strong
+        >do your thing</strong
+      > is ready, while running on the hardware you already have.
     </span>
 
     <div
@@ -37,24 +40,50 @@ import { Picture } from 'astro:assets';
         class="mb-2"
         ><button
           class="flex flex-row items-center justify-center py-2 pl-1 md:pl-0 text-lg dark:text-gray-100"
-          ><span class="hover:text-accent-500 transition-colors">Installation Guide</span>
+          ><span class="hover:text-accent-500 transition-colors"
+            >Installation Guide</span
+          >
         </button>
       </a>
     </div>
   </div>
 
   <div id="hero-right" class="xl:block hidden">
-      <div class="relative">
-        <div class="absolute top-20 right-36 -rotate-12 w-[400px] h-[240px]">
-          <Picture src="https://picsum.photos/800/480" alt="Placeholder" width={400} height={240} formats={['avif', 'webp']} quality={80} class="rounded-lg" />
-        </div>
-        <div class="absolute top-6 -right-4 rotate-[8deg] w-[400px] h-[240px]">
-          <Picture src="https://picsum.photos/800/480" alt="Placeholder" width={400} height={240} formats={['avif', 'webp']} quality={80} class="rounded-lg" />
-        </div>
-        <div class="absolute top-40 right-8 rotate-2 w-[400px] h-[240px]">
-          <Picture src="https://picsum.photos/800/480" alt="Placeholder" width={400} height={240} formats={['avif', 'webp']} quality={80} class="rounded-lg" />
-        </div>
+    <div class="relative">
+      <div class="absolute top-20 right-36 -rotate-12 w-[400px] h-[240px]">
+        <Picture
+          src="https://picsum.photos/800/480"
+          alt="Placeholder"
+          width={400}
+          height={240}
+          formats={["avif", "webp"]}
+          quality={80}
+          class="rounded-lg"
+        />
       </div>
+      <div class="absolute top-6 -right-4 rotate-[8deg] w-[400px] h-[240px]">
+        <Picture
+          src="https://picsum.photos/800/480"
+          alt="Placeholder"
+          width={400}
+          height={240}
+          formats={["avif", "webp"]}
+          quality={80}
+          class="rounded-lg"
+        />
+      </div>
+      <div class="absolute top-40 right-8 rotate-2 w-[400px] h-[240px]">
+        <Picture
+          src="https://picsum.photos/800/480"
+          alt="Placeholder"
+          width={400}
+          height={240}
+          formats={["avif", "webp"]}
+          quality={80}
+          class="rounded-lg"
+        />
+      </div>
+    </div>
   </div>
 </section>
 

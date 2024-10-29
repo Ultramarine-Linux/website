@@ -8,7 +8,8 @@ import XIcon from "../icons/XIcon.astro";
     <XIcon />
   </button>
   <h1 class="max-w-2xl mt-4">
-    Use the following command to install Ultramarine on top of your existing Fedora installation.
+    Use the following command to install Ultramarine on top of your existing
+    Fedora installation.
   </h1>
   <div class="mt-2 mb-4 self-center flex items-center justify-center w-full">
     <div
@@ -34,7 +35,9 @@ import XIcon from "../icons/XIcon.astro";
     </div>
   </div>
 </dialog>
-<button id="migrationscript" class="mt-2 text-gray-400">Or use the Fedora migration script</button>
+<button id="migrationscript" class="mt-2 text-gray-400"
+  >Or use the Fedora migration script</button
+>
 
 <style>
   dialog::backdrop {
@@ -43,20 +46,20 @@ import XIcon from "../icons/XIcon.astro";
 </style>
 
 <script is:inline>
-  const dialog = document.getElementById('migrationDialog');
-  const openButton = document.getElementById('migrationscript');
-  const closeButton = dialog.querySelector('button');
-  const copyButtons = document.querySelectorAll('.copy-button');
+  const dialog = document.getElementById("migrationDialog");
+  const openButton = document.getElementById("migrationscript");
+  const closeButton = dialog.querySelector("button");
+  const copyButtons = document.querySelectorAll(".copy-button");
 
-  openButton.addEventListener('click', () => {
+  openButton.addEventListener("click", () => {
     dialog.showModal();
   });
 
-  closeButton.addEventListener('click', () => {
+  closeButton.addEventListener("click", () => {
     dialog.close();
   });
 
-  dialog.addEventListener('click', (e) => {
+  dialog.addEventListener("click", (e) => {
     const dialogDimensions = dialog.getBoundingClientRect();
     if (
       e.clientX < dialogDimensions.left ||
@@ -69,8 +72,8 @@ import XIcon from "../icons/XIcon.astro";
   });
 
   copyButtons.forEach((button) => {
-    button.addEventListener('click', async () => {
-      const codeBlock = button.closest('.inline-flex').querySelector('code');
+    button.addEventListener("click", async () => {
+      const codeBlock = button.closest(".inline-flex").querySelector("code");
       const text = codeBlock.innerText;
 
       try {
@@ -80,7 +83,7 @@ import XIcon from "../icons/XIcon.astro";
           button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M16 4h2a2 2 0 0 1 2 2v4m1 4H11"/><path d="m15 10l-4 4l4 4"/></g></svg>`;
         }, 1500);
       } catch (err) {
-        console.error('Failed to copy text: ', err);
+        console.error("Failed to copy text: ", err);
       }
     });
   });

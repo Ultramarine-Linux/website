@@ -13,7 +13,8 @@ export default defineConfig({
   redirects: {
     "/release-announcements/40": {
       status: 302,
-      destination: "https://wiki.ultramarine-linux.org/en/release/upgrade-to-ultramarine-40/"
-    }
-  }
+      destination:
+        "https://wiki.ultramarine-linux.org/en/release/upgrade-to-ultramarine-40/",
+    },
+  },
 });

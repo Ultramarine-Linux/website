@@ -1,9 +1,9 @@
-@import url('https://api.fontshare.com/css?f[]=switzer@300,400,700&display=swap');
+@import url("https://api.fontshare.com/css?f[]=switzer@300,400,700&display=swap");
 
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
-  font-family: 'Switzer', sans-serif;
+  font-family: "Switzer", sans-serif;
 }
 
 blockquote {
