@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@iconify-json/bi": "^1.2.1",
+    "@iconify-json/simple-icons": "^1.2.10",
     "@tailwindcss/typography": "^0.5.15",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",

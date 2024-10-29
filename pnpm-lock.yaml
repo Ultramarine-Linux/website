@@ -36,6 +36,9 @@ importers:
       '@iconify-json/bi':
         specifier: ^1.2.1
         version: 1.2.1
+      '@iconify-json/simple-icons':
+        specifier: ^1.2.10
+        version: 1.2.10
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.14)
@@ -329,6 +332,9 @@ packages:
 
   '@iconify-json/fluent@1.2.5':
     resolution: {integrity: sha512-7d8Pq6szZ+bnWk649wXub6LSLVbRUUpa6al0c/enW+dWa6EGVADReDEyjHLB86WO+Wi05CmBDKHtZBm29SRmwg==}
+
+  '@iconify-json/simple-icons@1.2.10':
+    resolution: {integrity: sha512-9OK1dsSjXlH36lhu5n+BlSoXuqFjHUErGLtNdzHpq0vHq4YFBuGYWtZ+vZTHLreRQ8ijPRv/6EsgkV+nf6AReQ==}
 
   '@iconify/tools@4.0.7':
     resolution: {integrity: sha512-zOJxKIfZn96ZRGGvIWzDRLD9vb2CsxjcLuM+QIdvwWbv6SWhm49gECzUnd4d2P0sq9sfodT7yCNobWK8nvavxQ==}
@@ -2633,6 +2639,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/fluent@1.2.5':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/simple-icons@1.2.10':
     dependencies:
       '@iconify/types': 2.0.0
 
