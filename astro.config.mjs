@@ -18,5 +18,10 @@ export default defineConfig({
       destination:
         "https://wiki.ultramarine-linux.org/en/release/upgrade-to-ultramarine-40/",
     },
+    "/release-announcements/41": {
+      status: 302,
+      destination:
+        "https://wiki.ultramarine-linux.org/en/release/41-upgrades/",
+    },
   },
 });
