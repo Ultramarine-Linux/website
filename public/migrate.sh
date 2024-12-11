@@ -3,7 +3,7 @@
 # Fedora to Ultramarine Linux migration script
 # Lea's pro tip: Run this through shellcheck, it'll genuinely save so much time and effort
 
-ver="0.1.1"
+ver="0.1.2"
 # Oldest repo we provide is um37
 MINIMUM_RELEASEVER=37
 set -euo pipefail
@@ -27,7 +27,7 @@ os_variant=$(grep -E '^VARIANT_ID=' /etc/os-release | sed -e 's/VARIANT_ID=//g')
 if [[ ${os_id} = "fedora" ]] && [[ ${os_version} -ge $MINIMUM_RELEASEVER ]]; then
   : # do nothing
 elif [[ ${os_id} = "fedora" ]] || [[ ${os_version} -lt $MINIMUM_RELEASEVER ]]; then
-  echo "This script is only for Fedora MINIMUM_RELEASEVER or newer."
+  echo "This script is only for Fedora $MINIMUM_RELEASEVER or newer."
   exit 1
 elif [[ ${os_id} = "ultramarine" ]]; then
   echo "You are already running Ultramarine Linux. Congratulations!"
@@ -66,13 +66,40 @@ echo
 echo "■ (2/3) Installing repositories..."
 
 echo " ...[1/3] RPM Fusion"
-trace sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${os_version}.noarch.rpm" "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${os_version}.noarch.rpm"
+nonfree=$(rpm -qa rpmfusion-nonfree-release | head -c1 | wc -c)
+free=$(rpm -qa rpmfusion-free-release | head -c1 | wc -c)
+if [ "$nonfree" -eq 0 ] && [ "$free" -eq 0 ]; then
+  echo " --> Installing rpmfusion-nonfree-release and rpmfusion-free-release"
+  trace sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${os_version}.noarch.rpm" "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${os_version}.noarch.rpm"
+elif [ "$nonfree" -eq 0 ]; then
+  echo " --> Detected rpmfusion-free-release"
+  echo " --> Installing rpmfusion-nonfree-release"
+  trace sudo dnf install -y "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${os_version}.noarch.rpm"
+elif [ "$free" -eq 0 ]; then
+  echo " --> Detected rpmfusion-nonfree-release"
+  echo " --> Installing rpmfusion-free-release"
+  trace sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${os_version}.noarch.rpm"
+else
+  echo " --> Seems like both rpmfusion-nonfree-release and rpmfusion-free-release are installed"
+fi
+
+# HACK: there is a bug in dnf5 that doesn't parse $variables in `--setopt` correctly
+# https://github.com/rpm-software-management/dnf5/issues/1941
+releasever=$(rpm -E '%fedora')
 
 echo " ...[2/3] Terra"
-trace sudo dnf install -y --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' --setopt='terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc' terra-release
+if [ "$(rpm -qa terra-release | head -c1 | wc -c)" -eq 0 ]; then
+  trace sudo dnf install -y --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' --setopt="terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc" terra-release
+else
+  echo " --> Seems like terra-release has already been installed"
+fi
 
 echo " ...[3/3] Ultramarine Repositories"
-trace sudo dnf --nogpgcheck --repofrompath "ultramarine,https://repos.fyralabs.com/um${os_version}/" install -y ultramarine-repos-common ultramarine-repos
+if [ "$(rpm -qa ultramarine-repos-common | head -c1 | wc -c)" -eq 0 ]; then
+  trace sudo dnf install -y --repofrompath 'ultramarine,https://repos.fyralabs.com/um$releasever' --setopt="ultramarine.gpgkey=https://repos.fyralabs.com/um$releasever/key.asc" ultramarine-repos-common
+else
+  echo " [!] Seems like ultramarine-repos-common has already been installed"
+fi
 
 
 echo "■ (3/3) Converting to Ultramarine..."
