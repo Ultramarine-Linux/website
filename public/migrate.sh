@@ -62,9 +62,9 @@ echo
 echo "■ (1/3) Updating system..."
 trace sudo dnf update -y
 echo
-
+echo
 echo "■ (2/3) Installing repositories..."
-
+echo
 echo " ...[1/3] RPM Fusion"
 nonfree=$(rpm -qa rpmfusion-nonfree-release | head -c1 | wc -c)
 free=$(rpm -qa rpmfusion-free-release | head -c1 | wc -c)
@@ -87,6 +87,7 @@ fi
 # https://github.com/rpm-software-management/dnf5/issues/1941
 releasever=$(rpm -E '%fedora')
 
+echo
 echo " ...[2/3] Terra"
 if [ "$(rpm -qa terra-release | head -c1 | wc -c)" -eq 0 ]; then
   trace sudo dnf install -y --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' --setopt="terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc" terra-release
@@ -94,6 +95,7 @@ else
   echo " --> Seems like terra-release has already been installed"
 fi
 
+echo
 echo " ...[3/3] Ultramarine Repositories"
 if [ "$(rpm -qa ultramarine-repos-common | head -c1 | wc -c)" -eq 0 ]; then
   trace sudo dnf install -y --repofrompath 'ultramarine,https://repos.fyralabs.com/um$releasever' --setopt="ultramarine.gpgkey=https://repos.fyralabs.com/um$releasever/key.asc" ultramarine-repos-common
@@ -101,7 +103,8 @@ else
   echo " [!] Seems like ultramarine-repos-common has already been installed"
 fi
 
-
+echo
+echo
 echo "■ (3/3) Converting to Ultramarine..."
 if [[ ${os_variant} = "workstation" ]]; then
   echo ' ... Detected Fedora Workstation'
@@ -116,25 +119,33 @@ elif [[ ${os_variant} = "kde" ]]; then
 elif [[ ${os_variant} = "budgie" ]]; then
   echo ' ... Detected Fedora Budgie Spin'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
-  trace sudo dnf group install --allowerasing -y ultramarine-flagship-product-environment
+  # BUG: dnf depsolv issue
+  trace sudo dnf group install --allowerasing -y ultramarine-flagship-product-environment --exclude=budgie-desktop-defaults
   trace sudo dnf group remove -y budgie-desktop-environment
 elif [[ ${os_variant} = "xfce" ]]; then
   echo ' ... Detected Fedora XFCE Spin'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-xfce --allowerasing
-  trace sudo dnf group install -y ultramarine-xfce-product-environment
+  # BUG: dnf depsolv issue
+  trace sudo dnf swap -y desktop-backgrounds-compat ultramarine-backgrounds-compat
+  trace sudo dnf group install --allowerasing -y ultramarine-xfce-product-environment --exclude=desktop-backgrounds-compat
   trace sudo dnf group remove -y xfce-desktop-environment
 else # If the variant is unknown or doesn't have an equivalent in Ultramarine
   echo ' ... Falling back to `ultramarine-release-common`'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
-  trace sudo dnf group install --allowerasing -y ultramarine-product-common
+  trace sudo dnf group install --allowerasing --no-best -y ultramarine-product-common
 fi
-trace sudo dnf swap -y fedora-logos ultramarine-logos --allowerasing
+if [ "$(rpm -qa ultramarine-logos | head -c1 | wc -c)" -eq 0 ]; then
+  trace sudo dnf swap -y fedora-logos ultramarine-logos --allowerasing
+fi
 
+echo
+echo
 echo '┏━━━           ──────  '
 echo '  Migration Complete!  '
 echo '  ──────           ━━━┛'
 echo "You may now reboot your system.
 The next Linux kernel update will make your system entry appear as Ultramarine Linux, but now you're already running Ultramarine Linux."
+echo
 
 read -n 1 -p "□ Would you like to also generate a new initramfs? (generate an Ultramarine boot entry) (y/N) " -r REPLY
 
