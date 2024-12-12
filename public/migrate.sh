@@ -120,6 +120,7 @@ elif [[ ${os_variant} = "budgie" ]]; then
   echo ' ... Detected Fedora Budgie Spin'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
   # BUG: dnf depsolv issue
+  trace sudo dnf swap -y budgie-desktop-defaults ultramarine-flagship-filesystem
   trace sudo dnf group install --allowerasing -y ultramarine-flagship-product-environment --exclude=budgie-desktop-defaults
   trace sudo dnf group remove -y budgie-desktop-environment
 elif [[ ${os_variant} = "xfce" ]]; then
