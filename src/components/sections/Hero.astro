@@ -1,6 +1,12 @@
 ---
 import DownloadIcon from "../icons/DownloadIcon.astro";
 import { Picture } from "astro:assets";
+import flagshipScreenshot from "../../assets/41/screenshots/flagship.png";
+import gnomeScreenshot from "../../assets/41/screenshots/GNOME.png";
+import plasmaScreenshot from "../../assets/41/screenshots/plasma.png";
+import flagshipScreenshotDark from "../../assets/41/screenshots/flagship-dark.png";
+import gnomeScreenshotDark from "../../assets/41/screenshots/GNOME-dark.png";
+import plasmaScreenshotDark from "../../assets/41/screenshots/plasma-dark.png";
 ---
 
 <section
@@ -41,35 +47,50 @@ import { Picture } from "astro:assets";
     <div class="relative">
       <div class="absolute top-20 right-36 -rotate-12 w-[400px] h-[240px]">
         <Picture
-          src="https://picsum.photos/800/480"
+          src={flagshipScreenshot}
           alt="Placeholder"
-          width={400}
-          height={240}
           formats={["avif", "webp"]}
           quality={80}
-          class="rounded-lg"
+          class="rounded-lg dark:hidden"
+        />
+        <Picture
+          src={flagshipScreenshotDark}
+          alt="Placeholder"
+          formats={["avif", "webp"]}
+          quality={80}
+          class="rounded-lg hidden dark:block"
         />
       </div>
       <div class="absolute top-6 -right-4 rotate-[8deg] w-[400px] h-[240px]">
         <Picture
-          src="https://picsum.photos/800/480"
+          src={gnomeScreenshot}
           alt="Placeholder"
-          width={400}
-          height={240}
           formats={["avif", "webp"]}
           quality={80}
-          class="rounded-lg"
+          class="rounded-lg dark:hidden"
+        />
+        <Picture
+          src={gnomeScreenshotDark}
+          alt="Placeholder"
+          formats={["avif", "webp"]}
+          quality={80}
+          class="rounded-lg hidden dark:block"
         />
       </div>
       <div class="absolute top-40 right-8 rotate-2 w-[400px] h-[240px]">
         <Picture
-          src="https://picsum.photos/800/480"
+          src={plasmaScreenshot}
           alt="Placeholder"
-          width={400}
-          height={240}
           formats={["avif", "webp"]}
           quality={80}
-          class="rounded-lg"
+          class="rounded-lg dark:hidden"
+        />
+        <Picture
+          src={plasmaScreenshotDark}
+          alt="Placeholder"
+          formats={["avif", "webp"]}
+          quality={80}
+          class="rounded-lg hidden dark:block"
         />
       </div>
     </div>
