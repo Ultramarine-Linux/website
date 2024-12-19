@@ -69,13 +69,13 @@ const checksumLink = downloadLink + ".sha256sum";
   <Image
     src={screenshot}
     alt={"Ultramarine" + editionName + "Screenshot"}
-    class={`w-full md:w-auto h-[240px] md:rounded-r-xl ${screenshotDark ? 'dark:hidden' : ''}`}
+    class={`w-full md:w-auto md:h-[240px] object-cover md:rounded-r-xl ${screenshotDark ? 'dark:hidden' : ''}`}
     loading="eager"
   />
   {screenshotDark ? <Image
     src={screenshotDark}
     alt={"Ultramarine" + editionName + "Screenshot"}
-    class="w-full md:w-auto h-[240px] md:rounded-r-xl hidden dark:block"
+    class="w-full md:w-auto md:h-[240px] md:rounded-r-xl hidden dark:block"
     loading="eager"
   /> : <></>}
 </div>
