@@ -61,7 +61,7 @@ import laptopImageDark from "../assets/40/laptop/dark.png";
           </div>
           <a
             href="#migrate"
-            class="text-gray-500 dark:text-gray-400 md:block hidden ml-1 tracking-wide"
+            class="text-gray-500 dark:text-gray-400 block ml-1 tracking-wide md:text-inherit text-xs"
             >Using Fedora? Click here for a migration script.</a
           >
         </div>
@@ -99,13 +99,12 @@ import laptopImageDark from "../assets/40/laptop/dark.png";
         <div
           class="text-left lg:text-justify text-lg max-w-4xl bg-gray-200 dark:bg-gray-800 rounded-lg p-4 mt-0 mb-8 shadow-lg"
         >
-          Ultramarine Linux is an operating system designed for your
-          personal workstation (or battlestation). It is designed to be
-          intuitive and easy to use, shipping numerous simple environments.
-          Ultramarine keeps up with the latest and greatest software in the
-          open-source community, while staying stable and secure. Ultramarine
-          is for everyone, from the beginner to the tech enthusiast, and even
-          Windows dropouts!
+          Ultramarine Linux is an operating system designed for your personal
+          workstation (or battlestation). It is designed to be intuitive and
+          easy to use, shipping numerous simple environments. Ultramarine keeps
+          up with the latest and greatest software in the open-source community,
+          while staying stable and secure. Ultramarine is for everyone, from the
+          beginner to the tech enthusiast, and even Windows dropouts!
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
           <div
@@ -119,10 +118,9 @@ import laptopImageDark from "../assets/40/laptop/dark.png";
               Based on Fedora®
             </h3>
             <p class="max-w-sm text-lg text-left">
-              Based on Fedora Linux,
-              Ultramarine offers the latest and greatest in open-source
-              software, yet maintaining rock-solid stability. Making sure things
-              don't break is our top priority.
+              Based on Fedora Linux, Ultramarine offers the latest and greatest
+              in open-source software, yet maintaining rock-solid stability.
+              Making sure things don't break is our top priority.
             </p>
           </div>
           <div
@@ -137,9 +135,9 @@ import laptopImageDark from "../assets/40/laptop/dark.png";
             </h3>
             <p class="max-w-sm text-lg text-left">
               Ultramarine provides both developer-friendly and user-friendly
-              tools to make sure you can get the most out of your system.
-              We're making it as easy and accessible as possible for everyone
-              to create and package their software for Ultramarine (and in
+              tools to make sure you can get the most out of your system. We're
+              making it as easy and accessible as possible for everyone to
+              create and package their software for Ultramarine (and in
               extension, Fedora!).
             </p>
           </div>
@@ -168,9 +166,7 @@ import laptopImageDark from "../assets/40/laptop/dark.png";
         class="flex flex-col flex-wrap items-start lg:items-center mb-12 w-full"
       >
         <h2 class="text-4xl font-semibold">Reviews</h2>
-        <h3 class="text-lg mb-4">
-          A selection of the best reviews
-        </h3>
+        <h3 class="text-lg mb-4">A selection of the best reviews</h3>
         <div
           class="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-8 w-full"
         >
@@ -224,23 +220,20 @@ import laptopImageDark from "../assets/40/laptop/dark.png";
         >
       </section>
 
-      <section id="migrate" class="md:flex flex-col items-center mb-12 hidden">
-        <h2 class="text-2xl font-semibold">
+      <section id="migrate" class="flex flex-col items-center mb-12">
+        <h2 class="text-lg md:text-2xl font-semibold">
           Already using Fedora? You can use our migration script!
         </h2>
-        <div
-          id="migration"
-          class="hidden md:flex md:flex-col md:justify-center mt-2"
-        >
+        <div id="migration" class="flex md:flex-col md:justify-center mt-2">
           <div class="p-2">
             <!-- code block for copying command -->
             <div
               class="inline-flex items-center bg-gray-300 dark:bg-gray-600 rounded-xl"
             >
               <div
-                class="p-6 bg-gray-200 dark:text-gray-400 dark:bg-gray-700 rounded-xl"
+                class="p-6 bg-gray-200 dark:text-gray-400 dark:bg-gray-700 rounded-xl overflow-x-scroll md:overflow-x-auto md:max-w-fit max-w-64"
               >
-                <p id="migrate-script" class="font-mono">
+                <p id="migrate-script" class="font-mono whitespace-nowrap">
                   bash &lt;(curl -s https://ultramarine-linux.org/migrate.sh)
                 </p>
               </div>
