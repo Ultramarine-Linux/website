@@ -3,7 +3,7 @@
 # Fedora to Ultramarine Linux migration script
 # Lea's pro tip: Run this through shellcheck, it'll genuinely save so much time and effort
 
-ver="0.1.2"
+ver="0.1.3"
 # Oldest repo we provide is um37
 MINIMUM_RELEASEVER=37
 set -euo pipefail
@@ -19,9 +19,9 @@ LOG=ultramarine-migrate.log
 exec > >(tee -a "${LOG}") 2>&1
 
 # Get distro data from /etc/os-release
-os_id=$(grep -E '^ID=' /etc/os-release | sed -e 's/ID=//g')
-os_version=$(grep -E '^VERSION_ID=' /etc/os-release | sed -e 's/VERSION_ID=//g')
-os_variant=$(grep -E '^VARIANT_ID=' /etc/os-release | sed -e 's/VARIANT_ID=//g')
+os_id=$(grep -E '^ID=' /etc/os-release | sed -e 's/ID=//g'; true)
+os_version=$(grep -E '^VERSION_ID=' /etc/os-release | sed -e 's/VERSION_ID=//g'; true)
+os_variant=$(grep -E '^VARIANT_ID=' /etc/os-release | sed -e 's/VARIANT_ID=//g'; true)
 
 # If the os_id is fedora and os_version is greater than or equal to MINIMUM_RELEASEVER, then permit upgrade, otherwise error
 if [[ ${os_id} = "fedora" ]] && [[ ${os_version} -ge $MINIMUM_RELEASEVER ]]; then
