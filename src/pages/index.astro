@@ -224,14 +224,17 @@ import laptopImageDark from "../assets/40/laptop/dark.png";
         <h2 class="text-lg md:text-2xl font-semibold">
           Already using Fedora? You can use our migration script!
         </h2>
-        <div id="migration" class="flex md:flex-col md:justify-center mt-2">
-          <div class="p-2">
+        <div
+          id="migration"
+          class="flex md:flex-col md:justify-center mt-2 max-w-full"
+        >
+          <div class="p-2 max-w-full">
             <!-- code block for copying command -->
             <div
-              class="inline-flex items-center bg-gray-300 dark:bg-gray-600 rounded-xl"
+              class="inline-flex items-center bg-gray-300 dark:bg-gray-600 rounded-xl max-w-full"
             >
               <div
-                class="p-6 bg-gray-200 dark:text-gray-400 dark:bg-gray-700 rounded-xl overflow-x-scroll md:overflow-x-auto md:max-w-fit max-w-64"
+                class="p-6 bg-gray-200 dark:text-gray-400 dark:bg-gray-700 rounded-xl overflow-x-scroll md:overflow-x-auto md:max-w-fit"
               >
                 <p id="migrate-script" class="font-mono whitespace-nowrap">
                   bash &lt;(curl -s https://ultramarine-linux.org/migrate.sh)
