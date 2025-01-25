@@ -1,5 +1,4 @@
 import * as ToggleGroup from "@radix-ui/react-toggle-group";
-import { useState } from "react";
 import { useStore } from "@nanostores/react";
 import { downloadArch, downloadDevice } from "./downloadStore";
 
@@ -38,7 +37,7 @@ const DownloadOptions = () => {
         <summary className="pt-1 text-gray-500 text-sm cursor-pointer">
           Download Options
         </summary>
-        <div className="flex flex-col gap-2 pt-2">
+        <div className="flex flex-row flex-wrap gap-4 pt-2">
           <div>
             <p className="pb-1 text-sm text-gray-300">Architecture</p>
             <ToggleGroup.Root
