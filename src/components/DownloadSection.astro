@@ -1,26 +1,26 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import DownloadIcon from "./icons/DownloadIcon.astro";
+import DownloadIcon from "./icons/DownloadIcon.tsx";
+import DownloadLinks from './DownloadLinks'
 
 interface Props {
   editionName: string;
   screenshot: ImageMetadata;
   screenshotDark?: ImageMetadata;
-  downloadLink: string;
   description: string;
   background?: string;
+  version: number;
 }
 
 const {
   editionName,
   screenshot,
   screenshotDark,
-  downloadLink,
   description,
   background,
+  version
 } = Astro.props;
-const checksumLink = downloadLink + ".sha256sum";
 ---
 
 <div
@@ -35,22 +35,7 @@ const checksumLink = downloadLink + ".sha256sum";
         {description}
       </p>
     </div>
-    <div
-      class="flex flex-col sm:flex-row gap-2 md:gap-4 sm:items-center z-10 mt-6 md:mt-0"
-    >
-      <a
-        class="flex flex-row gap-2 items-center justify-center px-3 sm:px-4 md:px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 transition-colors w-full sm:w-auto text-sm sm:text-base"
-        href={downloadLink}
-      >
-        <DownloadIcon />
-        <span>Download</span>
-      </a>
-      <a
-        href={checksumLink}
-        class="text-gray-400 hover:text-blue-400 text-center md:text-left text-xs md:text-base"
-        >View Checksum</a
-      >
-    </div>
+    <DownloadLinks version={version} client:load/>
     {
       background && (
         <div class="absolute inset-0 overflow-hidden">

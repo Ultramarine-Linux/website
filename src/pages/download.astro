@@ -2,14 +2,17 @@
 import DownloadSection from "../components/DownloadSection.astro";
 import SmallDownloadCard from "../components/SmallDownloadCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import flagshipScreenshot from "../assets/41/screenshots/flagship.png";
-import gnomeScreenshot from "../assets/41/screenshots/GNOME.png";
-import xfceScreenshot from "../assets/41/screenshots/xfce.png";
-import plasmaScreenshot from "../assets/41/screenshots/plasma.png";
-import flagshipScreenshotDark from "../assets/41/screenshots/flagship-dark.png";
-import gnomeScreenshotDark from "../assets/41/screenshots/GNOME-dark.png";
-import xfceScreenshotDark from "../assets/41/screenshots/xfce-dark.png";
-import plasmaScreenshotDark from "../assets/41/screenshots/plasma-dark.png";
+import flagshipScreenshot from "../assets/41/screenshots/flagship.webp";
+import gnomeScreenshot from "../assets/41/screenshots/GNOME.webp";
+import xfceScreenshot from "../assets/41/screenshots/xfce.webp";
+import plasmaScreenshot from "../assets/41/screenshots/plasma.webp";
+import flagshipScreenshotDark from "../assets/41/screenshots/flagship-dark.webp";
+import gnomeScreenshotDark from "../assets/41/screenshots/GNOME-dark.webp";
+import xfceScreenshotDark from "../assets/41/screenshots/xfce-dark.webp";
+import plasmaScreenshotDark from "../assets/41/screenshots/plasma-dark.webp";
+import DownloadOptions from "../components/DownloadOptions";
+
+const version = 41;
 ---
 
 <BaseLayout>
@@ -19,6 +22,8 @@ import plasmaScreenshotDark from "../assets/41/screenshots/plasma-dark.png";
     <h1 class="text-4xl font-bold">Pick Your Flavor of Ultramarine</h1>
     <h2 class="pt-1 text-gray-500">Latest Release: 41 (Cyberia)</h2>
 
+    <DownloadOptions client:load />
+
     <div
       class="flex flex-col items-center justify-center gap-10 mt-8 mb-24 w-full"
     >
@@ -27,8 +32,8 @@ import plasmaScreenshotDark from "../assets/41/screenshots/plasma-dark.png";
         screenshot={flagshipScreenshot}
         screenshotDark={flagshipScreenshotDark}
         background="/umbrella_bg.webp"
-        downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-flagship-41-live-x86_64.iso"
         description="The quintessential Ultramarine experience. Our in-house design language with a familiar and stylish experience built on the Budgie desktop."
+        version={version}
       />
 
       <DownloadSection
@@ -36,7 +41,7 @@ import plasmaScreenshotDark from "../assets/41/screenshots/plasma-dark.png";
         screenshot={plasmaScreenshot}
         screenshotDark={plasmaScreenshotDark}
         description="A community favorite with an Ultramarine twist. Simple defaults and wide-ranging customizations."
-        downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-plasma-41-live-x86_64.iso"
+        version={version}
       />
 
       <DownloadSection
@@ -44,7 +49,7 @@ import plasmaScreenshotDark from "../assets/41/screenshots/plasma-dark.png";
         screenshot={xfceScreenshot}
         screenshotDark={xfceScreenshotDark}
         description="A lightweight and elegant experience designed to help you squeeze the most out of your device, or revive an old one."
-        downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-xfce-41-live-x86_64.iso"
+        version={version}
       />
 
       <DownloadSection
@@ -52,7 +57,7 @@ import plasmaScreenshotDark from "../assets/41/screenshots/plasma-dark.png";
         screenshot={gnomeScreenshot}
         screenshotDark={gnomeScreenshotDark}
         description="A simple, elegant, and intuitive desktop with a large ecosystem of apps and extensions."
-        downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-gnome-41-live-x86_64.iso"
+        version={version}
       />
     </div>
 
@@ -63,7 +68,7 @@ import plasmaScreenshotDark from "../assets/41/screenshots/plasma-dark.png";
       <SmallDownloadCard
         title="Torrents"
         description="Check out our torrents provided by FOSSTorents"
-        link=""
+        link="https://fosstorrents.com/distributions/ultramarine-linux/"
       />
       <SmallDownloadCard
         title="Raw Images"

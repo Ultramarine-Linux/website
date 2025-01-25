@@ -6,10 +6,12 @@ import tailwind from "@astrojs/tailwind";
 
 import icon from "astro-icon";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://ultramarine-linux.org",
-  integrations: [mdx(), sitemap(), tailwind(), icon()],
+  integrations: [mdx(), sitemap(), tailwind(), icon(), react()],
   redirects: {
     "/release-announcements/40": {
       status: 302,
