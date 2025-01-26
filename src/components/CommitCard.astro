@@ -32,7 +32,7 @@ const data = (await response.json()) as {
   <article
     class="flex flex-col bg-gray-900 px-3 py-2 rounded-md shadow-md transition-all"
   >
-    <h1 class="font-medium dark:opacity-[92%]">
+    <h1 class="font-medium opacity-[92%]">
       {data.commit.message}
     </h1>
     <div class="flex flex-row gap-2 items-center">
@@ -45,7 +45,7 @@ const data = (await response.json()) as {
         {data.author.login}
       </h2>
 
-      <h3 class="ml-auto text-gray-800 dark:text-gray-300 text-sm">
+      <h3 class="ml-auto text-gray-300 text-sm">
         {repo}
       </h3>
       <Icon name="bi:check2" class="text-green-500" />
