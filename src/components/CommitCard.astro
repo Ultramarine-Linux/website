@@ -1,0 +1,52 @@
+---
+import { Icon } from "astro-icon/components";
+
+export interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+
+const parsed = new URL(url);
+
+const repo = parsed.pathname.split("/").slice(1, 3).join("/");
+
+parsed.hostname = "api.github.com";
+parsed.pathname = "/repos" + parsed.pathname.replace("commit", "commits");
+
+const response = await fetch(parsed);
+const data = (await response.json()) as {
+  commit: {
+    message: string;
+  };
+  author: {
+    login: string;
+    avatar_url: string;
+  };
+};
+---
+
+<a href={url}>
+  <article
+    class="flex flex-col bg-gray-900 px-3 py-2 rounded-md shadow-md transition-all"
+  >
+    <h1 class="font-medium">
+      {data.commit.message}
+    </h1>
+    <div class="flex flex-row gap-2 items-center">
+      <img
+        src={data.author.avatar_url}
+        alt={`${data.author.login}'s profile picture`}
+        class="rounded-full h-5 w-5 inline-block"
+      />
+      <h2 class="opacity-[92%]">
+        {data.author.login}
+      </h2>
+
+      <h3 class="ml-auto text-gray-300 text-sm">
+        {repo}
+      </h3>
+      <Icon name="bi:check2" class="text-green-500" />
+    </div>
+  </article>
+</a>
