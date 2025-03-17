@@ -1,8 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
 
-// import { CheckIcon } from "@heroicons/react/24/outline";
-
 export interface Props {
   url: string;
 }
@@ -32,7 +30,7 @@ const data = (await response.json()) as {
   <article
     class="flex flex-col bg-gray-900 px-3 py-2 rounded-md shadow-md transition-all"
   >
-    <h1 class="font-medium opacity-[92%]">
+    <h1 class="font-medium">
       {data.commit.message}
     </h1>
     <div class="flex flex-row gap-2 items-center">
@@ -41,7 +39,7 @@ const data = (await response.json()) as {
         alt={`${data.author.login}'s profile picture`}
         class="rounded-full h-5 w-5 inline-block"
       />
-      <h2>
+      <h2 class="opacity-[92%]">
         {data.author.login}
       </h2>
 
