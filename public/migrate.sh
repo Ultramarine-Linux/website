@@ -61,6 +61,7 @@ echo
 
 echo "■ (1/3) Updating system..."
 trace sudo dnf update -y
+trace sudo dnf downgrade dnf5 -y || true
 echo
 echo
 echo "■ (2/3) Installing repositories..."
