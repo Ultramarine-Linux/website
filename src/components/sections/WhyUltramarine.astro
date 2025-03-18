@@ -4,6 +4,8 @@ import { Icon } from "astro-icon/components";
 
 import fyraTeam from "../../assets/fyra_team.svg";
 import CommitCard from "../CommitCard.astro";
+import currentComputerImage from "../../assets/41/marketing/current_computer.png";
+import workImage from "../../assets/41/marketing/work.png";
 ---
 
 <div class="pt-32 relative max-w-screen-2xl mx-auto px-8 md:px-16">
@@ -32,12 +34,9 @@ import CommitCard from "../CommitCard.astro";
     </div>
     <Picture
       class="hidden lg:block mt-8 lg:mt-0 lg:w-[466px] lg:h-[260px]"
-      src={"https://picsum.photos/932/520"}
-      width={466}
-      height={260}
+      src={workImage}
       formats={["avif", "webp"]}
-      quality={80}
-      alt="fyra team image"
+      alt="Screenshot of an Ultramarine GNOME system using Libreoffice"
     />
   </div>
 
@@ -65,12 +64,9 @@ import CommitCard from "../CommitCard.astro";
     </div>
     <Picture
       class="hidden lg:block lg:w-[466px] lg:h-[260px] mt-8 lg:mt-0"
-      src={"https://picsum.photos/932/520"}
-      width={466}
-      height={260}
+      src={currentComputerImage}
       formats={["avif", "webp"]}
-      quality={80}
-      alt="fyra team image"
+      alt="Screenshot of an Ultramarine GNOME system with the system monitor and fastfetch showing"
     />
   </div>
 
