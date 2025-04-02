@@ -17,7 +17,11 @@ import kdeScreenshot from "../assets/40/screenshots/kde.png";
     >
       <BackMenu targetLink="/" target="Home" />
       <h1 class="text-4xl font-bold">Pick Your Flavor of Ultramarine</h1>
-      <h2 class="pt-1 text-gray-400">Latest Release: 40 (Lost Umbrella)</h2>
+      <h2 class="pt-1 text-gray-400">Latest Release: 41 (Cyberia)</h2>
+      <h2 class="pt-3 text-gray-400">
+        These images are for generic x86 computers. Chances are this is what you
+        have, but if not, there are alternative downloads available below.
+      </h2>
       <div class="">
         <div
           class="grid grid-flow-row-dense grid-cols-1 gap-10 pt-12 md:grid-cols-2 md:flex-row"
@@ -26,28 +30,28 @@ import kdeScreenshot from "../assets/40/screenshots/kde.png";
             editionName="Flagship"
             screenshot={flagshipScreenshot}
             description="The Flagship Edition with the latest and greatest software and our best polish. Powered by Budgie Desktop. (Recommended)"
-            downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-flagship-40-live-x86_64.iso"
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-flagship-41-live-x86_64.iso"
           />
 
           <DownloadSection
             editionName="GNOME"
             screenshot={gnomeScreenshot}
             description="GNOME is a simple, elegant, and intuitive desktop environment with a focus on productivity."
-            downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-gnome-40-live-x86_64.iso"
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-gnome-41-live-x86_64.iso"
           />
 
           <DownloadSection
             editionName="XFCE"
             screenshot={xfceScreenshot}
             description="Xfce is a lightweight but elegant desktop designed to help you squeeze the most out of your device, or revive an old one."
-            downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-xfce-40-live-x86_64.iso"
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-xfce-41-live-x86_64.iso"
           />
 
           <DownloadSection
             editionName="KDE Plasma"
             screenshot={kdeScreenshot}
             description="The good old familiar KDE Plasma Desktop Environment --- simple by default, powerful when needed."
-            downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-kde-40-live-x86_64.iso"
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-plasma-41-live-x86_64.iso"
           />
         </div>
       </div>
@@ -56,9 +60,65 @@ import kdeScreenshot from "../assets/40/screenshots/kde.png";
         class="flex flex-col items-center justify-center text-center gap-10 mt-24 mb-10"
       >
         <div>
+          <h2 class="text-2xl font-semibold">ARM Builds</h2>
+          <h2 class="pt-1 text-gray-400">
+            Generic ARM EFI builds are available
+            <a
+              class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
+              href="/um41-arm">here</a
+            >.
+          </h2>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">Microsoft Surface</h2>
+          <h2 class="pt-1 text-gray-400">
+            Microsoft Surface builds are available
+            <a
+              class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
+              href="/um41-surface">here</a
+            >.
+          </h2>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">Preinstalled Images</h2>
+          <h2 class="pt-1 text-gray-400">
+            Preinstalled images to flash directly to a device (Raspberry Pi
+            users should grab these) available
+            <a
+              class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
+              href="https://images.fyralabs.com/images/ultramarine/41/"
+              target="_blank"
+              rel="noopener noreferrer">here</a
+            >.
+          </h2>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">Windows Subsystem for Linux</h2>
+          <h2 class="pt-1 text-gray-400">
+            Ultramarine WSL can be downloaded from the Microsoft Store
+            <br />
+            <br />
+          </h2>
+          <script
+            type="module"
+            src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"
+          ></script>
+          <ms-store-badge
+            productid="9PBPG2RDMZB9"
+            cid="um41"
+            window-mode="direct"
+            theme="dark"
+            size="large"
+            language="en-us"
+            animation="on"
+          >
+          </ms-store-badge>
+
+          <!-- </div>
+        <div> -->
           <h2 class="text-2xl font-semibold">Torrents</h2>
           <h2 class="pt-1 text-gray-400">
-            Alternatively, you can download Ultramarine from
+            You can download Ultramarine from
             <a
               class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
               href="https://fosstorrents.com/distributions/ultramarine-linux/"
@@ -67,34 +127,12 @@ import kdeScreenshot from "../assets/40/screenshots/kde.png";
           </h2>
         </div>
         <div>
-          <h2 class="text-2xl font-semibold">ARM Builds</h2>
+          <h2 class="text-2xl font-semibold">Ultramarine 40</h2>
           <h2 class="pt-1 text-gray-400">
-            Generic ARM EFI builds are available
+            Old Ultramarine 40 Builds are available
             <a
               class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
-              href="/um40-arm">here</a
-            >.
-          </h2>
-        </div>
-        <div>
-          <h2 class="text-2xl font-semibold">Raw Images</h2>
-          <h2 class="pt-1 text-gray-400">
-            Raw images to flash directly to the device. Raspberry Pi users should grab these. x86 and ARM are available
-            <a
-              class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
-              href="https://images.fyralabs.com/images/ultramarine/40/"
-              target="_blank"
-              rel="noopener noreferrer">here</a
-            >.
-          </h2>
-        </div>
-        <div>
-          <h2 class="text-2xl font-semibold">Ultramarine 39</h2>
-          <h2 class="pt-1 text-gray-400">
-            Old Ultramarine 39 Builds are available
-            <a
-              class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
-              href="/um39">here</a
+              href="/um40">here</a
             >.
           </h2>
         </div>

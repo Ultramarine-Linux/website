@@ -2,10 +2,10 @@
 import BackMenu from "../components/BackMenu.vue";
 import DownloadSection from "../components/DownloadSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import flagshipScreenshot from "../assets/39/screenshots/flagship.png";
-import gnomeScreenshot from "../assets/39/screenshots/GNOME.png";
-import pantheonScreenshot from "../assets/39/screenshots/pantheon.png";
-import kdeScreenshot from "../assets/39/screenshots/kde.png";
+import flagshipScreenshot from "../assets/40/screenshots/flagship.png";
+import gnomeScreenshot from "../assets/40/screenshots/GNOME.png";
+import xfceScreenshot from "../assets/40/screenshots/xfce.png";
+import kdeScreenshot from "../assets/40/screenshots/kde.png";
 ---
 
 <BaseLayout>
@@ -15,12 +15,13 @@ import kdeScreenshot from "../assets/39/screenshots/kde.png";
     <div
       class="flex flex-col min-h-screen p-2 md:px-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-900 dark:text-gray-100"
     >
-      <BackMenu targetLink="/um39" target="Ultramarine Linux 39" />
-      <h1 class="text-4xl font-bold">ARM Builds</h1>
-      <h2 class="pt-1 text-gray-400">
-        You can find ARM (aarch64) builds of Ultramarine Linux 39 here.
+      <BackMenu targetLink="/download" target="Downloads" />
+      <h1 class="text-4xl font-bold">Microsoft Surface Builds</h1>
+      <h2 class="pt-3 text-gray-400">
+        You can find Microsoft Surface builds of Ultramarine Linux 41 here. More
+        info can be found on our Wiki.
       </h2>
-      <div class="mb-8">
+      <div class="">
         <div
           class="grid grid-flow-row-dense grid-cols-1 gap-10 pt-12 md:grid-cols-2 md:flex-row"
         >
@@ -28,28 +29,28 @@ import kdeScreenshot from "../assets/39/screenshots/kde.png";
             editionName="Flagship"
             screenshot={flagshipScreenshot}
             description="The flagship edition with the latest and greatest software and our best polish. Powered by Budgie Desktop. (Recommended)"
-            downloadLink="https://images.fyralabs.com/isos/ultramarine/39/ultramarine-flagship-39-live-aarch64.iso"
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-flagship-41-surface-x86_64.iso"
           />
 
           <DownloadSection
             editionName="GNOME"
             screenshot={gnomeScreenshot}
             description="GNOME is a simple, elegant, and intuitive desktop environment with a focus on productivity."
-            downloadLink="https://images.fyralabs.com/isos/ultramarine/39/ultramarine-gnome-39-live-aarch64.iso"
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-gnome-41-surface-x86_64.iso"
           />
 
           <DownloadSection
-            editionName="Pantheon"
-            screenshot={pantheonScreenshot}
-            description="The default desktop of elementary OS focused on elegance and visual appeal."
-            downloadLink="https://images.fyralabs.com/isos/ultramarine/39/ultramarine-pantheon-39-live-aarch64.iso"
+            editionName="XFCE"
+            screenshot={xfceScreenshot}
+            description="Xfce is a lightweight but elegant desktop designed to help you squeeze the most out of your device, or revive an old one."
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-xfce-41-surface-x86_64.iso"
           />
 
           <DownloadSection
             editionName="KDE Plasma"
             screenshot={kdeScreenshot}
             description="The good old familiar KDE Plasma Desktop Environment --- simple by default, powerful when needed."
-            downloadLink="https://images.fyralabs.com/isos/ultramarine/39/ultramarine-kde-39-live-aarch64.iso"
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/41/ultramarine-plasma-41-surface-x86_64.iso"
           />
         </div>
       </div>
