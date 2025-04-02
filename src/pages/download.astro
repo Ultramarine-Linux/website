@@ -103,6 +103,12 @@ import kdeScreenshot from "../assets/40/screenshots/kde.png";
             type="module"
             src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"
           ></script>
+          <style>
+            /* Customize the badge's size */
+            ms-store-badge::part(img) {
+              max-height: 70px;
+            }
+          </style>
           <ms-store-badge
             productid="9PBPG2RDMZB9"
             cid="um41"
@@ -113,7 +119,6 @@ import kdeScreenshot from "../assets/40/screenshots/kde.png";
             animation="on"
           >
           </ms-store-badge>
-
           <!-- </div>
         <div> -->
           <h2 class="text-2xl font-semibold">Torrents</h2>
