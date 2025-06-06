@@ -11,7 +11,7 @@ import vue from "@astrojs/vue";
 // https://astro.build/config
 export default defineConfig({
   site: "https://ultramarine-linux.org",
-  integrations: [mdx(), sitemap(), tailwind(), vue()], 
+  integrations: [mdx(), sitemap(), tailwind(), vue()],
   redirects: {
     "/release-announcements/40": {
       status: 302,
