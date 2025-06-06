@@ -11,7 +11,7 @@ import vue from "@astrojs/vue";
 // https://astro.build/config
 export default defineConfig({
   site: "https://ultramarine-linux.org",
-  integrations: [mdx(), sitemap(), tailwind(), vue()],
+  integrations: [mdx(), sitemap(), tailwind(), vue()], 
   redirects: {
     "/release-announcements/40": {
       status: 302,
@@ -22,6 +22,11 @@ export default defineConfig({
       status: 302,
       destination:
         "https://wiki.ultramarine-linux.org/en/release/41-upgrades/",
+    },
+    "/release-announcements/42": {
+      status: 302,
+      destination:
+        "https://blog.fyralabs.com/ultramarine-42-upgrades/",
     },
   },
 });
