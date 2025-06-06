@@ -23,5 +23,10 @@ export default defineConfig({
       destination:
         "https://wiki.ultramarine-linux.org/en/release/41-upgrades/",
     },
+    "/release-announcements/42": {
+      status: 302,
+      destination:
+        "https://blog.fyralabs.com/ultramarine-42-upgrades/",
+    },
   },
 });
