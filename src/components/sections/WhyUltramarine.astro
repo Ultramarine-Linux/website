@@ -8,11 +8,11 @@ import currentComputerImage from "../../assets/41/marketing/current_computer.png
 import workImage from "../../assets/41/marketing/work.png";
 ---
 
-<div class="pt-32 relative max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16">
-  <h2 class="text-4xl font-bold mt-4">Why Ultramarine?</h2>
+<div class="relative max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16">
+  <h2 class="text-4xl font-bold mt-4 mb-12">Why Ultramarine?</h2>
 
   <div
-    class="w-full flex flex-col lg:flex-row items-center justify-between mb-24 lg:mb-48 mt-32"
+    class="w-full flex flex-col-reverse lg:flex-row items-center justify-between mb-24 lg:mb-48 gap-4"
   >
     <div class="lg:w-1/2">
       <h3 class="text-2xl font-semibold mb-4">Get to work, faster</h3>
@@ -33,7 +33,7 @@ import workImage from "../../assets/41/marketing/work.png";
       </a>
     </div>
     <Picture
-      class="hidden lg:block mt-8 lg:mt-0 lg:w-[466px] lg:h-[260px]"
+      class="lg:w-[466px] lg:h-[260px] rounded-xl"
       src={workImage}
       formats={["avif", "webp"]}
       alt="Screenshot of an Ultramarine GNOME system using Libreoffice"
@@ -41,7 +41,7 @@ import workImage from "../../assets/41/marketing/work.png";
   </div>
 
   <div
-    class="w-full flex flex-col lg:flex-row-reverse items-center justify-between mb-24 lg:mb-48"
+    class="w-full flex flex-col-reverse lg:flex-row-reverse items-center justify-between mb-24 lg:mb-48 gap-4"
   >
     <div class="lg:w-1/2 lg:text-right">
       <h3 class="text-2xl font-semibold mb-4">Your current computer, better</h3>
@@ -63,7 +63,7 @@ import workImage from "../../assets/41/marketing/work.png";
       </a>
     </div>
     <Picture
-      class="hidden lg:block lg:w-[466px] lg:h-[260px] mt-8 lg:mt-0"
+      class="lg:w-[466px] lg:h-[260px] rounded-xl"
       src={currentComputerImage}
       formats={["avif", "webp"]}
       alt="Screenshot of an Ultramarine GNOME system with the system monitor and fastfetch showing"
@@ -71,7 +71,7 @@ import workImage from "../../assets/41/marketing/work.png";
   </div>
 
   <div
-    class="w-full flex flex-col lg:flex-row items-center justify-between gap-8 mb-24 lg:mb-48"
+    class="w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-4 mb-24 lg:mb-48"
   >
     <div class="lg:w-1/2">
       <h3 class="text-2xl font-semibold mb-4">New tech, sooner</h3>
@@ -91,7 +91,7 @@ import workImage from "../../assets/41/marketing/work.png";
         />
       </a>
     </div>
-    <div class="hidden lg:flex flex-col gap-2 lg:w-1/2 max-w-[466px]">
+    <div class="flex flex-col gap-2 w-full lg:w-1/2 lg:max-w-[466px]">
       <CommitCard
         url={"https://github.com/Ultramarine-Linux/bootc/commit/7d2024a288f47b4a2f175825aa6620c5dd6e2a60"}
       />

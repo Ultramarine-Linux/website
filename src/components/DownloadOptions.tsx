@@ -20,8 +20,8 @@ const archDownloadVariations = new Map([
       name: "ARM",
       devices: new Map([
         ["generic", "Generic"],
-        ["rpi4", "Raspberry Pi 4"],
-        ["rpi5", "Raspberry Pi 5"],
+        ["rpi34", "Raspberry Pi 3/4"],
+        ["armchromebook", "Arm Chromebooks (beta)"],
       ]),
     },
   ],
