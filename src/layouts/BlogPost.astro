@@ -35,12 +35,12 @@ const {
             width={"100%"}
             src={heroImage}
             alt=""
-            class="rounded-3xl py-4 aspect-[21/9] object-cover h-96"
+            class="rounded-3xl py-4 aspect-21/9 object-cover h-96"
           />
         )
       }
       <div
-        class="w-full max-w-screen-2xl prose prose-invert lg:prose-lg lg:prose-h2:mb-2 prose-headings:mt-0 prose-p:mb-2 prose-code:before:content-none prose-code:after:content-none prose-code:bg-gray-700 prose-code:rounded-md prose-code:text-gray-50 prose-code:font-mono prose-code:p-1 prose-code:font-medium"
+        class="w-full max-w-(--breakpoint-2xl) prose prose-invert lg:prose-lg lg:prose-h2:mb-2 prose-headings:mt-0 prose-p:mb-2 prose-code:before:content-none prose-code:after:content-none prose-code:bg-gray-700 prose-code:rounded-md prose-code:text-gray-50 prose-code:font-mono prose-code:p-1 prose-code:font-medium"
       >
         <slot />
       </div>

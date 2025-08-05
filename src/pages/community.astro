@@ -6,7 +6,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout>
   <div
-    class="flex flex-col items-start max-w-screen-xl mx-auto px-8 md:px-16 mt-12"
+    class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12"
   >
     <h1 class="text-4xl font-bold">Join Us</h1>
     <h2 class="pt-1 text-gray-500">
@@ -121,12 +121,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           class="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center z-10 mt-6"
         >
           <a
-            class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 from-pink-500 to-pink-600 bg-gradient-to-br rounded-xl text-gray-50 hover:bg-pink-600 transition-colors w-full md:w-auto text-sm md:text-base relative group"
+            class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 from-pink-500 to-pink-600 bg-linear-to-br rounded-xl text-gray-50 hover:bg-pink-600 transition-colors w-full md:w-auto text-sm md:text-base relative group"
             href="https://github.com/sponsors/FyraLabs"
           >
             <Icon
               name="bi:heart-fill"
-              class="heartbeat absolute -right-1 -top-1 text-pink-300 group-hover:animate-[heartbeat_0.4s_cubic-bezier(0,_0,_0.2,_1)_infinite_alternate]"
+              class="heartbeat absolute -right-1 -top-1 text-pink-300 group-hover:animate-[heartbeat_0.4s_cubic-bezier(0,0,0.2,1)_infinite_alternate]"
             />
             <span>Sponsor</span>
           </a>
