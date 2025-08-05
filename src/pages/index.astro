@@ -8,6 +8,7 @@ import FedoraMigrationScriptDialog from "../components/sections/FedoraMigrationS
 
 import DownloadIcon from "../components/icons/DownloadIcon.tsx";
 import WavyDivider from "../../public/divider_1.svg";
+import UmDivider from "../../public/divider_2.svg";
 ---
 
 <BaseLayout>
@@ -22,7 +23,7 @@ import WavyDivider from "../../public/divider_1.svg";
       <WhyUltramarine />
 
       <div class="w-full overflow-hidden self-center hidden lg:block">
-        <div class="umDivider1"></div>
+        <UmDivider class="w-full" />
       </div>
 
       <TestimonialsAndFAQs />
@@ -63,72 +64,6 @@ import WavyDivider from "../../public/divider_1.svg";
     </div>
   </div>
 </BaseLayout>
-
-<style>
-  iframe {
-    aspect-ratio: 16/9;
-    width: 95%;
-  }
-
-  .wavyDivider1 {
-    width: 100%;
-    background-image: url(/divider_1.svg);
-    background-size: cover;
-    height: 0;
-    padding: 0; /* reset */
-    padding-bottom: calc(100% * 10 / 32);
-  }
-
-  .umDivider1 {
-    width: 100%;
-    background-image: url(/divider_2.svg);
-    background-size: cover;
-    height: 0;
-    padding: 0; /* reset */
-    padding-bottom: calc(100% * 10 / 32);
-  }
-
-  .mouse {
-    width: 30px;
-    height: 50px;
-    border: 3px solid #cccccc;
-    border-radius: 60px;
-    position: relative;
-  }
-
-  .mouse::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #cccccc;
-    border-radius: 50%;
-    opacity: 1;
-    animation: wheel 2s infinite;
-    -webkit-animation: wheel 2s infinite;
-  }
-
-  @keyframes wheel {
-    to {
-      opacity: 0;
-      top: 30px;
-    }
-  }
-
-  @-webkit-keyframes wheel {
-    to {
-      opacity: 0;
-      top: 30px;
-    }
-  }
-
-  .pb-1\.5 {
-    padding-bottom: 8px;
-  }
-</style>
 
 <script is:inline>
   function copyEvent(id) {
