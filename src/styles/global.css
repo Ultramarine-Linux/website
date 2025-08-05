@@ -3,6 +3,10 @@
 @config "../../tailwind.config.cjs";
 @layer (utilities);
 
+:root {
+  interpolate-size: allow-keywords;
+}
+
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
