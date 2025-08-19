@@ -1,6 +1,6 @@
 import { useStore } from "@nanostores/react";
 import { downloadArch, downloadDevice } from "./downloadStore";
-import DownloadIcon from "./icons/DownloadIcon";
+import DownloadIcon from "./icons/DownloadIcon.svg?react";
 
 const downloadLink = (version: number, arch: string, device: string) =>
   `https://images.fyralabs.com/isos/ultramarine/${version}/ultramarine-flagship-${version}-live-${arch}.iso`;

@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
+import Check from "~icons/bi/check2";
 import { Image } from "astro:assets";
 
 export interface Props {
@@ -48,7 +48,7 @@ const data = (await response.json()) as {
       <h3 class="ml-auto text-gray-300 text-sm">
         {repo}
       </h3>
-      <Icon name="bi:check2" class="text-green-500" />
+      <Check className="text-green-500" />
     </div>
   </article>
 </a>

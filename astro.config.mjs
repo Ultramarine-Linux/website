@@ -2,16 +2,18 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
-import icon from "astro-icon";
-
 import react from "@astrojs/react";
 
 import tailwindcss from "@tailwindcss/vite";
 
+import Icons from "unplugin-icons/vite";
+
+import svgr from "vite-plugin-svgr";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://ultramarine-linux.org",
-  integrations: [mdx(), sitemap(), icon(), react()],
+  integrations: [mdx(), sitemap(), react()],
 
   redirects: {
     "/release-announcements/40": {
@@ -22,6 +24,13 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [
+      tailwindcss(),
+      Icons({
+        compiler: "jsx",
+        jsx: "react",
+      }),
+      svgr(),
+    ],
   },
 });

@@ -1,6 +1,11 @@
 ---
-import { Icon } from "astro-icon/components";
-import UltramarineAltLogo from "./icons/UltramarineAltLogo.astro";
+import Discord from "~icons/simple-icons/discord";
+import GitHub from "~icons/simple-icons/github";
+import Twitter from "~icons/simple-icons/twitter";
+import Mastodon from "~icons/simple-icons/mastodon";
+import Bluesky from "~icons/simple-icons/bluesky";
+import Reddit from "~icons/simple-icons/reddit";
+import UltramarineAltLogo from "./icons/UltramarineAltLogo.svg";
 ---
 
 <footer class="p-6 md:pt-12 pb-8 w-full bg-gray-900 z-50">
@@ -9,7 +14,7 @@ import UltramarineAltLogo from "./icons/UltramarineAltLogo.astro";
   >
     <div class="sm:col-span-3 flex flex-col gap-2">
       <a href="/" class="flex items-start gap-2">
-        <UltramarineAltLogo classes="h-6 w-6 pt-1" />
+        <UltramarineAltLogo class="h-6 w-6 pt-1" />
         <span class="font-bold text-xl">Ultramarine Linux</span>
       </a>
       <p class="text-gray-400 max-w-lg">
@@ -60,30 +65,30 @@ import UltramarineAltLogo from "./icons/UltramarineAltLogo.astro";
     </div>
     <div class="flex items-center gap-4 sm:ml-auto">
       <a href="https://github.com/ultramarine-linux" aria-label="GitHub">
-        <Icon name="simple-icons:github" class="w-5 h-5" />
+        <GitHub className="w-5 h-5" />
         <span class="hidden">Ultramarine Github Repo</span>
       </a>
       <a href="https://fyralabs.com/discord" aria-label="Discord">
-        <Icon name="simple-icons:discord" class="w-5 h-5" />
+        <Discord className="w-5 h-5" />
         <span class="hidden">Ultramarine and Fyra Labs Discord community</span>
       </a>
       <a href="https://x.com/UltramarineProj" aria-label="Twitter">
-        <Icon name="simple-icons:twitter" class="w-5 h-5" />
+        <Twitter className="w-5 h-5" />
         <span class="hidden">Ultramarine Linux Twitter</span>
       </a>
       <a href="https://fedi.fyralabs.com/@ultramarine" aria-label="Mastodon">
-        <Icon name="simple-icons:mastodon" class="w-5 h-5" />
+        <Mastodon className="w-5 h-5" />
         <span class="hidden">Ultramarine Linux Mastodon</span>
       </a>
       <a
         href="https://bsky.app/profile/ultramarine-linux.org"
         aria-label="Bluesky"
       >
-        <Icon name="simple-icons:bluesky" class="w-5 h-5" />
+        <Bluesky className="w-5 h-5" />
         <span class="hidden">Ultramarine Linux Bluesky</span>
       </a>
       <a href="https://www.reddit.com/r/ultramarine" aria-label="Reddit">
-        <Icon name="simple-icons:reddit" class="w-5 h-5" />
+        <Reddit className="w-5 h-5" />
         <span class="hidden">Ultramarine Linux Subreddit</span>
       </a>
     </div>

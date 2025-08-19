@@ -1,6 +1,9 @@
 ---
-import { Icon } from "astro-icon/components";
-import LongArrow from "../components/icons/LongArrow.astro";
+import Mastodon from "~icons/simple-icons/mastodon";
+import Bluesky from "~icons/simple-icons/bluesky";
+import Reddit from "~icons/simple-icons/reddit";
+import Twitter from "~icons/simple-icons/twitter";
+import Heart from "~icons/bi/heart-fill";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -83,22 +86,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             href="https://fedi.fyralabs.com/@ultramarine"
             aria-label="Mastodon"
           >
-            <Icon name="simple-icons:mastodon" class="w-6 h-6" />
+            <Mastodon className="w-6 h-6" />
             <span class="hidden">Ultramarine Linux Mastodon</span>
           </a>
           <a
             href="https://bsky.app/profile/ultramarine-linux.org"
             aria-label="Bluesky"
           >
-            <Icon name="simple-icons:bluesky" class="w-6 h-6" />
+            <Bluesky className="w-6 h-6" />
             <span class="hidden">Ultramarine Linux Bluesky</span>
           </a>
           <a href="https://www.reddit.com/r/ultramarine" aria-label="Reddit">
-            <Icon name="simple-icons:reddit" class="w-6 h-6" />
+            <Reddit className="w-6 h-6" />
             <span class="hidden">Ultramarine Linux Subreddit</span>
           </a>
           <a href="https://x.com/UltramarineProj" aria-label="Twitter">
-            <Icon name="simple-icons:twitter" class="w-6 h-6" />
+            <Twitter className="w-6 h-6" />
             <span class="hidden">Ultramarine Linux Twitter</span>
           </a>
         </div>
@@ -124,9 +127,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 from-pink-500 to-pink-600 bg-linear-to-br rounded-xl text-gray-50 hover:bg-pink-600 transition-colors w-full md:w-auto text-sm md:text-base relative group"
             href="https://github.com/sponsors/FyraLabs"
           >
-            <Icon
-              name="bi:heart-fill"
-              class="heartbeat absolute -right-1 -top-1 text-pink-300 group-hover:animate-[heartbeat_0.4s_cubic-bezier(0,0,0.2,1)_infinite_alternate]"
+            <Heart
+              className="heartbeat absolute -right-1 -top-1 text-pink-300 group-hover:animate-[heartbeat_0.4s_cubic-bezier(0,0,0.2,1)_infinite_alternate]"
             />
             <span>Sponsor</span>
           </a>
