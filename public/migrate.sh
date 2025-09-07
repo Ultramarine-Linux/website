@@ -140,6 +140,10 @@ if [ "$(rpm -qa ultramarine-logos | head -c1 | wc -c)" -eq 0 ]; then
   trace sudo dnf swap -y fedora-logos ultramarine-logos --allowerasing
 fi
 
+echo "Adding DNF defaults..."
+echo max_parallel_downloads=20 >> /etc/dnf/dnf.conf
+echo defaultyes=True >> /etc/dnf/dnf.conf
+
 echo
 echo
 echo '┏━━━           ──────  '
@@ -163,4 +167,3 @@ echo "The migration logs can be found at ${LOG}.
 Come chat with us at https://discord.gg/5fdPuxTg5Q or https://matrix.to/#/#hub:fyralabs.com.
 For addtional information, please see the Ultramarine Wiki, https://wiki.ultramarine-linux.org.
 Have fun, thank you for using Ultramarine Linux!"
-
