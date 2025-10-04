@@ -14,8 +14,7 @@ const archDownloadVariations = new Map([
             title: "Generic",
             description: (
               <>
-                These images are for generic x86 computers, if you are unsure
-                what you have, this is probably what you want.
+                These images are for most x86 computers, if you're not sure, this is probably what you want.
               </>
             ),
           },
@@ -26,9 +25,7 @@ const archDownloadVariations = new Map([
             title: "Chromebook",
             description: (
               <>
-                These images come with the software and install methods
-                necessary to be installed on a stock firmware Chromebook or a
-                UEFI full ROM Chromebook. More information can be found on our{" "}
+                These images come with tweaks to be installed on Chromebooks with stock or UEFI firmware. More information can be found on our{" "}
                 <a
                   href="#TODO"
                   className="text-accent-300 hover:text-accent-400"
@@ -46,8 +43,7 @@ const archDownloadVariations = new Map([
             title: "Surface",
             description: (
               <>
-                These images come with the software necessary to be installed on
-                x86_64 Microsoft Surface devices. More information can be found
+                These images come with tweaks for Intel and AMD Microsoft Surfaces. More information can be found
                 on our{" "}
                 <a
                   href="https://wiki.ultramarine-linux.org/en/anywhere/surface/"
@@ -74,8 +70,7 @@ const archDownloadVariations = new Map([
             title: "Generic",
             description: (
               <>
-                These images are for generic ARM (aarch64) computers, more info
-                and supported devices can be found{" "}
+                These images are for 64bit ARM devices with support in Linux. See our wiki for more{" "}
                 <a
                   href="https://fedoraproject.org/wiki/Architectures/ARM"
                   className="text-accent-300 hover:text-accent-400"
@@ -93,9 +88,7 @@ const archDownloadVariations = new Map([
             title: "Raspberry Pi 3/4",
             description: (
               <>
-                These images are preinstalled, meant to be flashed right onto an
-                SD card/USB stick for use on a Raspberry Pi. More information
-                can be found on our{" "}
+                These images are preinstalled images for the Raspberry Pi 3 and 4 families. You can flash them directly to an SD card or use the Raspberry Pi Imager.Check our wiki for more information.{" "}
                 <a
                   href="https://wiki.ultramarine-linux.org/en/anywhere/rpi/"
                   className="text-accent-300 hover:text-accent-400"
@@ -110,13 +103,10 @@ const archDownloadVariations = new Map([
         [
           "armchromebook",
           {
-            title: "Arm Chromebooks (beta)",
+            title: "Arm Chromebooks (Preview)",
             description: (
               <>
-                These images use various patches to enable support on some
-                modern ARM Chromebooks. Note that these images must be used with
-                stock firmware, are preinstalled, and may not be as stable as
-                others. More info and supported devices can be found on our{" "}
+                These images support Chromebooks with mt81xx and sc7180 processors. See the wiki for more information.{" "}
                 <a
                   href="#TODO"
                   className="text-accent-300 hover:text-accent-400"
