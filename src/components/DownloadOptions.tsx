@@ -106,7 +106,7 @@ const archDownloadVariations = new Map([
             title: "Arm Chromebooks (Preview)",
             description: (
               <>
-                These images support Chromebooks with mt81xx and sc7180 processors. See the wiki for more information.{" "}
+                These images support select 64bit ARM Chromebooks. See the wiki for more information.{" "}
                 <a
                   href="#TODO"
                   className="text-accent-300 hover:text-accent-400"
