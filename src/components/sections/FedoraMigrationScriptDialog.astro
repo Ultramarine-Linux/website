@@ -3,7 +3,10 @@ import CopyIcon from "../icons/CopyIcon.svg";
 import XIcon from "../icons/XIcon.svg";
 ---
 
-<dialog id="migrationDialog" class="px-8 py-2 bg-gray-900 rounded-md">
+<dialog
+  id="migrationDialog"
+  class="px-8 py-2 bg-gray-900 rounded-md top-5 m-auto"
+>
   <button autofocus class="flex items-end justify-end w-full">
     <XIcon />
   </button>
@@ -16,9 +19,9 @@ import XIcon from "../icons/XIcon.svg";
       class="inline-flex items-center bg-gray-300 dark:bg-gray-800 rounded-xl"
     >
       <div
-        class="p-6 bg-gray-200 dark:text-gray-300 dark:bg-gray-700 rounded-xl"
+        class="p-6 bg-gray-200 dark:text-gray-200 dark:bg-gray-700 rounded-xl"
       >
-        <pre><code id="migrate-script" class="font-mono">bash <(curl -s https://ultramarine-linux.org/migrate.sh)</code></pre>
+        <pre><code id="migrate-script" class="font-mono">bash {"<"}(curl -s https://ultramarine-linux.org/migrate.sh)</code></pre>
       </div>
       <div
         class="relative px-3 py-4 mx-1 dark:bg-gray-800 cursor-pointer rounded-xl"
