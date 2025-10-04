@@ -16,7 +16,7 @@
     "@astrojs/react": "^4.3.1",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.5.1",
-    "@headlessui/react": "^2.2.7",
+    "@headlessui/react": "^2.2.9",
     "@iconify-json/fluent": "^1.2.30",
     "@nanostores/react": "^1.0.0",
     "@radix-ui/react-toggle-group": "^1.1.11",
