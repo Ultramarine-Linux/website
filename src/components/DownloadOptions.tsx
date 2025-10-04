@@ -40,6 +40,8 @@ const archDownloadVariations = new Map([
                 <a
                   href="#TODO"
                   className="text-accent-300 hover:text-accent-400"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   wiki
                 </a>
@@ -59,6 +61,8 @@ const archDownloadVariations = new Map([
                 <a
                   href="https://wiki.ultramarine-linux.org/en/anywhere/surface/"
                   className="text-accent-300 hover:text-accent-400"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   wiki
                 </a>
@@ -86,6 +90,8 @@ const archDownloadVariations = new Map([
                 <a
                   href="https://fedoraproject.org/wiki/Architectures/ARM"
                   className="text-accent-300 hover:text-accent-400"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   here
                 </a>
@@ -106,6 +112,8 @@ const archDownloadVariations = new Map([
                 <a
                   href="https://wiki.ultramarine-linux.org/en/anywhere/rpi/"
                   className="text-accent-300 hover:text-accent-400"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   wiki
                 </a>
@@ -125,6 +133,8 @@ const archDownloadVariations = new Map([
                 <a
                   href="#TODO"
                   className="text-accent-300 hover:text-accent-400"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   wiki
                 </a>
