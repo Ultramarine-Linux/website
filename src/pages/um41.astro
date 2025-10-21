@@ -1,0 +1,103 @@
+---
+import BackMenu from "../components/BackMenu.vue";
+import DownloadSection from "../components/DownloadSection.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import flagshipScreenshot from "../assets/41/screenshots/flagship-dark.webp";
+import gnomeScreenshot from "../assets/41/screenshots/GNOME-dark.webp";
+import xfceScreenshot from "../assets/41/screenshots/xfce-dark.webp";
+import kdeScreenshot from "../assets/41/screenshots/plasma-dark.webp";
+---
+
+<BaseLayout>
+  <div
+    class="min-h-screen text-gray-900 bg-gray-100 dark:text-gray-200 dark:bg-gray-900"
+  >
+    <div
+      class="flex flex-col min-h-screen p-2 md:px-12 text-gray-900 bg-gray-100 place-content-center md:items-center dark:bg-gray-900 dark:text-gray-100"
+    >
+      <BackMenu targetLink="/download" target="latest release" />
+      <h1 class="text-4xl font-bold">Ultramarine 41 Releases</h1>
+      <h2 class="pt-1 text-gray-400">Previous release of Ultramarine Linux</h2>
+      <div class="">
+        <div
+          class="grid grid-flow-row-dense grid-cols-1 gap-10 pt-12 md:grid-cols-2 md:flex-row"
+        >
+          <DownloadSection
+            editionName="Flagship"
+            screenshot={flagshipScreenshot}
+            description="The Flagship Edition with the latest and greatest software and our best polish. Powered by Budgie Desktop. (Recommended)"
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-flagship-41-live-anaconda-x86_64.iso"
+          />
+
+          <DownloadSection
+            editionName="GNOME"
+            screenshot={gnomeScreenshot}
+            description="GNOME is a simple, elegant, and intuitive desktop environment with a focus on productivity."
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-gnome-41-live-anaconda-x86_64.iso"
+          />
+
+          <DownloadSection
+            editionName="XFCE"
+            screenshot={xfceScreenshot}
+            description="Xfce is a lightweight but elegant desktop designed to help you squeeze the most out of your device, or revive an old one."
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-xfce-41-live-anaconda-x86_64.iso"
+          />
+
+          <DownloadSection
+            editionName="KDE Plasma"
+            screenshot={kdeScreenshot}
+            description="The good old familiar KDE Plasma Desktop Environment --- simple by default, powerful when needed."
+            downloadLink="https://images.fyralabs.com/isos/ultramarine/40/ultramarine-kde-41-live-anaconda-x86_64.iso"
+          />
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center text-center gap-10 mt-24 mb-10"
+      >
+        <div>
+          <h2 class="text-2xl font-semibold">Torrents</h2>
+          <h2 class="pt-1 text-gray-400">
+            Alternatively, you can download Ultramarine Linux from FOSS Torrents
+            with the torrents which can be found
+            <a
+              class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
+              href="https://fosstorrents.com/distributions/ultramarine-linux/"
+              >here</a
+            >.
+          </h2>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">ARM Builds</h2>
+          <h2 class="pt-1 text-gray-400">
+            If you want to download ARM builds for Ultramarine Linux, you can
+            find them
+            <a
+              class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
+              href="/um41-arm">here</a
+            >.
+          </h2>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">Disk images</h2>
+          <h2 class="pt-1 text-gray-400">
+            Disk images for Ultramarine are available
+            <a
+              class="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-200"
+              href="https://images.fyralabs.com/images/ultramarine/41/"
+              target="_blank"
+              rel="noopener noreferrer">here</a
+            >.
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+    />
+  </div>
+</BaseLayout>
