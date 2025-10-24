@@ -35,7 +35,7 @@ const {
         {description}
       </p>
     </div>
-    <DownloadLinks version={version} client:load/>
+    <DownloadLinks edition={editionName.toLowerCase()} version={version} client:load/>
     {
       background && (
         <div class="absolute inset-0 overflow-hidden">
