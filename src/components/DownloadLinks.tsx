@@ -8,7 +8,7 @@ const downloadLink = (
   arch: string,
   device: string,
 ) =>
-  `https://images.fyralabs.com/isos/ultramarine/${version}/ultramarine-${edition}-${version}-${device === "generic" ? "live" : device}-${arch}.iso`;
+  `https://images.fyralabs.com/isos/ultramarine/${version}/ultramarine-${edition}-${version}-${device === "generic" ? "live-anaconda" : device}-${arch}.iso`;
 
 const DownloadLinks = ({
   version,
