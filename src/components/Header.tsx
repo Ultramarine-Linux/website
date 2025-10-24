@@ -48,6 +48,8 @@ const Header = () => {
           <div className="hidden md:flex flex-row items-center gap-8">
             <a
               href="https://wiki.ultramarine-linux.org/en/welcome/"
+              target="_blank"
+              rel="noopener"
               className="hover:text-accent-500 transition-colors duration-300"
             >
               Wiki
@@ -60,12 +62,16 @@ const Header = () => {
             </a>
             <a
               href="https://blog.fyralabs.com"
+              target="_blank"
+              rel="noopener"
               className="hover:text-accent-500 transition-colors duration-300"
             >
               Blog
             </a>
             <a
               href="https://fyralabs.com/merch"
+              target="_blank"
+              rel="noopener"
               className="hover:text-accent-500 transition-colors duration-300"
             >
               Merch
@@ -91,6 +97,8 @@ const Header = () => {
             <div className="space-y-1 px-2 pt-2 pb-3">
               <a
                 href="https://wiki.ultramarine-linux.org/en/welcome/"
+                target="_blank"
+                rel="noopener"
                 className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"
               >
                 Wiki
@@ -103,12 +111,16 @@ const Header = () => {
               </a>
               <a
                 href="https://blog.fyralabs.com"
+                target="_blank"
+                rel="noopener"
                 className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"
               >
                 Blog
               </a>
               <a
                 href="https://fyralabs.com/merch"
+                target="_blank"
+                rel="noopener"
                 className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"
               >
                 Merch
