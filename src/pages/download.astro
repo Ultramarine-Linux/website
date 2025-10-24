@@ -13,6 +13,7 @@ import plasmaScreenshotDark from "../assets/42/screenshots/plasma-dark.webp";
 import DownloadOptions from "../components/DownloadOptions";
 
 const version = 42;
+const codename = "Heart of Gold";
 ---
 
 <BaseLayout>
@@ -20,7 +21,7 @@ const version = 42;
     class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12"
   >
     <h1 class="text-4xl font-bold">Pick Your Flavor of Ultramarine</h1>
-    <h2 class="pt-1 text-gray-500">Latest Release: 42 (Cyberia)</h2>
+    <h2 class="pt-1 text-gray-500">Latest Release: {version} ({codename})</h2>
 
     <DownloadOptions client:load />
 
