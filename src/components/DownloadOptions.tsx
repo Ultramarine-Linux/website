@@ -28,28 +28,28 @@ const archDownloadVariations = new Map([
             ),
           },
         ],
-        [
-          "chromebook",
-          {
-            title: "Chromebook",
-            description: (
-              <>
-                These images come with tweaks to be installed on Chromebooks
-                with stock or UEFI firmware. More information can be found on
-                our{" "}
-                <a
-                  href="#TODO"
-                  className="text-accent-300 hover:text-accent-400"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  wiki
-                </a>
-                .
-              </>
-            ),
-          },
-        ],
+        // [
+        //   "chromebook",
+        //   {
+        //     title: "Chromebook",
+        //     description: (
+        //       <>
+        //         These images come with tweaks to be installed on Chromebooks
+        //         with stock or UEFI firmware. More information can be found on
+        //         our{" "}
+        //         <a
+        //           href="#TODO"
+        //           className="text-accent-300 hover:text-accent-400"
+        //           target="_blank"
+        //           rel="noopener noreferrer"
+        //         >
+        //           wiki
+        //         </a>
+        //         .
+        //       </>
+        //     ),
+        //   },
+        // ],
         [
           "surface",
           {
@@ -100,49 +100,49 @@ const archDownloadVariations = new Map([
             ),
           },
         ],
-        [
-          "rpi34",
-          {
-            title: "Raspberry Pi 3/4",
-            description: (
-              <>
-                These images are preinstalled images for the Raspberry Pi 3 and
-                4 families. You can flash them directly to an SD card or use the
-                Raspberry Pi Imager.Check our wiki for more information.{" "}
-                <a
-                  href="https://wiki.ultramarine-linux.org/en/anywhere/rpi/"
-                  className="text-accent-300 hover:text-accent-400"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  wiki
-                </a>
-                .
-              </>
-            ),
-          },
-        ],
-        [
-          "armchromebook",
-          {
-            title: "Arm Chromebooks (Preview)",
-            description: (
-              <>
-                These images support select 64bit ARM Chromebooks. See the wiki
-                for more information.{" "}
-                <a
-                  href="#TODO"
-                  className="text-accent-300 hover:text-accent-400"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  wiki
-                </a>
-                .
-              </>
-            ),
-          },
-        ],
+        // [
+        //   "rpi34",
+        //   {
+        //     title: "Raspberry Pi 3/4",
+        //     description: (
+        //       <>
+        //         These images are preinstalled images for the Raspberry Pi 3 and
+        //         4 families. You can flash them directly to an SD card or use the
+        //         Raspberry Pi Imager.Check our wiki for more information.{" "}
+        //         <a
+        //           href="https://wiki.ultramarine-linux.org/en/anywhere/rpi/"
+        //           className="text-accent-300 hover:text-accent-400"
+        //           target="_blank"
+        //           rel="noopener noreferrer"
+        //         >
+        //           wiki
+        //         </a>
+        //         .
+        //       </>
+        //     ),
+        //   },
+        // ],
+        // [
+        //   "armchromebook",
+        //   {
+        //     title: "Arm Chromebooks (Preview)",
+        //     description: (
+        //       <>
+        //         These images support select 64bit ARM Chromebooks. See the wiki
+        //         for more information.{" "}
+        //         <a
+        //           href="#TODO"
+        //           className="text-accent-300 hover:text-accent-400"
+        //           target="_blank"
+        //           rel="noopener noreferrer"
+        //         >
+        //           wiki
+        //         </a>
+        //         .
+        //       </>
+        //     ),
+        //   },
+        // ],
       ]),
     },
   ],
