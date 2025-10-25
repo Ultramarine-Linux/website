@@ -53,16 +53,19 @@ const {
     }
   </div>
 
+  <!-- TODO: For some reason, the picture element causes the layout to break, image is fine for now -->
   <Image
     src={screenshot}
     alt={"Ultramarine" + editionName + "Screenshot"}
     class={`w-full md:w-auto md:h-[240px] object-cover md:rounded-r-xl ${screenshotDark ? 'dark:hidden' : ''}`}
     loading="eager"
+    layout="constrained"
   />
   {screenshotDark ? <Image
     src={screenshotDark}
     alt={"Ultramarine" + editionName + "Screenshot"}
     class="w-full md:w-auto md:h-[240px] md:rounded-r-xl hidden dark:block"
     loading="eager"
+    layout="constrained"
   /> : <></>}
 </div>
