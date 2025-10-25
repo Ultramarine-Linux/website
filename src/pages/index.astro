@@ -70,25 +70,3 @@ import UmDivider from "../../public/divider_2.svg";
     </div>
   </div>
 </BaseLayout>
-
-<script is:inline>
-  function copyEvent(id) {
-    var str = document.getElementById(id);
-    window.getSelection().selectAllChildren(str);
-    document.execCommand("Copy");
-  }
-
-  const dialog = document.querySelector("dialog");
-  const showButton = document.getElementById("migrationscript");
-  const closeButton = document.querySelector("dialog button");
-
-  // "Show the dialog" button opens the dialog modally
-  showButton.addEventListener("click", () => {
-    dialog.showModal();
-  });
-
-  // "Close" button closes the dialog
-  closeButton.addEventListener("click", () => {
-    dialog.close();
-  });
-</script>

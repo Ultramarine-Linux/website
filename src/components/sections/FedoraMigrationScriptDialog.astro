@@ -7,7 +7,10 @@ import XIcon from "../icons/XIcon.svg";
   id="migrationDialog"
   class="px-8 py-2 bg-gray-900 rounded-md top-5 m-auto"
 >
-  <button autofocus class="flex items-end mt-4 justify-end w-full">
+  <button
+    autofocus
+    class="flex items-end mt-4 justify-end w-full cursor-pointer"
+  >
     <XIcon />
   </button>
   <h1 class="max-w-2xl mt-4">
@@ -48,8 +51,10 @@ import XIcon from "../icons/XIcon.svg";
   }
 </style>
 
-<script is:inline>
-  const dialog = document.getElementById("migrationDialog");
+<script>
+  const dialog = document.getElementById(
+    "migrationDialog",
+  ) as HTMLDialogElement;
   const openButton = document.getElementById("migrationscript");
   const closeButton = dialog.querySelector("button");
   const copyButtons = document.querySelectorAll(".copy-button");
