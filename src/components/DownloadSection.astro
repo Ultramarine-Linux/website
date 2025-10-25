@@ -1,6 +1,6 @@
 ---
 import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
+import { Image, Picture } from "astro:assets";
 import DownloadIcon from "./icons/DownloadIcon.svg";
 import DownloadLinks from './DownloadLinks'
 
@@ -39,12 +39,14 @@ const {
     {
       background && (
         <div class="absolute inset-0 overflow-hidden">
-          <Image
+          <Picture
             src={background}
+            formats={["avif", "webp"]}
             width={950}
             height={540}
             alt={`${background} texture`}
             class="w-full h-full object-cover opacity-90 blur-xs pointer-events-none"
+            layout="fixed"
           />
         </div>
       )
