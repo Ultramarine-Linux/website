@@ -18,6 +18,7 @@ const { title, description, image = "/og_img_um.png" } = Astro.props;
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Canonical URL -->
@@ -43,4 +44,9 @@ const { title, description, image = "/og_img_um.png" } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- Analytics -->
-<script defer file-types="iso" data-domain="ultramarine-linux.org" src="https://plausible.fyralabs.com/js/script.file-downloads.outbound-links.js"></script>
+<script
+  defer
+  file-types="iso"
+  data-domain="ultramarine-linux.org"
+  src="https://plausible.fyralabs.com/js/script.file-downloads.outbound-links.js"
+></script>

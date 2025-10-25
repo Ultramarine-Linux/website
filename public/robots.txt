@@ -1,0 +1,5 @@
+# beep boop~
+User-agent: *
+Allow: /
+
+Sitemap: https://ultramarine-linux.org/sitemap-index.xml
