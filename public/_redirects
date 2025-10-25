@@ -1,0 +1,4 @@
+# We use this redirect to ensure that Plausible's download tracking works correctly
+# Otherwise, we would have to send the user directly to the CDN which would cause Plausible to treat it as a outbound page visit instead of a download
+# Also, Astro's redirects don't work for this, so we use Cloudflare pages redirects here
+/fyra-images/* https://images.fyralabs.com/:splat
