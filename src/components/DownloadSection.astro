@@ -1,42 +1,71 @@
 ---
 import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
+import { Image, Picture } from "astro:assets";
+import DownloadIcon from "./icons/DownloadIcon.svg";
+import DownloadLinks from './DownloadLinks'
 
 interface Props {
   editionName: string;
   screenshot: ImageMetadata;
-  downloadLink: string;
+  screenshotDark?: ImageMetadata;
   description: string;
+  background?: string;
+  version: number;
 }
 
-const { editionName, screenshot, downloadLink, description } = Astro.props;
-const checksumLink = downloadLink + ".sha256sum";
+const {
+  editionName,
+  screenshot,
+  screenshotDark,
+  description,
+  background,
+  version
+} = Astro.props;
 ---
 
-<div class="flex flex-col items-center">
+<div
+  class="flex flex-col-reverse md:flex-row bg-gray-900 rounded-xl w-full overflow-hidden"
+>
+  <div class="p-6 md:p-8 w-full flex flex-col justify-between relative">
+    <div class="z-10">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+        {editionName} Edition
+      </h2>
+      <p class="max-w-md text-sm md:text-base text-gray-400">
+        {description}
+      </p>
+    </div>
+    <DownloadLinks edition={editionName.toLowerCase()} version={version} client:load/>
+    {
+      background && (
+        <div class="absolute inset-0 overflow-hidden">
+          <Picture
+            src={background}
+            formats={["avif", "webp"]}
+            width={950}
+            height={540}
+            alt={`${background} texture`}
+            class="w-full h-full object-cover opacity-90 blur-xs pointer-events-none"
+            layout="fixed"
+          />
+        </div>
+      )
+    }
+  </div>
+
+  <!-- TODO: For some reason, the picture element causes the layout to break, image is fine for now -->
   <Image
     src={screenshot}
     alt={"Ultramarine" + editionName + "Screenshot"}
-    class="h-auto pb-4 rounded-sm w-96"
+    class={`w-full md:w-auto md:h-[240px] object-cover md:rounded-r-xl ${screenshotDark ? 'dark:hidden' : ''}`}
     loading="eager"
+    layout="constrained"
   />
-
-  <div class="flex flex-col items-center">
-    <a
-      href={downloadLink}
-      class="px-4 py-2 font-semibold text-gray-900 bg-transparent border-2 border-blue-500 rounded-lg dark:text-gray-50 hover:bg-blue-600 hover:text-gray-50"
-    >
-      <i class="fa fa-download"></i> &nbsp; Download {editionName} Edition
-    </a>
-
-    <div class="flex flex-col items-center gap-3 mt-2">
-      <a href={checksumLink} class="text-gray-400">View Checksum</a>
-    </div>
-  </div>
-
-  <div class="pt-2">
-    <p class="max-w-md text-lg text-center">
-      {description}
-    </p>
-  </div>
+  {screenshotDark ? <Image
+    src={screenshotDark}
+    alt={"Ultramarine" + editionName + "Screenshot"}
+    class="w-full md:w-auto md:h-[240px] md:rounded-r-xl hidden dark:block"
+    loading="eager"
+    layout="constrained"
+  /> : <></>}
 </div>

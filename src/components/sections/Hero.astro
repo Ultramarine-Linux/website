@@ -1,0 +1,118 @@
+---
+import DownloadIcon from "../icons/DownloadIcon.svg";
+import { Picture } from "astro:assets";
+import flagshipScreenshot from "../../assets/42/screenshots/flagship.webp";
+import gnomeScreenshot from "../../assets/42/screenshots/gnome.webp";
+import plasmaScreenshot from "../../assets/42/screenshots/plasma.webp";
+import flagshipScreenshotDark from "../../assets/42/screenshots/flagship-dark.webp";
+import gnomeScreenshotDark from "../../assets/42/screenshots/gnome-dark.webp";
+import plasmaScreenshotDark from "../../assets/42/screenshots/plasma-dark.webp";
+---
+
+<section
+  id="hero"
+  class="lg:mt-8 pt-4 mb-4 lg:mb-32 flex flex-row justify-between items-start max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16"
+>
+  <div id="hero-left" class="max-w-2xl mr-8 mt-10 lg:mt-12 mb-16 lg:mb-0">
+    <div class="text-bg-container">
+      <h1
+        class="hero-text font-bold text-4xl lg:text-5xl sm:text-6xl mb-2 leading-loose block"
+      >
+        Do your thing
+      </h1>
+    </div>
+    <span class="inline-block lg:text-lg max-w-xl 2xl:max-w-2xl text-gray-200">
+      Ultramarine is a modern operating system that lets you just do your thing
+      with the hardware and tools you already love. For work, school, and play.
+      However you use your system, we have you covered with tweaks and tools to
+      make things run smoother.
+    </span>
+
+    <div
+      id="button-row"
+      class="flex flex-col md:flex-row gap-2 md:gap-6 mt-4 md:mt-8"
+    >
+      <a href="/download">
+        <button
+          class="flex flex-row gap-2 items-center justify-center px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 text-lg transition-colors"
+        >
+          <DownloadIcon />
+          <span>Get Ultramarine</span>
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <div id="hero-right" class="xl:block hidden">
+    <div class="relative">
+      <div class="absolute top-20 right-36 -rotate-12 w-[400px]">
+        <Picture
+          src={flagshipScreenshot}
+          alt="Screenshot of Ultramarine Flagship in light mode"
+          formats={["avif", "webp"]}
+          class="rounded-lg dark:hidden"
+          width="400"
+          layout="fixed"
+        />
+        <Picture
+          src={flagshipScreenshotDark}
+          alt="Screenshot of Ultramarine Flagship in dark mode"
+          formats={["avif", "webp"]}
+          class="rounded-lg hidden dark:block"
+          width="400"
+          layout="fixed"
+        />
+      </div>
+      <div class="absolute top-6 -right-4 rotate-[8deg] w-[400px]">
+        <Picture
+          src={gnomeScreenshot}
+          alt="Screenshot of Ultramarine GNOME in light mode"
+          formats={["avif", "webp"]}
+          class="rounded-lg hidden dark:block"
+          width="400"
+          layout="fixed"
+        />
+        <Picture
+          src={gnomeScreenshotDark}
+          alt="Screenshot of Ultramarine GNOME in dark mode"
+          formats={["avif", "webp"]}
+          class="rounded-lg dark:hidden"
+          width="400"
+          layout="fixed"
+        />
+      </div>
+      <div class="absolute top-40 right-8 rotate-2 w-[400px]">
+        <Picture
+          src={plasmaScreenshot}
+          alt="Screenshot of Ultramarine Plasma in light mode"
+          formats={["avif", "webp"]}
+          class="rounded-lg dark:hidden"
+          width="400"
+          layout="fixed"
+        />
+        <Picture
+          src={plasmaScreenshotDark}
+          alt="Screenshot of Ultramarine Plasma in dark mode"
+          formats={["avif", "webp"]}
+          class="rounded-lg hidden dark:block"
+          width="400"
+          layout="fixed"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-text {
+    /* TODO: This texture is still large, is there a way we can optimize it or not use an image */
+    background-image: url("/texture.avif");
+    background-clip: text;
+    webkit-background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+    line-height: 1.2;
+  }
+</style>

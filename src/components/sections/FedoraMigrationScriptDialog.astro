@@ -1,0 +1,98 @@
+---
+import CopyIcon from "../icons/CopyIcon.svg";
+import XIcon from "../icons/XIcon.svg";
+---
+
+<dialog
+  id="migrationDialog"
+  class="px-8 py-2 bg-gray-900 rounded-md top-5 m-auto"
+>
+  <button
+    autofocus
+    class="flex items-end mt-4 justify-end w-full cursor-pointer"
+  >
+    <XIcon />
+  </button>
+  <h1 class="max-w-2xl mt-4">
+    Use this script to convert from Fedora to Ultramarine (review all scripts
+    before running)
+  </h1>
+  <div class="mt-2 mb-4 self-center flex items-center justify-center w-full">
+    <div
+      class="inline-flex items-center bg-gray-300 dark:bg-gray-800 rounded-xl"
+    >
+      <div
+        class="p-6 bg-gray-200 dark:text-gray-200 dark:bg-gray-700 rounded-xl"
+      >
+        <pre><code id="migrate-script" class="font-mono">bash {"<"}(curl -s https://ultramarine-linux.org/migrate.sh)</code></pre>
+      </div>
+      <div
+        class="relative px-3 py-4 mx-1 dark:bg-gray-800 cursor-pointer rounded-xl"
+      >
+        <button
+          type="button"
+          class="copy-button flex flex-row gap-2 items-center"
+          aria-label="Copy to clipboard button"
+        >
+          <span class="hidden">Copy</span>
+          <CopyIcon />
+        </button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<button id="migrationscript" class="mt-2 text-gray-400 cursor-pointer"
+  >Or <u>convert from Fedora</u></button
+>
+
+<style>
+  dialog::backdrop {
+    backdrop-filter: blur(6px);
+  }
+</style>
+
+<script>
+  const dialog = document.getElementById(
+    "migrationDialog",
+  ) as HTMLDialogElement;
+  const openButton = document.getElementById("migrationscript");
+  const closeButton = dialog.querySelector("button");
+  const copyButtons = document.querySelectorAll(".copy-button");
+
+  openButton.addEventListener("click", () => {
+    dialog.showModal();
+  });
+
+  closeButton.addEventListener("click", () => {
+    dialog.close();
+  });
+
+  dialog.addEventListener("click", (e) => {
+    const dialogDimensions = dialog.getBoundingClientRect();
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      dialog.close();
+    }
+  });
+
+  copyButtons.forEach((button) => {
+    button.addEventListener("click", async () => {
+      const codeBlock = button.closest(".inline-flex").querySelector("code");
+      const text = codeBlock.innerText;
+
+      try {
+        await navigator.clipboard.writeText(text);
+        button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="#389c57" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14l2 2l4-4"/></g></svg>`;
+        setTimeout(() => {
+          button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M16 4h2a2 2 0 0 1 2 2v4m1 4H11"/><path d="m15 10l-4 4l4 4"/></g></svg>`;
+        }, 1500);
+      } catch (err) {
+        console.error("Failed to copy text: ", err);
+      }
+    });
+  });
+</script>

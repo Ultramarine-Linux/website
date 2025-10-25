@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
+import { Font } from "astro:assets";
 
 export interface Props {
   title: string;
@@ -11,13 +12,14 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
+const { title, description, image = "/og_img_um.png" } = Astro.props;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Canonical URL -->
@@ -42,5 +44,13 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
+<!-- Fonts -->
+<Font cssVariable="--font-switzer" preload />
+
 <!-- Analytics -->
-<script defer file-types="iso" data-domain="ultramarine-linux.org" src="https://plausible.fyralabs.com/js/script.file-downloads.outbound-links.js"></script>
+<script
+  defer
+  file-types="iso"
+  data-domain="ultramarine-linux.org"
+  src="https://plausible.fyralabs.com/js/script.file-downloads.outbound-links.js"
+></script>
