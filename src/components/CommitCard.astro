@@ -1,6 +1,6 @@
 ---
 import Check from "~icons/bi/check2";
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 
 export interface Props {
   url: string;
@@ -35,14 +35,11 @@ const data = (await response.json()) as {
       {data.commit.message}
     </h1>
     <div class="flex flex-row gap-2 items-center">
-      <Picture
+      <Image
         src={data.author.avatar_url}
-        width={20}
-        formats={["avif", "webp"]}
         alt={`${data.author.login}'s profile`}
         class="rounded-full h-5 w-5 inline-block"
         inferSize
-        layout="fixed"
       />
       <h2 class="opacity-92">
         {data.author.login}
