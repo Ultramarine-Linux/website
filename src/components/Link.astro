@@ -1,0 +1,23 @@
+---
+import ArrowRight from "~icons/fluent/arrow-right-16-regular";
+
+export interface Props {
+  href: string;
+  arrow?: boolean;
+  className?: string;
+}
+
+const { href, arrow, className } = Astro.props;
+---
+
+<a
+  href={href}
+  class={(className || "") +
+    "items-center gap-2 text-accent-200 hover:text-accent-400 transition-colors group"}
+>
+  <slot />{
+    arrow && (
+      <ArrowRight className="size-6 group-hover:translate-x-1 transition-transform duration-300" />
+    )
+  }</a
+>
