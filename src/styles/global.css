@@ -1,7 +1,10 @@
-@import url("https://api.fontshare.com/css?f[]=switzer@300,400,500,600,700&display=swap");
 @import "tailwindcss";
 @config "../../tailwind.config.cjs";
 @layer (utilities);
+
+@theme inline {
+  --font-sans: var(--font-switzer);
+}
 
 :root {
   interpolate-size: allow-keywords;
@@ -10,7 +13,6 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
-  font-family: "Switzer", sans-serif;
 }
 
 blockquote {

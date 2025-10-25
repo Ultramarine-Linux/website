@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
+import { Font } from "astro:assets";
 
 export interface Props {
   title: string;
@@ -42,6 +43,9 @@ const { title, description, image = "/og_img_um.png" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Fonts -->
+<Font cssVariable="--font-switzer" preload />
 
 <!-- Analytics -->
 <script

@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
@@ -23,13 +23,11 @@ export default defineConfig({
     },
     "/release-announcements/41": {
       status: 302,
-      destination:
-        "https://wiki.ultramarine-linux.org/en/release/41-upgrades/",
+      destination: "https://wiki.ultramarine-linux.org/en/release/41-upgrades/",
     },
     "/release-announcements/42": {
       status: 302,
-      destination:
-        "https://blog.fyralabs.com/ultramarine-42-upgrades/",
+      destination: "https://blog.fyralabs.com/ultramarine-42-upgrades/",
     },
   },
 
@@ -41,6 +39,18 @@ export default defineConfig({
         jsx: "react",
       }),
       svgr(),
+    ],
+  },
+
+  experimental: {
+    fonts: [
+      {
+        provider: fontProviders.fontshare(),
+        name: "Switzer",
+        cssVariable: "--font-switzer",
+        weights: [300, 400, 500, 600, 700],
+        display: "swap",
+      },
     ],
   },
 });
