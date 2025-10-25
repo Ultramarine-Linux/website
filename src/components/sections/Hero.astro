@@ -45,52 +45,58 @@ import plasmaScreenshotDark from "../../assets/42/screenshots/plasma-dark.webp";
 
   <div id="hero-right" class="xl:block hidden">
     <div class="relative">
-      <div class="absolute top-20 right-36 -rotate-12 w-[400px] h-[240px]">
+      <div class="absolute top-20 right-36 -rotate-12 w-[400px]">
         <Picture
           src={flagshipScreenshot}
           alt="Screenshot of Ultramarine Flagship in light mode"
           formats={["avif", "webp"]}
-          quality={80}
           class="rounded-lg dark:hidden"
+          width="400"
+          layout="fixed"
         />
         <Picture
           src={flagshipScreenshotDark}
           alt="Screenshot of Ultramarine Flagship in dark mode"
           formats={["avif", "webp"]}
-          quality={80}
           class="rounded-lg hidden dark:block"
+          width="400"
+          layout="fixed"
         />
       </div>
-      <div class="absolute top-6 -right-4 rotate-[8deg] w-[400px] h-[240px]">
+      <div class="absolute top-6 -right-4 rotate-[8deg] w-[400px]">
         <Picture
           src={gnomeScreenshot}
           alt="Screenshot of Ultramarine GNOME in light mode"
           formats={["avif", "webp"]}
-          quality={80}
           class="rounded-lg hidden dark:block"
+          width="400"
+          layout="fixed"
         />
         <Picture
           src={gnomeScreenshotDark}
           alt="Screenshot of Ultramarine GNOME in dark mode"
           formats={["avif", "webp"]}
-          quality={80}
           class="rounded-lg dark:hidden"
+          width="400"
+          layout="fixed"
         />
       </div>
-      <div class="absolute top-40 right-8 rotate-2 w-[400px] h-[240px]">
+      <div class="absolute top-40 right-8 rotate-2 w-[400px]">
         <Picture
           src={plasmaScreenshot}
           alt="Screenshot of Ultramarine Plasma in light mode"
           formats={["avif", "webp"]}
-          quality={80}
           class="rounded-lg dark:hidden"
+          width="400"
+          layout="fixed"
         />
         <Picture
           src={plasmaScreenshotDark}
           alt="Screenshot of Ultramarine Plasma in dark mode"
           formats={["avif", "webp"]}
-          quality={80}
           class="rounded-lg hidden dark:block"
+          width="400"
+          layout="fixed"
         />
       </div>
     </div>
