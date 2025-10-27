@@ -1,14 +1,7 @@
 import { useStore } from "@nanostores/react";
 import { downloadArch, downloadDevice } from "./downloadStore";
 import DownloadIcon from "./icons/DownloadIcon.svg?react";
-
-const downloadLink = (
-  edition: string,
-  version: number,
-  arch: string,
-  device: string,
-) =>
-  `/fyra-images/isos/ultramarine/${version}/ultramarine-${edition}-${version}-${device === "generic" ? "live-anaconda" : device}-${arch}.iso`;
+import { downloadLink } from "../utils/downloadLinks";
 
 const DownloadLinks = ({
   version,
@@ -33,7 +26,9 @@ const DownloadLinks = ({
     
     // Clean up the iframe after a short delay
     setTimeout(() => {
-      document.body.removeChild(iframe);
+      if (iframe.parentNode) {
+        document.body.removeChild(iframe);
+      }
     }, 1000);
     
     // Redirect to thank you page

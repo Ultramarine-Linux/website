@@ -5,6 +5,7 @@ import Mastodon from "~icons/simple-icons/mastodon";
 import Bluesky from "~icons/simple-icons/bluesky";
 import Reddit from "~icons/simple-icons/reddit";
 import Twitter from "~icons/simple-icons/twitter";
+import { downloadLink } from "../utils/downloadLinks";
 
 const version = 42;
 
@@ -14,15 +15,8 @@ const edition = url.searchParams.get("edition") || "flagship";
 const arch = url.searchParams.get("arch") || "x86_64";
 const device = url.searchParams.get("device") || "generic";
 
-const downloadLink = (
-  edition: string,
-  version: number,
-  arch: string,
-  device: string,
-) =>
-  `/fyra-images/isos/ultramarine/${version}/ultramarine-${edition}-${version}-${device === "generic" ? "live-anaconda" : device}-${arch}.iso`;
-
-const checksumLink = downloadLink(edition, version, arch, device) + ".sha256sum";
+const link = downloadLink(edition, version, arch, device);
+const checksumLink = link + ".sha256sum";
 ---
 
 <BaseLayout>
@@ -34,7 +28,7 @@ const checksumLink = downloadLink(edition, version, arch, device) + ".sha256sum"
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Thank You for Downloading Ultramarine!</h1>
       <p class="text-lg text-gray-400">
         Your download should start automatically. If it doesn't, <a
-          href={downloadLink(edition, version, arch, device)}
+          href={link}
           class="text-blue-400 hover:text-blue-300 underline"
         >click here</a>.
       </p>
