@@ -1,14 +1,8 @@
 # Ultramarine Linux Website
 
-things to do
+Self-explanatory. See issues for things to work on.
 
-- contributor page
-- community page
-- move checksums to a thank you page after download
-- move install guide link to a thank you page after download
-- device/arch selector
-
-![image](https://user-images.githubusercontent.com/57040351/209970055-46c62d5e-a351-484b-b825-6dc4bd2355f4.png)
+![Homepage Screenshot](https://github.com/user-attachments/assets/bbd9ac1a-9e79-4dcd-b0d6-d87f8ccb6290)
 
 ## 🧞 Commands
 
