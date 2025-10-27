@@ -6,6 +6,15 @@
   --font-sans: var(--font-switzer);
 }
 
+/*
+  todo: remove in 2026
+  compliance with thai laws regarding mourning period for the passing of Queen Sirikit
+  https://www.nytimes.com/2025/10/24/world/asia/queen-sirikit-thailand-dead.html
+*/
+* {
+  filter: grayscale(100%);
+}
+
 :root {
   interpolate-size: allow-keywords;
 }
