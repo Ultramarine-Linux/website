@@ -1,0 +1,266 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Heart from "~icons/bi/heart-fill";
+import Mastodon from "~icons/simple-icons/mastodon";
+import Bluesky from "~icons/simple-icons/bluesky";
+import Reddit from "~icons/simple-icons/reddit";
+import Twitter from "~icons/simple-icons/twitter";
+
+const version = 42;
+
+// Get the edition and arch from query parameters
+const url = new URL(Astro.request.url);
+const edition = url.searchParams.get("edition") || "flagship";
+const arch = url.searchParams.get("arch") || "x86_64";
+const device = url.searchParams.get("device") || "generic";
+
+const downloadLink = (
+  edition: string,
+  version: number,
+  arch: string,
+  device: string,
+) =>
+  `/fyra-images/isos/ultramarine/${version}/ultramarine-${edition}-${version}-${device === "generic" ? "live-anaconda" : device}-${arch}.iso`;
+
+const checksumLink = downloadLink(edition, version, arch, device) + ".sha256sum";
+---
+
+<BaseLayout>
+  <div
+    class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12 mb-24"
+  >
+    <!-- Thank You Section -->
+    <div class="w-full text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Thank You for Downloading Ultramarine!</h1>
+      <p class="text-lg text-gray-400">
+        Your download should start automatically. If it doesn't, <a
+          href={downloadLink(edition, version, arch, device)}
+          class="text-blue-400 hover:text-blue-300 underline"
+        >click here</a>.
+      </p>
+    </div>
+
+    <!-- Checksum Section -->
+    <div class="w-full mb-12">
+      <div
+        class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
+      >
+        <div class="z-10">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+            Verify Your Download
+          </h2>
+          <p class="max-w-3xl text-sm md:text-base text-gray-400 mb-4">
+            For security, we recommend verifying the integrity of your download using the SHA256 checksum.
+          </p>
+          <div class="bg-gray-800 rounded-lg p-4 mb-4">
+            <p class="text-xs text-gray-500 mb-2">To verify your download, run:</p>
+            <code class="text-sm text-green-400 font-mono break-all">
+              sha256sum ultramarine-{edition}-{version}-{device === "generic" ? "live-anaconda" : device}-{arch}.iso
+            </code>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center z-10 mt-2"
+        >
+          <a
+            class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 transition-colors w-full md:w-auto text-sm md:text-base"
+            href={checksumLink}
+            target="_blank"
+          >
+            <span>View Checksum File</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post-Install Guide Section -->
+    <div class="w-full mb-12">
+      <div
+        class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
+      >
+        <div class="z-10">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+            Next Steps: Installation Guide
+          </h2>
+          <p class="max-w-3xl text-sm md:text-base text-gray-400 mb-4">
+            New to Ultramarine or need help with installation? Our comprehensive guide will walk you through the process step by step.
+          </p>
+          <ul class="list-disc list-inside text-gray-400 space-y-2 mb-4">
+            <li>Creating a bootable USB drive</li>
+            <li>Installing Ultramarine Linux</li>
+            <li>Post-installation setup and configuration</li>
+            <li>Getting started with your new system</li>
+          </ul>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center z-10 mt-2"
+        >
+          <a
+            class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 transition-colors w-full md:w-auto text-sm md:text-base"
+            href="https://wiki.ultramarine-linux.org/en/welcome/"
+            target="_blank"
+          >
+            <span>View Installation Guide</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Join the Community Section -->
+    <h2 class="text-3xl font-bold mb-6">Join the Community</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8 w-full mb-12">
+      <div
+        class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
+      >
+        <div class="z-10">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+            Chat with Us
+          </h2>
+          <p class="max-w-md text-sm md:text-base text-gray-400">
+            Our community is primarily on Discord. While most discussion is
+            related to Ultramarine Linux and Fyra Labs, we have a vibrant
+            community discussing a variety of topics, such as general
+            technology.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center z-10 mt-6"
+        >
+          <a
+            class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 transition-colors w-full md:w-auto text-sm md:text-base"
+            href="https://fyralabs.com/discord"
+          >
+            <span>Join Discord</span>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
+      >
+        <div class="z-10">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+            Contribute
+          </h2>
+          <p class="max-w-md text-sm md:text-base text-gray-400">
+            Ultramarine is proudly open source and built in the community. This
+            means anyone can propose changes, such as features and bug fixes. If
+            any contribution related questions arise, we'd be happy to assist
+            you in our chats, regardless of your experience level.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center z-10 mt-6"
+        >
+          <a
+            class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 transition-colors w-full md:w-auto text-sm md:text-base"
+            href="https://wiki.ultramarine-linux.org/en/contributing/contributorguide/"
+          >
+            <span>Contributor Guide</span>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
+      >
+        <div class="z-10">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+            Follow Us on Socials
+          </h2>
+          <p class="max-w-md text-sm md:text-base text-gray-400">
+            We're on a variety of social media platforms. If you want to follow
+            the project updates (and help boost us) this is the way to do it.
+          </p>
+        </div>
+        <div class="flex flex-row gap-2 md:gap-4 items-center z-10 mt-6">
+          <a
+            href="https://fedi.fyralabs.com/@ultramarine"
+            aria-label="Mastodon"
+            class="hover:text-blue-400 transition-colors"
+          >
+            <Mastodon className="w-6 h-6" />
+            <span class="hidden">Ultramarine Linux Mastodon</span>
+          </a>
+          <a
+            href="https://bsky.app/profile/ultramarine-linux.org"
+            aria-label="Bluesky"
+            class="hover:text-blue-400 transition-colors"
+          >
+            <Bluesky className="w-6 h-6" />
+            <span class="hidden">Ultramarine Linux Bluesky</span>
+          </a>
+          <a 
+            href="https://www.reddit.com/r/ultramarine" 
+            aria-label="Reddit"
+            class="hover:text-blue-400 transition-colors"
+          >
+            <Reddit className="w-6 h-6" />
+            <span class="hidden">Ultramarine Linux Subreddit</span>
+          </a>
+          <a 
+            href="https://x.com/UltramarineProj" 
+            aria-label="Twitter"
+            class="hover:text-blue-400 transition-colors"
+          >
+            <Twitter className="w-6 h-6" />
+            <span class="hidden">Ultramarine Linux Twitter</span>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
+      >
+        <div class="z-10">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+            Support Us
+          </h2>
+          <p class="max-w-md text-sm md:text-base text-gray-400">
+            Ultramarine wouldn't be possible without the financial support of
+            our sponsors. Any sponsorship helps us build faster, better, and
+            stronger, no matter the amount.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center z-10 mt-6"
+        >
+          <a
+            class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 from-pink-500 to-pink-600 bg-linear-to-br rounded-xl text-gray-50 hover:bg-pink-600 transition-colors w-full md:w-auto text-sm md:text-base relative group"
+            href="https://github.com/sponsors/FyraLabs"
+          >
+            <Heart
+              className="heartbeat absolute -right-1 -top-1 text-pink-300 group-hover:animate-[heartbeat_0.4s_cubic-bezier(0,0,0.2,1)_infinite_alternate]"
+            />
+            <span>Sponsor Us</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Downloads -->
+    <div class="w-full text-center mt-8">
+      <a
+        href="/download"
+        class="text-blue-400 hover:text-blue-300 underline text-lg"
+      >
+        ← Back to Downloads
+      </a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  @keyframes heartbeat {
+    75%,
+    100% {
+      transform: scale(1.25);
+    }
+  }
+
+  .heartbeat {
+    rotate: 30deg;
+    transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1);
+  }
+</style>
