@@ -20,7 +20,7 @@ const link = downloadLink(edition, version, arch, device);
 
 <BaseLayout>
   <div
-    class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12 mb-24"
+    class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12"
   >
     <!-- Thank You Section -->
     <div class="w-full text-center mb-12">
@@ -69,7 +69,7 @@ const link = downloadLink(edition, version, arch, device);
     <!-- Join the Community Section -->
     <h2 class="text-3xl font-bold mb-6">Join the Community</h2>
     
-    <div class="grid md:grid-cols-2 gap-8 w-full mb-12">
+    <div class="grid md:grid-cols-2 gap-8 w-full">
       <div
         class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
       >
@@ -197,16 +197,6 @@ const link = downloadLink(edition, version, arch, device);
           </a>
         </div>
       </div>
-    </div>
-
-    <!-- Back to Downloads -->
-    <div class="w-full text-center mt-8">
-      <a
-        href="/download"
-        class="text-blue-400 hover:text-blue-300 underline text-lg"
-      >
-        ← Back to Downloads
-      </a>
     </div>
   </div>
 </BaseLayout>
