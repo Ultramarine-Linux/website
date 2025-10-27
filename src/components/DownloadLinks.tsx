@@ -18,20 +18,10 @@ const DownloadLinks = ({
   const handleDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     
-    // Create an invisible iframe to trigger the download
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.src = link;
-    document.body.appendChild(iframe);
+    // Open download in new window/tab
+    window.open(link, '_blank');
     
-    // Clean up the iframe after a short delay
-    setTimeout(() => {
-      if (iframe.parentNode) {
-        document.body.removeChild(iframe);
-      }
-    }, 1000);
-    
-    // Redirect to thank you page
+    // Navigate to thank you page
     window.location.href = thankYouLink;
   };
 
