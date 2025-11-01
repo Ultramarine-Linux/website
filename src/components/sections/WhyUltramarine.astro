@@ -18,14 +18,21 @@ import workImage from "../../assets/42/marketing/work.webp";
     <div class="lg:w-1/2">
       <h3 class="text-2xl font-semibold mb-4">Get to work, faster</h3>
       <p class="text-gray-200 mb-3">
-        Ultramarine enables you get started quickly, cutting out many configuration
-        steps. With user-centric tweaks and tools out of the box, you’ll be
-        ready to go in no time.
+        Ultramarine helps you get started quickly, cutting out time consuming
+        set up, by coming with everything you need to get started, from apps to
+        drivers, so that you can be ready to go in no time.
       </p>
       <p class="text-gray-200 mb-3">
-Be relieved to know that the pain points of Fedora — <b>codecs</b>, <b>drivers</b>, and <b>multilingual support</b>, are beautifully handled via our <Link href="https://github.com/Ultramarine-Linux/taidan">in-house out-of-box experience app</Link>.
+        We include just what you need to get started, from a browser to a full
+        office suite, and automatically install drivers for your hardware. Your
+        apps, drivers, and the system itself are all updated together, and we
+        install them when you choose to.
       </p>
-      <Link href="https://wiki.ultramarine-linux.org/en/release/diff-fedora/" arrow className="flex flex-row">
+      <Link
+        href="https://wiki.ultramarine-linux.org/en/release/diff-fedora/"
+        arrow
+        className="flex flex-row"
+      >
         <span class="font-medium">Learn more about our tweaks</span>
       </Link>
     </div>
@@ -45,12 +52,22 @@ Be relieved to know that the pain points of Fedora — <b>codecs</b>, <b>drivers
     <div class="lg:w-1/2 lg:text-right">
       <h3 class="text-2xl font-semibold mb-4">Your current computer, better</h3>
       <p class="text-gray-200 mb-3">
-        Ultramarine builds an easier experience for a wider range of hardware,
-        from standard PCs to Chromebooks and SBCs. Ultramarine meets you where
-        you’re at, without arbitrary limits.
+        Ultramarine provides better experience for a wide range of hardware,
+        from two-decades of PCs, to Chromebooks and SBCs. It runs better on the
+        hardware you have, without arbitrary limits.
       </p>
-      <Link href="https://wiki.ultramarine-linux.org/en/anywhere/anywhere/" arrow className="flex flex-row items-center lg:justify-end gap-2">
-        <span class="font-medium">Learn more about the Anywhere Initiative</span>
+      <p class="text-gray-200 mb-3">
+        If your computer could run Windows 7, odds are it'll run Ultramarine,
+        and probably better than newer OSes. Ultramarine comes with what you
+        actually need, no ads, no tracking, and no limits.
+      </p>
+      <Link
+        href="https://wiki.ultramarine-linux.org/en/anywhere/anywhere/"
+        arrow
+        className="flex flex-row items-center lg:justify-end gap-2"
+      >
+        <span class="font-medium">Learn more about the Anywhere Initiative</span
+        >
       </Link>
     </div>
     <Picture
@@ -68,11 +85,20 @@ Be relieved to know that the pain points of Fedora — <b>codecs</b>, <b>drivers
     <div class="lg:w-1/2">
       <h3 class="text-2xl font-semibold mb-4">New tech, sooner</h3>
       <p class="text-gray-200 mb-3">
-        Ultramarine gets the latest and greatest tech quicker. From packages and
-        the user experience, to the build toolchain, Ultramarine is ready for
-        today’s world, and tomorrow’s.
+        Ultramarine gets the latest and greatest tech quicker. From app updates,
+        to the tools we use to build it, Ultramarine is ready for today’s world,
+        and tomorrow’s.
       </p>
-      <Link href="https://developer.fyralabs.com" arrow className="flex flex-row">
+      <p class="text-gray-200 mb-3">
+        We're always trying new things, you get the latest apps faster, support
+        for the newest hardware sooner, and tech under the hood like dnf5 and
+        systemd-repart before anyone else.
+      </p>
+      <Link
+        href="https://developer.fyralabs.com"
+        arrow
+        className="flex flex-row"
+      >
         <span class="font-medium">Learn more about our stack</span>
       </Link>
     </div>
@@ -87,5 +113,41 @@ Be relieved to know that the pain points of Fedora — <b>codecs</b>, <b>drivers
         url={"https://github.com/Ultramarine-Linux/images/commit/82c0f337619ba9c8f6622d4e6176f9af6e971e17"}
       />
     </div>
+  </div>
+
+  <div
+    class="w-full flex flex-col-reverse lg:flex-row-reverse items-center justify-between mb-24 gap-4"
+  >
+    <div class="lg:w-1/2 lg:text-right">
+      <h3 class="text-2xl font-semibold mb-4">
+        You name it, Ultramarine runs it
+      </h3>
+      <p class="text-gray-200 mb-3">
+        From native apps from Flathub and Terra, to professional software like
+        DaVinci Resolve, and many popular games on Steam, you'll be well
+        equipped on Ultramarine.
+      </p>
+      <p class="text-gray-200 mb-3">
+        Not only are apps abundant, they're at your fingertips in the included
+        app store. Apps on Ultramarine are faster to install, you don't have to
+        make sure you're not also downloading viruses, and just in case, apps
+        are blocked from touching your stuff without permission. You can go from
+        fresh install to playing your favorite game in 10 clicks.
+      </p>
+      <Link
+        href="https://wiki.ultramarine-linux.org/en/anywhere/anywhere/"
+        arrow
+        className="flex flex-row items-center lg:justify-end gap-2"
+      >
+        <span class="font-medium">Lorem Ipsum</span>
+      </Link>
+    </div>
+    <Picture
+      class="lg:w-[466px] rounded-lg"
+      layout="constrained"
+      src={currentComputerImage}
+      formats={["avif", "webp"]}
+      alt="Screenshot of an Ultramarine GNOME system with the system monitor and fastfetch showing"
+    />
   </div>
 </div>
