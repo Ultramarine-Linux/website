@@ -1,14 +1,7 @@
 import { useStore } from "@nanostores/react";
 import { downloadArch, downloadDevice } from "./downloadStore";
 import DownloadIcon from "./icons/DownloadIcon.svg?react";
-
-const downloadLink = (
-  edition: string,
-  version: number,
-  arch: string,
-  device: string,
-) =>
-  `/fyra-images/isos/ultramarine/${version}/ultramarine-${edition}-${version}-${device === "generic" ? "live-anaconda" : device}-${arch}.iso`;
+import { downloadLink } from "../utils/download";
 
 const DownloadLinks = ({
   version,
@@ -20,12 +13,19 @@ const DownloadLinks = ({
   const arch = useStore(downloadArch);
   const device = useStore(downloadDevice);
   const link = downloadLink(edition, version, arch, device);
+  const downloadParams = new URLSearchParams({
+    edition,
+    version: version.toString(),
+    arch,
+    device,
+  });
+  const thankYouLink = `/thank-you?${downloadParams.toString()}`;
 
   return (
     <div className="flex flex-col sm:flex-row gap-2 md:gap-4 sm:items-center z-10 mt-6 md:mt-0">
       <a
         className="flex flex-row gap-2 items-center justify-center px-3 sm:px-4 md:px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 transition-colors w-full sm:w-auto text-sm sm:text-base"
-        href={link}
+        href={thankYouLink}
       >
         <DownloadIcon />
         <span>Download</span>

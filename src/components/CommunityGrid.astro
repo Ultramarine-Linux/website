@@ -1,0 +1,131 @@
+---
+import Mastodon from "~icons/simple-icons/mastodon";
+import Bluesky from "~icons/simple-icons/bluesky";
+import Reddit from "~icons/simple-icons/reddit";
+import Twitter from "~icons/simple-icons/twitter";
+import Heart from "~icons/bi/heart-fill";
+---
+
+<div class="grid md:grid-cols-2 gap-8 my-8 w-full">
+  <div
+    class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
+  >
+    <div class="z-10">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">Support Us</h2>
+      <p class="max-w-md text-sm md:text-base text-gray-400">
+        Ultramarine wouldn't be possible without the financial support of our
+        sponsors. Any sponsorship helps us build faster, better, and stronger,
+        no matter the amount.
+      </p>
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center z-10 mt-6"
+    >
+      <a
+        class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 from-pink-500 to-pink-600 bg-linear-to-br rounded-xl text-gray-50 hover:bg-pink-600 transition-colors w-full md:w-auto text-sm md:text-base relative group"
+        href="https://github.com/sponsors/FyraLabs"
+      >
+        <Heart
+          className="heartbeat absolute -right-1 -top-1 text-pink-300 group-hover:animate-[heartbeat_0.4s_cubic-bezier(0,0,0.2,1)_infinite_alternate]"
+        />
+        <span>Sponsor</span>
+      </a>
+    </div>
+  </div>
+
+  <div
+    class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
+  >
+    <div class="z-10">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">Chat with Us</h2>
+      <p class="max-w-md text-sm md:text-base text-gray-400">
+        Our community is primarily on Discord. While most discussion is related
+        to Ultramarine Linux and Fyra Labs, we have a vibrant community
+        discussing a variety of topics, such as general technology.
+      </p>
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center z-10 mt-6"
+    >
+      <a
+        class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 transition-colors w-full md:w-auto text-sm md:text-base"
+        href="https://fyralabs.com/discord"
+      >
+        <span>Discord</span>
+      </a>
+    </div>
+  </div>
+
+  <div
+    class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
+  >
+    <div class="z-10">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">Contribute</h2>
+      <p class="max-w-md text-sm md:text-base text-gray-400">
+        Ultramarine is proudly open source and built in the community. This
+        means anyone can propose changes, such as features and bug fixes. If any
+        contribution related questions arrise, we'd be happy to assist you in
+        our chats, regardless of your experience level.
+      </p>
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center z-10 mt-6"
+    >
+      <a
+        class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 transition-colors w-full md:w-auto text-sm md:text-base"
+        href="https://wiki.ultramarine-linux.org/en/contributing/contributorguide/"
+      >
+        <span>Contributor Guide</span>
+      </a>
+    </div>
+  </div>
+
+  <div
+    class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
+  >
+    <div class="z-10">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+        Follow Us on Socials
+      </h2>
+      <p class="max-w-md text-sm md:text-base text-gray-400">
+        We're on a variety of social media platforms, i you want to follow the
+        project updates (and help boost us) this is the way to do it.
+      </p>
+    </div>
+    <div class="flex flex-row gap-2 md:gap-4 items-center z-10 mt-6">
+      <a href="https://fedi.fyralabs.com/@ultramarine" aria-label="Mastodon">
+        <Mastodon className="w-6 h-6" />
+        <span class="hidden">Ultramarine Linux Mastodon</span>
+      </a>
+      <a
+        href="https://bsky.app/profile/ultramarine-linux.org"
+        aria-label="Bluesky"
+      >
+        <Bluesky className="w-6 h-6" />
+        <span class="hidden">Ultramarine Linux Bluesky</span>
+      </a>
+      <a href="https://www.reddit.com/r/ultramarine" aria-label="Reddit">
+        <Reddit className="w-6 h-6" />
+        <span class="hidden">Ultramarine Linux Subreddit</span>
+      </a>
+      <a href="https://x.com/UltramarineProj" aria-label="Twitter">
+        <Twitter className="w-6 h-6" />
+        <span class="hidden">Ultramarine Linux Twitter</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes heartbeat {
+    75%,
+    100% {
+      transform: scale(1.25);
+    }
+  }
+
+  .heartbeat {
+    rotate: 30deg;
+    transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1);
+  }
+</style>
