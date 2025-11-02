@@ -7,7 +7,7 @@ const DownloadLinks = ({
   version,
   edition,
 }: {
-  version: number;
+  version: string;
   edition: string;
 }) => {
   const arch = useStore(downloadArch);

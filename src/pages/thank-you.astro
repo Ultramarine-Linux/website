@@ -12,7 +12,7 @@ import CommunityGrid from "../components/CommunityGrid.astro";
     <h2 class="pt-1 text-gray-500">
       If the download doesn't start automatically, please <a
         class="text-accent-200 hover:text-accent-400 transition-colors"
-        href="/download">click here.</a
+        id="manual-download-link">click here.</a
       >
     </h2>
 
@@ -59,6 +59,12 @@ import CommunityGrid from "../components/CommunityGrid.astro";
 
     if (edition && version && arch && device) {
       const url = downloadLink(edition, version, arch, device);
+
+      const manualLink = document.getElementById(
+        "manual-download-link",
+      ) as HTMLAnchorElement;
+      manualLink.href = url;
+
       const link = document.createElement("a");
       link.href = url;
       link.download = "";
