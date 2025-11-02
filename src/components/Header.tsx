@@ -77,6 +77,14 @@ const Header = () => {
               Merch
             </a>
             <a
+              href="https://github.com/sponsors/FyraLabs"
+              target="_blank"
+              rel="noopener"
+              className="hover:text-accent-500 transition-colors duration-300"
+            >
+              Sponsor
+            </a>
+            <a
               href="/download"
               className="flex flex-row gap-2 items-center text-white font-medium py-2 px-6 rounded-xl bg-accent-600 hover:bg-accent-700 transition-colors"
             >
@@ -124,6 +132,14 @@ const Header = () => {
                 className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"
               >
                 Merch
+              </a>
+              <a
+                href="https://github.com/sponsors/FyraLabs"
+                target="_blank"
+                rel="noopener"
+                className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"
+              >
+                Sponsor
               </a>
               <a
                 href="/download"
