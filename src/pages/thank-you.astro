@@ -48,8 +48,10 @@ import seaOfImaginationDark from "../assets/42/backgrounds/sea-of-imagination-da
           </a>
         </div>
       </div>
+      <!-- TODO: wonder if there's a way we can make this look good on mobile -->
+      <!-- people aren't really downloading on mobile anyways, so this should be fine for now -->
       <div
-        class={`group bg-cover rounded-r-xl w-full relative`}
+        class={`group bg-cover rounded-r-xl w-full relative hidden md:block`}
         style={{ backgroundImage: `url(${seaOfImaginationDark.src})` }}
       >
         <div
