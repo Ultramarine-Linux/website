@@ -49,7 +49,8 @@ import seaOfImaginationDark from "../assets/42/backgrounds/sea-of-imagination-da
         </div>
       </div>
       <div
-        class={`group bg-[url(/sea-of-imagination-dark.webp)] bg-cover rounded-r-xl w-full relative`}
+        class={`group bg-cover rounded-r-xl w-full relative`}
+        style={{ backgroundImage: `url(${seaOfImaginationDark.src})` }}
       >
         <div
           class="w-full h-full bg-linear-to-r from-[#0d0f1b] via-transparent to-transparent absolute"
@@ -101,7 +102,7 @@ import seaOfImaginationDark from "../assets/42/backgrounds/sea-of-imagination-da
   });
 
   hover("#mizuki", (element) => {
-    const animation = animate(
+    animate(
       element,
       { transform: "translateY(-25%)" },
       {
@@ -142,44 +143,4 @@ import seaOfImaginationDark from "../assets/42/backgrounds/sea-of-imagination-da
     rotate: 30deg;
     transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1);
   }
-
-  /*.dawgbouncer:not(:hover) {
-    /*animation-play-state: paused;
-    transform: translateY(0); /* Reset position */
-  /*transition:
-      transform 0.5s ease-out,
-      animation-play-state 0.5s ease-out;*/
-  /*animation: dawgbounce-out 1s;*/
-  /*}*/
-
-  /*.dawgbouncer:hover {*/
-  /*animation-play-state: running;*/
-  /*animation: dawgbounce 1s infinite;*/
-  /*}*/
-
-  /*@keyframes dawgbounce {
-    0%,
-    100% {
-      transform: none;
-      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    }
-
-    50% {
-      transform: translateY(-25%);
-      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-    }
-  }*/
-
-  /*@keyframes dawgbounce-out {
-    /*0% {
-      transform: translateY(-25%);
-      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-    }*/
-
-  /*100%,
-    50% {
-      transform: none;
-      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    }
-  }*/
 </style>
