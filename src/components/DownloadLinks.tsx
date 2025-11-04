@@ -15,7 +15,7 @@ const DownloadLinks = ({
   const link = downloadLink(edition, version, arch, device);
   const downloadParams = new URLSearchParams({
     edition,
-    version: version.toString(),
+    version,
     arch,
     device,
   });
