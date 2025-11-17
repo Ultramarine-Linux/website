@@ -6,6 +6,9 @@ import Mastodon from "~icons/simple-icons/mastodon";
 import Bluesky from "~icons/simple-icons/bluesky";
 import Reddit from "~icons/simple-icons/reddit";
 import UltramarineAltLogo from "./icons/UltramarineAltLogo.svg";
+import { Image } from "astro:assets";
+import eepymizuki from "../assets/mizuki-sleepy.webp";
+
 ---
 
 <footer class="p-6 md:pt-12 pb-8 w-full bg-gray-900 z-50">
@@ -142,5 +145,15 @@ import UltramarineAltLogo from "./icons/UltramarineAltLogo.svg";
         <span class="hidden">Ultramarine Linux Subreddit</span>
       </a>
     </div>
+  </div>
+  <div id='eepy' class="flex justify-center mt-25">
+    <Image
+      id="mizuki"
+      src={eepymizuki}
+      alt={"Mizuki, the mascot of Ultramarine, sleeping"}
+      class="w-full md:w-auto md:h-60 md:rounded-r-xl scale-100 z-10"
+      loading="eager"
+      layout="constrained"
+    />
   </div>
 </footer>
