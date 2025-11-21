@@ -77,7 +77,7 @@ const Header = () => {
               Merch
             </a>
             <a
-              href="https://github.com/sponsors/FyraLabs"
+              href="/community"
               target="_blank"
               rel="noopener"
               className="hover:text-accent-500 transition-colors duration-300"
@@ -134,7 +134,7 @@ const Header = () => {
                 Merch
               </a>
               <a
-                href="https://github.com/sponsors/FyraLabs"
+                href="/community"
                 target="_blank"
                 rel="noopener"
                 className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"

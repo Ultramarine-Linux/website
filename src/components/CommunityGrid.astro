@@ -4,6 +4,8 @@ import Bluesky from "~icons/simple-icons/bluesky";
 import Reddit from "~icons/simple-icons/reddit";
 import Twitter from "~icons/simple-icons/twitter";
 import Heart from "~icons/bi/heart-fill";
+import KoFi from "~icons/simple-icons/kofi";
+import Liberapay from "~icons/simple-icons/liberapay";
 ---
 
 <div class="grid md:grid-cols-2 gap-8 my-8 w-full">
@@ -28,8 +30,27 @@ import Heart from "~icons/bi/heart-fill";
         <Heart
           className="heartbeat absolute -right-1 -top-1 text-pink-300 group-hover:animate-[heartbeat_0.4s_cubic-bezier(0,0,0.2,1)_infinite_alternate]"
         />
-        <span>Sponsor</span>
+        <span>GitHub Sponsors</span>
       </a>
+      <div class="w-0.5 h-full bg-gray-800"></div>
+      <div class="flex flex-row gap-4">
+        <a
+          class="hover:text-red-400 transition-colors"
+          href="https://ko-fi.com/fyra"
+          aria-label="Ko-fi"
+        >
+          <KoFi className="size-6" />
+          <span class="sr-only">Ko-fi</span>
+        </a>
+        <a
+          class="hover:text-[#f6c915] transition-colors"
+          href="https://liberapay.com/fyra/"
+          aria-label="Liberapay"
+        >
+          <Liberapay className="size-6" />
+          <span class="sr-only">Liberapay</span>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -64,8 +85,8 @@ import Heart from "~icons/bi/heart-fill";
       <p class="max-w-md text-sm md:text-base text-gray-400">
         Ultramarine is proudly open source and built in the community. This
         means anyone can propose changes, such as features and bug fixes. If any
-        contribution related questions arise, we'd be happy to assist you in
-        our chats, regardless of your experience level.
+        contribution related questions arise, we'd be happy to assist you in our
+        chats, regardless of your experience level.
       </p>
     </div>
     <div
@@ -95,22 +116,22 @@ import Heart from "~icons/bi/heart-fill";
     <div class="flex flex-row gap-2 md:gap-4 items-center z-10 mt-6">
       <a href="https://fedi.fyralabs.com/@ultramarine" aria-label="Mastodon">
         <Mastodon className="w-6 h-6" />
-        <span class="hidden">Ultramarine Linux Mastodon</span>
+        <span class="sr-only">Ultramarine Linux Mastodon</span>
       </a>
       <a
         href="https://bsky.app/profile/ultramarine-linux.org"
         aria-label="Bluesky"
       >
         <Bluesky className="w-6 h-6" />
-        <span class="hidden">Ultramarine Linux Bluesky</span>
+        <span class="sr-only">Ultramarine Linux Bluesky</span>
       </a>
       <a href="https://www.reddit.com/r/ultramarine" aria-label="Reddit">
         <Reddit className="w-6 h-6" />
-        <span class="hidden">Ultramarine Linux Subreddit</span>
+        <span class="sr-only">Ultramarine Linux Subreddit</span>
       </a>
       <a href="https://x.com/UltramarineProj" aria-label="Twitter">
         <Twitter className="w-6 h-6" />
-        <span class="hidden">Ultramarine Linux Twitter</span>
+        <span class="sr-only">Ultramarine Linux Twitter</span>
       </a>
     </div>
   </div>
