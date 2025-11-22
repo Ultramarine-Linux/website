@@ -8,8 +8,9 @@ import {
 import DownloadIcon from "./icons/DownloadIcon.svg?react";
 import HorizontalLines from "~icons/fluent/line-horizontal-3-16-regular";
 import Dismiss from "~icons/fluent/dismiss-16-regular";
+import LanguagePicker from "./LanguagePicker";
 
-const Header = () => {
+const Header = ({ currentLang }: { currentLang: string }) => {
   return (
     <Disclosure>
       <header
@@ -83,6 +84,7 @@ const Header = () => {
               <DownloadIcon />
               Download
             </a>
+            <LanguagePicker currentLang={currentLang} />
           </div>
         </div>
         <Transition
@@ -132,6 +134,7 @@ const Header = () => {
                 <DownloadIcon />
                 Download
               </a>
+              <LanguagePicker currentLang={currentLang} />
             </div>
           </DisclosurePanel>
         </Transition>

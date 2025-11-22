@@ -1,0 +1,96 @@
+---
+import DownloadSection from "../../components/DownloadSection.astro";
+import SmallDownloadCard from "../../components/SmallDownloadCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import flagshipScreenshot from "../../assets/42/screenshots/flagship.webp";
+import gnomeScreenshot from "../../assets/42/screenshots/gnome.webp";
+import xfceScreenshot from "../../assets/42/screenshots/xfce.webp";
+import plasmaScreenshot from "../../assets/42/screenshots/plasma.webp";
+import flagshipScreenshotDark from "../../assets/42/screenshots/flagship-dark.webp";
+import gnomeScreenshotDark from "../../assets/42/screenshots/gnome-dark.webp";
+import xfceScreenshotDark from "../../assets/42/screenshots/xfce-dark.webp";
+import plasmaScreenshotDark from "../../assets/42/screenshots/plasma-dark.webp";
+import DownloadOptions from "../../components/DownloadOptions";
+import { languages } from "../../i18n";
+
+const version = 42;
+const codename = "Heart of Gold";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang: lang } }));
+}
+---
+
+<BaseLayout>
+  <div
+    class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12"
+  >
+    <h1 class="text-4xl font-bold">Pick Your Flavor of Ultramarine</h1>
+    <h2 class="pt-1 text-gray-500">Latest Release: {version} ({codename})</h2>
+
+    <DownloadOptions client:load />
+
+    <div
+      class="flex flex-col items-center justify-center gap-10 mt-8 mb-24 w-full"
+    >
+      <DownloadSection
+        editionName="Flagship"
+        screenshot={flagshipScreenshot}
+        screenshotDark={flagshipScreenshotDark}
+        background="/umbrella_bg.webp"
+        description="The quintessential Ultramarine experience. Our in-house design language with a familiar and stylish experience built on the Budgie desktop."
+        version={version}
+      />
+
+      <DownloadSection
+        editionName="Plasma"
+        screenshot={plasmaScreenshot}
+        screenshotDark={plasmaScreenshotDark}
+        description="A community favorite with an Ultramarine twist. Simple defaults and wide-ranging customizations."
+        version={version}
+      />
+
+      <DownloadSection
+        editionName="Xfce"
+        screenshot={xfceScreenshot}
+        screenshotDark={xfceScreenshotDark}
+        description="A lightweight and elegant experience designed to help you squeeze the most out of your device, or revive an old one."
+        version={version}
+      />
+
+      <DownloadSection
+        editionName="GNOME"
+        screenshot={gnomeScreenshot}
+        screenshotDark={gnomeScreenshotDark}
+        description="A simple, elegant, and intuitive desktop with a large ecosystem of apps and extensions."
+        version={version}
+      />
+    </div>
+
+    <h2 class="text-3xl font-bold">Alternate Downloads</h2>
+    <p class="pt-1 text-gray-500">Ultramarine in various alternative formats</p>
+
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 w-full mt-8 mb-48">
+      <SmallDownloadCard
+        title="WSL"
+        description="Use Ultramarine on your existing Windows installation via WSL"
+        link="https://apps.microsoft.com/store/detail/9PBPG2RDMZB9?cid=DevShareMCLPCB"
+      />
+      <SmallDownloadCard
+        title="Preinstalled Images"
+        description="Preinstalled images to flash directly to a device"
+        link="https://images.fyralabs.com/images/ultramarine/42/"
+      />
+      <SmallDownloadCard
+        title="Torrents"
+        description="Check out our torrents provided by FOSSTorents"
+        link="https://fosstorrents.com/distributions/ultramarine-linux/"
+      />
+      <SmallDownloadCard
+        title="Old Releases"
+        description="For archival purposes, you can download old releases here"
+        link="https://images.fyralabs.com/"
+      />
+    </div>
+  </div>
+</BaseLayout>

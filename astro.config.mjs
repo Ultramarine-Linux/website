@@ -53,4 +53,11 @@ export default defineConfig({
       },
     ],
   },
+
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "zh_HK"],
+
+    // the reference implementation required routing.prefixDefaultLocale, but since we can obtain the locale using `Astro.params.locale` instead of from the URL, this is no longer needed
+  },
 });
