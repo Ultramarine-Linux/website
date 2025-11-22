@@ -9,18 +9,6 @@ import DownloadIcon from "./icons/DownloadIcon.svg?react";
 import HorizontalLines from "~icons/fluent/line-horizontal-3-16-regular";
 import Dismiss from "~icons/fluent/dismiss-16-regular";
 import LanguagePicker from "./LanguagePicker";
-
-import UltramarineAltLogo from "./icons/UltramarineAltLogo.svg?react";
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Transition,
-} from "@headlessui/react";
-import DownloadIcon from "./icons/DownloadIcon.svg?react";
-import HorizontalLines from "~icons/fluent/line-horizontal-3-16-regular";
-import Dismiss from "~icons/fluent/dismiss-16-regular";
-import LanguagePicker from "./LanguagePicker";
 import { makeT } from "../i18n.ts";
 
 const Header = ({ currentLang }: { currentLang: string }) => {

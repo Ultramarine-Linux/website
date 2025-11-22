@@ -27,6 +27,28 @@ const DownloadOptions = ({ lang }) => {
               description: t("downloadOptions.genericDescription"),
             },
           ],
+          // [
+          //   "chromebook",
+          //   {
+          //     title: "Chromebook",
+          //     description: (
+          //       <>
+          //         These images come with tweaks to be installed on Chromebooks
+          //         with stock or UEFI firmware. More information can be found on
+          //         our{" "}
+          //         <a
+          //           href="#TODO"
+          //           className="text-accent-300 hover:text-accent-400"
+          //           target="_blank"
+          //           rel="noopener noreferrer"
+          //         >
+          //           wiki
+          //         </a>
+          //         .
+          //       </>
+          //     ),
+          //   },
+          // ],
           [
             "surface",
             {
