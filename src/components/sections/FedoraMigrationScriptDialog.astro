@@ -1,6 +1,10 @@
 ---
 import CopyIcon from "../icons/CopyIcon.svg";
 import XIcon from "../icons/XIcon.svg";
+
+import { makeT } from "../../i18n";
+import Trans from "../Trans";
+const t = makeT(Astro.params.lang);
 ---
 
 <dialog
@@ -14,8 +18,7 @@ import XIcon from "../icons/XIcon.svg";
     <XIcon />
   </button>
   <h1 class="max-w-2xl mt-4">
-    Use this script to convert from Fedora to Ultramarine (review all scripts
-    before running)
+    {t("migrate.description")}
   </h1>
   <div class="mt-2 mb-4 self-center flex items-center justify-center w-full">
     <div
@@ -34,7 +37,7 @@ import XIcon from "../icons/XIcon.svg";
           class="copy-button flex flex-row gap-2 items-center"
           aria-label="Copy to clipboard button"
         >
-          <span class="hidden">Copy</span>
+          <span class="hidden">{t("migrate.copy")}</span>
           <CopyIcon />
         </button>
       </div>
@@ -42,7 +45,7 @@ import XIcon from "../icons/XIcon.svg";
   </div>
 </dialog>
 <button id="migrationscript" class="mt-2 text-gray-400 cursor-pointer"
-  >Or <u>convert from Fedora</u></button
+  ><u>{t("migrate.convert")}</u></button
 >
 
 <style>

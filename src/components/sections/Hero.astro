@@ -7,6 +7,9 @@ import plasmaScreenshot from "../../assets/42/screenshots/plasma.webp";
 import flagshipScreenshotDark from "../../assets/42/screenshots/flagship-dark.webp";
 import gnomeScreenshotDark from "../../assets/42/screenshots/gnome-dark.webp";
 import plasmaScreenshotDark from "../../assets/42/screenshots/plasma-dark.webp";
+
+import { makeT } from "../../i18n";
+const t = makeT(Astro.params.lang);
 ---
 
 <section
@@ -18,14 +21,11 @@ import plasmaScreenshotDark from "../../assets/42/screenshots/plasma-dark.webp";
       <h1
         class="hero-text font-bold text-4xl lg:text-5xl sm:text-6xl mb-2 leading-loose block"
       >
-        Do your thing.
+        {t("hero.slogan")}
       </h1>
     </div>
     <span class="inline-block lg:text-lg max-w-xl 2xl:max-w-2xl text-gray-200">
-      Ultramarine Linux is a modern operating system that supports your workflow
-      with the hardware and tools you already love, for work, school, and play.
-      However you use your system, we have you covered with tweaks and tools to
-      make things run more seamlessly out of the box.
+      {t("hero.description")}
     </span>
 
     <div
@@ -37,7 +37,7 @@ import plasmaScreenshotDark from "../../assets/42/screenshots/plasma-dark.webp";
           class="flex flex-row gap-2 items-center justify-center px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 text-lg transition-colors"
         >
           <DownloadIcon />
-          <span>Get Ultramarine</span>
+          <span>{t("hero.get")}</span>
         </button>
       </a>
     </div>

@@ -7,33 +7,32 @@ import CommitCard from "../CommitCard.astro";
 import Link from "../Link.astro";
 import currentComputerImage from "../../assets/42/marketing/current-computer.webp";
 import workImage from "../../assets/42/marketing/work.webp";
+import { makeT } from "../../i18n.ts";
+const t = makeT(Astro.params.lang ?? "en");
 ---
 
 <div class="relative max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16">
-  <h2 class="text-4xl font-bold mt-4 mb-12">Why Ultramarine?</h2>
+  <h2 class="text-4xl font-bold mt-4 mb-12">{t("whyUltramarine.title")}</h2>
 
   <div
     class="w-full flex flex-col-reverse lg:flex-row items-center justify-between mb-24 gap-4"
   >
     <div class="lg:w-1/2">
-      <h3 class="text-2xl font-semibold mb-4">Get to work, faster</h3>
+      <h3 class="text-2xl font-semibold mb-4">
+        {t("whyUltramarine.work.title")}
+      </h3>
       <p class="text-gray-200 mb-3">
-        Ultramarine helps you get started quickly, cutting out time consuming
-        set up, by coming with everything you need to get started, from apps to
-        drivers, so that you can be ready to go in no time.
+        {t("whyUltramarine.work.p1")}
       </p>
       <p class="text-gray-200 mb-3">
-        We include just what you need to get started, from a browser to a full
-        office suite, and automatically install drivers for your hardware. Your
-        apps, drivers, and the system itself are all updated together, and we
-        install them when you choose to.
+        {t("whyUltramarine.work.p2")}
       </p>
       <Link
         href="https://wiki.ultramarine-linux.org/en/release/diff-fedora/"
         arrow
         className="flex flex-row"
       >
-        <span class="font-medium">Learn more about our tweaks</span>
+        <span class="font-medium">{t("whyUltramarine.work.learnMore")}</span>
       </Link>
     </div>
     <Picture
@@ -50,24 +49,21 @@ import workImage from "../../assets/42/marketing/work.webp";
     class="w-full flex flex-col-reverse lg:flex-row-reverse items-center justify-between mb-24 gap-4"
   >
     <div class="lg:w-1/2 lg:text-right">
-      <h3 class="text-2xl font-semibold mb-4">Your current computer, better</h3>
+      <h3 class="text-2xl font-semibold mb-4">
+        {t("whyUltramarine.current.title")}
+      </h3>
       <p class="text-gray-200 mb-3">
-        Ultramarine provides better experience for a wide range of hardware,
-        from two-decades of PCs, to Chromebooks and SBCs. It runs better on the
-        hardware you have, without arbitrary limits.
+        {t("whyUltramarine.current.p1")}
       </p>
       <p class="text-gray-200 mb-3">
-        If your computer could run Windows 7, odds are it'll run Ultramarine,
-        and probably better than newer OSes. Ultramarine comes with what you
-        actually need, no ads, no tracking, and no limits.
+        {t("whyUltramarine.current.p2")}
       </p>
       <Link
         href="https://wiki.ultramarine-linux.org/en/anywhere/anywhere/"
         arrow
         className="flex flex-row items-center lg:justify-end gap-2"
       >
-        <span class="font-medium">Learn more about the Anywhere Initiative</span
-        >
+        <span class="font-medium">{t("whyUltramarine.current.learnMore")}</span>
       </Link>
     </div>
     <Picture
@@ -83,23 +79,21 @@ import workImage from "../../assets/42/marketing/work.webp";
     class="w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-4 mb-24"
   >
     <div class="lg:w-1/2">
-      <h3 class="text-2xl font-semibold mb-4">New tech, sooner</h3>
+      <h3 class="text-2xl font-semibold mb-4">
+        {t("whyUltramarine.tech.title")}
+      </h3>
       <p class="text-gray-200 mb-3">
-        Ultramarine gets the latest and greatest tech quicker. From app updates,
-        to the tools we use to build it, Ultramarine is ready for today’s world,
-        and tomorrow’s.
+        {t("whyUltramarine.tech.p1")}
       </p>
       <p class="text-gray-200 mb-3">
-        We're always trying new things, you get the latest apps faster, support
-        for the newest hardware sooner, and tech under the hood like dnf5 and
-        systemd-repart before anyone else.
+        {t("whyUltramarine.tech.p2")}
       </p>
       <Link
         href="https://developer.fyralabs.com"
         arrow
         className="flex flex-row"
       >
-        <span class="font-medium">Learn more about our stack</span>
+        <span class="font-medium">{t("whyUltramarine.tech.learnMore")}</span>
       </Link>
     </div>
     <div class="flex flex-col gap-2 w-full lg:w-1/2 lg:max-w-[466px]">
@@ -120,26 +114,21 @@ import workImage from "../../assets/42/marketing/work.webp";
   >
     <div class="lg:w-1/2 lg:text-right">
       <h3 class="text-2xl font-semibold mb-4">
-        You name it, Ultramarine runs it
+        {t("whyUltramarine.runs.title")}
       </h3>
       <p class="text-gray-200 mb-3">
-        From native apps from Flathub and Terra, to professional software like
-        DaVinci Resolve, and many popular games on Steam, you'll be well
-        equipped on Ultramarine.
+        {t("whyUltramarine.runs.p1")}
       </p>
       <p class="text-gray-200 mb-3">
-        Not only are apps abundant, they're at your fingertips in the included
-        app store. Apps on Ultramarine are faster to install, you don't have to
-        make sure you're not also downloading viruses, and just in case, apps
-        are blocked from touching your stuff without permission. You can go from
-        fresh install to playing your favorite game in 10 clicks.
+        {t("whyUltramarine.runs.p2")}
       </p>
       <Link
         href="https://wiki.ultramarine-linux.org/en/anywhere/anywhere/"
         arrow
         className="flex flex-row items-center lg:justify-end gap-2"
       >
-        <span class="font-medium">Lorem Ipsum</span>
+        <!-- TODO -->
+        <span class="font-medium">{t("whyUltramarine.runs.learnMore")}</span>
       </Link>
     </div>
     <Picture
