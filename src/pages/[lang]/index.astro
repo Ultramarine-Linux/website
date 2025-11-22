@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import Hero from "../../components/sections/Hero.astro";
 import WhyUltramarine from "../../components/sections/WhyUltramarine.astro";
-import TestimonialsAndFAQs from "../../components/sections/TestimonialsAndFAQs.astro";
+import TestimonialsAndFAQs from "../../components/sections/TestimonialsAndFAQs.tsx";
 import FedoraMigrationScriptDialog from "../../components/sections/FedoraMigrationScriptDialog.astro";
 
 import DownloadIcon from "../../components/icons/DownloadIcon.svg";
@@ -33,7 +33,7 @@ export async function getStaticPaths() {
         <UmDivider class="w-full" preserveAspectRatio="xMidYMax meet" />
       </div>
 
-      <TestimonialsAndFAQs />
+      <TestimonialsAndFAQs lang={Astro.params.lang} />
 
       <div>
         <div
