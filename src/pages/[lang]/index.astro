@@ -9,12 +9,12 @@ import FedoraMigrationScriptDialog from "../../components/sections/FedoraMigrati
 import DownloadIcon from "../../components/icons/DownloadIcon.svg";
 import WavyDivider from "../../../public/divider_1.svg";
 import UmDivider from "../../../public/divider_2.svg";
-import { makeT, languages } from "../../i18n";
+import { makeT, languages, defaultLang } from "../../i18n";
 
 const t = makeT(Astro.params.lang);
 
 export async function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({ params: { lang: lang } }));
+  return Object.keys(languages).filter(lang => lang !== defaultLang).map((lang) => ({ params: { lang: lang } }));
 }
 ---
 

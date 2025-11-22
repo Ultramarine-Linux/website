@@ -1,5 +1,10 @@
 ---
+import { defaultLang, languages } from "../../i18n";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).filter(lang => lang !== defaultLang).map((lang) => ({ params: { lang: lang } }));
+}
 ---
 
 <BaseLayout>

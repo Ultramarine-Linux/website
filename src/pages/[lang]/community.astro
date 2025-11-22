@@ -5,6 +5,11 @@ import Reddit from "~icons/simple-icons/reddit";
 import Twitter from "~icons/simple-icons/twitter";
 import Heart from "~icons/bi/heart-fill";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { defaultLang, languages } from "../../i18n";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).filter(lang => lang !== defaultLang).map((lang) => ({ params: { lang: lang } }));
+}
 ---
 
 <BaseLayout>

@@ -11,13 +11,13 @@ import gnomeScreenshotDark from "../../assets/42/screenshots/gnome-dark.webp";
 import xfceScreenshotDark from "../../assets/42/screenshots/xfce-dark.webp";
 import plasmaScreenshotDark from "../../assets/42/screenshots/plasma-dark.webp";
 import DownloadOptions from "../../components/DownloadOptions";
-import { languages } from "../../i18n";
+import { defaultLang, languages } from "../../i18n";
 
 const version = 42;
 const codename = "Heart of Gold";
 
 export async function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({ params: { lang: lang } }));
+  return Object.keys(languages).filter(lang => lang !== defaultLang).map((lang) => ({ params: { lang: lang } }));
 }
 ---
 
