@@ -7,7 +7,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<BaseLayout>
+<BaseLayout lang={Astro.params.lang}>
   <div
     class="flex flex-col items-start max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16 mt-12"
   >

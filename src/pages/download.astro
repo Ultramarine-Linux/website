@@ -11,17 +11,21 @@ import gnomeScreenshotDark from "../assets/42/screenshots/gnome-dark.webp";
 import xfceScreenshotDark from "../assets/42/screenshots/xfce-dark.webp";
 import plasmaScreenshotDark from "../assets/42/screenshots/plasma-dark.webp";
 import DownloadOptions from "../components/DownloadOptions";
+import { makeT } from "../i18n.ts";
 
 const version = 42;
 const codename = "Heart of Gold";
+const t = makeT(Astro.params.lang ?? "en");
 ---
 
 <BaseLayout>
   <div
     class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12"
   >
-    <h1 class="text-4xl font-bold">Pick Your Flavor of Ultramarine</h1>
-    <h2 class="pt-1 text-gray-500">Latest Release: {version} ({codename})</h2>
+    <h1 class="text-4xl font-bold">{t("download.pickFlavor")}</h1>
+    <h2 class="pt-1 text-gray-500">
+      {t("download.latestRelease", { version, codename })}
+    </h2>
 
     <DownloadOptions client:load />
 
@@ -33,7 +37,7 @@ const codename = "Heart of Gold";
         screenshot={flagshipScreenshot}
         screenshotDark={flagshipScreenshotDark}
         background="/umbrella_bg.webp"
-        description="The quintessential Ultramarine experience. Our in-house design language with a familiar and stylish experience built on the Budgie desktop."
+        description={t("download.flagshipDescription")}
         version={version}
       />
 
@@ -41,7 +45,7 @@ const codename = "Heart of Gold";
         editionName="Plasma"
         screenshot={plasmaScreenshot}
         screenshotDark={plasmaScreenshotDark}
-        description="A community favorite with an Ultramarine twist. Simple defaults and wide-ranging customizations."
+        description={t("download.plasmaDescription")}
         version={version}
       />
 
@@ -49,7 +53,7 @@ const codename = "Heart of Gold";
         editionName="Xfce"
         screenshot={xfceScreenshot}
         screenshotDark={xfceScreenshotDark}
-        description="A lightweight and elegant experience designed to help you squeeze the most out of your device, or revive an old one."
+        description={t("download.xfceDescription")}
         version={version}
       />
 
@@ -57,33 +61,33 @@ const codename = "Heart of Gold";
         editionName="GNOME"
         screenshot={gnomeScreenshot}
         screenshotDark={gnomeScreenshotDark}
-        description="A simple, elegant, and intuitive desktop with a large ecosystem of apps and extensions."
+        description={t("download.gnomeDescription")}
         version={version}
       />
     </div>
 
-    <h2 class="text-3xl font-bold">Alternate Downloads</h2>
-    <p class="pt-1 text-gray-500">Ultramarine in various alternative formats</p>
+    <h2 class="text-3xl font-bold">{t("download.alternateDownloads")}</h2>
+    <p class="pt-1 text-gray-500">{t("download.alternateDescription")}</p>
 
     <div class="grid gap-4 grid-cols-1 md:grid-cols-2 w-full mt-8 mb-48">
       <SmallDownloadCard
-        title="WSL"
-        description="Use Ultramarine on your existing Windows installation via WSL"
+        title={t("download.wslTitle")}
+        description={t("download.wslDescription")}
         link="https://apps.microsoft.com/store/detail/9PBPG2RDMZB9?cid=DevShareMCLPCB"
       />
       <SmallDownloadCard
-        title="Preinstalled Images"
-        description="Preinstalled images to flash directly to a device"
+        title={t("download.preinstalledTitle")}
+        description={t("download.preinstalledDescription")}
         link="https://images.fyralabs.com/images/ultramarine/42/"
       />
       <SmallDownloadCard
-        title="Torrents"
-        description="Check out our torrents provided by FOSSTorents"
+        title={t("download.torrentsTitle")}
+        description={t("download.torrentsDescription")}
         link="https://fosstorrents.com/distributions/ultramarine-linux/"
       />
       <SmallDownloadCard
-        title="Old Releases"
-        description="For archival purposes, you can download old releases here"
+        title={t("download.oldReleasesTitle")}
+        description={t("download.oldReleasesDescription")}
         link="https://images.fyralabs.com/"
       />
     </div>

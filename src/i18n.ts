@@ -18,9 +18,12 @@ const fallbackLang = {
 
 export const defaultLang = "en";
 
+export type Key = keyof typeof en;
+export type Interpolation = Record<string, string | number>;
+
 export const makeT =
   (lang: string = defaultLang) =>
-  (key: keyof typeof en, interpolation: Record<string, string> = {}) => {
+    (key: Key, interpolation: Interpolation = {}) => {
     let s: string;
     while (!(s = translations[`../langs/${lang}.json`]?.default[key])) {
       if (lang === defaultLang) {
@@ -31,7 +34,7 @@ export const makeT =
       lang = newlang;
     }
     for (const [k, v] of Object.entries(interpolation)) {
-      s = s.replace(`{{${k}}}`, v);
+      s = s.replace(`{{${k}}}`, `${v}`);
     }
     return s;
   };

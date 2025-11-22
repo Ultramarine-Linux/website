@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { makeT } from "../i18n.ts";
+const t = makeT(Astro.params.lang ?? "en");
 
 import Hero from "../components/sections/Hero.astro";
 import WhyUltramarine from "../components/sections/WhyUltramarine.astro";
@@ -38,14 +40,14 @@ import UmDivider from "../../public/divider_2.svg";
         >
           <div class="flex flex-col items-center relative z-10">
             <h1 class="text-center font-bold text-2xl md:text-4xl mb-6">
-              Ready to do your thing?
+              {t("index.ready")}
             </h1>
             <a
               href="/download"
               class="flex flex-row gap-2 items-center text-white font-medium text-xl py-2 px-6 rounded-xl bg-accent-600 hover:bg-accent-700 transition-colors"
             >
               <DownloadIcon />
-              Get Ultramarine
+              {t("index.getUltramarine")}
             </a>
             <FedoraMigrationScriptDialog />
           </div>

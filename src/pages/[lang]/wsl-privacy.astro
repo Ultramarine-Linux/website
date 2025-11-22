@@ -1,26 +1,21 @@
 ---
-import { defaultLang, languages } from "../../i18n";
+import { defaultLang, languages, makeT } from "../../i18n";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const t = makeT(Astro.params.lang);
 
 export async function getStaticPaths() {
   return Object.keys(languages).filter(lang => lang !== defaultLang).map((lang) => ({ params: { lang: lang } }));
 }
 ---
 
-<BaseLayout>
+<BaseLayout lang={Astro.params.lang}>
   <div
     class="flex flex-col items-start max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16 mt-12"
   >
-    <h1 class="text-4xl font-bold mb-2">Ultramarine for WSL Privacy Policy</h1>
+    <h1 class="text-4xl font-bold mb-2">{t("wslPrivacy.title")}</h1>
     <p>
-      Ultramarine for WSL doesn't transmit any information on its own, the
-      distrbution is solely installed and contained on your machine. However, as
-      an operating system, software ran in the operating system may perform any
-      task. Some bundled software, such as dnf (package manager), may transmit
-      data in order to serve a functional purpose or provide anonymised metrics
-      (such as dnf countme). For any questions, email <a
-        href="mailto:contact@fyralabs.com">contact@fyralabs.com</a
-      >.
+      {t("wslPrivacy.description", { email: (<a href="mailto:contact@fyralabs.com">contact@fyralabs.com</a>)})}      
     </p>
   </div>
 </BaseLayout>

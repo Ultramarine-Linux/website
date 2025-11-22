@@ -6,6 +6,9 @@ import Mastodon from "~icons/simple-icons/mastodon";
 import Bluesky from "~icons/simple-icons/bluesky";
 import Reddit from "~icons/simple-icons/reddit";
 import UltramarineAltLogo from "./icons/UltramarineAltLogo.svg";
+
+import { makeT } from "../i18n.ts";
+const t = makeT(Astro.params.lang ?? "en");
 ---
 
 <footer class="p-6 md:pt-12 pb-8 w-full bg-gray-900 z-50">
@@ -15,68 +18,71 @@ import UltramarineAltLogo from "./icons/UltramarineAltLogo.svg";
     <div class="sm:col-span-3 flex flex-col gap-2">
       <a href="/" class="flex items-start gap-2">
         <UltramarineAltLogo class="h-6 w-6 pt-1" />
-        <span class="font-bold text-xl">Ultramarine Linux</span>
+        <span class="font-bold text-xl">{t("footer.siteName")}</span>
       </a>
       <p class="text-gray-400 max-w-lg">
-        Ultramarine is a modern operating system that lets you just do your
-        thing with the hardware and tools you already love.
+        {t("footer.description")}
       </p>
     </div>
     <div class="flex flex-col gap-1">
-      <h1 class="font-bold">Pages</h1>
-      <a href="/" class="text-muted-foreground">Home</a>
-      <a href="/download" class="text-muted-foreground">Download</a>
-      <a href="/community" class="text-muted-foreground">Community</a>
+      <h1 class="font-bold">{t("footer.pages")}</h1>
+      <a href="/" class="text-muted-foreground">{t("footer.home")}</a>
+      <a href="/download" class="text-muted-foreground"
+        >{t("footer.download")}</a
+      >
+      <a href="/community" class="text-muted-foreground"
+        >{t("footer.community")}</a
+      >
       <a
         href="https://blog.fyralabs.com/"
         target="_blank"
         rel="noopener"
-        class="text-muted-foreground">Blog</a
+        class="text-muted-foreground">{t("footer.blog")}</a
       >
     </div>
     <div class="flex flex-col gap-1">
-      <h1 class="font-bold">Resources</h1>
+      <h1 class="font-bold">{t("footer.resources")}</h1>
       <a
         href="https://wiki.ultramarine-linux.org/en/welcome"
         target="_blank"
         rel="noopener"
-        class="text-muted-foreground">Documentation</a
+        class="text-muted-foreground">{t("footer.documentation")}</a
       >
       <a
         href="https://wiki.ultramarine-linux.org/en/contributing/contributorguide/"
         target="_blank"
         rel="noopener"
-        class="text-muted-foreground">Contribute</a
+        class="text-muted-foreground">{t("footer.contribute")}</a
       >
       <a
         href="https://fyralabs.com/contact"
         target="_blank"
         rel="noopener"
-        class="text-muted-foreground">Contact</a
+        class="text-muted-foreground">{t("footer.contact")}</a
       >
     </div>
     <div class="flex flex-col gap-1">
-      <h1 class="font-bold">Extras</h1>
+      <h1 class="font-bold">{t("footer.extras")}</h1>
       <a
         href="https://github.com/sponsors/FyraLabs"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-muted-foreground">Sponsor</a
+        class="text-muted-foreground">{t("footer.sponsor")}</a
       >
       <a
         href="https://fyralabs.com"
         target="_blank"
         rel="noopener"
-        class="text-muted-foreground">Fyra Labs Website</a
+        class="text-muted-foreground">{t("footer.fyraLabsWebsite")}</a
       >
       <a
         href="https://fyralabs.com/merch"
         target="_blank"
         rel="noopener"
-        class="text-muted-foreground">Merch Shop</a
+        class="text-muted-foreground">{t("footer.merchShop")}</a
       >
       <a href="/licenses" class="text-muted-foreground"
-        >License Notice & Credits</a
+        >{t("footer.licenseNotice")}</a
       >
     </div>
   </div>
@@ -84,7 +90,7 @@ import UltramarineAltLogo from "./icons/UltramarineAltLogo.svg";
     class="container max-w-(--breakpoint-2xl) mx-auto sm:pr-16 mt-10 text-sm text-gray-500 dark:text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4"
   >
     <div class="text-center sm:text-left">
-      © 2021 - {new Date().getFullYear()} Fyra Labs. All rights reserved.
+      {t("footer.copyright", { year: new Date().getFullYear() })}
     </div>
     <div class="flex items-center gap-4 sm:ml-auto">
       <a

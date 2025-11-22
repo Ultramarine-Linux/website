@@ -1,6 +1,7 @@
 import { useStore } from "@nanostores/react";
 import { downloadArch, downloadDevice } from "./downloadStore";
 import DownloadIcon from "./icons/DownloadIcon.svg?react";
+import { makeT } from "../i18n.ts";
 
 const downloadLink = (
   edition: string,
@@ -13,13 +14,16 @@ const downloadLink = (
 const DownloadLinks = ({
   version,
   edition,
+  lang,
 }: {
   version: number;
   edition: string;
+  lang: string;
 }) => {
   const arch = useStore(downloadArch);
   const device = useStore(downloadDevice);
   const link = downloadLink(edition, version, arch, device);
+  const t = makeT(lang);
 
   return (
     <div className="flex flex-col sm:flex-row gap-2 md:gap-4 sm:items-center z-10 mt-6 md:mt-0">
@@ -28,13 +32,13 @@ const DownloadLinks = ({
         href={link}
       >
         <DownloadIcon />
-        <span>Download</span>
+        <span>{t("downloadLinks.download")}</span>
       </a>
       <a
         href={link + ".sha256sum"}
         className="text-gray-400 hover:text-blue-400 text-center md:text-left text-xs md:text-base"
       >
-        View Checksum
+        {t("downloadLinks.viewChecksum")}
       </a>
     </div>
   );
