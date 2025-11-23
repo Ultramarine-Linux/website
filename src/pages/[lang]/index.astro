@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import Hero from "../../components/sections/Hero.astro";
 import WhyUltramarine from "../../components/sections/WhyUltramarine.astro";
-import TestimonialsAndFAQs from "../../components/sections/TestimonialsAndFAQs.tsx";
+import TestimonialsAndFAQs from "../../components/sections/TestimonialsAndFAQs.astro";
 import FedoraMigrationScriptDialog from "../../components/sections/FedoraMigrationScriptDialog.astro";
 
 import DownloadIcon from "../../components/icons/DownloadIcon.svg";
@@ -14,7 +14,9 @@ import { makeT, languages, defaultLang } from "../../i18n";
 const t = makeT(Astro.params.lang);
 
 export async function getStaticPaths() {
-  return Object.keys(languages).filter(lang => lang !== defaultLang).map((lang) => ({ params: { lang: lang } }));
+  return Object.keys(languages)
+    .filter((lang) => lang !== defaultLang)
+    .map((lang) => ({ params: { lang: lang } }));
 }
 ---
 

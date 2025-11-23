@@ -69,8 +69,8 @@
 
   "blogPost.lastUpdated": "Last updated on",
 
+  "community.githubSponsors": "GitHub Sponsors",
   "community.joinUs": "Join Us",
-  "community.buildFuture": "Let's build the future of the desktop together.",
   "community.chatWithUs": "Chat with Us",
   "community.chatDescription": "Our community is primarily on Discord. While most discussion is related to Ultramarine Linux and Fyra Labs, we have a vibrant community discussing a variety of topics, such as general technology.",
   "community.discord": "Discord",
@@ -82,13 +82,19 @@
   "community.supportUs": "Support Us",
   "community.supportDescription": "Ultramarine wouldn't be possible without the financial support of our sponsors. Any sponsorship helps us build faster, better, and stronger, no matter the amount.",
   "community.sponsor": "Sponsor",
+  "community.kofi": "Ko-fi",
+  "community.liberapay": "Liberapay",
+  "community.mastodon": "Ultramarine Linux Mastodon",
+  "community.bluesky": "Ultramarine Linux Bluesky",
+  "community.subreddit": "Ultramarine Linux Subreddit",
+  "community.twitter": "Ultramarine Linux Twitter",
 
   "wslPrivacy.title": "Ultramarine for WSL Privacy Policy",
   "wslPrivacy.description": "Ultramarine for WSL doesn't transmit any information on its own, the distribution is solely installed and contained on your machine. However, as an operating system, software run in the operating system may perform any task. Some bundled software, such as dnf (package manager), may transmit data in order to serve a functional purpose or provide anonymised metrics (such as dnf countme). For any questions, email {{email}}.",
 
   "migrate.description": "Use this script to convert from Fedora to Ultramarine (review all scripts before running)",
   "migrate.copy": "Copy",
-  "migrate.convert": "Or convert from Fedora",
+  "migrate.convert": "Or <1>convert from Fedora</1>",
 
   "hero.slogan": "Do your thing.",
   "hero.description": "Ultramarine Linux is a modern operating system that supports your workflow with the hardware and tools you already love, for work, school, and play. However you use your system, we have you covered with tweaks and tools to make things run more seamlessly out of the box.",
