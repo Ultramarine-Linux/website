@@ -13,7 +13,7 @@ import svgr from "vite-plugin-svgr";
 // https://astro.build/config
 export default defineConfig({
   site: "https://ultramarine-linux.org",
-  integrations: [mdx(), sitemap(), react()],
+  integrations: [mdx(), sitemap(), react({ experimentalReactChildren: true })],
 
   redirects: {
     "/release-announcements/40": {
