@@ -6,7 +6,8 @@ import Mastodon from "~icons/simple-icons/mastodon";
 import Bluesky from "~icons/simple-icons/bluesky";
 import Reddit from "~icons/simple-icons/reddit";
 import UltramarineAltLogo from "./icons/UltramarineAltLogo.svg";
-
+import { Image } from "astro:assets";
+import eepymizuki from "../assets/mizuki-sleepy.webp";
 import { makeT } from "../i18n.ts";
 const t = makeT(Astro.params.lang ?? "en");
 ---
@@ -148,5 +149,15 @@ const t = makeT(Astro.params.lang ?? "en");
         <span class="hidden">Ultramarine Linux Subreddit</span>
       </a>
     </div>
+  </div>
+  <div id="eepy" class="flex justify-center mt-25">
+    <Image
+      id="mizuki"
+      src={eepymizuki}
+      alt={"Mizuki, the mascot of Ultramarine, sleeping"}
+      class="w-full md:w-auto md:h-60 md:rounded-r-xl scale-100 z-10"
+      loading="eager"
+      layout="constrained"
+    />
   </div>
 </footer>

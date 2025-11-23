@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BookIcon from "~icons/fluent/book-16-filled";
+import CommunityGrid from "../components/CommunityGrid.astro";
+import { Image } from "astro:assets";
+import mizuki from "../assets/mizuki.webp";
+import seaOfImagination from "../assets/42/backgrounds/sea-of-imagination.webp";
+---
+
+<BaseLayout>
+  <div
+    class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12"
+  >
+    <h1 class="text-4xl font-bold">Thank you for downloading Ultramarine!</h1>
+    <h2 class="pt-1 text-gray-500">
+      If the download doesn't start automatically, please <a
+        class="text-accent-200 hover:text-accent-400 transition-colors"
+        id="manual-download-link">click here.</a
+      >
+    </h2>
+
+    <div
+      class="flex flex-col-reverse md:flex-row bg-gray-900 rounded-xl w-full mt-8 relative"
+    >
+      <div class="p-6 md:p-8 w-full flex flex-col justify-between relative">
+        <div class="z-10">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+            Get Started
+          </h2>
+          <p class="max-w-md text-sm md:text-base text-gray-400">
+            Installing Ultramarine is easy, just follow the following guide and
+            we'll get you set up quick. If you have questions, join our
+            community, and we'll be happy to help!
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center z-10 mt-6"
+        >
+          <a
+            class="flex flex-row gap-2 items-center justify-center px-3 md:px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 transition-colors w-full md:w-auto text-sm md:text-base"
+            target="_blank"
+            rel="noopener"
+            href="https://wiki.ultramarine-linux.org/en/setup/installation/"
+          >
+            <BookIcon />
+            Open Guide
+          </a>
+        </div>
+      </div>
+      <!-- TODO: wonder if there's a way we can make this look good on mobile -->
+      <!-- people aren't really downloading on mobile anyways, so this should be fine for now -->
+      <div
+        class={`group bg-cover rounded-r-xl w-full relative hidden md:block`}
+        style={{ backgroundImage: `url(${seaOfImagination.src})` }}
+      >
+        <div
+          class="w-full h-full bg-linear-to-r from-gray-900 via-transparent to-transparent absolute"
+        >
+        </div>
+        <Image
+          id="mizuki"
+          src={mizuki}
+          alt={"Mizuki, the mascot of Ultramarine"}
+          class="w-full md:w-auto md:h-[240px] md:rounded-r-xl scale-120 z-10 ml-auto"
+          loading="eager"
+          layout="constrained"
+        />
+      </div>
+    </div>
+
+    <CommunityGrid />
+  </div>
+</BaseLayout>
+
+<script>
+  import { hover, animate, spring } from "motion";
+  import { downloadLink } from "../utils/download";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const edition = urlParams.get("edition");
+    const version = urlParams.get("version");
+    const arch = urlParams.get("arch");
+    const device = urlParams.get("device");
+
+    if (edition && version && arch && device) {
+      const url = downloadLink(edition, version, arch, device);
+
+      // TODO: Implement SSR method of doing this, migrate to Workers assets.
+      const manualLink = document.getElementById(
+        "manual-download-link",
+      ) as HTMLAnchorElement;
+      manualLink.href = url;
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  });
+
+  hover("#mizuki", (element) => {
+    animate(
+      element,
+      { transform: "translateY(-25%)" },
+      {
+        duration: 0.5,
+        repeatType: "reverse",
+        repeat: Infinity,
+        ease: [
+          [0, 0, 0.2, 1],
+          [0.8, 0, 1, 1],
+        ],
+      },
+    );
+
+    return () =>
+      animate(
+        element,
+        { transform: "none" },
+        {
+          duration: 0.5,
+          ease: [
+            [0, 0, 0.2, 1],
+            [0.8, 0, 1, 1],
+          ],
+        },
+      );
+  });
+</script>
+
+<style>
+  @keyframes heartbeat {
+    75%,
+    100% {
+      transform: scale(1.25);
+    }
+  }
+
+  .heartbeat {
+    rotate: 30deg;
+    transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1);
+  }
+</style>

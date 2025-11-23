@@ -5,15 +5,17 @@ export interface Props {
   href: string;
   arrow?: boolean;
   className?: string;
+  target?: string;
 }
 
-const { href, arrow, className } = Astro.props;
+const { href, arrow, className, target } = Astro.props;
 ---
 
 <a
   href={href}
   class={(className || "") +
     "items-center gap-2 text-accent-200 hover:text-accent-400 transition-colors group"}
+  target={target}
 >
   <slot />{
     arrow && (
