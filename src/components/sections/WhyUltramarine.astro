@@ -5,7 +5,7 @@ import ArrowRight from "~icons/fluent/arrow-right-16-regular";
 import fyraTeam from "../../assets/fyra_team.svg";
 import CommitCard from "../CommitCard.astro";
 import Link from "../Link.astro";
-import currentComputerImage from "../../assets/42/marketing/current-computer.webp";
+import currentComputerImage from "../../assets/43/screenshots/plasma-dark.png";
 import workImage from "../../assets/42/marketing/work.webp";
 import { makeT } from "../../i18n.ts";
 const t = makeT(Astro.params.lang ?? "en");
@@ -73,7 +73,7 @@ const t = makeT(Astro.params.lang ?? "en");
       layout="constrained"
       src={currentComputerImage}
       formats={["avif", "webp"]}
-      alt="Screenshot of an Ultramarine GNOME system with the system monitor and fastfetch showing"
+      alt="Screenshot of an Ultramarine Plasma system with Firefox and Terminal (fastfetch)"
     />
   </div>
 
@@ -126,11 +126,10 @@ const t = makeT(Astro.params.lang ?? "en");
         {t("whyUltramarine.runs.p2")}
       </p>
       <Link
-        href="https://wiki.ultramarine-linux.org/en/anywhere/anywhere/"
+        href="https://flathub.org/"
         arrow
         className="flex flex-row items-center lg:justify-end gap-2"
       >
-        <!-- TODO -->
         <span class="font-medium">{t("whyUltramarine.runs.learnMore")}</span>
       </Link>
     </div>
