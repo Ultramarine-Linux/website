@@ -70,7 +70,8 @@ const archDownloadVariations = new Map([
                 >
                   wiki
                 </a>
-                .
+                . Please note that Surface hasn't been upgraded to 43, so these
+                images are Ultramarine 42.
               </>
             ),
           },
