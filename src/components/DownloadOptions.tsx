@@ -299,6 +299,23 @@ const DownloadOptions = () => {
           archDownloadVariations.get($downloadArch).devices.get($downloadDevice)
             .description
         }
+        {$downloadDevice === "generic" && $downloadInstaller === "readymade" ? (
+          <>
+            {" "}
+            Please note that Readymade is still in preview and still may not be
+            fully functional. If you encounter any issues,{" "}
+            <a
+              href="https://github.com/FyraLabs/readymade/issues"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent-200 hover:text-accent-400 transition-colors"
+            >
+              please report them here.
+            </a>
+          </>
+        ) : (
+          <></>
+        )}
       </p>
     </>
   );
