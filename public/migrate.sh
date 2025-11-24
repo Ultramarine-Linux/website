@@ -3,7 +3,7 @@
 # Fedora to Ultramarine Linux migration script
 # Lea's pro tip: Run this through shellcheck, it'll genuinely save so much time and effort
 
-ver="0.1.3"
+ver="0.1.4"
 # Oldest repo we provide is um37
 MINIMUM_RELEASEVER=37
 set -euo pipefail
@@ -119,11 +119,18 @@ elif [[ ${os_variant} = "kde" ]]; then
   trace sudo dnf group remove -y kde-desktop-environment
 elif [[ ${os_variant} = "budgie" ]]; then
   echo ' ... Detected Fedora Budgie Spin'
-  trace sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
-  # BUG: dnf depsolv issue
-  trace sudo dnf swap -y budgie-desktop-defaults ultramarine-flagship-filesystem
-  trace sudo dnf group install --allowerasing -y ultramarine-flagship-product-environment --exclude=budgie-desktop-defaults
-  trace sudo dnf group remove -y budgie-desktop-environment
+  if [ $releasever -le 42 ]; then
+    trace sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
+    # BUG: dnf depsolv issue
+    trace sudo dnf swap -y budgie-desktop-defaults ultramarine-flagship-filesystem
+    trace sudo dnf group install --allowerasing -y ultramarine-flagship-product-environment --exclude=budgie-desktop-defaults
+    trace sudo dnf group remove -y budgie-desktop-environment
+  else
+    trace sudo dnf swap -y fedora-release-common ultramarine-release-budgie --allowerasing
+    trace sudo dnf swap -y budgie-desktop-defaults ultramarine-budgie-filesystem
+    trace sudo dnf group install --allowerasing -y ultramarine-budgie-product-environment --exclude=budgie-desktop-defaults
+    trace sudo dnf group remove -y budgie-desktop-environment
+  fi
 elif [[ ${os_variant} = "xfce" ]]; then
   echo ' ... Detected Fedora XFCE Spin'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-xfce --allowerasing
