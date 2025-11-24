@@ -31,7 +31,7 @@ export async function getStaticPaths() {
       {t("download.latestRelease", { version, codename })}
     </h2>
 
-    <DownloadOptions client:load />
+    <DownloadOptions client:load lang={Astro.params.lang} />
 
     <div
       class="flex flex-col items-center justify-center gap-10 mt-8 mb-24 w-full"

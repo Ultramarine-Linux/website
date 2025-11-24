@@ -1,6 +1,10 @@
 import * as ToggleGroup from "@radix-ui/react-toggle-group";
 import { useStore } from "@nanostores/react";
-import { downloadArch, downloadDevice } from "./downloadStore";
+import {
+  downloadArch,
+  downloadDevice,
+  downloadInstaller,
+} from "./downloadStore";
 import {
   Listbox,
   ListboxButton,
@@ -27,28 +31,6 @@ const DownloadOptions = ({ lang }) => {
               description: t("downloadOptions.genericDescription"),
             },
           ],
-          // [
-          //   "chromebook",
-          //   {
-          //     title: "Chromebook",
-          //     description: (
-          //       <>
-          //         These images come with tweaks to be installed on Chromebooks
-          //         with stock or UEFI firmware. More information can be found on
-          //         our{" "}
-          //         <a
-          //           href="#TODO"
-          //           className="text-accent-300 hover:text-accent-400"
-          //           target="_blank"
-          //           rel="noopener noreferrer"
-          //         >
-          //           wiki
-          //         </a>
-          //         .
-          //       </>
-          //     ),
-          //   },
-          // ],
           [
             "surface",
             {
@@ -65,6 +47,10 @@ const DownloadOptions = ({ lang }) => {
               ),
             },
           ],
+        ]),
+        installers: new Map([
+          ["anaconda", { title: "Anaconda" }],
+          ["readymade", { title: "Readymade (Preview)" }],
         ]),
       },
     ],
@@ -89,49 +75,10 @@ const DownloadOptions = ({ lang }) => {
               ),
             },
           ],
-          // [
-          //   "rpi34",
-          //   {
-          //     title: "Raspberry Pi 3/4",
-          //     description: (
-          //       <>
-          //         These images are preinstalled images for the Raspberry Pi 3 and
-          //         4 families. You can flash them directly to an SD card or use the
-          //         Raspberry Pi Imager.Check our wiki for more information.{" "}
-          //         <a
-          //           href="https://wiki.ultramarine-linux.org/en/anywhere/rpi/"
-          //           className="text-accent-300 hover:text-accent-400"
-          //           target="_blank"
-          //           rel="noopener noreferrer"
-          //         >
-          //           wiki
-          //         </a>
-          //         .
-          //       </>
-          //     ),
-          //   },
-          // ],
-          // [
-          //   "armchromebook",
-          //   {
-          //     title: "Arm Chromebooks (Preview)",
-          //     description: (
-          //       <>
-          //         These images support select 64bit ARM Chromebooks. See the wiki
-          //         for more information.{" "}
-          //         <a
-          //           href="#TODO"
-          //           className="text-accent-300 hover:text-accent-400"
-          //           target="_blank"
-          //           rel="noopener noreferrer"
-          //         >
-          //           wiki
-          //         </a>
-          //         .
-          //       </>
-          //     ),
-          //   },
-          // ],
+        ]),
+        installers: new Map([
+          ["anaconda", { title: "Anaconda" }],
+          ["readymade", { title: "Readymade (Preview)" }],
         ]),
       },
     ],
@@ -139,6 +86,7 @@ const DownloadOptions = ({ lang }) => {
 
   const $downloadArch = useStore(downloadArch);
   const $downloadDevice = useStore(downloadDevice);
+  const $downloadInstaller = useStore(downloadInstaller);
 
   return (
     <>
@@ -220,6 +168,57 @@ const DownloadOptions = ({ lang }) => {
             </Listbox>
           </div>
         </div>
+
+        {$downloadDevice === "generic" ? (
+          <div>
+            <p className="pb-1 text-sm text-gray-200">Installer</p>
+            <div className="w-64">
+              <Listbox
+                value={$downloadInstaller}
+                onChange={(value) => {
+                  downloadInstaller.set(value);
+                }}
+              >
+                <ListboxButton className="flex flex-row w-full items-center h-9 px-4 py-2 rounded-lg bg-gray-800 text-left text-sm font-medium focus:not-data-focus:outline-none">
+                  <span className="overflow-hidden whitespace-nowrap text-ellipsis">
+                    {
+                      archDownloadVariations
+                        .get($downloadArch)
+                        .installers.get($downloadInstaller).title
+                    }
+                  </span>
+                  <ChevronDown
+                    className="pointer-events-none ml-auto shrink-0"
+                    aria-hidden="true"
+                  />
+                </ListboxButton>
+                <ListboxOptions
+                  anchor="bottom"
+                  transition
+                  className="w-(--button-width) rounded-lg [--anchor-gap:--spacing(1)] focus:outline-none bg-gray-800 transition duration-100 ease-in data-leave:data-closed:opacity-0 p-1 gap-1 flex flex-col z-50 shadow-md border border-white/5"
+                >
+                  {Array.from(
+                    archDownloadVariations
+                      .get($downloadArch)
+                      .installers.entries(),
+                  ).map(([id, installer]) => (
+                    <ListboxOption
+                      className="group flex items-center rounded-md px-3 py-1.5 gap-2 text-sm font-medium data-focus:bg-gray-700 select-none cursor-default"
+                      key={id}
+                      value={id}
+                      aria-label={installer.title}
+                    >
+                      <Checkmark className="invisible group-data-selected:visible" />
+                      {installer.title}
+                    </ListboxOption>
+                  ))}
+                </ListboxOptions>
+              </Listbox>
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
 
       <p className="text-gray-200 mt-4">
@@ -227,6 +226,17 @@ const DownloadOptions = ({ lang }) => {
           archDownloadVariations.get($downloadArch).devices.get($downloadDevice)
             .description
         }
+        {$downloadDevice === "generic" &&
+          $downloadInstaller === "readymade" && (
+            <Trans t={t("downloadOptions.readymadeNote")}>
+              <a
+                href="https://github.com/FyraLabs/readymade/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-200 hover:text-accent-400 transition-colors"
+              />
+            </Trans>
+          )}
       </p>
     </>
   );

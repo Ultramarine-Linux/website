@@ -1,5 +1,9 @@
 import { useStore } from "@nanostores/react";
-import { downloadArch, downloadDevice } from "./downloadStore";
+import {
+  downloadArch,
+  downloadDevice,
+  downloadInstaller,
+} from "./downloadStore";
 import DownloadIcon from "./icons/DownloadIcon.svg?react";
 import { makeT } from "../i18n.ts";
 import { downloadLink } from "../utils/download";
@@ -15,13 +19,15 @@ const DownloadLinks = ({
 }) => {
   const arch = useStore(downloadArch);
   const device = useStore(downloadDevice);
-  const link = downloadLink(edition, version, arch, device);
+  const installer = useStore(downloadInstaller);
+  const link = downloadLink(edition, version, arch, device, installer);
   const t = makeT(lang);
   const downloadParams = new URLSearchParams({
     edition,
     version,
     arch,
     device,
+    installer,
   });
   const thankYouLink = `/thank-you?${downloadParams.toString()}`;
 

@@ -21,6 +21,7 @@
   "downloadOptions.genericDescription": "These images are for most x86 computers, if you're not sure, this is probably what you want.",
   "downloadOptions.surfaceDescription": "These images come with tweaks for Intel and AMD Microsoft Surfaces. More information can be found on our <1>wiki</1>.",
   "downloadOptions.armDescription": "These images are for 64bit ARM devices with support in Linux. See our wiki for more <1>here</1>.",
+  "downloadOptions.readymadeNote": "Please note that Readymade is still in preview and still may not be fully functional. If you encounter any issues, <1>please report them here.</1>",
 
   "smallDownloadCard.edition": "{{edition}} Edition",
 
@@ -44,7 +45,7 @@
 
   "download.pickFlavor": "Pick Your Flavor of Ultramarine",
   "download.latestRelease": "Latest Release: {{version}} ({{codename}})",
-  "download.flagshipDescription": "The quintessential Ultramarine experience. Our in-house design language with a familiar and stylish experience built on the Budgie desktop.",
+  "download.budgieDescription": " A familiar and stylish experience with a bit of flair.",
   "download.plasmaDescription": "A community favorite with an Ultramarine twist. Simple defaults and wide-ranging customizations.",
   "download.xfceDescription": "A lightweight and elegant experience designed to help you squeeze the most out of your device, or revive an old one.",
   "download.gnomeDescription": "A simple, elegant, and intuitive desktop with a large ecosystem of apps and extensions.",
