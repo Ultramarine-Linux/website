@@ -4,7 +4,7 @@ import BookIcon from "~icons/fluent/book-16-filled";
 import CommunityGrid from "../components/CommunityGrid.astro";
 import { Image } from "astro:assets";
 import mizuki from "../assets/mizuki.webp";
-import seaOfImagination from "../assets/42/backgrounds/sea-of-imagination.webp";
+import valleyBowl from "../assets/43/backgrounds/valley-bowl.webp";
 ---
 
 <BaseLayout>
@@ -51,7 +51,7 @@ import seaOfImagination from "../assets/42/backgrounds/sea-of-imagination.webp";
       <!-- people aren't really downloading on mobile anyways, so this should be fine for now -->
       <div
         class={`group bg-cover rounded-r-xl w-full relative hidden md:block`}
-        style={{ backgroundImage: `url(${seaOfImagination.src})` }}
+        style={{ backgroundImage: `url(${valleyBowl.src})` }}
       >
         <div
           class="w-full h-full bg-linear-to-r from-gray-900 via-transparent to-transparent absolute"
@@ -83,9 +83,10 @@ import seaOfImagination from "../assets/42/backgrounds/sea-of-imagination.webp";
     const version = urlParams.get("version");
     const arch = urlParams.get("arch");
     const device = urlParams.get("device");
+    const installer = urlParams.get("installer");
 
-    if (edition && version && arch && device) {
-      const url = downloadLink(edition, version, arch, device);
+    if (edition && version && arch && device && installer) {
+      const url = downloadLink(edition, version, arch, device, installer);
 
       // TODO: Implement SSR method of doing this, migrate to Workers assets.
       const manualLink = document.getElementById(

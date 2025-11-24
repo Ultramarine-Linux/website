@@ -2,18 +2,18 @@
 import DownloadSection from "../components/DownloadSection.astro";
 import SmallDownloadCard from "../components/SmallDownloadCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import flagshipScreenshot from "../assets/42/screenshots/flagship.webp";
-import gnomeScreenshot from "../assets/42/screenshots/gnome.webp";
-import xfceScreenshot from "../assets/42/screenshots/xfce.webp";
-import plasmaScreenshot from "../assets/42/screenshots/plasma.webp";
-import flagshipScreenshotDark from "../assets/42/screenshots/flagship-dark.webp";
-import gnomeScreenshotDark from "../assets/42/screenshots/gnome-dark.webp";
-import xfceScreenshotDark from "../assets/42/screenshots/xfce-dark.webp";
-import plasmaScreenshotDark from "../assets/42/screenshots/plasma-dark.webp";
+import budgieScreenshot from "../assets/43/screenshots/budgie.webp";
+import gnomeScreenshot from "../assets/43/screenshots/gnome.webp";
+import xfceScreenshot from "../assets/43/screenshots/xfce.webp";
+import plasmaScreenshot from "../assets/43/screenshots/plasma.webp";
+import budgieScreenshotDark from "../assets/43/screenshots/budgie-dark.webp";
+import gnomeScreenshotDark from "../assets/43/screenshots/gnome-dark.webp";
+import xfceScreenshotDark from "../assets/43/screenshots/xfce-dark.webp";
+import plasmaScreenshotDark from "../assets/43/screenshots/plasma-dark.webp";
 import DownloadOptions from "../components/DownloadOptions";
 
-const version = "42";
-const codename = "Heart of Gold";
+const version = "43";
+const codename = "Gas Meter";
 ---
 
 <BaseLayout>
@@ -29,18 +29,10 @@ const codename = "Heart of Gold";
       class="flex flex-col items-center justify-center gap-10 mt-8 mb-24 w-full"
     >
       <DownloadSection
-        editionName="Flagship"
-        screenshot={flagshipScreenshot}
-        screenshotDark={flagshipScreenshotDark}
-        background="/umbrella_bg.webp"
-        description="The quintessential Ultramarine experience. Our in-house design language with a familiar and stylish experience built on the Budgie desktop."
-        version={version}
-      />
-
-      <DownloadSection
         editionName="Plasma"
         screenshot={plasmaScreenshot}
         screenshotDark={plasmaScreenshotDark}
+        background="/umbrella_bg.webp"
         description="A community favorite with an Ultramarine twist. Simple defaults and wide-ranging customizations."
         version={version}
       />
@@ -50,6 +42,14 @@ const codename = "Heart of Gold";
         screenshot={xfceScreenshot}
         screenshotDark={xfceScreenshotDark}
         description="A lightweight and elegant experience designed to help you squeeze the most out of your device, or revive an old one."
+        version={version}
+      />
+
+      <DownloadSection
+        editionName="Budgie"
+        screenshot={budgieScreenshot}
+        screenshotDark={budgieScreenshotDark}
+        description="A familiar and stylish experience with a bit of flair."
         version={version}
       />
 
