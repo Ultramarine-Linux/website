@@ -12,3 +12,4 @@ import { atom } from "nanostores";
 
 export const downloadArch = atom("x86_64");
 export const downloadDevice = atom("generic");
+export const downloadInstaller = atom("anaconda");

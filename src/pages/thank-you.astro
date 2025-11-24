@@ -83,9 +83,10 @@ import seaOfImagination from "../assets/42/backgrounds/sea-of-imagination.webp";
     const version = urlParams.get("version");
     const arch = urlParams.get("arch");
     const device = urlParams.get("device");
+    const installer = urlParams.get("installer");
 
-    if (edition && version && arch && device) {
-      const url = downloadLink(edition, version, arch, device);
+    if (edition && version && arch && device && installer) {
+      const url = downloadLink(edition, version, arch, device, installer);
 
       // TODO: Implement SSR method of doing this, migrate to Workers assets.
       const manualLink = document.getElementById(

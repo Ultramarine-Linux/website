@@ -3,5 +3,6 @@ export const downloadLink = (
   version: string,
   arch: string,
   device: string,
+  installer: string,
 ) =>
-  `/fyra-images/isos/ultramarine/${version}/ultramarine-${edition}-${version}-${device === "generic" ? "live-anaconda" : device}-${arch}.iso`;
+  `/fyra-images/isos/ultramarine/${version}/ultramarine-${edition}-${version}-${device === "generic" ? `live${installer === "anaconda" ? "-anaconda" : ""}` : device}-${arch}.iso`;
