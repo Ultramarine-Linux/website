@@ -1,12 +1,10 @@
 ---
 import { Picture } from "astro:assets";
-import ArrowRight from "~icons/fluent/arrow-right-16-regular";
-
-import fyraTeam from "../../assets/fyra_team.svg";
 import CommitCard from "../CommitCard.astro";
 import Link from "../Link.astro";
 import currentComputerImage from "../../assets/43/screenshots/plasma-dark.webp";
 import workImage from "../../assets/42/marketing/work.webp";
+import runImage from "../../assets/43/screenshots/budgie-dark.webp";
 import { makeT } from "../../i18n.ts";
 const t = makeT(Astro.params.lang ?? "en");
 ---
@@ -136,7 +134,7 @@ const t = makeT(Astro.params.lang ?? "en");
     <Picture
       class="lg:w-[466px] rounded-lg"
       layout="constrained"
-      src={currentComputerImage}
+      src={runImage}
       formats={["avif", "webp"]}
       alt="Screenshot of an Ultramarine GNOME system with the system monitor and fastfetch showing"
     />
