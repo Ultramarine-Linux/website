@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 import mizuki from "../assets/mizuki.webp";
 import valleyBowl from "../assets/43/backgrounds/valley-bowl.webp";
 import Trans from "../components/Trans";
-import { defaultLang } from "../i18n";
+import { defaultLang, makeT } from "../i18n";
 const t = makeT(Astro.params.lang ?? defaultLang);
 ---
 
