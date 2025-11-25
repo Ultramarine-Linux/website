@@ -1,15 +1,15 @@
 ---
 import DownloadIcon from "../icons/DownloadIcon.svg";
 import { Picture } from "astro:assets";
-import flagshipScreenshot from "../../assets/42/screenshots/flagship.webp";
-import gnomeScreenshot from "../../assets/42/screenshots/gnome.webp";
-import plasmaScreenshot from "../../assets/42/screenshots/plasma.webp";
-import flagshipScreenshotDark from "../../assets/42/screenshots/flagship-dark.webp";
-import gnomeScreenshotDark from "../../assets/42/screenshots/gnome-dark.webp";
-import plasmaScreenshotDark from "../../assets/42/screenshots/plasma-dark.webp";
-
+import budgieScreenshot from "../../assets/43/screenshots/budgie.webp";
+import gnomeScreenshot from "../../assets/43/screenshots/gnome.webp";
+import plasmaScreenshot from "../../assets/43/screenshots/plasma.webp";
+import budgieScreenshotDark from "../../assets/43/screenshots/budgie-dark.webp";
+import gnomeScreenshotDark from "../../assets/43/screenshots/gnome-dark.webp";
+import plasmaScreenshotDark from "../../assets/43/screenshots/plasma-dark.webp";
 import { makeT } from "../../i18n";
 const t = makeT(Astro.params.lang);
+
 ---
 
 <section
@@ -47,7 +47,7 @@ const t = makeT(Astro.params.lang);
     <div class="relative">
       <div class="absolute top-20 right-36 -rotate-12 w-[400px]">
         <Picture
-          src={flagshipScreenshot}
+          src={budgieScreenshot}
           alt="Screenshot of Ultramarine Flagship in light mode"
           formats={["avif", "webp"]}
           class="rounded-lg dark:hidden"
@@ -55,7 +55,7 @@ const t = makeT(Astro.params.lang);
           layout="fixed"
         />
         <Picture
-          src={flagshipScreenshotDark}
+          src={budgieScreenshotDark}
           alt="Screenshot of Ultramarine Flagship in dark mode"
           formats={["avif", "webp"]}
           class="rounded-lg hidden dark:block"
