@@ -11,8 +11,8 @@ import gnomeScreenshotDark from "../assets/43/screenshots/gnome-dark.webp";
 import xfceScreenshotDark from "../assets/43/screenshots/xfce-dark.webp";
 import plasmaScreenshotDark from "../assets/43/screenshots/plasma-dark.webp";
 import DownloadOptions from "../components/DownloadOptions";
-import { makeT } from "../i18n.ts";
-const t = makeT(Astro.params.lang ?? "en");
+import { defaultLang, makeT } from "../i18n.ts";
+const t = makeT(Astro.params.lang ?? defaultLang);
 const version = "43";
 const codename = "Gas Meter";
 ---

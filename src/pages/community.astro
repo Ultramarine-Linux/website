@@ -1,8 +1,8 @@
 ---
 import CommunityGrid from "../components/CommunityGrid.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { makeT } from "../i18n.ts";
-const t = makeT(Astro.params.lang ?? "en");
+import { defaultLang, makeT } from "../i18n.ts";
+const t = makeT(Astro.params.lang ?? defaultLang);
 ---
 
 <BaseLayout>

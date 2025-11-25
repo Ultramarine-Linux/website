@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { makeT } from "../i18n.ts";
-const t = makeT(Astro.params.lang ?? "en");
+import { defaultLang, makeT } from "../i18n.ts";
+const t = makeT(Astro.params.lang ?? defaultLang);
 
 import Hero from "../components/sections/Hero.astro";
 import WhyUltramarine from "../components/sections/WhyUltramarine.astro";

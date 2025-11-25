@@ -72,6 +72,7 @@
 
   "community.githubSponsors": "GitHub Sponsors",
   "community.joinUs": "Join Us",
+  "community.buildFuture": "Let's build the future of the desktop together.",
   "community.chatWithUs": "Chat with Us",
   "community.chatDescription": "Our community is primarily on Discord. While most discussion is related to Ultramarine Linux and Fyra Labs, we have a vibrant community discussing a variety of topics, such as general technology.",
   "community.discord": "Discord",
@@ -141,5 +142,11 @@
   "whyUltramarine.runs.title": "You name it, Ultramarine runs it",
   "whyUltramarine.runs.p1": "From native apps from Flathub and Terra, to professional software like DaVinci Resolve, and many popular games on Steam, you'll be well equipped on Ultramarine.",
   "whyUltramarine.runs.p2": "Not only are apps abundant, they're at your fingertips in the included app store. Apps on Ultramarine are faster to install, you don't have to make sure you're not also downloading viruses, and just in case, apps are blocked from touching your stuff without permission. You can go from fresh install to playing your favorite game in 10 clicks.",
-  "whyUltramarine.runs.learnMore": "Explore our app selection"
+  "whyUltramarine.runs.learnMore": "Explore our app selection",
+
+  "thankYou.title": "Thank you for downloading Ultramarine!",
+  "thankYou.downloadHelp": "If the download doesn't start automatically, please <1>click here.</1>",
+  "thankYou.getStartedTitle": "Get Started",
+  "thankYou.getStartedDescription": "Installing Ultramarine is easy, just follow the following guide and we'll get you set up quick. If you have questions, join our community, and we'll be happy to help!",
+  "thankYou.openGuide": "Open Guide"
 }

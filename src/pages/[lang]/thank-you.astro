@@ -1,16 +1,22 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import BookIcon from "~icons/fluent/book-16-filled";
-import CommunityGrid from "../components/CommunityGrid.astro";
+import CommunityGrid from "../../components/CommunityGrid.astro";
 import { Image } from "astro:assets";
-import mizuki from "../assets/mizuki.webp";
-import valleyBowl from "../assets/43/backgrounds/valley-bowl.webp";
-import Trans from "../components/Trans";
-import { defaultLang } from "../i18n";
-const t = makeT(Astro.params.lang ?? defaultLang);
+import mizuki from "../../assets/mizuki.webp";
+import valleyBowl from "../../assets/43/backgrounds/valley-bowl.webp";
+import { defaultLang, languages, makeT } from "../../i18n";
+import Trans from "../../components/Trans";
+
+const t = makeT(Astro.params.lang);
+export async function getStaticPaths() {
+  return Object.keys(languages)
+    .filter((lang) => lang !== defaultLang)
+    .map((lang) => ({ params: { lang: lang } }));
+}
 ---
 
-<BaseLayout>
+<BaseLayout lang={Astro.params.lang}>
   <div
     class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12"
   >
@@ -76,7 +82,7 @@ const t = makeT(Astro.params.lang ?? defaultLang);
 
 <script>
   import { hover, animate, spring } from "motion";
-  import { downloadLink } from "../utils/download";
+  import { downloadLink } from "../../utils/download";
 
   document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
