@@ -11,15 +11,14 @@ import gnomeScreenshotDark from "../../assets/42/screenshots/gnome-dark.webp";
 import xfceScreenshotDark from "../../assets/42/screenshots/xfce-dark.webp";
 import plasmaScreenshotDark from "../../assets/42/screenshots/plasma-dark.webp";
 import DownloadOptions from "../../components/DownloadOptions";
-import { defaultLang, languages, makeT } from "../../i18n";
+import i18nya, { makeT } from "../../i18n.ts";
+import { makeGetStaticPaths } from 'astro-i18nya';
+const t = makeT(Astro.params.lang ?? "en");
+export const getStaticPaths = makeGetStaticPaths(i18nya);
 
 const version = 42;
 const codename = "Heart of Gold";
-const t = makeT(Astro.params.lang);
 
-export async function getStaticPaths() {
-  return Object.keys(languages).filter(lang => lang !== defaultLang).map((lang) => ({ params: { lang: lang } }));
-}
 ---
 
 <BaseLayout lang={Astro.params.lang}>

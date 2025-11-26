@@ -9,15 +9,10 @@ import FedoraMigrationScriptDialog from "../../components/sections/FedoraMigrati
 import DownloadIcon from "../../components/icons/DownloadIcon.svg";
 import WavyDivider from "../../../public/divider_1.svg";
 import UmDivider from "../../../public/divider_2.svg";
-import { makeT, languages, defaultLang } from "../../i18n";
-
-const t = makeT(Astro.params.lang);
-
-export async function getStaticPaths() {
-  return Object.keys(languages)
-    .filter((lang) => lang !== defaultLang)
-    .map((lang) => ({ params: { lang: lang } }));
-}
+import i18nya, { makeT } from "../../i18n.ts";
+import { makeGetStaticPaths } from 'astro-i18nya';
+const t = makeT(Astro.params.lang ?? "en");
+export const getStaticPaths = makeGetStaticPaths(i18nya);
 ---
 
 <BaseLayout lang={Astro.params.lang}>

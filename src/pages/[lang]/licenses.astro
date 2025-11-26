@@ -1,10 +1,9 @@
 ---
-import { defaultLang, languages } from "../../i18n";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import i18nya, { makeT } from "../../i18n.ts";
+import { makeGetStaticPaths } from 'astro-i18nya';
+export const getStaticPaths = makeGetStaticPaths(i18nya);
 
-export async function getStaticPaths() {
-  return Object.keys(languages).filter(lang => lang !== defaultLang).map((lang) => ({ params: { lang: lang } }));
-}
 ---
 
 <BaseLayout lang={Astro.params.lang}>

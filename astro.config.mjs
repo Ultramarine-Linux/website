@@ -1,19 +1,17 @@
 import { defineConfig, fontProviders } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-
 import react from "@astrojs/react";
-
 import tailwindcss from "@tailwindcss/vite";
-
+import i18nya from './src/i18n';
+import astro_i18nya from 'astro-i18nya';
 import Icons from "unplugin-icons/vite";
-
 import svgr from "vite-plugin-svgr";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://ultramarine-linux.org",
-  integrations: [mdx(), sitemap(), react({ experimentalReactChildren: true })],
+  integrations: [mdx(), sitemap(), react({ experimentalReactChildren: true }), astro_i18nya(i18nya)],
 
   redirects: {
     "/release-announcements/40": {
@@ -52,12 +50,5 @@ export default defineConfig({
         display: "swap",
       },
     ],
-  },
-
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "zh_HK"],
-
-    // the reference implementation required routing.prefixDefaultLocale, but since we can obtain the locale using `Astro.params.locale` instead of from the URL, this is no longer needed
   },
 });

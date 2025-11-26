@@ -1,14 +1,10 @@
 ---
 import CommunityGrid from "../../components/CommunityGrid.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { defaultLang, languages, makeT } from "../../i18n.ts";
+import i18nya, { makeT } from "../../i18n.ts";
+import { makeGetStaticPaths } from 'astro-i18nya';
 const t = makeT(Astro.params.lang ?? "en");
-
-export async function getStaticPaths() {
-  return Object.keys(languages)
-    .filter((lang) => lang !== defaultLang)
-    .map((lang) => ({ params: { lang: lang } }));
-}
+export const getStaticPaths = makeGetStaticPaths(i18nya);
 ---
 
 <BaseLayout lang={Astro.params.lang}>

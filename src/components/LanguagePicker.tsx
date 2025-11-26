@@ -4,7 +4,8 @@ import {
   ListboxOption,
   ListboxOptions,
 } from "@headlessui/react";
-import { languages, defaultLang } from "../i18n.ts";
+import { listLang } from "astro-i18nya";
+import i18nya from "../i18n";
 import Globe from "~icons/fluent/globe-20-regular";
 import Checkmark from "~icons/fluent/checkmark-16-regular";
 
@@ -20,7 +21,7 @@ const LanguagePicker = ({ currentLang }: { currentLang: string }) => {
             if (url.startsWith(`/${currentLang}`)) {
               url = url.replace(
                 `/${currentLang}`,
-                value === defaultLang ? "" : `/${value}`,
+                value === i18nya.config.defaultLang ? "" : `/${value}`,
               );
             } else {
               url = `/${value}${url}`;
@@ -36,7 +37,7 @@ const LanguagePicker = ({ currentLang }: { currentLang: string }) => {
             transition
             className="rounded-lg [--anchor-gap:--spacing(1)] focus:outline-none bg-gray-800 transition duration-100 ease-in data-leave:data-closed:opacity-0 p-1 gap-1 flex flex-col z-50 shadow-md border border-white/5"
           >
-            {Array.from(Object.entries(languages)).map(([locale, lang]) => (
+            {Object.entries(listLang(i18nya)).map(([locale, lang]) => (
               <ListboxOption
                 className="group flex items-center rounded-md px-3 py-1.5 gap-2 text-sm font-medium data-focus:bg-gray-700 select-none cursor-default"
                 key={locale}

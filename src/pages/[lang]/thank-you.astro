@@ -5,15 +5,10 @@ import CommunityGrid from "../../components/CommunityGrid.astro";
 import { Image } from "astro:assets";
 import mizuki from "../../assets/mizuki.webp";
 import valleyBowl from "../../assets/43/backgrounds/valley-bowl.webp";
-import { defaultLang, languages, makeT } from "../../i18n";
-import Trans from "../../components/Trans";
-
-const t = makeT(Astro.params.lang);
-export async function getStaticPaths() {
-  return Object.keys(languages)
-    .filter((lang) => lang !== defaultLang)
-    .map((lang) => ({ params: { lang: lang } }));
-}
+import i18nya, { makeT } from "../../i18n.ts";
+import { makeGetStaticPaths, Trans } from 'astro-i18nya';
+const t = makeT(Astro.params.lang ?? "en");
+export const getStaticPaths = makeGetStaticPaths(i18nya);
 ---
 
 <BaseLayout lang={Astro.params.lang}>
