@@ -35,7 +35,7 @@ const {
         {description}
       </p>
     </div>
-    <DownloadLinks edition={editionName.toLowerCase()} version={version} client:load/>
+    <DownloadLinks edition={editionName.toLowerCase()} version={version} client:load lang={Astro.params.lang}/>
     {
       background && (
         <div class="absolute inset-0 overflow-hidden">

@@ -1,0 +1,15 @@
+{
+  "site.title": "Ultramarine Linux",
+  "site.title.short": "Ultramarine",
+  "site.description": "Ultramarine Linux 是一個基於 Fedora 的 Linux 作業系統，專為用家提供簡潔易用的體驗。所有版本都附帶了多項預設調整，以確保初次安裝和日常使用流程的平滑進行。",
+
+  "header.openMenu": "開啟選單",
+  "header.wiki": "維基",
+  "header.community": "社羣",
+  "header.blog": "日誌",
+  "header.merch": "商品",
+  "header.download": "下載",
+
+  "downloadLinks.download": "下載",
+  "downloadLinks.viewChecksum": "校驗和"
+}

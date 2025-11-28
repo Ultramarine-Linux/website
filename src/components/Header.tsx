@@ -8,8 +8,12 @@ import {
 import DownloadIcon from "./icons/DownloadIcon.svg?react";
 import HorizontalLines from "~icons/fluent/line-horizontal-3-16-regular";
 import Dismiss from "~icons/fluent/dismiss-16-regular";
+import LanguagePicker from "./LanguagePicker";
+import { makeT } from "../i18n.ts";
 
-const Header = () => {
+const Header = ({ currentLang }: { currentLang: string }) => {
+  const t = makeT(currentLang);
+
   return (
     <Disclosure>
       <header
@@ -20,7 +24,7 @@ const Header = () => {
           <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className=" group inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-zinc-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">{t("header.openMenu")}</span>
               <Dismiss
                 className="hidden group-data-open:block h-6 w-6"
                 aria-hidden="true"
@@ -38,7 +42,9 @@ const Header = () => {
               className="hover:text-accent-500 transition-colors duration-300 cursor-pointer"
             >
               <div className="relative mr-6">
-                <span className="font-bold text-xl">Ultramarine</span>
+                <span className="font-bold text-xl">
+                  {t("site.title.short")}
+                </span>
                 <div className="absolute -top-1 -right-6">
                   <UltramarineAltLogo />
                 </div>
@@ -52,13 +58,13 @@ const Header = () => {
               rel="noopener"
               className="hover:text-accent-500 transition-colors duration-300"
             >
-              Wiki
+              {t("header.wiki")}
             </a>
             <a
               href="/community"
               className="hover:text-accent-500 transition-colors duration-300"
             >
-              Community
+              {t("header.community")}
             </a>
             <a
               href="https://blog.fyralabs.com"
@@ -66,7 +72,7 @@ const Header = () => {
               rel="noopener"
               className="hover:text-accent-500 transition-colors duration-300"
             >
-              Blog
+              {t("header.blog")}
             </a>
             <a
               href="https://fyralabs.com/merch"
@@ -74,7 +80,7 @@ const Header = () => {
               rel="noopener"
               className="hover:text-accent-500 transition-colors duration-300"
             >
-              Merch
+              {t("header.merch")}
             </a>
             <a
               href="/community"
@@ -89,8 +95,9 @@ const Header = () => {
               className="flex flex-row gap-2 items-center text-white font-medium py-2 px-6 rounded-xl bg-accent-600 hover:bg-accent-700 transition-colors"
             >
               <DownloadIcon />
-              Download
+              {t("header.download")}
             </a>
+            <LanguagePicker currentLang={currentLang} />
           </div>
         </div>
         <Transition
@@ -109,13 +116,13 @@ const Header = () => {
                 rel="noopener"
                 className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"
               >
-                Wiki
+                {t("header.wiki")}
               </a>
               <a
                 href="/community"
                 className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"
               >
-                Community
+                {t("header.community")}
               </a>
               <a
                 href="https://blog.fyralabs.com"
@@ -123,7 +130,7 @@ const Header = () => {
                 rel="noopener"
                 className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"
               >
-                Blog
+                {t("header.blog")}
               </a>
               <a
                 href="https://fyralabs.com/merch"
@@ -131,7 +138,7 @@ const Header = () => {
                 rel="noopener"
                 className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"
               >
-                Merch
+                {t("header.merch")}
               </a>
               <a
                 href="/community"
@@ -146,8 +153,9 @@ const Header = () => {
                 className="flex flex-row gap-2 items-center text-white font-medium py-2 px-3 rounded-xl bg-accent-600 hover:bg-accent-700 transition-colors"
               >
                 <DownloadIcon />
-                Download
+                {t("header.download")}
               </a>
+              <LanguagePicker currentLang={currentLang} />
             </div>
           </DisclosurePanel>
         </Transition>

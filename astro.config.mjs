@@ -1,19 +1,17 @@
 import { defineConfig, fontProviders } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-
 import react from "@astrojs/react";
-
 import tailwindcss from "@tailwindcss/vite";
-
+import i18nya from './src/i18n';
+import astro_i18nya from 'astro-i18nya';
 import Icons from "unplugin-icons/vite";
-
 import svgr from "vite-plugin-svgr";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://ultramarine-linux.org",
-  integrations: [mdx(), sitemap(), react()],
+  integrations: [mdx(), sitemap(), react({ experimentalReactChildren: true }), astro_i18nya(i18nya)],
 
   redirects: {
     "/release-announcements/40": {

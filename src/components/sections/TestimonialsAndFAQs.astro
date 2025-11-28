@@ -1,5 +1,8 @@
 ---
+import { makeT } from "../../i18n";
+import Trans from "../Trans";
 
+const t = makeT(Astro.params.lang);
 ---
 
 <div class="bg-[#0f1120]">
@@ -8,7 +11,7 @@
     <div class="">
       <div class="max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16">
         <h2 class="text-2xl md:text-4xl font-bold py-10 text-center">
-          Loved by the People
+          {t("comments.loved")}
         </h2>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
           <a
@@ -21,10 +24,9 @@
               class="lg:text-lg"
               cite="https://www.zdnet.com/article/ultramarine-linux-flagship-is-a-contender-for-desktop-of-the-year/"
             >
-              If you're looking for a new Linux distribution (or a new OS in
-              general), I would highly recommend Ultramarine Linux Flagship.
+              {t("comments.1")}
             </blockquote>
-            <p class="pt-4 text-gray-400">- Jack Wallen, ZDNet</p>
+            <p class="pt-4 text-gray-400">{t("comments.1a")}</p>
           </a>
           <a
             href="https://news.itsfoss.com/ultramarine-linux-40-release/"
@@ -36,11 +38,9 @@
               class="lg:text-lg"
               cite="https://news.itsfoss.com/ultramarine-linux-40-release/"
             >
-              Liked by both beginners and veterans, most people find
-              [Ultramarine] to be a very reliable daily-driver Linux distro that
-              doesn't get in the way.
+              {t("comments.2")}
             </blockquote>
-            <p class="pt-4 text-gray-400">- Sourav Rudra, It's FOSS News</p>
+            <p class="pt-4 text-gray-400">{t("comments.2a")}</p>
           </a>
           <a
             href="https://youtu.be/N7pfVVAc7NY?si=pXzxvIP-hsmz8YP-"
@@ -52,12 +52,9 @@
               class="lg:text-lg"
               cite="https://www.youtube.com/watch?v=AX7fgbjkGY4"
             >
-              [Ultramarine] is one of the best [distributions] I've tried
-              throughout 2024.
+              {t("comments.3")}
             </blockquote>
-            <p class="pt-4 text-gray-400">
-              - Jusdeit (Translated from Spanish)
-            </p>
+            <p class="pt-4 text-gray-400">{t("comments.3a")}</p>
           </a>
         </div>
       </div>
@@ -65,7 +62,7 @@
     <div class="py-24">
       <div class="max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16">
         <h2 class="text-2xl md:text-4xl font-bold mb-10 text-center">
-          Frequently Asked Questions
+          {t("faq.title")}
         </h2>
         <div
           class="flex flex-col w-full max-w-4xl mx-auto divide-y divide-gray-800 bg-gray-900 border border-gray-800 rounded-xl px-10 py-2 pb-4"
@@ -74,15 +71,11 @@
             class="open:details-content:h-auto details-content:h-0 details-content:overflow-hidden details-content:transition-[height,content-visibility] details-content:transition-discrete"
           >
             <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg"
-              >Why does this distro exist?</summary
+              >{t("faq.1")}</summary
             >
             <div class="px-4 pb-4">
               <p>
-                Ultramarine Linux’s primary goal is to create an instantly
-                usable experience, while keeping up with the latest in Linux
-                desktop innovations. We take what's great about Fedora, and
-                build on it to create an experience that anyone can use,
-                anywhere.
+                {t("faq.1a")}
               </p>
             </div>
           </details>
@@ -90,35 +83,22 @@
             class="open:details-content:h-auto details-content:h-0 details-content:overflow-hidden details-content:transition-[height,content-visibility] details-content:transition-discrete"
           >
             <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg"
-              >Isn't this just Fedora with repos added?</summary
+              >{t("faq.2")}</summary
             >
             <div class="px-4 pb-4">
-              <p>
-                Ultramarine Linux’s primary goal is to create an instantly
-                usable experience, while keeping up with the latest in Linux
-                desktop innovations. We take what's great about Fedora, and
-                build on it to create an experience that anyone can use,
-                anywhere.
-              </p>
+              <p>{t("faq.2a")}</p><br />
+              <p>{t("faq.2b")}</p>
             </div>
           </details>
           <details
             class="open:details-content:h-auto details-content:h-0 details-content:overflow-hidden details-content:transition-[height,content-visibility] details-content:transition-discrete"
           >
             <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg"
-              >What does the migration script do?</summary
+              >{t("faq.3")}</summary
             >
             <div class="px-4 pb-4">
-              <p>
-                The migration scripts install RPMFusion, Terra repository, and
-                our signing keys, then installs the bare minimum of an
-                Ultramarine Linux installation (Swapping Fedora release packages
-                with the Ultramarine ones). <br /><br />
-
-                The script only installs the bare minimum required for
-                Ultramarine Linux to work because we don’t want to add
-                additional bloat to your current system.
-              </p>
+              <p>{t("faq.3a")}</p><br />
+              <p>{t("faq.3b")}</p>
             </div>
           </details>
           <details
@@ -126,20 +106,15 @@
           >
             <summary
               class="pt-6 pb-4 outline-none cursor-pointer text-lg details-content:bg-red-600"
-              >Does Ultramarine track me or collect my data?</summary
+              >{t("faq.4")}</summary
             >
             <div class="px-4 pb-4">
               <p>
-                As of now, the only data we collect is a count of how many times
-                a package has been downloaded from Terra or the Ultramarine
-                repository using <a
-                  href="https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/dnf-counting/"
-                  class="text-accent-300 hover:text-accent-400"
-                  target="_blank"
-                  rel="noopener noreferrer">DNF Counting</a
-                >. This information is not tied to you or your computer. Fyra
-                Labs (the company behind Ultramarine) does not collect any data
-                that can be tied to an individual.
+                <Trans t={t("faq.4a")}>
+                  <a
+                    href="https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/dnf-counting/"
+                    class="text-accent-300 hover:text-accent-400"></a>
+                </Trans>
               </p>
             </div>
           </details>
@@ -147,33 +122,23 @@
             class="open:details-content:h-auto details-content:h-0 details-content:overflow-hidden details-content:transition-[height,content-visibility] details-content:transition-discrete"
           >
             <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg"
-              >Is Ultramarine semi-rolling?</summary
+              >{t("faq.5")}</summary
             >
-            <div class="px-4 pb-4">
-              No. Ultramarine and Fedora are not semi-rolling or rolling. They
-              use a stable release scheme. Updates with breaking changes are
-              rolled out with only major releases. Minor updates/point updates
-              must be backwards-compatible, i.e. system components in
-              Ultramarine are updated if and only if they do not break
-              compatibility.
-            </div>
+            <div class="px-4 pb-4">{t("faq.5a")}</div>
           </details>
           <details
             class="open:details-content:h-auto details-content:h-0 details-content:overflow-hidden details-content:transition-[height,content-visibility] details-content:transition-discrete"
           >
             <summary class="pt-6 pb-4 outline-none cursor-pointer text-lg"
-              >Does Ultramarine run on my device?</summary
+              >{t("faq.6")}</summary
             >
             <div class="px-4 pb-4">
               <p>
-                If your're using a standard PC, yes. Otherwise, if your computer
-                is 64-bit, check out the
-                <a
-                  href="https://wiki.ultramarine-linux.org/en/hardware/anywhere/"
-                  class="text-accent-300 hover:text-accent-400"
-                  target="_blank"
-                  rel="noopener">Ultramarine Anywhere page</a
-                > for more about non-standard devices.
+                <Trans t={t("faq.6a")}>
+                  <a
+                    href="https://wiki.ultramarine-linux.org/en/hardware/anywhere/"
+                    class="text-accent-300 hover:text-accent-400"></a>
+                </Trans>
               </p>
             </div>
           </details>

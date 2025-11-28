@@ -5,19 +5,23 @@ import {
   downloadInstaller,
 } from "./downloadStore";
 import DownloadIcon from "./icons/DownloadIcon.svg?react";
+import { makeT } from "../i18n.ts";
 import { downloadLink } from "../utils/download";
 
 const DownloadLinks = ({
   version,
   edition,
+  lang,
 }: {
   version: string;
   edition: string;
+  lang: string;
 }) => {
   const arch = useStore(downloadArch);
   const device = useStore(downloadDevice);
   const installer = useStore(downloadInstaller);
   const link = downloadLink(edition, version, arch, device, installer);
+  const t = makeT(lang);
   const downloadParams = new URLSearchParams({
     edition,
     version,
@@ -34,13 +38,13 @@ const DownloadLinks = ({
         href={thankYouLink}
       >
         <DownloadIcon />
-        <span>Download</span>
+        <span>{t("downloadLinks.download")}</span>
       </a>
       <a
         href={link + ".sha256sum"}
         className="text-gray-400 hover:text-blue-400 text-center md:text-left text-xs md:text-base"
       >
-        View Checksum
+        {t("downloadLinks.viewChecksum")}
       </a>
     </div>
   );

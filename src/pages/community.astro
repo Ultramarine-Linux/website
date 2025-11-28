@@ -1,15 +1,17 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
 import CommunityGrid from "../components/CommunityGrid.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { makeT } from "../i18n.ts";
+const t = makeT(Astro.params.lang);
 ---
 
 <BaseLayout>
   <div
     class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12"
   >
-    <h1 class="text-4xl font-bold">Join Us</h1>
+    <h1 class="text-4xl font-bold">{t("community.joinUs")}</h1>
     <h2 class="pt-1 text-gray-500">
-      Let's build the future of the desktop together.
+      {t("community.buildFuture")}
     </h2>
 
     <CommunityGrid />

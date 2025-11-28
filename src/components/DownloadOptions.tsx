@@ -13,155 +13,77 @@ import {
 } from "@headlessui/react";
 import ChevronDown from "~icons/fluent/chevron-down-16-regular";
 import Checkmark from "~icons/fluent/checkmark-16-regular";
+import { makeT } from "../i18n.ts";
+import Trans from "./Trans.tsx";
 
-const archDownloadVariations = new Map([
-  [
-    "x86_64",
-    {
-      name: "x64",
-      devices: new Map([
-        [
-          "generic",
-          {
-            title: "Generic",
-            description: (
-              <>
-                These images are for most x86 computers, if you're not sure,
-                this is probably what you want.
-              </>
-            ),
-          },
-        ],
-        // [
-        //   "chromebook",
-        //   {
-        //     title: "Chromebook",
-        //     description: (
-        //       <>
-        //         These images come with tweaks to be installed on Chromebooks
-        //         with stock or UEFI firmware. More information can be found on
-        //         our{" "}
-        //         <a
-        //           href="#TODO"
-        //           className="text-accent-300 hover:text-accent-400"
-        //           target="_blank"
-        //           rel="noopener noreferrer"
-        //         >
-        //           wiki
-        //         </a>
-        //         .
-        //       </>
-        //     ),
-        //   },
-        // ],
-        [
-          "surface",
-          {
-            title: "Surface",
-            description: (
-              <>
-                These images come with tweaks for Intel and AMD Microsoft
-                Surfaces. More information can be found on our{" "}
-                <a
-                  href="https://wiki.ultramarine-linux.org/en/anywhere/surface/"
-                  className="text-accent-300 hover:text-accent-400"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  wiki
-                </a>
-                . Please note that Surface hasn't been upgraded to 43, so these
-                images are Ultramarine 42.
-              </>
-            ),
-          },
-        ],
-      ]),
-      installers: new Map([
-        ["anaconda", { title: "Anaconda" }],
-        ["readymade", { title: "Readymade (Preview)" }],
-      ]),
-    },
-  ],
-  [
-    "aarch64",
-    {
-      name: "ARM",
-      devices: new Map([
-        [
-          "generic",
-          {
-            title: "Generic",
-            description: (
-              <>
-                These images are for 64bit ARM devices with support in Linux.
-                See our wiki for more{" "}
-                <a
-                  href="https://fedoraproject.org/wiki/Architectures/ARM"
-                  className="text-accent-300 hover:text-accent-400"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  here
-                </a>
-                .
-              </>
-            ),
-          },
-        ],
-        // [
-        //   "rpi34",
-        //   {
-        //     title: "Raspberry Pi 3/4",
-        //     description: (
-        //       <>
-        //         These images are preinstalled images for the Raspberry Pi 3 and
-        //         4 families. You can flash them directly to an SD card or use the
-        //         Raspberry Pi Imager.Check our wiki for more information.{" "}
-        //         <a
-        //           href="https://wiki.ultramarine-linux.org/en/anywhere/rpi/"
-        //           className="text-accent-300 hover:text-accent-400"
-        //           target="_blank"
-        //           rel="noopener noreferrer"
-        //         >
-        //           wiki
-        //         </a>
-        //         .
-        //       </>
-        //     ),
-        //   },
-        // ],
-        // [
-        //   "armchromebook",
-        //   {
-        //     title: "Arm Chromebooks (Preview)",
-        //     description: (
-        //       <>
-        //         These images support select 64bit ARM Chromebooks. See the wiki
-        //         for more information.{" "}
-        //         <a
-        //           href="#TODO"
-        //           className="text-accent-300 hover:text-accent-400"
-        //           target="_blank"
-        //           rel="noopener noreferrer"
-        //         >
-        //           wiki
-        //         </a>
-        //         .
-        //       </>
-        //     ),
-        //   },
-        // ],
-      ]),
-      installers: new Map([
-        ["anaconda", { title: "Anaconda" }],
-        ["readymade", { title: "Readymade (Preview)" }],
-      ]),
-    },
-  ],
-]);
+const DownloadOptions = ({ lang }) => {
+  const t = makeT(lang);
+  const archDownloadVariations = new Map([
+    [
+      "x86_64",
+      {
+        name: "x64",
+        devices: new Map([
+          [
+            "generic",
+            {
+              title: t("downloadOptions.generic"),
+              description: t("downloadOptions.genericDescription"),
+            },
+          ],
+          [
+            "surface",
+            {
+              title: t("downloadOptions.surface"),
+              description: (
+                <Trans t={t("downloadOptions.surfaceDescription")}>
+                  <a
+                    href="https://wiki.ultramarine-linux.org/en/anywhere/surface/"
+                    className="text-accent-300 hover:text-accent-400"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
+                </Trans>
+              ),
+            },
+          ],
+        ]),
+        installers: new Map([
+          ["anaconda", { title: "Anaconda" }],
+          ["readymade", { title: "Readymade (Preview)" }],
+        ]),
+      },
+    ],
+    [
+      "aarch64",
+      {
+        name: "ARM",
+        devices: new Map([
+          [
+            "generic",
+            {
+              title: t("downloadOptions.generic"),
+              description: (
+                <Trans t={t("downloadOptions.armDescription")}>
+                  <a
+                    href="https://fedoraproject.org/wiki/Architectures/ARM"
+                    className="text-accent-300 hover:text-accent-400"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
+                </Trans>
+              ),
+            },
+          ],
+        ]),
+        installers: new Map([
+          ["anaconda", { title: "Anaconda" }],
+          ["readymade", { title: "Readymade (Preview)" }],
+        ]),
+      },
+    ],
+  ]);
 
-const DownloadOptions = () => {
   const $downloadArch = useStore(downloadArch);
   const $downloadDevice = useStore(downloadDevice);
   const $downloadInstaller = useStore(downloadInstaller);
@@ -170,7 +92,9 @@ const DownloadOptions = () => {
     <>
       <div className="flex flex-row flex-wrap gap-4 pt-2">
         <div>
-          <p className="pb-1 text-sm text-gray-200">Architecture</p>
+          <p className="pb-1 text-sm text-gray-200">
+            {t("downloadOptions.architecture")}
+          </p>
           <ToggleGroup.Root
             className="inline-flex h-9 items-center justify-center rounded-lg bg-gray-800 p-1 text-muted-foreground"
             type="single"
@@ -181,7 +105,7 @@ const DownloadOptions = () => {
                 downloadDevice.set("generic");
               }
             }}
-            aria-label="Architecture"
+            aria-label={t("downloadOptions.architecture")}
           >
             {Array.from(archDownloadVariations.entries()).map(
               ([id, archVariation]) => (
@@ -199,7 +123,9 @@ const DownloadOptions = () => {
         </div>
 
         <div>
-          <p className="pb-1 text-sm text-gray-200">Device</p>
+          <p className="pb-1 text-sm text-gray-200">
+            {t("downloadOptions.device")}
+          </p>
           <div className="w-64">
             <Listbox
               value={$downloadDevice}
@@ -300,23 +226,17 @@ const DownloadOptions = () => {
           archDownloadVariations.get($downloadArch).devices.get($downloadDevice)
             .description
         }
-        {$downloadDevice === "generic" && $downloadInstaller === "readymade" ? (
-          <>
-            {" "}
-            Please note that Readymade is still in preview and still may not be
-            fully functional. If you encounter any issues,{" "}
-            <a
-              href="https://github.com/FyraLabs/readymade/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent-200 hover:text-accent-400 transition-colors"
-            >
-              please report them here.
-            </a>
-          </>
-        ) : (
-          <></>
-        )}
+        {$downloadDevice === "generic" &&
+          $downloadInstaller === "readymade" && (
+            <Trans t={t("downloadOptions.readymadeNote")}>
+              <a
+                href="https://github.com/FyraLabs/readymade/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-200 hover:text-accent-400 transition-colors"
+              />
+            </Trans>
+          )}
       </p>
     </>
   );

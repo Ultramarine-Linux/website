@@ -6,6 +6,8 @@ import Twitter from "~icons/simple-icons/twitter";
 import Heart from "~icons/bi/heart-fill";
 import KoFi from "~icons/simple-icons/kofi";
 import Liberapay from "~icons/simple-icons/liberapay";
+import { makeT } from "../i18n.ts";
+const t = makeT(Astro.params.lang ?? "en");
 ---
 
 <div class="grid md:grid-cols-2 gap-8 my-8 w-full">
@@ -13,11 +15,11 @@ import Liberapay from "~icons/simple-icons/liberapay";
     class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
   >
     <div class="z-10">
-      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">Support Us</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+        {t("community.supportUs")}
+      </h2>
       <p class="max-w-md text-sm md:text-base text-gray-400">
-        Ultramarine wouldn't be possible without the financial support of our
-        sponsors. Any sponsorship helps us build faster, better, and stronger,
-        no matter the amount.
+        {t("community.supportDescription")}
       </p>
     </div>
     <div
@@ -32,7 +34,7 @@ import Liberapay from "~icons/simple-icons/liberapay";
         <Heart
           className="heartbeat absolute -right-1 -top-1 text-pink-300 group-hover:animate-[heartbeat_0.4s_cubic-bezier(0,0,0.2,1)_infinite_alternate]"
         />
-        <span>GitHub Sponsors</span>
+        <span>{t("community.githubSponsors")}</span>
       </a>
       <div class="w-0.5 h-full bg-gray-800"></div>
       <div class="flex flex-row gap-4">
@@ -44,7 +46,7 @@ import Liberapay from "~icons/simple-icons/liberapay";
           rel="noopener noreferrer"
         >
           <KoFi className="size-6" />
-          <span class="sr-only">Ko-fi</span>
+          <span class="sr-only">{t("community.kofi")}</span>
         </a>
         <a
           class="hover:text-[#f6c915] transition-colors"
@@ -54,7 +56,7 @@ import Liberapay from "~icons/simple-icons/liberapay";
           rel="noopener noreferrer"
         >
           <Liberapay className="size-6" />
-          <span class="sr-only">Liberapay</span>
+          <span class="sr-only">{t("community.liberapay")}</span>
         </a>
       </div>
     </div>
@@ -64,11 +66,11 @@ import Liberapay from "~icons/simple-icons/liberapay";
     class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
   >
     <div class="z-10">
-      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">Chat with Us</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+        {t("community.chatWithUs")}
+      </h2>
       <p class="max-w-md text-sm md:text-base text-gray-400">
-        Our community is primarily on Discord. While most discussion is related
-        to Ultramarine Linux and Fyra Labs, we have a vibrant community
-        discussing a variety of topics, such as general technology.
+        {t("community.chatDescription")}
       </p>
     </div>
     <div
@@ -80,7 +82,7 @@ import Liberapay from "~icons/simple-icons/liberapay";
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span>Discord</span>
+        <span>{t("community.discord")}</span>
       </a>
     </div>
   </div>
@@ -89,12 +91,11 @@ import Liberapay from "~icons/simple-icons/liberapay";
     class="flex flex-col justify-between relative bg-gray-900 rounded-xl w-full overflow-hidden p-6 md:p-8"
   >
     <div class="z-10">
-      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">Contribute</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+        {t("community.contribute")}
+      </h2>
       <p class="max-w-md text-sm md:text-base text-gray-400">
-        Ultramarine is proudly open source and built in the community. This
-        means anyone can propose changes, such as features and bug fixes. If any
-        contribution related questions arise, we'd be happy to assist you in our
-        chats, regardless of your experience level.
+        {t("community.contributeDescription")}
       </p>
     </div>
     <div
@@ -106,7 +107,7 @@ import Liberapay from "~icons/simple-icons/liberapay";
         target="_blank"
         rel="noopener"
       >
-        <span>Contributor Guide</span>
+        <span>{t("community.contributorGuide")}</span>
       </a>
     </div>
   </div>
@@ -116,11 +117,10 @@ import Liberapay from "~icons/simple-icons/liberapay";
   >
     <div class="z-10">
       <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
-        Follow Us on Socials
+        {t("community.socials")}
       </h2>
       <p class="max-w-md text-sm md:text-base text-gray-400">
-        We're on a variety of social media platforms, if you want to follow the
-        project updates (and help boost us) this is the way to do it.
+        {t("community.socialsDescription")}
       </p>
     </div>
     <div class="flex flex-row gap-2 md:gap-4 items-center z-10 mt-6">
@@ -131,7 +131,7 @@ import Liberapay from "~icons/simple-icons/liberapay";
         rel="noopener noreferrer"
       >
         <Mastodon className="w-6 h-6" />
-        <span class="sr-only">Ultramarine Linux Mastodon</span>
+        <span class="sr-only">{t("community.mastodon")}</span>
       </a>
       <a
         href="https://bsky.app/profile/ultramarine-linux.org"
@@ -140,7 +140,7 @@ import Liberapay from "~icons/simple-icons/liberapay";
         rel="noopener noreferrer"
       >
         <Bluesky className="w-6 h-6" />
-        <span class="sr-only">Ultramarine Linux Bluesky</span>
+        <span class="sr-only">{t("community.bluesky")}</span>
       </a>
       <a
         href="https://www.reddit.com/r/ultramarine"
@@ -149,7 +149,7 @@ import Liberapay from "~icons/simple-icons/liberapay";
         rel="noopener noreferrer"
       >
         <Reddit className="w-6 h-6" />
-        <span class="sr-only">Ultramarine Linux Subreddit</span>
+        <span class="sr-only">{t("community.subreddit")}</span>
       </a>
       <a
         href="https://x.com/UltramarineProj"
@@ -158,7 +158,7 @@ import Liberapay from "~icons/simple-icons/liberapay";
         rel="noopener noreferrer"
       >
         <Twitter className="w-6 h-6" />
-        <span class="sr-only">Ultramarine Linux Twitter</span>
+        <span class="sr-only">{t("community.twitter")}</span>
       </a>
     </div>
   </div>
