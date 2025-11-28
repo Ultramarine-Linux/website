@@ -1,7 +1,7 @@
 {
   "site.title": "Ultramarine Linux",
   "site.title.short": "Ultramarine",
-  "site.description": "Ultramarine Linux is a Fedora-based Linux distribution designed to stay out of your way and be easy to use. All editions come with several tweaks preapplied to make initial setup and daily usage seamless.",
+  "site.description": "Ultramarine is a modern operating system that lets you just do your thing with the hardware and tools you already love.",
 
   "header.openMenu": "Open main menu",
   "header.wiki": "Wiki",
@@ -128,7 +128,7 @@
 
   "whyUltramarine.title": "Why Ultramarine?",
   "whyUltramarine.work.title": "Get to work, faster",
-  "whyUltramarine.work.p1": "Ultramarine helps you get started quickly, cutting out time consuming set up, by coming with everything you need to get started, from apps to drivers, so that you can be ready to go in no time.",
+  "whyUltramarine.work.p1": "Ultramarine helps you get started quickly, we cut out the time consuming set up, and include everything you need to get started, from apps to drivers, so you can be ready to go in no time.",
   "whyUltramarine.work.p2": "We include just what you need to get started, from a browser to a full office suite, and automatically install drivers for your hardware. Your apps, drivers, and the system itself are all updated together, and we install them when you choose to.",
   "whyUltramarine.work.learnMore": "Learn more about our tweaks",
   "whyUltramarine.current.title": "Your current computer, better",
@@ -140,7 +140,7 @@
   "whyUltramarine.tech.p2": "We're always trying new things, you get the latest apps faster, support for the newest hardware sooner, and tech under the hood like dnf5 and systemd-repart before anyone else.",
   "whyUltramarine.tech.learnMore": "Learn more about our stack",
   "whyUltramarine.runs.title": "You name it, Ultramarine runs it",
-  "whyUltramarine.runs.p1": "From native apps from Flathub and Terra, to professional software like DaVinci Resolve, and many popular games on Steam, you'll be well equipped on Ultramarine.",
+  "whyUltramarine.runs.p1": "From native apps on Flathub and Terra, to professional software like DaVinci Resolve, and many popular games on Steam, you'll be well equipped on Ultramarine.",
   "whyUltramarine.runs.p2": "Not only are apps abundant, they're at your fingertips in the included app store. Apps on Ultramarine are faster to install, you don't have to make sure you're not also downloading viruses, and just in case, apps are blocked from touching your stuff without permission. You can go from fresh install to playing your favorite game in 10 clicks.",
   "whyUltramarine.runs.learnMore": "Explore our app selection",
 
