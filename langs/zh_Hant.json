@@ -1,1 +1,18 @@
-{}
+{
+  "site.description": "Ultramarine前衛作業系統。用您最愛的裝置和工具，專注做您最愛的事。",
+  "header.openMenu": "開啟選單",
+  "header.wiki": "維基",
+  "header.community": "社羣",
+  "header.blog": "日誌",
+  "header.merch": "商品",
+  "header.download": "下載",
+  "downloadLinks.download": "下載",
+  "downloadLinks.viewChecksum": "校驗碼",
+  "downloadOptions.architecture": "處理器架構",
+  "downloadOptions.device": "裝置",
+  "downloadOptions.generic": "普通",
+  "downloadOptions.surface": "Microsoft Surface",
+  "downloadOptions.arm": "ARM架構",
+  "hero.slogan": "做您最愛的。",
+  "hero.description": "Ultramarine Linux是一個前衛作業系統，不論工作、學習、娛樂，都能以您原有的裝置及工具，加持您的工作流程；配合不同微調、工具，令您的系統行雲流水、一氣呵成。"
+}
