@@ -1,1 +1,15 @@
-{}
+{
+  "site.title": "Ultramarine Linux",
+  "site.title.short": "Ultramarine",
+  "site.description": "Ultramarineは、使い慣れたハードウェアとツールを使用して、あなたのやりたいことに集中できる最新のオペレーティングシステムです。",
+  "header.openMenu": "メインメニューを開く",
+  "header.wiki": "Wiki",
+  "header.community": "コミュニティ",
+  "header.blog": "ブログ",
+  "header.merch": "グッズ",
+  "header.download": "ダウンロード",
+  "downloadLinks.download": "ダウンロード",
+  "downloadLinks.viewChecksum": "チェックサムを表示",
+  "downloadOptions.architecture": "アーキテクチャー",
+  "downloadOptions.device": "デバイス"
+}
