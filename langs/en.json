@@ -54,7 +54,7 @@
   "download.wslTitle": "WSL",
   "download.wslDescription": "Use Ultramarine on your existing Windows installation via WSL",
   "download.preinstalledTitle": "Preinstalled Images",
-  "download.preinstalledDescription": "Preinstalled images to flash directly to a device",
+  "download.preinstalledDescription": "Preinstalled images to flash directly to a device. Raspberry Pi and Pinebook Pro users should grab these.",
   "download.torrentsTitle": "Torrents",
   "download.torrentsDescription": "Check out our torrents provided by FOSSTorrents",
   "download.oldReleasesTitle": "Old Releases",
