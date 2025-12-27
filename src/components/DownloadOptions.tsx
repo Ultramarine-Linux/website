@@ -228,14 +228,17 @@ const DownloadOptions = ({ lang }) => {
         }
         {$downloadDevice === "generic" &&
           $downloadInstaller === "readymade" && (
-            <Trans t={t("downloadOptions.readymadeNote")}>
-              <a
-                href="https://github.com/FyraLabs/readymade/issues"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent-200 hover:text-accent-400 transition-colors"
-              />
-            </Trans>
+            <>
+              <br/>
+              <Trans t={t("downloadOptions.readymadeNote")}>
+                <a
+                  href="https://github.com/FyraLabs/readymade/issues"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-200 hover:text-accent-400 transition-colors"
+                />
+              </Trans>
+            </>
           )}
       </p>
     </>
