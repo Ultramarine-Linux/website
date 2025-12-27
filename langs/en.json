@@ -124,7 +124,7 @@
   "faq.5": "Is Ultramarine semi-rolling?",
   "faq.5a": "No. Ultramarine and Fedora are not semi-rolling or rolling. They use a stable release scheme. Updates with breaking changes are rolled out with only major releases. Minor updates/point updates must be backwards-compatible, i.e. system components in Ultramarine are updated if and only if they do not break compatibility.",
   "faq.6": "Does Ultramarine run on my device?",
-  "faq.6a": "If your're using a standard PC, yes. Otherwise, if your computer is 64-bit, check out the <1>Ultramarine Anywhere page</1> for more about non-standard devices.",
+  "faq.6a": "If you're using a standard PC, yes. Otherwise, if your computer is 64-bit, check out the <1>Ultramarine Anywhere page</1> for more about non-standard devices.",
 
   "whyUltramarine.title": "Why Ultramarine?",
   "whyUltramarine.work.title": "Get to work, faster",
