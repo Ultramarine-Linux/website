@@ -37,17 +37,21 @@ const LanguagePicker = ({ currentLang }: { currentLang: string }) => {
             transition
             className="rounded-lg [--anchor-gap:--spacing(1)] focus:outline-none bg-gray-800 transition duration-100 ease-in data-leave:data-closed:opacity-0 p-1 gap-1 flex flex-col z-50 shadow-md border border-white/5"
           >
-            {Array.from(listLang(i18nya).entries().map(([locale, lang]) => (
-              <ListboxOption
-                className="group flex items-center rounded-md px-3 py-1.5 gap-2 text-sm font-medium data-focus:bg-gray-700 select-none cursor-default"
-                key={locale}
-                value={locale}
-                aria-label={lang}
-              >
-                <Checkmark className="invisible group-data-selected:visible" />
-                {lang}
-              </ListboxOption>
-            )))}
+            {Array.from(
+              listLang(i18nya)
+                .entries()
+                .map(([locale, lang]) => (
+                  <ListboxOption
+                    className="group flex items-center rounded-md px-3 py-1.5 gap-2 text-sm font-medium data-focus:bg-gray-700 select-none cursor-default"
+                    key={locale}
+                    value={locale}
+                    aria-label={lang}
+                  >
+                    <Checkmark className="invisible group-data-selected:visible" />
+                    {lang}
+                  </ListboxOption>
+                )),
+            )}
           </ListboxOptions>
         </Listbox>
       </div>
