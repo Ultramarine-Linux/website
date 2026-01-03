@@ -1,16 +1,19 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { makeT } from "../i18n.ts";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { makeGetStaticPaths } from "astro-i18nya";
+import i18nya, { makeT, getLocalizedPath } from "../../i18n.ts";
 const t = makeT(Astro.params.lang);
 
-import Hero from "../components/sections/Hero.astro";
-import WhyUltramarine from "../components/sections/WhyUltramarine.astro";
-import TestimonialsAndFAQs from "../components/sections/TestimonialsAndFAQs.astro";
-import FedoraMigrationScriptDialog from "../components/sections/FedoraMigrationScriptDialog.astro";
+import Hero from "../../components/sections/Hero.astro";
+import WhyUltramarine from "../../components/sections/WhyUltramarine.astro";
+import TestimonialsAndFAQs from "../../components/sections/TestimonialsAndFAQs.astro";
+import FedoraMigrationScriptDialog from "../../components/sections/FedoraMigrationScriptDialog.astro";
 
-import DownloadIcon from "../components/icons/DownloadIcon.svg";
-import WavyDivider from "../../public/divider_1.svg";
-import UmDivider from "../../public/divider_2.svg";
+import DownloadIcon from "../../components/icons/DownloadIcon.svg";
+import WavyDivider from "../../../public/divider_1.svg";
+import UmDivider from "../../../public/divider_2.svg";
+
+export const getStaticPaths = makeGetStaticPaths(i18nya);
 ---
 
 <BaseLayout>
@@ -43,7 +46,7 @@ import UmDivider from "../../public/divider_2.svg";
               {t("index.ready")}
             </h1>
             <a
-              href="/download"
+              href={getLocalizedPath(Astro.params.lang, "/download")}
               class="flex flex-row gap-2 items-center text-white font-medium text-xl py-2 px-6 rounded-xl bg-accent-600 hover:bg-accent-700 transition-colors"
             >
               <DownloadIcon />

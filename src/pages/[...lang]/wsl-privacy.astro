@@ -1,18 +1,23 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import i18nya, { makeT } from "../../i18n.ts";
-import { makeGetStaticPaths } from 'astro-i18nya';
-const t = makeT(Astro.params.lang ?? "en");
+import { makeGetStaticPaths } from "astro-i18nya";
+const t = makeT(Astro.params.lang);
+
 export const getStaticPaths = makeGetStaticPaths(i18nya);
 ---
 
-<BaseLayout lang={Astro.params.lang}>
+<BaseLayout>
   <div
     class="flex flex-col items-start max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16 mt-12"
   >
     <h1 class="text-4xl font-bold mb-2">{t("wslPrivacy.title")}</h1>
     <p>
-      {t("wslPrivacy.description", { email: (<a href="mailto:contact@fyralabs.com">contact@fyralabs.com</a>)})}      
+      {
+        t("wslPrivacy.description", {
+          email: <a href="mailto:contact@fyralabs.com">contact@fyralabs.com</a>,
+        })
+      }
     </p>
   </div>
 </BaseLayout>
