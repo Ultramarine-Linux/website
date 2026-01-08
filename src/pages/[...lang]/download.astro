@@ -1,20 +1,23 @@
 ---
-import DownloadSection from "../components/DownloadSection.astro";
-import SmallDownloadCard from "../components/SmallDownloadCard.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import budgieScreenshot from "../assets/43/screenshots/budgie.webp";
-import gnomeScreenshot from "../assets/43/screenshots/gnome.webp";
-import xfceScreenshot from "../assets/43/screenshots/xfce.webp";
-import plasmaScreenshot from "../assets/43/screenshots/plasma.webp";
-import budgieScreenshotDark from "../assets/43/screenshots/budgie-dark.webp";
-import gnomeScreenshotDark from "../assets/43/screenshots/gnome-dark.webp";
-import xfceScreenshotDark from "../assets/43/screenshots/xfce-dark.webp";
-import plasmaScreenshotDark from "../assets/43/screenshots/plasma-dark.webp";
-import DownloadOptions from "../components/DownloadOptions";
-import { makeT } from "../i18n.ts";
+import DownloadSection from "../../components/DownloadSection.astro";
+import SmallDownloadCard from "../../components/SmallDownloadCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import budgieScreenshot from "../../assets/43/screenshots/budgie.webp";
+import gnomeScreenshot from "../../assets/43/screenshots/gnome.webp";
+import xfceScreenshot from "../../assets/43/screenshots/xfce.webp";
+import plasmaScreenshot from "../../assets/43/screenshots/plasma.webp";
+import budgieScreenshotDark from "../../assets/43/screenshots/budgie-dark.webp";
+import gnomeScreenshotDark from "../../assets/43/screenshots/gnome-dark.webp";
+import xfceScreenshotDark from "../../assets/43/screenshots/xfce-dark.webp";
+import plasmaScreenshotDark from "../../assets/43/screenshots/plasma-dark.webp";
+import DownloadOptions from "../../components/DownloadOptions";
+import i18nya, { makeT } from "../../i18n.ts";
+import { makeGetStaticPaths } from "astro-i18nya";
 const t = makeT(Astro.params.lang);
 const version = "43";
 const codename = "Gas Meter";
+
+export const getStaticPaths = makeGetStaticPaths(i18nya);
 ---
 
 <BaseLayout>
