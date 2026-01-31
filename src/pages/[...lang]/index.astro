@@ -22,12 +22,12 @@ export const getStaticPaths = makeGetStaticPaths(i18nya);
     <div>
       <Hero />
 
-      <div class="w-full overflow-hidden self-center hidden md:block">
+      <div class="relative w-full overflow-hidden self-center hidden md:block">
         <WavyDivider class="w-full" preserveAspectRatio="none" />
       </div>
 
       <a
-        class="hidden md:block absolute bottom-8 left-8"
+        class="hidden md:block sticky bottom-8 ml-8 mb-12"
         href="#why-ultramarine"
       >
         <ArrowDown className="size-8 animate-bounce" />
