@@ -11,6 +11,10 @@ import gnomeScreenshotDark from "../../assets/43/screenshots/gnome-dark.webp";
 import xfceScreenshotDark from "../../assets/43/screenshots/xfce-dark.webp";
 import plasmaScreenshotDark from "../../assets/43/screenshots/plasma-dark.webp";
 import DownloadOptions from "../../components/DownloadOptions";
+import Windows from "~icons/fa6-brands/windows";
+import Bittorrent from "~icons/simple-icons/bittorrent";
+import Archive from "~icons/bi/archive-fill";
+import File from "~icons/bi/file-earmark-fill";
 import i18nya, { makeT } from "../../i18n.ts";
 import { makeGetStaticPaths } from "astro-i18nya";
 const t = makeT(Astro.params.lang);
@@ -77,22 +81,30 @@ export const getStaticPaths = makeGetStaticPaths(i18nya);
         title={t("download.wslTitle")}
         description={t("download.wslDescription")}
         link="https://apps.microsoft.com/store/detail/9PBPG2RDMZB9?cid=DevShareMCLPCB"
-      />
+      >
+        <Windows className="w-6 h-6 text-gray-400" slot="icon" />
+      </SmallDownloadCard>
       <SmallDownloadCard
         title={t("download.preinstalledTitle")}
         description={t("download.preinstalledDescription")}
         link={`https://images.fyralabs.com/images/ultramarine/${version}/`}
-      />
+      >
+        <File className="w-6 h-6 text-gray-400" slot="icon" />
+      </SmallDownloadCard>
       <SmallDownloadCard
         title={t("download.torrentsTitle")}
         description={t("download.torrentsDescription")}
         link="https://fosstorrents.com/distributions/ultramarine-linux/"
-      />
+      >
+        <Bittorrent className="w-6 h-6 text-gray-400" slot="icon" />
+      </SmallDownloadCard>
       <SmallDownloadCard
         title={t("download.oldReleasesTitle")}
         description={t("download.oldReleasesDescription")}
         link="https://images.fyralabs.com/"
-      />
+      >
+        <Archive className="w-6 h-6 text-gray-400" slot="icon" />
+      </SmallDownloadCard>
     </div>
   </div>
 </BaseLayout>
