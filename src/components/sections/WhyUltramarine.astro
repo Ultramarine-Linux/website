@@ -9,7 +9,10 @@ import { makeT } from "../../i18n.ts";
 const t = makeT(Astro.params.lang ?? "en");
 ---
 
-<div class="relative max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16">
+<div
+  class="relative max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16"
+  id="why-ultramarine"
+>
   <h2 class="text-4xl font-bold mt-4 mb-12">{t("whyUltramarine.title")}</h2>
 
   <div
