@@ -12,11 +12,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
   color-scheme: dark;
 }
 
 * {
- text-autospace: normal;
+  text-autospace: normal;
 }
 
 blockquote {

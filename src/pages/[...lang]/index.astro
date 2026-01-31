@@ -12,6 +12,7 @@ import FedoraMigrationScriptDialog from "../../components/sections/FedoraMigrati
 import DownloadIcon from "../../components/icons/DownloadIcon.svg";
 import WavyDivider from "../../../public/divider_1.svg";
 import UmDivider from "../../../public/divider_2.svg";
+import ArrowDown from "~icons/bi/arrow-down";
 
 export const getStaticPaths = makeGetStaticPaths(i18nya);
 ---
@@ -24,6 +25,13 @@ export const getStaticPaths = makeGetStaticPaths(i18nya);
       <div class="w-full overflow-hidden self-center hidden md:block">
         <WavyDivider class="w-full" preserveAspectRatio="none" />
       </div>
+
+      <a
+        class="hidden md:block absolute bottom-8 left-8"
+        href="#why-ultramarine"
+      >
+        <ArrowDown className="size-8 animate-bounce" />
+      </a>
 
       <WhyUltramarine />
 
