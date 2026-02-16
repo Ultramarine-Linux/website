@@ -28,7 +28,7 @@
       "devDependencies": {
         "@iconify-json/bi": "^1.2.7",
         "@iconify-json/fa6-brands": "^1.2.6",
-        "@iconify-json/simple-icons": "^1.2.55",
+        "@iconify-json/simple-icons": "^1.2.70",
         "@tailwindcss/typography": "^0.5.19",
         "prettier": "^3.6.2",
         "prettier-plugin-astro": "^0.14.1",
@@ -171,7 +171,7 @@
 
     "@iconify-json/fluent": ["@iconify-json/fluent@1.2.33", "", { "dependencies": { "@iconify/types": "2.0.0" } }, "sha512-boteYANiRo+txCGpxv0okpGUmAkmdsze+Gy061TpXx2N+VUFeGYMnmcoimRZWPOoJt7se+QF+Wv8DY3PV0otfg=="],
 
-    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.55", "", { "dependencies": { "@iconify/types": "2.0.0" } }, "sha512-9vc04pmup/zcef8hDypWU8nMwMaFVkWuUzWkxyL++DVp5AA8baoJHK6RyKN1v+cvfR2agxkUb053XVggzFFkTA=="],
+    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.70", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-CYNRCgN6nBTjN4dNkrBCjHXNR2e4hQihdsZUs/afUNFOWLSYjfihca4EFN05rRvDk4Xoy2n8tym6IxBZmcn+Qg=="],
 
     "@iconify/types": ["@iconify/types@2.0.0", "", {}, "sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg=="],
 
