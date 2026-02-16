@@ -33,7 +33,7 @@
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
-    "@iconify-json/bi": "^1.2.6",
+    "@iconify-json/bi": "^1.2.7",
     "@iconify-json/fa6-brands": "^1.2.6",
     "@iconify-json/simple-icons": "^1.2.55",
     "@tailwindcss/typography": "^0.5.19",
