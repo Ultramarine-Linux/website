@@ -26,7 +26,7 @@
         "tailwindcss": "^4.1.16",
       },
       "devDependencies": {
-        "@iconify-json/bi": "^1.2.6",
+        "@iconify-json/bi": "^1.2.7",
         "@iconify-json/fa6-brands": "^1.2.6",
         "@iconify-json/simple-icons": "^1.2.55",
         "@tailwindcss/typography": "^0.5.19",
@@ -165,7 +165,7 @@
 
     "@headlessui/react": ["@headlessui/react@2.2.9", "", { "dependencies": { "@floating-ui/react": "0.26.28", "@react-aria/focus": "3.21.2", "@react-aria/interactions": "3.25.6", "@tanstack/react-virtual": "3.13.12", "use-sync-external-store": "1.6.0" }, "peerDependencies": { "react": "19.2.0", "react-dom": "19.2.0" } }, "sha512-Mb+Un58gwBn0/yWZfyrCh0TJyurtT+dETj7YHleylHk5od3dv2XqETPGWMyQ5/7sYN7oWdyM1u9MvC0OC8UmzQ=="],
 
-    "@iconify-json/bi": ["@iconify-json/bi@1.2.6", "", { "dependencies": { "@iconify/types": "2.0.0" } }, "sha512-fWfLr1/+DJDe8+rIUXxMwvmWBZFlxRtM59sYnrezJ2xX87QKyXVw3QuforJ4kF2Orrz85J+JTRG6305vaJ7flA=="],
+    "@iconify-json/bi": ["@iconify-json/bi@1.2.7", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-IPz8WNxmLkH1I9msl+0Q4OnmjjvP4uU0Z61a4i4sqonB6vKSbMGUWuGn8/YuuszlReVj8rf+3gNv5JU8Xoljyg=="],
 
     "@iconify-json/fa6-brands": ["@iconify-json/fa6-brands@1.2.6", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-twL3X4KWcxAhbc1vz/mIDsVr+CAItk1/EIfxKUVQtpv6O4eydk5KNYqTZWdvJNHGInUgd6vKg21aWfVgb5DXEg=="],
 
