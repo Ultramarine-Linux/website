@@ -25,7 +25,7 @@
     "@types/react-dom": "^19.2.2",
     "astro": "^5.16.15",
     "astro-i18nya": "^0.2.3",
-    "i18nya": "^0.2.3",
+    "i18nya": "^0.2.4",
     "motion": "^12.34.0",
     "nanostores": "^1.1.0",
     "react": "^19.2.0",
