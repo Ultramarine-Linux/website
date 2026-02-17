@@ -6,6 +6,7 @@ import currentComputerImage from "../../assets/43/screenshots/plasma-dark.webp";
 import workImage from "../../assets/42/marketing/work.webp";
 import runImage from "../../assets/43/screenshots/budgie-dark.webp";
 import { makeT } from "../../i18n.ts";
+import Carousel from "../Carousel";
 const t = makeT(Astro.params.lang ?? "en");
 ---
 
@@ -134,12 +135,36 @@ const t = makeT(Astro.params.lang ?? "en");
         <span class="font-medium">{t("whyUltramarine.runs.learnMore")}</span>
       </Link>
     </div>
-    <Picture
-      class="lg:w-[466px] rounded-lg"
-      layout="constrained"
-      src={runImage}
-      formats={["avif", "webp"]}
-      alt="Screenshot of an Ultramarine GNOME system with the system monitor and fastfetch showing"
-    />
+    <div class="lg:w-[466px]">
+      <Carousel
+        client:load
+        views={[
+          {
+            name: "Play",
+            description:
+              "An example gaming setup, displaying CrossCode and Steam",
+            image: "/carousel/play.webp",
+          },
+          {
+            name: "Create",
+            description:
+              "An example creative setup, displaying a pebble drawn in Krita and Victrola (our music app)",
+            image: "/carousel/create.webp",
+          },
+          {
+            name: "Develop",
+            description:
+              "An example software development setup, displaying VSCode and htop running in a terminal",
+            image: "/carousel/develop.webp",
+          },
+          {
+            name: "Study",
+            description:
+              'An example study setup, with a web browser opened on the Wikipedia page for "Catgirl" and an essay opened in LibreOffice',
+            image: "/carousel/study.webp",
+          },
+        ]}
+      />
+    </div>
   </div>
 </div>
