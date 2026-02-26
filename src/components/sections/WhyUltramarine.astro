@@ -6,6 +6,7 @@ import currentComputerImage from "../../assets/43/screenshots/plasma-dark.webp";
 import workImage from "../../assets/42/marketing/work.webp";
 import runImage from "../../assets/43/screenshots/budgie-dark.webp";
 import { makeT } from "../../i18n.ts";
+import Carousel from "../Carousel";
 const t = makeT(Astro.params.lang ?? "en");
 ---
 
@@ -134,12 +135,40 @@ const t = makeT(Astro.params.lang ?? "en");
         <span class="font-medium">{t("whyUltramarine.runs.learnMore")}</span>
       </Link>
     </div>
-    <Picture
-      class="lg:w-[466px] rounded-lg"
-      layout="constrained"
-      src={runImage}
-      formats={["avif", "webp"]}
-      alt="Screenshot of an Ultramarine GNOME system with the system monitor and fastfetch showing"
-    />
+    <div class="lg:w-[466px]">
+      <Carousel
+        client:load
+        views={[
+          {
+            name: "Play",
+            description:
+              "An example gaming setup, displaying Portal 2 and Steam's controller configurator. Ultramarine supports the majority of games on Steam and most game controllers.",
+            image: "/carousel/play.webp",
+            apps: "Portal 2 and Steam by Valve Software",
+          },
+          {
+            name: "Create",
+            description:
+              "An example creative setup, displaying a drawing in Krita and a Drum Machine app",
+            image: "/carousel/create.webp",
+            apps: "Krita by KDE and Drum Machine by Revisito",
+          },
+          {
+            name: "Develop",
+            description:
+              "An example software development setup, displaying Zed Editor and documentation open in a web browser",
+            image: "/carousel/develop.webp",
+            apps: "Zed by Zed Industries and Firefox by Mozilla",
+          },
+          {
+            name: "Study",
+            description:
+              'An example study setup, with a web browser opened on the Wikipedia page for "Catgirl" and an essay opened in LibreOffice',
+            image: "/carousel/study.webp",
+            apps: "Firefox by Mozilla and LibreOffice",
+          },
+        ]}
+      />
+    </div>
   </div>
 </div>
