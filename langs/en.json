@@ -120,7 +120,7 @@
   "faq.3a": "The migration scripts install RPM Fusion, Terra, and the bare minimum of an Ultramarine Linux installation (Swapping Fedora release packages with the Ultramarine ones).",
   "faq.3b": "The script only installs the bare minimum required for Ultramarine Linux to work because we don’t want to add additional bloat to your current system.",
   "faq.4": "Does Ultramarine track me or collect my data?",
-  "faq.4a": "As of now, the only data we collect is a count of how many times a package has been downloaded from Terra or the Ultramarine repository using <1>DNF Counting</1>. This information is not tied to you or your computer. Fyra Labs (the company behind Ultramarine) does not collect any data that can be tied to an individual.",
+  "faq.4a": "As of now, the only data we collect is a count of how many times a package has been downloaded from Terra or the Ultramarine repository using <1>DNF Counting</1>, and the number of times our out of box experience connects to the internet. This information does not include any information about your system beyond your CPU architecture, Ultramarine version, and Edition. Fyra Labs (the company behind Ultramarine) does not collect any data that can be tied to an individual.",
   "faq.5": "Is Ultramarine semi-rolling?",
   "faq.5a": "No. Ultramarine and Fedora are not semi-rolling or rolling. They use a stable release scheme. Updates with breaking changes are rolled out with only major releases. Minor updates/point updates must be backwards-compatible, i.e. system components in Ultramarine are updated if and only if they do not break compatibility.",
   "faq.6": "Does Ultramarine run on my device?",
