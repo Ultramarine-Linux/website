@@ -21,7 +21,7 @@ export const CarouselWrapper = () => {
               </a>{" "}
               and{" "}
               <a
-                href="https://flathub.org/en/apps/com.valvesoftware.Steam"
+                href="https://steampowered.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent-200 hover:text-accent-400"
