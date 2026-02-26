@@ -9,7 +9,7 @@ interface CarouselItem {
   name: string;
   image: string;
   description: string;
-  apps: string;
+  apps: React.ReactNode;
 }
 
 const Carousel: FC<{ views: CarouselItem[] }> = (props) => {
