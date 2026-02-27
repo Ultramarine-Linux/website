@@ -77,7 +77,7 @@ export const CarouselWrapper = () => {
               </a>{" "}
               by Zed Industries and{" "}
               <a
-                href="https://flathub.org/en/apps/org.mozilla.firefox"
+                href="https://zed.dev/docs/linux#other-ways-to-install-zed-on-linux"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent-200 hover:text-accent-400"
