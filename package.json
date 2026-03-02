@@ -23,7 +23,7 @@
     "@tailwindcss/vite": "^4.2.1",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
-    "astro": "^5.16.15",
+    "astro": "^5.18.0",
     "astro-i18nya": "^0.2.3",
     "i18nya": "^0.2.4",
     "motion": "^12.34.3",
