@@ -16,3 +16,10 @@ All commands are run from the root of the project, from a terminal:
 | `bun run preview`       | Preview your build locally, before deploying     |
 | `bun run astro ...`     | Run CLI commands like `astro add`, `astro check` |
 | `bun run astro --help`  | Get help using the Astro CLI                     |
+
+## Most active contributors
+<a href="https://github.com/Ultramarine-Linux/website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Ultramarine-Linux/website" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
