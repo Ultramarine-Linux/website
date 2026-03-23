@@ -4,7 +4,7 @@ Self-explanatory. See issues for things to work on.
 
 ![Homepage Screenshot](https://github.com/user-attachments/assets/bbd9ac1a-9e79-4dcd-b0d6-d87f8ccb6290)
 
-## Running
+## Hacking
 ### Dev Containers
 
 1. Install the Dev Containers extension in your IDE
