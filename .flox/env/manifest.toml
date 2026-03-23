@@ -14,6 +14,8 @@ on-activate = """
   echo "run 'flox services start dev-host' to start the dev server and expose to the LAN/Tailnet at hostname:4321"
   echo ""
   echo "Contact Jaiden for help with Flox @ Fyra"
+  echo ""
+  echo ""
 """
 [services.dev]
 command = "bun dev"

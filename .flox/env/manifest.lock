@@ -11,7 +11,7 @@
       }
     },
     "hook": {
-      "on-activate": "\n  bun i\n  echo \"\"\n  echo \"run 'flox services start dev' to start the dev server at localhost:4321\"\n  echo \"\"\n  echo \"run 'flox services start dev-host' to start the dev server and expose to the LAN/Tailnet at hostname:4321\"\n  echo \"\"\n  echo \"Contact Jaiden for help with Flox @ Fyra\"\n"
+      "on-activate": "\n  bun i\n  echo \"\"\n  echo \"run 'flox services start dev' to start the dev server at localhost:4321\"\n  echo \"\"\n  echo \"run 'flox services start dev-host' to start the dev server and expose to the LAN/Tailnet at hostname:4321\"\n  echo \"\"\n  echo \"Contact Jaiden for help with Flox @ Fyra\"\n  echo \"\"\n  echo \"\"\n"
     },
     "options": {
       "systems": [
