@@ -23,10 +23,10 @@
     },
     "services": {
       "dev": {
-        "command": "bun dev'"
+        "command": "bun dev"
       },
       "dev-host": {
-        "command": "bun dev --host'"
+        "command": "bun dev --host"
       }
     }
   },

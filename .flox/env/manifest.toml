@@ -16,10 +16,10 @@ on-activate = """
   echo "Contact Jaiden for help with Flox @ Fyra"
 """
 [services.dev]
-command = "bun dev'"
+command = "bun dev"
 
 [services.dev-host]
-command = "bun dev --host'"
+command = "bun dev --host"
 
 ## Other Environment Options -----------------------------------------
 [options]
