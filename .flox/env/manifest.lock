@@ -1,0 +1,271 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "schema-version": "1.10.0",
+    "install": {
+      "bun": {
+        "pkg-path": "bun"
+      },
+      "nodejs": {
+        "pkg-path": "nodejs"
+      }
+    },
+    "hook": {
+      "on-activate": "\n  bun i\n  echo \"\"\n  echo \"run 'flox services start dev' to start the dev server at localhost:4321\"\n  echo \"\"\n  echo \"run 'flox services start dev-host' to start the dev server and expose to the LAN/Tailnet at hostname:4321\"\n  echo \"\"\n  echo \"Contact Jaiden for help with Flox @ Fyra\"\n  echo \"\"\n  echo \"\"\n"
+    },
+    "options": {
+      "systems": [
+        "aarch64-darwin",
+        "aarch64-linux",
+        "x86_64-darwin",
+        "x86_64-linux"
+      ]
+    },
+    "services": {
+      "dev": {
+        "command": "bun dev"
+      },
+      "dev-host": {
+        "command": "bun dev --host"
+      }
+    }
+  },
+  "packages": [
+    {
+      "attr_path": "bun",
+      "broken": false,
+      "derivation": "/nix/store/6wvpwf4gfv8rpm3a2dr73ahlx2cw2r18-bun-1.3.10.drv",
+      "description": "Incredibly fast JavaScript runtime, bundler, transpiler and package manager – all in one",
+      "install_id": "bun",
+      "license": "[ MIT, LGPL-2.1-only ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "name": "bun-1.3.10",
+      "pname": "bun",
+      "rev": "5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "rev_count": 963917,
+      "rev_date": "2026-03-16T07:26:50Z",
+      "scrape_date": "2026-03-17T04:42:03.394492Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.3.10",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/421j82pv4gjmh9n2gchb4cs40hqfj20d-bun-1.3.10"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "bun",
+      "broken": false,
+      "derivation": "/nix/store/ripy81lw4h7slpj8r8rnqy2648wk8fv0-bun-1.3.10.drv",
+      "description": "Incredibly fast JavaScript runtime, bundler, transpiler and package manager – all in one",
+      "install_id": "bun",
+      "license": "[ MIT, LGPL-2.1-only ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "name": "bun-1.3.10",
+      "pname": "bun",
+      "rev": "5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "rev_count": 963917,
+      "rev_date": "2026-03-16T07:26:50Z",
+      "scrape_date": "2026-03-17T05:14:38.447833Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.3.10",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/ffdcfkl3kpdwagswlwlff6qazxkj4cag-bun-1.3.10"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "bun",
+      "broken": false,
+      "derivation": "/nix/store/isi2vyf4kk6c0ddwsgq0n53313xqsqdf-bun-1.3.10.drv",
+      "description": "Incredibly fast JavaScript runtime, bundler, transpiler and package manager – all in one",
+      "install_id": "bun",
+      "license": "[ MIT, LGPL-2.1-only ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "name": "bun-1.3.10",
+      "pname": "bun",
+      "rev": "5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "rev_count": 963917,
+      "rev_date": "2026-03-16T07:26:50Z",
+      "scrape_date": "2026-03-17T05:45:10.056379Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.3.10",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/k6gj0kvvy9nrs87i646qxj9hr6fkchix-bun-1.3.10"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "bun",
+      "broken": false,
+      "derivation": "/nix/store/7nj2p1hvxj7kkg50bllk9d2bkb3y43c3-bun-1.3.10.drv",
+      "description": "Incredibly fast JavaScript runtime, bundler, transpiler and package manager – all in one",
+      "install_id": "bun",
+      "license": "[ MIT, LGPL-2.1-only ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "name": "bun-1.3.10",
+      "pname": "bun",
+      "rev": "5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "rev_count": 963917,
+      "rev_date": "2026-03-16T07:26:50Z",
+      "scrape_date": "2026-03-17T06:21:13.915335Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.3.10",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/ffgyf7g2n4gbhi1zgbcphssivfah1c4s-bun-1.3.10"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs",
+      "broken": false,
+      "derivation": "/nix/store/15casabz8n6il3myv53c3gwmazcjwjxf-nodejs-24.13.0.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "name": "nodejs-24.13.0",
+      "pname": "nodejs",
+      "rev": "5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "rev_count": 963917,
+      "rev_date": "2026-03-16T07:26:50Z",
+      "scrape_date": "2026-03-17T04:42:28.264954Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "24.13.0",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/cx0jd5mwhn7ihryyv0qp9d33f8s1iwb7-nodejs-24.13.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs",
+      "broken": false,
+      "derivation": "/nix/store/w9vyyxzm4d1y0y3qyazdcfnvp3yjx9rb-nodejs-24.13.0.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "name": "nodejs-24.13.0",
+      "pname": "nodejs",
+      "rev": "5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "rev_count": 963917,
+      "rev_date": "2026-03-16T07:26:50Z",
+      "scrape_date": "2026-03-17T05:15:19.362355Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "24.13.0",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/8dsjz52869ygjd6xdvibgk3ysl3fg6zp-nodejs-24.13.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs",
+      "broken": false,
+      "derivation": "/nix/store/2g4jab428j25rirdw7k5j8hwwfxp5x9v-nodejs-24.13.0.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "name": "nodejs-24.13.0",
+      "pname": "nodejs",
+      "rev": "5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "rev_count": 963917,
+      "rev_date": "2026-03-16T07:26:50Z",
+      "scrape_date": "2026-03-17T05:45:35.208791Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "24.13.0",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/i9bak02hsrywwba0apxdn7ldvkf9jl6a-nodejs-24.13.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs",
+      "broken": false,
+      "derivation": "/nix/store/gr41mppcarfhwk10hv2g6rdmgr2yq3hz-nodejs-24.13.0.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "name": "nodejs-24.13.0",
+      "pname": "nodejs",
+      "rev": "5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+      "rev_count": 963917,
+      "rev_date": "2026-03-16T07:26:50Z",
+      "scrape_date": "2026-03-17T06:21:57.237740Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "24.13.0",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/sy0c7j0npsq33d9zhnnzvjnzc52f4y0p-nodejs-24.13.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    }
+  ]
+}
