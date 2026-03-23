@@ -12,6 +12,8 @@ Self-explanatory. See issues for things to work on.
 
    - VSCode users need to install the Dev Containers extension
 
+   - Podman users need to install `podman-docker` from their package manager
+   
 2. Open your IDE and select the "Reopen in Dev Container" option
 3. Run `bun i` to install deps
 4. Run `bun dev` or `bun dev --host` to start the dev server
