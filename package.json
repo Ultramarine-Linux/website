@@ -41,6 +41,6 @@
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.34.5",
     "unplugin-icons": "^23.0.1",
-    "vite-plugin-svgr": "^4.5.0"
+    "vite-plugin-svgr": "^5.0.0"
   }
 }
