@@ -18,7 +18,7 @@
     "@astrojs/sitemap": "^3.7.1",
     "@headlessui/react": "^2.2.9",
     "@iconify-json/fluent": "^1.2.33",
-    "@nanostores/react": "^1.0.0",
+    "@nanostores/react": "^1.1.0",
     "@radix-ui/react-toggle-group": "^1.1.11",
     "@tailwindcss/vite": "^4.2.1",
     "@types/react": "^19.2.2",
