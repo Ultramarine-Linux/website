@@ -1,1 +1,11 @@
-{}
+{
+  "site.title.short": "Ultramarine",
+  "header.wiki": "ვიკი",
+  "header.community": "საზოგადოება",
+  "header.blog": "ბლოგი",
+  "header.merch": "საქონელი",
+  "header.download": "გადმოწერა",
+  "downloadLinks.download": "გადმოწერა",
+  "downloadOptions.architecture": "არქიტექტურა",
+  "downloadOptions.device": "მოწყობილობა"
+}
