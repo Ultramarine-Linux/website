@@ -6,6 +6,7 @@
 ver="0.1.4"
 # Oldest repo we provide is um37
 MINIMUM_RELEASEVER=37
+MAXIMUM_RELEASEVER=43
 set -euo pipefail
 
 trace() {
@@ -23,17 +24,17 @@ os_id=$(grep -E '^ID=' /etc/os-release | sed -e 's/ID=//g'; true)
 os_version=$(grep -E '^VERSION_ID=' /etc/os-release | sed -e 's/VERSION_ID=//g'; true)
 os_variant=$(grep -E '^VARIANT_ID=' /etc/os-release | sed -e 's/VARIANT_ID=//g'; true)
 
-# If the os_id is fedora and os_version is greater than or equal to MINIMUM_RELEASEVER, then permit upgrade, otherwise error
-if [[ ${os_id} = "fedora" ]] && [[ ${os_version} -ge $MINIMUM_RELEASEVER ]]; then
+# If the os_id is fedora and os_version is between MINIMUM_RELEASEVER and MAXIMUM_RELEASEVER, then permit upgrade, otherwise error
+if [[ ${os_id} = "fedora" ]] && [[ ${os_version} -ge $MINIMUM_RELEASEVER ]] && [[ ${os_version} -le $MAXIMUM_RELEASEVER ]]; then
   : # do nothing
-elif [[ ${os_id} = "fedora" ]] || [[ ${os_version} -lt $MINIMUM_RELEASEVER ]]; then
-  echo "This script is only for Fedora $MINIMUM_RELEASEVER or newer."
+elif [[ ${os_id} = "fedora" ]]; then
+  echo "This script is only for Fedora $MINIMUM_RELEASEVER to $MAXIMUM_RELEASEVER."
   exit 1
 elif [[ ${os_id} = "ultramarine" ]]; then
   echo "You are already running Ultramarine Linux. Congratulations!"
   exit 1
 else
-  echo "OS ${os_id} version ${os_version} is not supported. Please run this script on a copy of Fedora Linux $MINIMUM_RELEASEVER or newer."
+  echo "OS ${os_id} version ${os_version} is not supported. Please run this script on a copy of Fedora Linux $MINIMUM_RELEASEVER to $MAXIMUM_RELEASEVER."
   exit 1
 fi
 
