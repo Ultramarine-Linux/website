@@ -3,7 +3,7 @@
 # Fedora to Ultramarine Linux migration script
 # Lea's pro tip: Run this through shellcheck, it'll genuinely save so much time and effort
 
-ver="0.1.4"
+ver="0.1.5"
 # Oldest repo we provide is um37
 MINIMUM_RELEASEVER=37
 MAXIMUM_RELEASEVER=43
