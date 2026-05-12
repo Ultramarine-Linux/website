@@ -40,15 +40,20 @@ export default defineConfig({
     ],
   },
 
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.fontshare(),
-        name: "Switzer",
-        cssVariable: "--font-switzer",
-        weights: [300, 400, 500, 600, 700],
-        display: "swap",
-      },
-    ],
+  fonts: [
+    {
+      provider: fontProviders.fontshare(),
+      name: "Switzer",
+      cssVariable: "--font-switzer",
+      weights: [300, 400, 500, 600, 700],
+      display: "swap",
+    },
+  ],
+
+  image: {
+    remotePatterns: [{
+      protocol: 'https',
+      hostname: '**.githubusercontent.com',
+    }],
   },
 });
