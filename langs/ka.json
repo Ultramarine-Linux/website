@@ -65,5 +65,10 @@
   "download.latestRelease": "უახლესი ვერსია: {{version}} ({{codename}})",
   "community.socials": "გამოგვყევით სოციალურ ქსელებში",
   "migrate.convert": "ან <1>გადმოდით Fedora-დან</1>",
-  "comments.1a": "- Jack Wallen, ZDNet"
+  "comments.1a": "- Jack Wallen, ZDNet",
+  "comments.loved": "ხალხს უყვარს",
+  "whyUltramarine.work.title": "აბა, ჩქარა, სამსახურში",
+  "whyUltramarine.current.title": "თქვენი კომპიუტერი. უფრო უკეთესი",
+  "whyUltramarine.runs.learnMore": "დაათვალიერეთ ჩვენი აპების არჩევანი",
+  "download.pickFlavor": "აირჩიეთ Ultramarine-ის სასურველი ტიპი"
 }
