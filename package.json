@@ -19,7 +19,7 @@
     "@headlessui/react": "^2.2.10",
     "@iconify-json/fluent": "^1.2.48",
     "@nanostores/react": "^1.1.0",
-    "@radix-ui/react-toggle-group": "^1.1.11",
+    "@radix-ui/react-toggle-group": "^1.1.12",
     "@tailwindcss/vite": "^4.3.0",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
