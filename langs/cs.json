@@ -1,1 +1,19 @@
-{}
+{
+  "site.title": "Ultramarine Linux",
+  "site.title.short": "Ultramarine",
+  "site.description": "Ultramarine je moderní operační systém který vás nechá dělat si své s hardwarem a nástroji které milujete.",
+  "header.openMenu": "Otevřít hlavní nabídku",
+  "header.wiki": "Wiki",
+  "header.community": "Komunita",
+  "header.blog": "Blog",
+  "header.merch": "Merch",
+  "header.download": "Stáhnout",
+  "downloadLinks.download": "Stáhnout",
+  "downloadLinks.viewChecksum": "Zobrazit Checksum",
+  "downloadOptions.architecture": "Architektura",
+  "downloadOptions.device": "Zařízení",
+  "downloadOptions.generic": "Obecný",
+  "downloadOptions.surface": "Surface",
+  "downloadOptions.arm": "ARM",
+  "downloadOptions.genericDescription": "Tyto obrazy jsou pro většinu x86 počítačů. Pokud si nejste jistí, pravděpodobné potřebujete tyto."
+}
