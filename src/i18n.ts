@@ -7,6 +7,7 @@ const i18nya = await init<keyof typeof en>({
   defaultLang: "en",
   langDir: "../langs",
   fallbackLangs: {
+    zh_HK: "zh_Hant",
     yue: "zh_HK",
     yue_HK: "yue",
   },
