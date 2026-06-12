@@ -12,7 +12,7 @@
   "downloadOptions.genericDescription": "Estas imagens servem para a maioria dos computadores x86. Em caso de incerteza, isto provavelmente é o que procura.",
   "downloadOptions.surfaceDescription": "Estas imagens vêm com ajustes para dispositivos Microsoft Surface Intel e AMD. Mais informações podem ser encontradas em nossa <1>wiki</1>.",
   "downloadOptions.armDescription": "Estas imagens são para dispositivos ARM 64bit com suporte para Linux. Veja nossa wiki para mais informações <1>aqui</1>.",
-  "downloadOptions.readymadeNote": "Por favor, tenha em mente que o Readymade ainda está em preview e pode ainda não estar inteiramente funcional. Caso encontre algum problema, <1>pedimos que os reporte aqui.</>",
+  "downloadOptions.readymadeNote": "Por favor, tenha em mente que o Readymade ainda está em preview e pode ainda não estar inteiramente funcional. Caso encontre algum problema, <1>pedimos que os reporte aqui.</1>",
   "smallDownloadCard.edition": "Versão {{edition}}",
   "footer.description": "Ultramarine é um sistema operacional moderno que lhe permite só fazer o que precisa fazer, com o hardware e ferramentas que você já tem afinidade.",
   "footer.pages": "Páginas",
