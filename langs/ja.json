@@ -40,5 +40,19 @@
   "download.xfceDescription": "軽くて上品。古いPCを蘇らせたり、限界まで性能を引き出したりしたい人向け。",
   "download.gnomeDescription": "シンプルで洗練され直感的なデスクトップ。豊富なアプリと拡張機能のエコシステムが揃っています。",
   "index.ready": "準備できたか？",
-  "index.getUltramarine": "Ultramarineを取得"
+  "index.getUltramarine": "Ultramarineを取得",
+  "community.supportUs": "応援しよう",
+  "community.supportDescription": "Ultramarineはスポンサーのご支援があってこそ実現しています。ご支援は金額にかかわらず、私たちがより速く、より良く、より強く開発する助けになります。",
+  "community.sponsor": "スポンサー",
+  "community.kofi": "Ko-fi",
+  "community.liberapay": "Liberapay",
+  "community.mastodon": "Ultramarine Linuxマストドン",
+  "community.bluesky": "Ultramarine Linux Bluesky",
+  "community.subreddit": "Ultramarine Linuxサブレディット",
+  "community.twitter": "Ultramarine Linuxツイッター",
+  "wslPrivacy.title": "Ultramarine for WSLプライバシーポリシー",
+  "migrate.copy": "コピー",
+  "migrate.description": "このスクリプトでFedoraをUltramarineに変換してください（全てのスクリプトは検討してから実行してください）",
+  "migrate.convert": "或いは<1>Fedoraから変換する<1>",
+  "hero.slogan": "好きなことをやろう。"
 }
