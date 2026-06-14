@@ -28,7 +28,7 @@ os_variant=$(grep -E '^VARIANT_ID=' /etc/os-release | sed -e 's/VARIANT_ID=//g';
 if [[ ${os_id} = "fedora" || ${os_id} = "fedora-asahi-remix" ]] && [[ ${os_version} -le $MAXIMUM_RELEASEVER ]]; then
   : # do nothing
 elif [[ ${os_id} = "fedora" || ${os_id} = "fedora-asahi-remix" ]] || [[ ${os_version} -lt $MINIMUM_RELEASEVER ]]; then
-  echo "This script is only for Fedora $MINIMUM_RELEASEVER or newer."
+  echo "This script is only for Fedora $MINIMUM_RELEASEVER to $MAXIMUM_RELEASEVER."
   exit 1
 elif [[ ${os_id} = "ultramarine" ]]; then
   echo "You are already running Ultramarine Linux. Congratulations!"
