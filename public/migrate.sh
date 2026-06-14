@@ -25,7 +25,7 @@ os_version=$(grep -E '^VERSION_ID=' /etc/os-release | sed -e 's/VERSION_ID=//g';
 os_variant=$(grep -E '^VARIANT_ID=' /etc/os-release | sed -e 's/VARIANT_ID=//g'; true)
 
 # If the os_id is fedora and os_version is between MINIMUM_RELEASEVER and MAXIMUM_RELEASEVER, then permit upgrade, otherwise error
-if [[ ${os_id} = "fedora" || ${os_id} = "fedora-asahi-remix" ]] && [[ ${os_version} -ge $MINIMUM_RELEASEVER ]]; then
+if [[ ${os_id} = "fedora" || ${os_id} = "fedora-asahi-remix" ]] && [[ ${os_version} -le $MAXIMUM_RELEASEVER ]]; then
   : # do nothing
 elif [[ ${os_id} = "fedora" || ${os_id} = "fedora-asahi-remix" ]] || [[ ${os_version} -lt $MINIMUM_RELEASEVER ]]; then
   echo "This script is only for Fedora $MINIMUM_RELEASEVER or newer."
