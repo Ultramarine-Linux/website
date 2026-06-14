@@ -1,20 +1,27 @@
 ---
-import DownloadSection from "../components/DownloadSection.astro";
-import SmallDownloadCard from "../components/SmallDownloadCard.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import budgieScreenshot from "../assets/43/screenshots/budgie.webp";
-import gnomeScreenshot from "../assets/43/screenshots/gnome.webp";
-import xfceScreenshot from "../assets/43/screenshots/xfce.webp";
-import plasmaScreenshot from "../assets/43/screenshots/plasma.webp";
-import budgieScreenshotDark from "../assets/43/screenshots/budgie-dark.webp";
-import gnomeScreenshotDark from "../assets/43/screenshots/gnome-dark.webp";
-import xfceScreenshotDark from "../assets/43/screenshots/xfce-dark.webp";
-import plasmaScreenshotDark from "../assets/43/screenshots/plasma-dark.webp";
-import DownloadOptions from "../components/DownloadOptions";
-import { makeT } from "../i18n.ts";
+import DownloadSection from "../../components/DownloadSection.astro";
+import SmallDownloadCard from "../../components/SmallDownloadCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import budgieScreenshot from "../../assets/43/screenshots/budgie.webp";
+import gnomeScreenshot from "../../assets/43/screenshots/gnome.webp";
+import xfceScreenshot from "../../assets/43/screenshots/xfce.webp";
+import plasmaScreenshot from "../../assets/43/screenshots/plasma.webp";
+import budgieScreenshotDark from "../../assets/43/screenshots/budgie-dark.webp";
+import gnomeScreenshotDark from "../../assets/43/screenshots/gnome-dark.webp";
+import xfceScreenshotDark from "../../assets/43/screenshots/xfce-dark.webp";
+import plasmaScreenshotDark from "../../assets/43/screenshots/plasma-dark.webp";
+import DownloadOptions from "../../components/DownloadOptions";
+import Windows from "~icons/fa6-brands/windows";
+import Bittorrent from "~icons/simple-icons/bittorrent";
+import Archive from "~icons/bi/archive-fill";
+import File from "~icons/bi/file-earmark-fill";
+import i18nya, { makeT } from "../../i18n.ts";
+import { makeGetStaticPaths } from "astro-i18nya";
 const t = makeT(Astro.params.lang);
 const version = "43";
 const codename = "Gas Meter";
+
+export const getStaticPaths = makeGetStaticPaths(i18nya);
 ---
 
 <BaseLayout>
@@ -32,6 +39,7 @@ const codename = "Gas Meter";
       class="flex flex-col items-center justify-center gap-10 mt-8 mb-24 w-full"
     >
       <DownloadSection
+        editionDisplayName="KDE Plasma"
         editionName="Plasma"
         screenshot={plasmaScreenshot}
         screenshotDark={plasmaScreenshotDark}
@@ -73,22 +81,30 @@ const codename = "Gas Meter";
         title={t("download.wslTitle")}
         description={t("download.wslDescription")}
         link="https://apps.microsoft.com/store/detail/9PBPG2RDMZB9?cid=DevShareMCLPCB"
-      />
+      >
+        <Windows className="w-6 h-6 text-gray-400" slot="icon" />
+      </SmallDownloadCard>
       <SmallDownloadCard
         title={t("download.preinstalledTitle")}
         description={t("download.preinstalledDescription")}
         link={`https://images.fyralabs.com/images/ultramarine/${version}/`}
-      />
+      >
+        <File className="w-6 h-6 text-gray-400" slot="icon" />
+      </SmallDownloadCard>
       <SmallDownloadCard
         title={t("download.torrentsTitle")}
         description={t("download.torrentsDescription")}
         link="https://fosstorrents.com/distributions/ultramarine-linux/"
-      />
+      >
+        <Bittorrent className="w-6 h-6 text-gray-400" slot="icon" />
+      </SmallDownloadCard>
       <SmallDownloadCard
         title={t("download.oldReleasesTitle")}
         description={t("download.oldReleasesDescription")}
         link="https://images.fyralabs.com/"
-      />
+      >
+        <Archive className="w-6 h-6 text-gray-400" slot="icon" />
+      </SmallDownloadCard>
     </div>
   </div>
 </BaseLayout>

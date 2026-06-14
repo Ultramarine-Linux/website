@@ -9,7 +9,7 @@ import DownloadIcon from "./icons/DownloadIcon.svg?react";
 import HorizontalLines from "~icons/fluent/line-horizontal-3-16-regular";
 import Dismiss from "~icons/fluent/dismiss-16-regular";
 import LanguagePicker from "./LanguagePicker";
-import { makeT } from "../i18n.ts";
+import { getLocalizedPath, makeT } from "../i18n.ts";
 
 const Header = ({ currentLang }: { currentLang: string }) => {
   const t = makeT(currentLang);
@@ -38,7 +38,7 @@ const Header = ({ currentLang }: { currentLang: string }) => {
 
           <div className="flex flex-row items-center mx-auto md:mx-0">
             <a
-              href="/"
+              href={getLocalizedPath(currentLang, "/")}
               className="hover:text-accent-500 transition-colors duration-300 cursor-pointer"
             >
               <div className="relative mr-6">
@@ -61,7 +61,7 @@ const Header = ({ currentLang }: { currentLang: string }) => {
               {t("header.wiki")}
             </a>
             <a
-              href="/community"
+              href={getLocalizedPath(currentLang, "/community")}
               className="hover:text-accent-500 transition-colors duration-300"
             >
               {t("header.community")}
@@ -83,7 +83,7 @@ const Header = ({ currentLang }: { currentLang: string }) => {
               {t("header.merch")}
             </a>
             <a
-              href="/community"
+              href={getLocalizedPath(currentLang, "/community")}
               target="_blank"
               rel="noopener"
               className="hover:text-accent-500 transition-colors duration-300"
@@ -91,7 +91,7 @@ const Header = ({ currentLang }: { currentLang: string }) => {
               Sponsor
             </a>
             <a
-              href="/download"
+              href={getLocalizedPath(currentLang, "/download")}
               className="flex flex-row gap-2 items-center text-white font-medium py-2 px-6 rounded-xl bg-accent-600 hover:bg-accent-700 transition-colors"
             >
               <DownloadIcon />
@@ -119,7 +119,7 @@ const Header = ({ currentLang }: { currentLang: string }) => {
                 {t("header.wiki")}
               </a>
               <a
-                href="/community"
+                href={getLocalizedPath(currentLang, "/community")}
                 className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"
               >
                 {t("header.community")}
@@ -141,7 +141,7 @@ const Header = ({ currentLang }: { currentLang: string }) => {
                 {t("header.merch")}
               </a>
               <a
-                href="/community"
+                href={getLocalizedPath(currentLang, "/community")}
                 target="_blank"
                 rel="noopener"
                 className="hover:text-accent-500 transition-colors duration-300 block px-3 py-2"
@@ -149,7 +149,7 @@ const Header = ({ currentLang }: { currentLang: string }) => {
                 Sponsor
               </a>
               <a
-                href="/download"
+                href={getLocalizedPath(currentLang, "/download")}
                 className="flex flex-row gap-2 items-center text-white font-medium py-2 px-3 rounded-xl bg-accent-600 hover:bg-accent-700 transition-colors"
               >
                 <DownloadIcon />

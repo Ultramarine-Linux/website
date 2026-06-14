@@ -5,7 +5,7 @@ import {
   downloadInstaller,
 } from "./downloadStore";
 import DownloadIcon from "./icons/DownloadIcon.svg?react";
-import { makeT } from "../i18n.ts";
+import { getLocalizedPath, makeT } from "../i18n.ts";
 import { downloadLink } from "../utils/download";
 
 const DownloadLinks = ({
@@ -35,7 +35,7 @@ const DownloadLinks = ({
     <div className="flex flex-col sm:flex-row gap-2 md:gap-4 sm:items-center z-10 mt-6 md:mt-0">
       <a
         className="flex flex-row gap-2 items-center justify-center px-3 sm:px-4 md:px-6 py-2 bg-accent-700 rounded-xl text-gray-50 hover:bg-accent-800 transition-colors w-full sm:w-auto text-sm sm:text-base"
-        href={thankYouLink}
+        href={getLocalizedPath(lang, thankYouLink)}
       >
         <DownloadIcon />
         <span>{t("downloadLinks.download")}</span>

@@ -1,0 +1,28 @@
+schema-version = "1.10.0"
+
+[install]
+nodejs.pkg-path = "nodejs"
+bun.pkg-path = "bun"
+
+[hook]
+on-activate = """
+
+  bun i
+  echo ""
+  echo "run 'flox services start dev' to start the dev server at localhost:4321"
+  echo ""
+  echo "run 'flox services start dev-host' to start the dev server and expose to the LAN/Tailnet at hostname:4321"
+  echo ""
+  echo "Contact Jaiden for help with Flox @ Fyra"
+  echo ""
+  echo ""
+"""
+[services.dev]
+command = "bun dev"
+
+[services.dev-host]
+command = "bun dev --host"
+
+## Other Environment Options -----------------------------------------
+[options]
+systems = ["aarch64-darwin", "aarch64-linux", "x86_64-darwin", "x86_64-linux"]

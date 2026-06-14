@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: "bun"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      astro:
+        patterns: ["astro", "@astrojs*"]
+      i18nya:
+        patterns: ["*i18nya*"]
+      iconify-json:
+        patterns: ["@iconify-json*"]
+      prettier:
+        patterns: ["prettier*"]
+      react:
+        patterns: ["react", "react-dom", "@types/react", "@types/react-dom"]
+      tailwindcss:
+        patterns: ["tailwindcss", "@tailwindcss*"]

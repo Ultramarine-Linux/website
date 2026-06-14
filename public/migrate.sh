@@ -6,6 +6,7 @@
 ver="0.2.0"
 # Oldest repo we provide is um41
 MINIMUM_RELEASEVER=41
+MAXIMUM_RELEASEVER=44
 set -euo pipefail
 
 trace() {
@@ -33,7 +34,7 @@ elif [[ ${os_id} = "ultramarine" ]]; then
   echo "You are already running Ultramarine Linux. Congratulations!"
   exit 1
 else
-  echo "OS ${os_id} version ${os_version} is not supported. Please run this script on a copy of Fedora Linux $MINIMUM_RELEASEVER or newer."
+  echo "OS ${os_id} version ${os_version} is not supported. Please run this script on a copy of Fedora Linux $MINIMUM_RELEASEVER to $MAXIMUM_RELEASEVER."
   exit 1
 fi
 

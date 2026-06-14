@@ -6,10 +6,14 @@ import currentComputerImage from "../../assets/43/screenshots/plasma-dark.webp";
 import workImage from "../../assets/42/marketing/work.webp";
 import runImage from "../../assets/43/screenshots/budgie-dark.webp";
 import { makeT } from "../../i18n.ts";
+import { CarouselWrapper } from "./CarouselWrapper";
 const t = makeT(Astro.params.lang ?? "en");
 ---
 
-<div class="relative max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16">
+<div
+  class="relative max-w-(--breakpoint-2xl) mx-auto px-8 md:px-16"
+  id="why-ultramarine"
+>
   <h2 class="text-4xl font-bold mt-4 mb-12">{t("whyUltramarine.title")}</h2>
 
   <div
@@ -131,12 +135,8 @@ const t = makeT(Astro.params.lang ?? "en");
         <span class="font-medium">{t("whyUltramarine.runs.learnMore")}</span>
       </Link>
     </div>
-    <Picture
-      class="lg:w-[466px] rounded-lg"
-      layout="constrained"
-      src={runImage}
-      formats={["avif", "webp"]}
-      alt="Screenshot of an Ultramarine GNOME system with the system monitor and fastfetch showing"
-    />
+    <div class="lg:w-[466px]">
+      <CarouselWrapper client:load />
+    </div>
   </div>
 </div>
