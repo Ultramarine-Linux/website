@@ -39,7 +39,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.1",
     "unplugin-icons": "^23.0.1",
     "vite-plugin-svgr": "^5.2.0"
   }
