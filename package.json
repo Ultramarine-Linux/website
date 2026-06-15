@@ -37,7 +37,7 @@
     "@iconify-json/fa6-brands": "^1.2.6",
     "@iconify-json/simple-icons": "^1.2.86",
     "@tailwindcss/typography": "^0.5.19",
-    "prettier": "^3.8.3",
+    "prettier": "^3.8.4",
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.35.1",
     "unplugin-icons": "^23.0.1",
