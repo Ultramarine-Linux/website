@@ -16,6 +16,7 @@
   "downloadOptions.surfaceDescription": "Эти образы поставляются с улучшениями для Intel и AMD устройств Microsoft Surface. Больше информации можете найти на нашем <1>вики</1>.",
   "downloadOptions.armDescription": "Эти образы предназначены для 64 битных ARM устройств с поддержкой Linux. Изучите наше вики для большей информации <1>здесь</1>.",
   "downloadOptions.readymadeNote": "Readymade всё ещё в активной разработке и может быть сломан. Если вы столкнулись с проблемой - <1>пожалуйста сообщите о ней здесь.</1>",
+  "footer.siteName": "Ultramarine Linux",
   "footer.description": "Ultramarine - современная ОС которая позволяет вам делать комфортно работать с железом и инструментами что вы так любите.",
   "footer.pages": "Страницы",
   "footer.home": "Главная",
