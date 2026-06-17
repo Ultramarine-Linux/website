@@ -11,7 +11,7 @@
   "downloadOptions.architecture": "Архитектура",
   "downloadOptions.device": "Устройство",
   "downloadOptions.generic": "Общий",
-  "downloadOptions.surface": "",
+  "downloadOptions.surface": "Surface",
   "downloadOptions.genericDescription": "Эти образы подходят для большинства x86 систем, если вы не уверены что выбрать - скорее всего они вам подходят.",
   "downloadOptions.surfaceDescription": "Эти образы поставляются с улучшениями для Intel и AMD устройств Microsoft Surface. Больше информации можете найти на нашем <1>вики</1>.",
   "downloadOptions.armDescription": "Эти образы предназначены для 64 битных ARM устройств с поддержкой Linux. Изучите наше вики для большей информации <1>здесь</1>.",
