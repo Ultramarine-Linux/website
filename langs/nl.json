@@ -74,5 +74,12 @@
   "faq.2a": "Ultramarine Linux's primaire doel is om een direct bruikbare ervaring te geven, zonder dat daarvoor de laatste Linux updates en innovaties voor worden weg gesmeten. We nemen wat goed is aan Fedora, en we bouwen er een ervaring op die iedereen, overal kan gebruiken.",
   "faq.2b": "Ultramarine komt met veel verschillende tweaks en cutting-edge componenten die niet normaal aanwezig zijn in Fedora, zoals onze in-house installer, een out of the box ervaring en multilinguele steun.",
   "community.discord": "Discord",
-  "community.contribute": "Draag bij"
+  "community.contribute": "Draag bij",
+  "community.contributeDescription": "Ultramarine is met trots open source en gebouwd in de community. Dit betekent dat iedereen veranderingen kan voorstellen, zoals features en het fixen van bugs. Als er vragen zijn naar deze bijdragen, zijn we blij om je te helpen in onze chats, ongeacht van je ervaringsniveau.",
+  "community.contributorGuide": "Handleiding voor Bijdragers",
+  "community.socials": "Volg ons op Socials",
+  "community.socialsDescription": "We zijn op een aantal sociale media platformen. Als je de updates van het project wilt volgen (en ons wilt boosten) is dit de manier om dat te doen.",
+  "community.supportUs": "Steun Ons",
+  "community.supportDescription": "Ultramarine zo niet mogelijk zijn zonder financiële hulp van onze sponsors. Elke sponsoring helpt ons met sneller, beter en sterker bouwen, ongeacht de grootte.",
+  "community.sponsor": "Sponsor"
 }
