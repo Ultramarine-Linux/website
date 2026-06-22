@@ -10,7 +10,7 @@
         "@astrojs/rss": "^4.0.18",
         "@astrojs/sitemap": "^3.7.3",
         "@headlessui/react": "^2.2.10",
-        "@iconify-json/fluent": "^1.2.50",
+        "@iconify-json/fluent": "^1.2.51",
         "@nanostores/react": "^1.1.0",
         "@radix-ui/react-toggle-group": "^1.1.12",
         "@tailwindcss/vite": "^4.3.1",
@@ -173,7 +173,7 @@
 
     "@iconify-json/fa6-brands": ["@iconify-json/fa6-brands@1.2.6", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-twL3X4KWcxAhbc1vz/mIDsVr+CAItk1/EIfxKUVQtpv6O4eydk5KNYqTZWdvJNHGInUgd6vKg21aWfVgb5DXEg=="],
 
-    "@iconify-json/fluent": ["@iconify-json/fluent@1.2.50", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-j4a4wYtdf2vnvSvN8nNo9bLRdjwyghw+zuq7XYvSxIDwnr4VEsn9gfwySZqw9Yhb0CMnbtgOdZQ2xOxiD7pb6Q=="],
+    "@iconify-json/fluent": ["@iconify-json/fluent@1.2.51", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-9yvCpC3uk1ZpSWNPnlSy/Rd+6HNT5/eyRwgZ42GSBbWzqnzo2GNpmDhVt3587sVrXNStI0KmU+K0ptIAqDgpPw=="],
 
     "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.86", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-t3jck5qPQuK1qy+bRn9eCoDQhIB7XSazKz1Fjp8hcan3XOAsTI5Mq/s3F0ekOKSvMQqkVORYK6ns6o6T9f5EMA=="],
 
