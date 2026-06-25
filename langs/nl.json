@@ -81,5 +81,21 @@
   "community.socialsDescription": "We zijn op een aantal sociale media platformen. Als je de updates van het project wilt volgen (en ons wilt boosten) is dit de manier om dat te doen.",
   "community.supportUs": "Steun Ons",
   "community.supportDescription": "Ultramarine zo niet mogelijk zijn zonder financiële hulp van onze sponsors. Elke sponsoring helpt ons met sneller, beter en sterker bouwen, ongeacht de grootte.",
-  "community.sponsor": "Sponsor"
+  "community.sponsor": "Sponsor",
+  "wslPrivacy.description": "Ultramarine voor WSL verzend zelf geen informatie, de distributie is uitsluitend geinstalleerd en bevind zich uitsluitend op je machine. Maar, als een besturingssysteem kan software in dat besturingssysteem taken doen. Sommige gebundelde software, zoals dnf (de package manager), kan data doorsturen om een functionele functie te kunnen bereiken of geanonimiseerde cijfers (zoals dnf countme). Als je vragen hebt, email dan {{email}}.",
+  "migrate.description": "Gebruik dit script om je gegevens van Fedora naar Ultramarine om te zetten. (Bekijk alle scripts voordat je ze gebruikt)",
+  "migrate.copy": "Kopieer",
+  "migrate.convert": "Of <1>zet om van Fedora naar Utramarine</1>",
+  "hero.slogan": "Doe je eigen ding.",
+  "hero.description": "Ultramarine is een modern besturingssysteem dat je je eigen gang laat gaan met de programmas en tools waarvan jij houd, voor werk, school, en games. Hoe dat je ook je systeem gebruikt, wij zorgen ervoor dat het gewoon out of the box werkt met tweaks en tools.",
+  "hero.get": "Krijg Ultramarine",
+  "comments.loved": "Geliefd bij de Mensen",
+  "comments.1": "Als je op zoek bent naar een nieuwe Linux distributie (of gewoon een nieuw besturingsysteem in het algemeen), raad ik Ultramarine Linux van harte aan.",
+  "comments.1a": "- Jack Wallen, ZDNet",
+  "comments.2": "Geliefd door beginners en veteranen, vinden de meeste mensen [Ultramarine] een heel betrouwbare daily-driver Linux distro die niet in de weg geraakt.",
+  "comments.2a": "- Sourav Rudra, it's FOSS News",
+  "faq.3": "Wat doet het migratiescript?",
+  "faq.3a": "Het migratiescript instaleert RPM Fusion, Terra, en de absolute minimum van een Ultramarine Linux installatie (Door Fedora-packages te vervangen met die van Ultramarine Linux).",
+  "faq.3b": "Het script installeert alleen de absolute minimum voor Ultramarine Linux om te werken omdat we niet extra bloat willen toevoegen aan je bestaand systeem.",
+  "faq.4": "Houd Ultramarine mijn locatie bij of verzamelt het mijn gegevens?"
 }
