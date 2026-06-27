@@ -91,3 +91,6 @@ sw.*
 
 # Astro
 .astro
+
+# Deno
+deno.lock
