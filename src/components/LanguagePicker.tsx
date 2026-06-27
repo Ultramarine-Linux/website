@@ -35,17 +35,18 @@ const switchLang = (
 
 const checkSwitchLang = () => {
   const ignores: string[] = [];
-  for (const lang of navigator.languages.map((l) => l.replace("-", "_"))) {
+  for (const lang of navigator.languages) {
     const checks = [lang];
-    if (lang.includes("_")) checks.push(lang.split("_", 1)[0]);
+    if (lang.includes("-")) checks.push(lang.split("-", 1)[0]);
     for (let check of checks.filter((c) => !ignores.includes(c))) {
       if (langs.includes(check)) return check;
       for (
         ignores.push(check);
-        (check = fallbacks[check]) && !ignores.includes(check);
+        (check = fallbacks[check] ?? fallbacks[check.replaceAll('-', '_')]) && !ignores.includes(check);
         ignores.push(check)
-      )
-        if (langs.includes(check)) return check;
+      ) {
+        if (langs.includes(check = check.replaceAll('_', '-'))) return check;
+      }
     }
   }
 };
