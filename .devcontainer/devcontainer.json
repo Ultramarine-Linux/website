@@ -1,8 +1,8 @@
 {
   "name": "Ultramarine Website",
   "image": "ghcr.io/ultramarine-linux/ultramarine:43",
-  "onCreateCommand": "sudo dnf install -y bun nodejs",
-  "postCreateCommand": "bun install",
+  "onCreateCommand": "sudo dnf install -y pnpm nodejs",
+  "postCreateCommand": "pnpm install --frozen-lockfile",
   "forwardPorts": [4321],
   "portsAttributes": {
     "4321": {
