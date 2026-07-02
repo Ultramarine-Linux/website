@@ -15,6 +15,17 @@
       "allow_retire": true,
       "branchname": "master",
       "date_created": "2014-05-14 12:36:15",
+      "date_updated": "2026-07-02 4:30:00",
+      "dist_tag": ".um44",
+      "koji_name": "f44",
+      "name": "Ultramarine Linux",
+      "status": "Active",
+      "version": "44"
+    },
+    {
+      "allow_retire": true,
+      "branchname": "master",
+      "date_created": "2014-05-14 12:36:15",
       "date_updated": "2025-10-29 18:34:00",
       "dist_tag": ".um43",
       "koji_name": "f43",
