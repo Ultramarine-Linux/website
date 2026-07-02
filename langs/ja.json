@@ -53,6 +53,6 @@
   "wslPrivacy.title": "Ultramarine for WSLプライバシーポリシー",
   "migrate.copy": "コピー",
   "migrate.description": "このスクリプトでFedoraをUltramarineに変換してください（全てのスクリプトは検討してから実行してください）",
-  "migrate.convert": "或いは<1>Fedoraから変換する<1>",
+  "migrate.convert": "或いは<1>Fedoraから変換する</1>",
   "hero.slogan": "好きなことをやろう。"
 }

@@ -34,7 +34,7 @@
   "footer.licenseNotice": "Лицензия и авторы",
   "footer.copyright": "© 2021 - {{year}} Fyra Labs. Все права защищены.",
   "download.pickFlavor": "Выбери свой вариант Ultramarine",
-  "download.latestRelease": "Последний релиз: {version}} ({{codename}})",
+  "download.latestRelease": "Последний релиз: {{version}} ({{codename}})",
   "download.budgieDescription": "Привычный и стильный, с изюминкой.",
   "download.plasmaDescription": "Рекомендуемая нами редакция для повседневного использования и любимица сообщества — с фирменной ноткой Ultramarine. Простые параметры по умолчанию и широкие возможности настройки.",
   "download.xfceDescription": "Лёгок и удобен в использовании, создан с целью помочь вам выжать максимум из вашего устройства, или возродить старое.",
