@@ -19,9 +19,9 @@
   "downloadOptions.surface": "Surface",
   "downloadOptions.arm": "ARM",
   "downloadOptions.genericDescription": "These images are for most x86 computers, if you're not sure, this is probably what you want.",
-  "downloadOptions.surfaceDescription": "These images come with tweaks for Intel and AMD Microsoft Surfaces. More information can be found on our <1>wiki</1>.",
+  "downloadOptions.surfaceDescription": "These images come with tweaks for Intel and AMD Microsoft Surfaces. These images are still on UM43! More information can be found on our <1>wiki</1>.",
   "downloadOptions.armDescription": "These images are for 64bit ARM devices with support in Linux. See our wiki for more <1>here</1>.",
-  "downloadOptions.readymadeNote": "Please note that Readymade is still in preview and still may not be fully functional. If you encounter any issues, <1>please report them here.</1>",
+  "downloadOptions.readymadeNote": "Please note that Readymade is still in preview and still may not be fully functional. These images are still on UM43! If you encounter any issues, <1>please report them here.</1>",
 
   "smallDownloadCard.edition": "{{edition}} Edition",
 
