@@ -46,6 +46,10 @@ const { title, description, image = "/og_img_um.png" } = Astro.props;
 
 <!-- Fonts -->
 <Font cssVariable="--font-switzer" preload />
+{Astro.params.lang == "ja" && (<Font cssVariable="--font-jp" preload />)}
+{Astro.params.lang == "zh_HK" && (<Font cssVariable="--font-hk" preload />)}
+{Astro.params.lang == "zh_Hant" && (<Font cssVariable="--font-tw" preload />)}
+{Astro.params.lang == "zh_Hans" && (<Font cssVariable="--font-cn" preload />)}
 
 <!-- Analytics -->
 <script

@@ -38,7 +38,7 @@ const DownloadLinks = ({
         href={getLocalizedPath(lang, thankYouLink)}
       >
         <DownloadIcon />
-        <span>{t("downloadLinks.download")}</span>
+        <span class="font-medium">{t("downloadLinks.download")}</span>
       </a>
       <a
         href={link + ".sha256sum"}
