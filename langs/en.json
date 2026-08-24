@@ -19,9 +19,9 @@
   "downloadOptions.surface": "Surface",
   "downloadOptions.arm": "ARM",
   "downloadOptions.genericDescription": "These images are for most x86 computers, if you're not sure, this is probably what you want.",
-  "downloadOptions.surfaceDescription": "These images come with tweaks for Intel and AMD Microsoft Surfaces. More information can be found on our <1>wiki</1>.",
+  "downloadOptions.surfaceDescription": "These images come with tweaks for Intel and AMD Microsoft Surfaces. These images are still on UM43! More information can be found on our <1>wiki</1>.",
   "downloadOptions.armDescription": "These images are for 64bit ARM devices with support in Linux. See our wiki for more <1>here</1>.",
-  "downloadOptions.readymadeNote": "Please note that Readymade is still in preview and still may not be fully functional. If you encounter any issues, <1>please report them here.</1>",
+  "downloadOptions.readymadeNote": "Please note that Readymade is still in preview and still may not be fully functional. These images are still on UM43! If you encounter any issues, <1>please report them here.</1>",
 
   "smallDownloadCard.edition": "{{edition}} Edition",
 
@@ -122,7 +122,7 @@
   "faq.4": "Does Ultramarine track me or collect my data?",
   "faq.4a": "As of now, the only data we collect is a count of how many times a package has been downloaded from Terra or the Ultramarine repository using <1>DNF Counting</1>, and the number of times our out of box experience connects to the internet. This information does not include any information about your system beyond your CPU architecture, Ultramarine version, and Edition. Fyra Labs (the company behind Ultramarine) does not collect any data that can be tied to an individual.",
   "faq.5": "Is Ultramarine semi-rolling?",
-  "faq.5a": "No. Ultramarine and Fedora are not semi-rolling or rolling. They use a stable release scheme. Updates with breaking changes are rolled out with only major releases. Minor updates/point updates must be backwards-compatible, i.e. system components in Ultramarine are updated if and only if they do not break compatibility.",
+  "faq.5a": "Yes, Ultramarine is semi-rolling. Fedora is not. Starting in Ultramarine 44, we shifted to a semi-rolling model. Features are shipped when they’re done throughout the year, but major changes (like DE version updates) are done to coincide with Fedora. We made this change to keep momentum up between releases, and better align with our recommended Edition’s release scheme. System components provided by Fedora in Ultramarine are updated if and only if they do not break compatibility with older versions, this is mostly point releases.",
   "faq.6": "Does Ultramarine run on my device?",
   "faq.6a": "If you're using a standard PC, yes. Otherwise, if your computer is 64-bit, check out the <1>Ultramarine Anywhere page</1> for more about non-standard devices.",
 
