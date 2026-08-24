@@ -44,7 +44,7 @@ const t = makeT(Astro.params.lang);
 
   <div id="hero-right" class="xl:block hidden">
     <div class="relative">
-      <div class="absolute top-20 right-36 -rotate-12 w-[400px]">
+      <div class="absolute top-20 ltr:right-36 rtl:left-36 -rotate-12 w-[400px]">
         <Picture
           src={budgieScreenshot}
           alt="Screenshot of Ultramarine Flagship in light mode"
@@ -62,7 +62,7 @@ const t = makeT(Astro.params.lang);
           layout="fixed"
         />
       </div>
-      <div class="absolute top-6 -right-4 rotate-[8deg] w-[400px]">
+      <div class="absolute top-6 ltr:-right-4 rtl:-left-4 rotate-[8deg] w-[400px]">
         <Picture
           src={gnomeScreenshot}
           alt="Screenshot of Ultramarine GNOME in light mode"
@@ -80,7 +80,7 @@ const t = makeT(Astro.params.lang);
           layout="fixed"
         />
       </div>
-      <div class="absolute top-40 right-8 rotate-2 w-[400px]">
+      <div class="absolute top-40 ltr:right-8 rtl:left-8 rotate-2 w-[400px]">
         <Picture
           src={plasmaScreenshot}
           alt="Screenshot of Ultramarine Plasma in light mode"

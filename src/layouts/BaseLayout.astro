@@ -3,13 +3,15 @@ import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.tsx";
 
-import { makeT } from "../i18n";
+import { directionComputer,makeT } from "../i18n";
+
 const t = makeT(Astro.params.lang);
 const { lang = "en" } = Astro.params;
+const direction = directionComputer(lang)
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} dir={direction}>
   <head>
     <BaseHead title={t("site.title")} description={t("site.description")} />
   </head>

@@ -25,3 +25,8 @@ const getLocalizedPath = (lang: string | undefined, path: string) =>
 export default i18nya;
 const { makeT } = i18nya;
 export { makeT, getLocalizedPath };
+
+const rtlLanguages = ["ar", "he"];
+
+export const directionComputer = (lang: string) =>
+  rtlLanguages.includes(lang) ? "rtl" : "ltr";

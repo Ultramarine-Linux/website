@@ -16,11 +16,11 @@ const { title, description, link } = Astro.props;
       <h3 class="text-xl font-bold">{title}</h3>
       <p class="text-gray-400">{description}</p>
     </div>
-    <div class="ml-auto">
+    <div class="ltr:ml-auto rtl:mr-auto">
       <slot name="icon" />
     </div>
   </div>
-  <div class="flex flex-row w-full justify-end mt-2">
+  <div class="flex flex-row w-full justify-end mt-2 rtl:rotate-180 rtl:justify-start">
     <LongArrow />
   </div>
 </a>

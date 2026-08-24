@@ -19,7 +19,7 @@ const { href, arrow, className, target } = Astro.props;
 >
   <slot />{
     arrow && (
-      <ArrowRight className="size-6 group-hover:translate-x-1 transition-transform duration-300" />
+      <ArrowRight className="size-6 ltr:group-hover:translate-x-1 transition-transform duration-300 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
     )
   }</a
 >
