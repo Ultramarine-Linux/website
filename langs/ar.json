@@ -11,7 +11,7 @@
   "downloadOptions.architecture": "معمارية",
   "downloadOptions.device": "جهاز",
   "downloadOptions.generic": "عام",
-  "downloadOptions.surface": "سطح",
+  "downloadOptions.surface": "Microsoft Surface",
   "downloadOptions.arm": "ARM",
   "downloadOptions.genericDescription": "هذه الصور مخصصة لمعظم أجهزة الكمبيوتر التي تعمل بنظام x86, وإذا لم تكن متأكدًا، فمن المرجح أن تكون هذه هي الصورة التي تبحث عنها.",
   "smallDownloadCard.edition": "نسخة {{edition}}",
