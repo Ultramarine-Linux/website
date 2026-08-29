@@ -127,7 +127,7 @@
   "site.title.short": "Ultramarine",
   "site.description": "Ultramarine to nowoczesny system operacyjny, który pozwala po prostu robić to, co lubisz, korzystając ze sprzętu i narzędzi, które już znasz i lubisz.",
   "downloadOptions.readymadeNote": "Pamiętaj, że Readymade jest nadal w fazie testów i może nie działać w pełni poprawnie. Jeśli napotkasz jakiekolwiek problemy, <1>zgłoś je tutaj.</1>",
-  "smallDownloadCard.edition": "{{wydanie}} Edycja",
+  "smallDownloadCard.edition": "{{edition}} Edycja",
   "footer.siteName": "Ultramarine Linux",
   "hero.description": "Ultramarine Linux to nowoczesny system operacyjny, który wspiera Twoją codzienną pracę, wykorzystując sprzęt i narzędzia, które już znasz i lubisz – zarówno w pracy, jak i w szkole czy podczas rozrywki. Niezależnie od tego, jak korzystasz ze swojego systemu, zapewniamy Ci szereg ulepszeń i narzędzi, dzięki którym wszystko będzie działać płynnie od samego początku.",
   "hero.get": "Pobierz Ultramarine",
