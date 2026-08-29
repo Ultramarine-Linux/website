@@ -2,8 +2,10 @@
 @config "../../tailwind.config.cjs";
 @layer (utilities);
 
+@custom-variant cjk (&:where([lang="zh_HK"] *),&:where([lang="zh_Hant"] *),&:where([lang="ja"] *));
+
 @theme inline {
-  --font-sans: var(--font-switzer);
+  --font-sans: var(--font-switzer) var(--font-jp) var(--font-hk) var(--font-tw) var(--font-cn);
 }
 
 :root {

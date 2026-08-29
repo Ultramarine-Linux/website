@@ -48,6 +48,38 @@ export default defineConfig({
       weights: [300, 400, 500, 600, 700],
       display: "swap",
     },
+    {
+      provider: fontProviders.google(),
+      name: "Noto Sans JP",
+      cssVariable: "--font-jp",
+      weights: ["100-900"],
+      fallbacks: ["Source Han Sans", "sans-serif"],
+      display: "swap",
+    },
+    {
+      provider: fontProviders.google(),
+      name: "Noto Sans HK",
+      cssVariable: "--font-hk",
+      weights: ["100-900"],
+      fallbacks: ["Source Han Sans HC", "sans-serif"],
+      display: "swap",
+    },
+    {
+      provider: fontProviders.google(),
+      name: "Noto Sans TC",
+      cssVariable: "--font-tw",
+      weights: ["100-900"],
+      fallbacks: ["Source Han Sans TC", "sans-serif"],
+      display: "swap",
+    },
+    {
+      provider: fontProviders.google(),
+      name: "Noto Sans SC",
+      cssVariable: "--font-cn",
+      weights: ["100-900"],
+      fallbacks: ["Source Han Sans SC", "sans-serif"],
+      display: "swap",
+    },
   ],
 
   image: {
