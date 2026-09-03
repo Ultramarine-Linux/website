@@ -4,8 +4,8 @@
 # Lea's pro tip: Run this through shellcheck, it'll genuinely save so much time and effort
 
 ver="0.2.0"
-# Oldest repo we provide is um41
-MINIMUM_RELEASEVER=41
+# Oldest repo we provide is um43
+MINIMUM_RELEASEVER=43
 MAXIMUM_RELEASEVER=44
 set -euo pipefail
 
@@ -109,42 +109,42 @@ echo
 echo "■ (3/3) Converting to Ultramarine..."
 if [[ ${os_variant} = "workstation" ]]; then
   echo ' ... Detected Fedora Workstation'
-  trace sudo dnf swap -y fedora-release-common ultramarine-release-gnome --allowerasing
+  trace sudo dnf swap --allowerasing -y fedora-release-common ultramarine-release-gnome
   trace sudo dnf group install --allowerasing -y ultramarine-gnome-product-environment
   trace sudo dnf group remove -y workstation-product-environment
 elif [[ ${os_variant} = "kde" ]]; then
   echo ' ... Detected Fedora KDE Spin'
-  trace sudo dnf swap -y fedora-release-common ultramarine-release-kde --allowerasing
+  trace sudo dnf swap --allowerasing -y fedora-release-common ultramarine-release-kde
   trace sudo dnf group install --allowerasing -y ultramarine-kde-product-environment
   trace sudo dnf group remove -y kde-desktop-environment
 elif [[ ${os_variant} = "budgie" ]]; then
   echo ' ... Detected Fedora Budgie Spin'
   if [ $releasever -le 42 ]; then
-    trace sudo dnf swap -y fedora-release-common ultramarine-release-flagship --allowerasing
+    trace sudo dnf swap --allowerasing -y fedora-release-common ultramarine-release-flagship
     # BUG: dnf depsolv issue
     trace sudo dnf swap -y budgie-desktop-defaults ultramarine-flagship-filesystem
     trace sudo dnf group install --allowerasing -y ultramarine-flagship-product-environment --exclude=budgie-desktop-defaults
     trace sudo dnf group remove -y budgie-desktop-environment
   else
-    trace sudo dnf swap -y fedora-release-common ultramarine-release-budgie --allowerasing
+    trace sudo dnf swap --allowerasing -y fedora-release-common ultramarine-release-budgie
     trace sudo dnf swap -y budgie-desktop-defaults ultramarine-budgie-filesystem
     trace sudo dnf group install --allowerasing -y ultramarine-budgie-product-environment --exclude=budgie-desktop-defaults
     trace sudo dnf group remove -y budgie-desktop-environment
   fi
 elif [[ ${os_variant} = "xfce" ]]; then
   echo ' ... Detected Fedora XFCE Spin'
-  trace sudo dnf swap -y fedora-release-common ultramarine-release-xfce --allowerasing
+  trace sudo dnf swap --allowerasing -y fedora-release-common ultramarine-release-xfce
   # BUG: dnf depsolv issue
   trace sudo dnf swap -y desktop-backgrounds-compat ultramarine-backgrounds-compat
   trace sudo dnf group install --allowerasing -y ultramarine-xfce-product-environment --exclude=desktop-backgrounds-compat
   trace sudo dnf group remove -y xfce-desktop-environment
 else # If the variant is unknown or doesn't have an equivalent in Ultramarine
   echo ' ... Falling back to `ultramarine-release-common`'
-  trace sudo dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
+  trace sudo dnf swap --allowerasing -y fedora-release-common ultramarine-release-common
   trace sudo dnf group install --allowerasing --no-best -y ultramarine-product-common
 fi
 if [ "$(rpm -qa ultramarine-logos | head -c1 | wc -c)" -eq 0 ]; then
-  trace sudo dnf swap -y fedora-logos ultramarine-logos --allowerasing
+  trace sudo dnf swap --allowerasing -y fedora-logos ultramarine-logos
 fi
 
 echo "Adding DNF defaults..."
