@@ -9,6 +9,7 @@
     "build": "astro build",
     "generate": "astro build",
     "preview": "astro preview",
+    "deploy": "astro build && wrangler deploy",
     "astro": "astro"
   },
   "dependencies": {
@@ -42,7 +43,10 @@
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.35.2",
     "unplugin-icons": "^23.0.1",
-    "vite-plugin-svgr": "^5.2.0"
+    "vite-plugin-svgr": "^5.2.0",
+    "wrangler": "^4.129.0"
   },
-  "workspaces": ["."]
+  "workspaces": [
+    "."
+  ]
 }
