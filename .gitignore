@@ -94,3 +94,6 @@ sw.*
 
 # Deno
 deno.lock
+
+# Wrangler
+.wrangler

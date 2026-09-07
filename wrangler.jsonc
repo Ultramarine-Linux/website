@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ultramarine-website",
+  "compatibility_date": "2026-09-07",
+  "assets": {
+    "directory": "./dist"
+  }
+}
