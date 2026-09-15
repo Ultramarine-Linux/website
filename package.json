@@ -34,7 +34,7 @@
   "devDependencies": {
     "@iconify-json/bi": "^1.2.7",
     "@iconify-json/fa6-brands": "^1.2.6",
-    "@iconify-json/simple-icons": "^1.2.94",
+    "@iconify-json/simple-icons": "^1.2.95",
     "@tailwindcss/typography": "^0.5.20",
     "@types/node": "^26.0.1",
     "@types/react": "^19.3.0",
