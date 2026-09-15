@@ -19,7 +19,7 @@
     "@astrojs/sitemap": "^3.7.3",
     "@headlessui/react": "^2.2.10",
     "@iconify-json/fluent": "^1.2.57",
-    "@nanostores/react": "^1.1.0",
+    "@nanostores/react": "^2.0.1",
     "@radix-ui/react-toggle-group": "^1.1.13",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.0.3",
