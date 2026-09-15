@@ -41,7 +41,7 @@
     "@types/react-dom": "^19.3.0",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^1.0.0",
-    "sharp": "^0.35.2",
+    "sharp": "^0.35.4",
     "unplugin-icons": "^23.0.1",
     "vite-plugin-svgr": "^5.2.0",
     "wrangler": "^4.129.0"
