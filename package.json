@@ -18,15 +18,15 @@
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
     "@headlessui/react": "^2.2.10",
-    "@iconify-json/fluent": "^1.2.57",
+    "@iconify-json/fluent": "^1.2.58",
     "@nanostores/react": "^2.0.1",
-    "@radix-ui/react-toggle-group": "^1.1.13",
+    "@radix-ui/react-toggle-group": "^1.1.19",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.2",
     "astro-i18nya": "^0.2.6",
     "i18nya": "^0.2.6",
-    "motion": "^12.42.0",
-    "nanostores": "^1.4.0",
+    "motion": "^12.43.0",
+    "nanostores": "^1.5.3",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "tailwindcss": "^4.3.3"
@@ -34,9 +34,9 @@
   "devDependencies": {
     "@iconify-json/bi": "^1.2.7",
     "@iconify-json/fa6-brands": "^1.2.6",
-    "@iconify-json/simple-icons": "^1.2.95",
+    "@iconify-json/simple-icons": "^1.2.96",
     "@tailwindcss/typography": "^0.5.20",
-    "@types/node": "^26.0.1",
+    "@types/node": "^26.5.1",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "prettier": "^3.9.6",
@@ -44,7 +44,7 @@
     "sharp": "^0.35.4",
     "unplugin-icons": "^23.0.1",
     "vite-plugin-svgr": "^5.2.0",
-    "wrangler": "^4.129.0"
+    "wrangler": "^4.131.2"
   },
   "workspaces": [
     "."
