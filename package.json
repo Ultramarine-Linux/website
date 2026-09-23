@@ -20,7 +20,7 @@
     "@headlessui/react": "^2.2.10",
     "@iconify-json/fluent": "^1.2.58",
     "@nanostores/react": "^2.0.1",
-    "@radix-ui/react-toggle-group": "^1.1.13",
+    "@radix-ui/react-toggle-group": "^1.1.19",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.3",
     "astro-i18nya": "^0.2.6",
