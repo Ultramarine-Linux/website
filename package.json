@@ -44,7 +44,7 @@
     "sharp": "^0.35.4",
     "unplugin-icons": "^24.0.0",
     "vite-plugin-svgr": "^5.2.0",
-    "wrangler": "^4.129.0"
+    "wrangler": "^4.146.0"
   },
   "workspaces": [
     "."
