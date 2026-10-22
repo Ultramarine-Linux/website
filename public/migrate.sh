@@ -91,7 +91,7 @@ releasever=$(rpm -E '%fedora')
 echo
 echo " ...[2/3] Terra"
 if [ "$(rpm -qa terra-release | head -c1 | wc -c)" -eq 0 ]; then
-  trace sudo dnf install -y --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' --setopt="terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc" terra-release
+  trace sudo dnf install -y --repofrompath "terra,https://repos.fyralabs.com/terra$releasever" --setopt="terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc" terra-release
 else
   echo " --> Seems like terra-release has already been installed"
 fi
@@ -99,7 +99,7 @@ fi
 echo
 echo " ...[3/3] Ultramarine Repositories"
 if [ "$(rpm -qa ultramarine-repos-common | head -c1 | wc -c)" -eq 0 ]; then
-  trace sudo dnf install -y --repofrompath 'ultramarine,https://repos.fyralabs.com/um$releasever' --setopt="ultramarine.gpgkey=https://repos.fyralabs.com/um$releasever/key.asc" ultramarine-repos-common
+  trace sudo dnf install -y --repofrompath "ultramarine,https://repos.fyralabs.com/um$releasever" --setopt="ultramarine.gpgkey=https://repos.fyralabs.com/um$releasever/key.asc" ultramarine-repos-common
 else
   echo " [!] Seems like ultramarine-repos-common has already been installed"
 fi
