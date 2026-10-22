@@ -138,6 +138,10 @@ elif [[ ${os_variant} = "xfce" ]]; then
   trace sudo dnf swap -y desktop-backgrounds-compat ultramarine-backgrounds-compat
   trace sudo dnf group install --allowerasing -y ultramarine-xfce-product-environment --exclude=desktop-backgrounds-compat
   trace sudo dnf group remove -y xfce-desktop-environment
+elif [[ ${os_variant} = "container" ]]; then
+  echo ' ... Detected Fedora Container'
+  echo "If your environment support using custom images, you can use the Ultramarine Container Edition instead by pulling ghcr.io/ultramarine-linux/ultramarine:${os_version}"
+  trace sudo dnf swap -y fedora-release-common ultramarine-release-identity-container --allowerasing
 else # If the variant is unknown or doesn't have an equivalent in Ultramarine
   echo ' ... Falling back to `ultramarine-release-common`'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
