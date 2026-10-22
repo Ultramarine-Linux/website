@@ -91,7 +91,7 @@ releasever=$(rpm -E '%fedora')
 echo
 echo " ...[2/3] Terra"
 if [ "$(rpm -qa terra-release | head -c1 | wc -c)" -eq 0 ]; then
-  trace sudo dnf install -y --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' --setopt="terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc" terra-release
+  trace sudo dnf install -y --repofrompath "terra,https://repos.fyralabs.com/terra$releasever" --setopt="terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc" terra-release
 else
   echo " --> Seems like terra-release has already been installed"
 fi
@@ -99,7 +99,7 @@ fi
 echo
 echo " ...[3/3] Ultramarine Repositories"
 if [ "$(rpm -qa ultramarine-repos-common | head -c1 | wc -c)" -eq 0 ]; then
-  trace sudo dnf install -y --repofrompath 'ultramarine,https://repos.fyralabs.com/um$releasever' --setopt="ultramarine.gpgkey=https://repos.fyralabs.com/um$releasever/key.asc" ultramarine-repos-common
+  trace sudo dnf install -y --repofrompath "ultramarine,https://repos.fyralabs.com/um$releasever" --setopt="ultramarine.gpgkey=https://repos.fyralabs.com/um$releasever/key.asc" ultramarine-repos-common
 else
   echo " [!] Seems like ultramarine-repos-common has already been installed"
 fi
@@ -138,6 +138,10 @@ elif [[ ${os_variant} = "xfce" ]]; then
   trace sudo dnf swap -y desktop-backgrounds-compat ultramarine-backgrounds-compat
   trace sudo dnf group install --allowerasing -y ultramarine-xfce-product-environment --exclude=desktop-backgrounds-compat
   trace sudo dnf group remove -y xfce-desktop-environment
+elif [[ ${os_variant} = "container" ]]; then
+  echo ' ... Detected Fedora Container'
+    echo "If your environment supports using custom images, you can use the Ultramarine Container instead by pulling ghcr.io/ultramarine-linux/ultramarine:${os_version}"
+  trace sudo dnf swap -y fedora-release-common ultramarine-release-identity-container --allowerasing
 else # If the variant is unknown or doesn't have an equivalent in Ultramarine
   echo ' ... Falling back to `ultramarine-release-common`'
   trace sudo dnf swap -y fedora-release-common ultramarine-release-common --allowerasing
