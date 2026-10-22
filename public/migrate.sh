@@ -140,7 +140,7 @@ elif [[ ${os_variant} = "xfce" ]]; then
   trace sudo dnf group remove -y xfce-desktop-environment
 elif [[ ${os_variant} = "container" ]]; then
   echo ' ... Detected Fedora Container'
-  echo "If your environment support using custom images, you can use the Ultramarine Container Edition instead by pulling ghcr.io/ultramarine-linux/ultramarine:${os_version}"
+    echo "If your environment supports using custom images, you can use the Ultramarine Container instead by pulling ghcr.io/ultramarine-linux/ultramarine:${os_version}"
   trace sudo dnf swap -y fedora-release-common ultramarine-release-identity-container --allowerasing
 else # If the variant is unknown or doesn't have an equivalent in Ultramarine
   echo ' ... Falling back to `ultramarine-release-common`'
