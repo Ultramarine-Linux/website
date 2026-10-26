@@ -27,8 +27,8 @@
     "i18nya": "^0.2.6",
     "motion": "^14.3.0",
     "nanostores": "^1.5.4",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
