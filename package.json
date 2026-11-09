@@ -21,7 +21,7 @@
     "@iconify-json/fluent": "^1.2.61",
     "@nanostores/react": "^2.0.1",
     "@radix-ui/react-toggle-group": "^1.2.1",
-    "@tailwindcss/vite": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.4",
     "astro": "^7.4.7",
     "astro-i18nya": "^0.2.6",
     "i18nya": "^0.2.6",
@@ -29,7 +29,7 @@
     "nanostores": "^1.5.4",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.4"
   },
   "devDependencies": {
     "@iconify-json/bi": "^1.2.7",
