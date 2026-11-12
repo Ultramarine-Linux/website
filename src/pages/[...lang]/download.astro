@@ -39,7 +39,7 @@ export const getStaticPaths = makeGetStaticPaths(i18nya);
       class="flex flex-col items-center justify-center gap-10 mt-8 mb-24 w-full"
     >
       <DownloadSection
-        editionDisplayName="KDE Plasma"
+        editionDisplayName="Ultramarine"
         editionName="Plasma"
         screenshot={plasmaScreenshot}
         screenshotDark={plasmaScreenshotDark}
@@ -53,14 +53,6 @@ export const getStaticPaths = makeGetStaticPaths(i18nya);
         screenshot={xfceScreenshot}
         screenshotDark={xfceScreenshotDark}
         description={t("download.xfceDescription")}
-        version={version}
-      />
-
-      <DownloadSection
-        editionName="Budgie"
-        screenshot={budgieScreenshot}
-        screenshotDark={budgieScreenshotDark}
-        description="A familiar and stylish experience with a bit of flair."
         version={version}
       />
 
