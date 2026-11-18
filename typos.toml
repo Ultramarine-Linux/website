@@ -1,0 +1,3 @@
+[files]
+# translations aren't supported by typos, add back english lang
+extend-exclude = ["pnpm-lock.yaml", "langs/*.json", "!langs/en.json"]
