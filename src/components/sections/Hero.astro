@@ -104,8 +104,8 @@ const t = makeT(Astro.params.lang);
 
 <style>
   .hero-text {
-    /* TODO: This texture is still large, is there a way we can optimize it or not use an image */
-    background-image: url("/texture.avif");
+    background: linear-gradient(100deg,#673df6,#673df6,#5c9cf8,#673df6,#673df6);
+    background-size: 200% 100%;
     background-clip: text;
     webkit-background-clip: text;
     -webkit-background-clip: text;
@@ -113,5 +113,15 @@ const t = makeT(Astro.params.lang);
 
     color: transparent;
     line-height: 1.2;
+    animation: flow 5s linear infinite;
+  }
+
+  @keyframes flow {
+     from {
+        background-position: 0% 0;
+    }
+    to {
+        background-position: 200% 0;
+    }
   }
 </style>
