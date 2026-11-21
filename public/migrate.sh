@@ -31,7 +31,7 @@ elif [[ ${os_id} = "fedora" || ${os_id} = "fedora-asahi-remix" ]]; then
   echo "This script is only for Fedora $MINIMUM_RELEASEVER to $MAXIMUM_RELEASEVER."
   exit 1
 elif [[ ${os_id} = "ultramarine" ]]; then
-  echo "You are already running Ultramarine Linux. Congratulations!"
+  echo "You are already running Ultramarine. Congratulations!"
   exit 1
 else
   echo "OS ${os_id} version ${os_version} is not supported. Please run this script on a copy of Fedora Linux $MINIMUM_RELEASEVER to $MAXIMUM_RELEASEVER."
@@ -41,10 +41,10 @@ fi
 
 echo
 echo ┌────────────────────────────────────┐
-echo │ Ultramarine Linux Migration Script │
+echo │ Ultramarine Migration Script │
 echo └──────────────────────────────╴v$ver
-echo "Welcome to the Fedora to Ultramarine Linux migration script!
-This script will migrate your Fedora system to Ultramarine Linux.
+echo "Welcome to the Fedora to Ultramarine migration script!
+This script will migrate your Fedora system to Ultramarine.
 Please make sure you have a backup of your system before proceeding, as this script will make major changes to your system.
 This script will also update your system to the latest version of Fedora before proceeding. Please make sure you can properly update your system before proceeding."
 echo
@@ -161,7 +161,7 @@ echo '┏━━━           ──────  '
 echo '  Migration Complete!  '
 echo '  ──────           ━━━┛'
 echo "You may now reboot your system.
-The next Linux kernel update will make your system entry appear as Ultramarine Linux, but now you're already running Ultramarine Linux."
+The next Linux kernel update will make your system entry appear as Ultramarine, but now you're already running Ultramarine."
 echo
 
 read -n 1 -p "□ Would you like to also generate a new initramfs? (generate an Ultramarine boot entry) (y/N) " -r REPLY
@@ -177,4 +177,4 @@ echo
 echo "The migration logs can be found at ${LOG}.
 Come chat with us at https://fyralabs.com/discord or https://wiki.ultramarine-linux.org/en/community/community/.
 For addtional information, please see the Ultramarine Wiki, https://wiki.ultramarine-linux.org.
-Have fun, thank you for using Ultramarine Linux!"
+Have fun, thank you for using Ultramarine!"
