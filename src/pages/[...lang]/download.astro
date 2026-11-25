@@ -18,16 +18,14 @@ import File from "~icons/bi/file-earmark-fill";
 import i18nya, { makeT } from "../../i18n.ts";
 import { makeGetStaticPaths } from "astro-i18nya";
 const t = makeT(Astro.params.lang);
-const version = "44";
-const codename = "Flying Fish";
+const version = "45";
+const codename = "Cyberdyne";
 
 export const getStaticPaths = makeGetStaticPaths(i18nya);
 ---
 
 <BaseLayout>
-  <div
-    class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12"
-  >
+  <div class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12">
     <h1 class="text-4xl font-bold">{t("download.pickFlavor")}</h1>
     <h2 class="pt-1 text-gray-500">
       {t("download.latestRelease", { version, codename })}
@@ -35,9 +33,7 @@ export const getStaticPaths = makeGetStaticPaths(i18nya);
 
     <DownloadOptions client:load lang={Astro.params.lang} />
 
-    <div
-      class="flex flex-col items-center justify-center gap-10 mt-8 mb-24 w-full"
-    >
+    <div class="flex flex-col items-center justify-center gap-10 mt-8 mb-24 w-full">
       <DownloadSection
         editionDisplayName="Ultramarine"
         editionName="Plasma"
