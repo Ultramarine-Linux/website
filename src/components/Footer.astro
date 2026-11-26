@@ -7,9 +7,11 @@ import Mastodon from "~icons/simple-icons/mastodon";
 import Bluesky from "~icons/simple-icons/bluesky";
 import Reddit from "~icons/simple-icons/reddit";
 import UltramarineAltLogo from "./icons/UltramarineAltLogo.svg";
+import FyraLogo from "./icons/FyraLogo.svg";
 import { Image } from "astro:assets";
 import eepymizuki from "../assets/mizuki-sleepy.webp";
 import { makeT, getLocalizedPath } from "../i18n.ts";
+import Trans from "./Trans";
 const t = makeT(Astro.params.lang ?? "en");
 ---
 
@@ -27,6 +29,19 @@ const t = makeT(Astro.params.lang ?? "en");
       </a>
       <p class="text-gray-400 max-w-lg">
         {t("footer.description")}
+      </p>
+      <p class="flex items-center gap-2 text-gray-500 mt-2">
+        <FyraLogo class="h-4 w-4 shrink-0" aria-hidden="true" />
+        <span>
+        <Trans t={t("footer.fyraProject")}>
+          <a
+            href="https://fyralabs.com"
+            target="_blank"
+            rel="noopener"
+            class="font-semibold text-gray-300 hover:text-gray-100 transition-colors"
+          ></a>
+        </Trans>
+        </span>
       </p>
     </div>
     <div class="flex flex-col gap-1">

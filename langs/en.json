@@ -16,7 +16,7 @@
   "downloadOptions.generic": "Generic",
   "downloadOptions.genericX86": "Standard PC",
   "downloadOptions.surface": "Microsoft Surface",
-  "downloadOptions.arm": "ARM",
+  "downloadOptions.arm": "Generic ARM",
   "downloadOptions.rpi5": "Raspberry Pi",
   "downloadOptions.pinebookPro": "Pinebook Pro",
   "downloadOptions.rpiDescription": "Preinstalled images for the Raspberry Pi 4 and 5. Flash this directly to a SD card or SSD. Or use Raspberry Pi Imager",
@@ -30,6 +30,7 @@
 
   "footer.siteName": "Ultramarine",
   "footer.description": "Ultramarine is a modern operating system that lets you just do your thing with the hardware and tools you already love.",
+  "footer.fyraProject": "A <1>Fyra Labs</1> Project",
   "footer.pages": "Pages",
   "footer.home": "Home",
   "footer.download": "Download",
