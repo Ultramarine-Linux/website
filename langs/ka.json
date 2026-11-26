@@ -6,8 +6,6 @@
   "header.merch": "საქონელი",
   "header.download": "გადმოწერა",
   "downloadLinks.download": "გადმოწერა",
-  "downloadOptions.architecture": "არქიტექტურა",
-  "downloadOptions.device": "მოწყობილობა",
   "site.title": "Ultramarine",
   "downloadOptions.generic": "საერთო",
   "downloadOptions.surface": "Surface",
@@ -69,6 +67,5 @@
   "comments.loved": "ხალხს უყვარს",
   "whyUltramarine.work.title": "აბა, ჩქარა, სამსახურში",
   "whyUltramarine.current.title": "თქვენი კომპიუტერი. უფრო უკეთესი",
-  "whyUltramarine.runs.learnMore": "დაათვალიერეთ ჩვენი აპების არჩევანი",
-  "download.pickFlavor": "აირჩიეთ Ultramarine-ის სასურველი ტიპი"
+  "whyUltramarine.runs.learnMore": "დაათვალიერეთ ჩვენი აპების არჩევანი"
 }

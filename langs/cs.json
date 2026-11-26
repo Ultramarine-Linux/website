@@ -10,8 +10,6 @@
   "header.download": "Stáhnout",
   "downloadLinks.download": "Stáhnout",
   "downloadLinks.viewChecksum": "Zobrazit Checksum",
-  "downloadOptions.architecture": "Architektura",
-  "downloadOptions.device": "Zařízení",
   "downloadOptions.generic": "Obecný",
   "downloadOptions.surface": "Surface",
   "downloadOptions.arm": "ARM",
