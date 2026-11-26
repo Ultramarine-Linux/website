@@ -176,5 +176,5 @@ fi
 echo
 echo "The migration logs can be found at ${LOG}.
 Come chat with us at https://fyralabs.com/discord or https://wiki.ultramarine-linux.org/en/community/community/.
-For addtional information, please see the Ultramarine Wiki, https://wiki.ultramarine-linux.org.
+For additional information, please see the Ultramarine Wiki, https://wiki.ultramarine-linux.org.
 Have fun, thank you for using Ultramarine Linux!"
