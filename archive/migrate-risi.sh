@@ -122,11 +122,11 @@ if [[ $REPLY =~ ^[Nn]$ ]]; then
     echo "The migration logs can be found at ${LOG}."
     exit 1
 fi
-echo "Sit back and relax, you can continue using your computer while we downlad the updates"
+echo "Sit back and relax, you can continue using your computer while we download the updates"
 sudo dnf upgrade -y
-echo "Sit back and relax, you can continue using your computer while we downlad the updates"
+echo "Sit back and relax, you can continue using your computer while we download the updates"
 sudo dnf install -y dnf-plugin-system-upgrade
-echo "Sit back and relax, you can continue using your computer while we downlad the updates"
+echo "Sit back and relax, you can continue using your computer while we download the updates"
 sudo dnf system-upgrade download --releasever=39 -y --allowerasing
 echo "Your system is ready to upgrade! Save your work and"
 read -p "Press enter to reboot"
