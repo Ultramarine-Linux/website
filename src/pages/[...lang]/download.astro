@@ -1,16 +1,19 @@
 ---
 import DownloadSection from "../../components/DownloadSection.astro";
+import DownloadCard from "../../components/DownloadCard.astro";
+import FedoraMigrationScript from "../../components/FedoraMigrationScript.astro";
 import SmallDownloadCard from "../../components/SmallDownloadCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import budgieScreenshot from "../../assets/44/screenshots/budgie.webp";
-import gnomeScreenshot from "../../assets/44/screenshots/gnome.webp";
-import xfceScreenshot from "../../assets/44/screenshots/xfce.webp";
-import plasmaScreenshot from "../../assets/44/screenshots/plasma.webp";
-import budgieScreenshotDark from "../../assets/44/screenshots/budgie.webp";
-import gnomeScreenshotDark from "../../assets/44/screenshots/gnome.webp";
-import xfceScreenshotDark from "../../assets/44/screenshots/xfce.webp";
-import plasmaScreenshotDark from "../../assets/44/screenshots/plasma.webp";
-import DownloadOptions from "../../components/DownloadOptions";
+import plasmaHeroScreenshot from "../../assets/45/screenshots/plasma-hero-light.webp";
+import plasmaCreateScreenshot from "../../assets/45/screenshots/plasma-create-light.webp";
+import plasmaCreateScreenshotDark from "../../assets/45/screenshots/plasma-create-dark.webp";
+import plasmaBuildScreenshot from "../../assets/45/screenshots/plasma-build-light.webp";
+import plasmaPlayScreenshot from "../../assets/42/screenshots/plasma.webp";
+import plasmaPlayScreenshotDark from "../../assets/42/screenshots/plasma-dark.webp";
+import gnomeScreenshot from "../../assets/45/screenshots/gnome.webp";
+import xfceScreenshot from "../../assets/45/screenshots/xfce-light.webp";
+import niriScreenshot from "../../assets/45/screenshots/niri-light.webp";
+import niriScreenshotDark from "../../assets/45/screenshots/niri-dark.webp";
 import Windows from "~icons/fa6-brands/windows";
 import Bittorrent from "~icons/simple-icons/bittorrent";
 import Archive from "~icons/bi/archive-fill";
@@ -18,65 +21,87 @@ import File from "~icons/bi/file-earmark-fill";
 import i18nya, { makeT } from "../../i18n.ts";
 import { makeGetStaticPaths } from "astro-i18nya";
 const t = makeT(Astro.params.lang);
-const version = "44";
-const codename = "Flying Fish";
+const version = "45";
+const codename = "Cyberdyne";
 
 export const getStaticPaths = makeGetStaticPaths(i18nya);
 ---
 
 <BaseLayout>
-  <div
-    class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12"
-  >
-    <h1 class="text-4xl font-bold">{t("download.pickFlavor")}</h1>
-    <h2 class="pt-1 text-gray-500">
-      {t("download.latestRelease", { version, codename })}
-    </h2>
-
-    <DownloadOptions client:load lang={Astro.params.lang} />
-
-    <div
-      class="flex flex-col items-center justify-center gap-10 mt-8 mb-24 w-full"
-    >
+  <div class="flex flex-col items-start max-w-(--breakpoint-xl) mx-auto px-8 md:px-16 mt-12">
+    <div class="flex flex-col items-center justify-center gap-8 mb-24 w-full">
       <DownloadSection
-        editionDisplayName="KDE Plasma"
+        editionDisplayName="Ultramarine"
         editionName="Plasma"
-        screenshot={plasmaScreenshot}
-        screenshotDark={plasmaScreenshotDark}
-        background="/umbrella_bg.webp"
+        subtitle={t("download.latestRelease", { version, codename })}
+        screenshots={[
+          { src: plasmaHeroScreenshot, alt: "Ultramarine Plasma desktop" },
+          {
+            src: plasmaCreateScreenshot,
+            dark: plasmaCreateScreenshotDark,
+            alt: "Ultramarine Plasma desktop",
+            caption: {
+              title: t("download.plasmaFeature1Title"),
+              text: t("download.plasmaFeature1Text"),
+            },
+          },
+          {
+            src: plasmaBuildScreenshot,
+            alt: "Ultramarine Plasma desktop",
+            caption: {
+              title: t("download.plasmaFeature2Title"),
+              text: t("download.plasmaFeature2Text"),
+            },
+          },
+          {
+            src: plasmaPlayScreenshot,
+            dark: plasmaPlayScreenshotDark,
+            alt: "Ultramarine Plasma desktop",
+            caption: {
+              title: t("download.plasmaFeature3Title"),
+              text: t("download.plasmaFeature3Text"),
+            },
+          },
+        ]}
         description={t("download.plasmaDescription")}
         version={version}
       />
 
-      <DownloadSection
-        editionName="Xfce"
-        screenshot={xfceScreenshot}
-        screenshotDark={xfceScreenshotDark}
-        description={t("download.xfceDescription")}
-        version={version}
-      />
+      <div class="w-full mt-8 pt-12 border-t border-gray-800 flex flex-col items-start">
+        <h2 class="text-3xl font-bold">{t("download.otherEditions")}</h2>
+        <p class="pt-1 text-gray-500">{t("download.otherEditionsDescription")}</p>
+        <div class="grid gap-6 lg:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full mt-8">
+        <DownloadCard
+          editionName="GNOME"
+          screenshot={gnomeScreenshot}
+          description={t("download.gnomeDescription")}
+          version={version}
+        />
 
-      <DownloadSection
-        editionName="Budgie"
-        screenshot={budgieScreenshot}
-        screenshotDark={budgieScreenshotDark}
-        description="A familiar and stylish experience with a bit of flair."
-        version={version}
-      />
+        <DownloadCard
+          editionName="niri"
+          screenshot={niriScreenshot}
+          screenshotDark={niriScreenshotDark}
+          aspectClass="aspect-[16/10]"
+          description={t("download.niriDescription")}
+          version={version}
+        />
 
-      <DownloadSection
-        editionName="GNOME"
-        screenshot={gnomeScreenshot}
-        screenshotDark={gnomeScreenshotDark}
-        description={t("download.gnomeDescription")}
-        version={version}
-      />
+        <DownloadCard
+          editionName="Xfce"
+          screenshot={xfceScreenshot}
+          aspectClass="aspect-[16/10]"
+          description={t("download.xfceDescription")}
+          version={version}
+        />
+        </div>
+      </div>
     </div>
 
     <h2 class="text-3xl font-bold">{t("download.alternateDownloads")}</h2>
     <p class="pt-1 text-gray-500">{t("download.alternateDescription")}</p>
 
-    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 w-full mt-8 mb-48">
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 w-full mt-8 mb-24">
       <SmallDownloadCard
         title={t("download.wslTitle")}
         description={t("download.wslDescription")}
@@ -105,6 +130,10 @@ export const getStaticPaths = makeGetStaticPaths(i18nya);
       >
         <Archive className="w-6 h-6 text-gray-400" slot="icon" />
       </SmallDownloadCard>
+    </div>
+
+    <div class="w-full mb-48">
+      <FedoraMigrationScript />
     </div>
   </div>
 </BaseLayout>

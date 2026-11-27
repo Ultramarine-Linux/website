@@ -1,5 +1,5 @@
 {
-  "site.title": "Ultramarine Linux",
+  "site.title": "Ultramarine",
   "site.title.short": "Ultramarine",
   "site.description": "Ultramarine je moderní operační systém který vás nechá dělat si své s hardwarem a nástroji které milujete.",
   "header.openMenu": "Otevřít hlavní nabídku",
@@ -10,8 +10,6 @@
   "header.download": "Stáhnout",
   "downloadLinks.download": "Stáhnout",
   "downloadLinks.viewChecksum": "Zobrazit Checksum",
-  "downloadOptions.architecture": "Architektura",
-  "downloadOptions.device": "Zařízení",
   "downloadOptions.generic": "Obecný",
   "downloadOptions.surface": "Surface",
   "downloadOptions.arm": "ARM",

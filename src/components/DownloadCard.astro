@@ -1,0 +1,62 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import DownloadLinks from "./DownloadLinks";
+
+interface Props {
+  editionDisplayName?: string;
+  editionName: string;
+  screenshot: ImageMetadata;
+  screenshotDark?: ImageMetadata;
+  aspectClass?: string;
+  description: string;
+  version: string;
+}
+
+const {
+  editionDisplayName,
+  editionName,
+  screenshot,
+  screenshotDark,
+  aspectClass = "aspect-[3/2]",
+  description,
+  version,
+} = Astro.props;
+
+const displayName = editionDisplayName ?? editionName;
+---
+
+<div class="flex flex-col bg-gray-900 rounded-xl w-full overflow-hidden">
+  <Image
+    src={screenshot}
+    alt={`Ultramarine ${displayName} Screenshot`}
+    class={`w-full ${aspectClass} object-cover ${screenshotDark ? "dark:hidden" : ""}`}
+    width={480}
+    loading="lazy"
+  />
+  {
+    screenshotDark && (
+      <Image
+        src={screenshotDark}
+        alt={`Ultramarine ${displayName} Screenshot`}
+        class={`w-full ${aspectClass} object-cover hidden dark:block`}
+        width={480}
+        loading="lazy"
+      />
+    )
+  }
+
+  <div class="flex flex-col grow gap-5 p-6">
+    <div class="grow">
+      <h3 class="text-2xl font-bold mb-2">{displayName}</h3>
+      <p class="text-sm md:text-base text-gray-400">{description}</p>
+    </div>
+    <DownloadLinks
+      edition={editionName.toLowerCase()}
+      version={version}
+      lang={Astro.params.lang}
+      stacked
+      client:load
+    />
+  </div>
+</div>

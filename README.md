@@ -1,4 +1,4 @@
-# Ultramarine Linux Website
+# Ultramarine Website
 
 Self-explanatory. See issues for things to work on.
 

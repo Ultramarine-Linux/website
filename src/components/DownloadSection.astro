@@ -1,73 +1,122 @@
 ---
 import type { ImageMetadata } from "astro";
-import { Image, Picture } from "astro:assets";
-// import DownloadIcon from "./icons/DownloadIcon.svg";
-import DownloadLinks from './DownloadLinks'
+import { Image } from "astro:assets";
+import DownloadLinks from "./DownloadLinks";
+
+interface Screenshot {
+  src: ImageMetadata;
+  dark?: ImageMetadata;
+  alt: string;
+  caption?: { title: string; text: string };
+}
 
 interface Props {
   editionDisplayName?: string;
   editionName: string;
-  screenshot: ImageMetadata;
-  screenshotDark?: ImageMetadata;
+  screenshots: Screenshot[];
   description: string;
-  background?: string;
+  subtitle?: string;
   version: string;
 }
 
 const {
   editionDisplayName,
   editionName,
-  screenshot,
-  screenshotDark,
+  screenshots,
   description,
-  background,
-  version
+  subtitle,
+  version,
 } = Astro.props;
 ---
 
-<div
-  class="flex flex-col-reverse md:flex-row bg-gray-900 rounded-xl w-full overflow-hidden"
->
-  <div class="p-6 md:p-8 w-full flex flex-col justify-between relative">
-    <div class="z-10">
-      <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
-        {editionDisplayName ?? editionName} Edition
-      </h2>
-      <p class="max-w-md text-sm md:text-base text-gray-400">
-        {description}
-      </p>
+<section class="w-full">
+  <div class="grid grid-cols-1 lg:grid-cols-9 gap-8 lg:gap-12 items-center">
+    <div class="lg:col-span-4 flex flex-col gap-6">
+      <div>
+        <h2 class="edition-title w-fit whitespace-nowrap text-5xl md:text-7xl lg:text-5xl xl:text-6xl font-bold pb-1">
+          {editionDisplayName ?? editionName}
+        </h2>
+        {subtitle && <p class="text-gray-500 font-bold text-lg md:text-xl mt-1">{subtitle}</p>}
+        <div class="mb-4"></div>
+        <p class="text-base md:text-lg text-gray-300">{description}</p>
+      </div>
+
+      <div>
+        <DownloadLinks
+          edition={editionName.toLowerCase()}
+          version={version}
+          client:load
+          lang={Astro.params.lang}
+        />
+      </div>
     </div>
-    <DownloadLinks edition={editionName.toLowerCase()} version={version} client:load lang={Astro.params.lang}/>
+
+    <div class="lg:col-span-5">
+      {
+        screenshots.slice(0, 1).map((shot) => (
+          <div>
+            <Image
+              src={shot.src}
+              alt={shot.alt}
+              class={`w-full aspect-[3/2] object-cover rounded-xl shadow-2xl ring-1 ring-white/10 ${shot.dark ? "dark:hidden" : ""}`}
+              width={1200}
+              loading="eager"
+            />
+            {shot.dark && (
+              <Image
+                src={shot.dark}
+                alt={shot.alt}
+                class="w-full aspect-[3/2] object-cover rounded-xl shadow-2xl ring-1 ring-white/10 hidden dark:block"
+                width={1200}
+                loading="eager"
+              />
+            )}
+          </div>
+        ))
+      }
+    </div>
+
     {
-      background && (
-        <div class="absolute inset-0 overflow-hidden">
-          <Picture
-            src={background}
-            formats={["avif", "webp"]}
-            width={950}
-            height={540}
-            alt={`${background} texture`}
-            class="w-full h-full object-cover opacity-90 blur-xs pointer-events-none"
-            layout="fixed"
-          />
+      screenshots.length > 1 && (
+        <div class="lg:col-span-9 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+            {screenshots.slice(1, 4).map((shot) => (
+              <div>
+                <Image
+                  src={shot.src}
+                  alt={shot.alt}
+                  class={`w-full aspect-[3/2] object-cover rounded-lg shadow-xl ring-1 ring-white/10 ${shot.dark ? "dark:hidden" : ""}`}
+                  width={600}
+                  loading="lazy"
+                />
+                {shot.dark && (
+                  <Image
+                    src={shot.dark}
+                    alt={shot.alt}
+                    class="w-full aspect-[3/2] object-cover rounded-lg shadow-xl ring-1 ring-white/10 hidden dark:block"
+                    width={600}
+                    loading="lazy"
+                  />
+                )}
+                {shot.caption && (
+                  <div class="mt-3">
+                    <h3 class="font-semibold text-gray-100">{shot.caption.title}</h3>
+                    <p class="text-sm text-gray-400">{shot.caption.text}</p>
+                  </div>
+                )}
+              </div>
+            ))}
         </div>
       )
     }
   </div>
+</section>
 
-  <!-- TODO: For some reason, the picture element causes the layout to break, image is fine for now -->
-  <Image
-    src={screenshot}
-    alt={"Ultramarine" + editionName + "Screenshot"}
-    class={`w-full md:w-auto md:h-[240px] object-cover md:rounded-r-xl ${screenshotDark ? 'dark:hidden' : ''}`}
-    loading="eager"
-    layout="constrained"
-  />
-  {screenshotDark ? <Image
-    src={screenshotDark}
-    alt={"Ultramarine" + editionName + "Screenshot"}
-    class="w-full md:w-auto md:h-[240px] md:rounded-r-xl hidden dark:block"
-    loading="eager"
-    layout="constrained"
-  /> : <></>}
-</div>
+<style>
+  .edition-title {
+    background-image: url("/texture.avif");
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1.1;
+  }
+</style>

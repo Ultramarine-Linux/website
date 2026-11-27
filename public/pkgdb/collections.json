@@ -7,7 +7,7 @@
       "date_updated": "2024-02-13 13:07:23",
       "dist_tag": ".um41",
       "koji_name": "rawhide",
-      "name": "Ultramarine Linux",
+      "name": "Ultramarine",
       "status": "Under Development",
       "version": "devel"
     },
@@ -18,7 +18,7 @@
       "date_updated": "2026-07-02 4:30:00",
       "dist_tag": ".um44",
       "koji_name": "f44",
-      "name": "Ultramarine Linux",
+      "name": "Ultramarine",
       "status": "Active",
       "version": "44"
     },
@@ -29,7 +29,7 @@
       "date_updated": "2025-10-29 18:34:00",
       "dist_tag": ".um43",
       "koji_name": "f43",
-      "name": "Ultramarine Linux",
+      "name": "Ultramarine",
       "status": "Active",
       "version": "43"
     },
@@ -40,7 +40,7 @@
       "date_updated": "2025-06-05 04:04:37",
       "dist_tag": ".um42",
       "koji_name": "f42",
-      "name": "Ultramarine Linux",
+      "name": "Ultramarine",
       "status": "Active",
       "version": "42"
     },
@@ -51,7 +51,7 @@
       "date_updated": "2024-11-27 13:07:23",
       "dist_tag": ".um41",
       "koji_name": "f41",
-      "name": "Ultramarine Linux",
+      "name": "Ultramarine",
       "status": "Active",
       "version": "41"
     },
@@ -62,7 +62,7 @@
       "date_updated": "2024-05-07 03:35:09",
       "dist_tag": ".um40",
       "koji_name": "f40",
-      "name": "Ultramarine Linux",
+      "name": "Ultramarine",
       "status": "Active",
       "version": "40"
     },
@@ -73,7 +73,7 @@
       "date_updated": "2023-08-08 17:07:23",
       "dist_tag": ".um39",
       "koji_name": "f39",
-      "name": "Ultramarine Linux",
+      "name": "Ultramarine",
       "status": "Active",
       "version": "39"
     }
